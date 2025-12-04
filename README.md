@@ -41,3 +41,36 @@ https://a1253247.blogspot.com/p/epub.html</p>
 https://a1253247.info/blogs/2023/07/jodi_picoult-%e8%8c%b1%e8%bf%aa%e7%9a%ae%e8%80%83%e7%89%b9-%e5%87%a1%e5%a6%ae%e8%8e%8e%e7%9a%84%e5%a6%bb%e5%ad%90.html</p>
 好讀網站-異鄉人(卡謬)</p>
 https://a1253247.blogspot.com/p/blog-page_30.html</p>
+<H2>2025最新文章</H2></p>
+窮人的經濟學</p>
+https://a1253247.info/pacermania/archive/2025-12.html</p>
+老派球迷的逆襲：挺球員、背紀錄、重情義，找回看球的初衷與樂趣</p>
+https://a1253247.info/pacermania/archive/2025-11.html</p>
+Kindle-火藥時代（歐陽泰）</p>
+https://a1253247.info/pacermania/archive/2025-10.html</p>
+你的幸福曲線</p>
+https://a1253247.info/pacermania/archive/2025-09.html</p>
+大是出版-給那天落選的你(阿部廣太郎）</p>
+https://a1253247.info/pacermania/archive/2025-08.html</p>
+利用Raspberry Pi設置軟路由(以NORDVPN為例)</p>
+https://a1253247.info/pacermania/archive/2025-07-1.html</p>
+柳美里-『JR上野駅公園口』</p>
+https://a1253247.info/pacermania/archive/2025-07.html</p>
+漢聲精選世界成長文學-浪潮(莫頓.盧)</p>
+https://a1253247.info/pacermania/archive/2025-06.html</p>
+半藤一利-諾門罕之夏（Google圖書）</p>
+https://a1253247.info/pacermania/archive/2025-05.html</p>
+Readmoo-蜜蜂與遠雷(恩田陸)</p>
+https://a1253247.info/pacermania/archive/2025-04.html</p>
+Picoreplayer-將音樂轉發至homepod上</p>
+https://a1253247.info/pacermania/archive/2025-03-1.html</p>
+好讀網站-沙丘第一部(法蘭克‧赫伯特)</p>
+https://a1253247.info/pacermania/archive/2025-03.html</p>
+漫遊者文化-少年來了（韓江）</p>
+https://a1253247.info/pacermania/archive/2025-02-1.html</p>
+利用Raspberry Pi設置軟路由(以Express VPN為例)</p>
+https://a1253247.info/pacermania/archive/2025-02.html</p>
+角田光代-第八日的蟬</p>
+https://a1253247.info/pacermania/archive/2025-01.html</p>
+SiriusXM-美國在線廣播和播客平台</p>
+https://a1253247.info/pacermania/archive/2025-01-1.html</p>
