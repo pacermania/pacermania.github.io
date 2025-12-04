@@ -1,5 +1,5 @@
 <center><H1>這是我的部落格。</H1></center></p>
-Newsletter</p>
+我的電子報(My Newsletter)</p>
 https://a1253247.info/blogs/newsletter</p>
 Blogger Profile</p>
 https://www.blogger.com/profile/11641665526391591374</p>
