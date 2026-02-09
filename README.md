@@ -41,7 +41,12 @@ https://a1253247.blogspot.com/p/epub.html</p>
 https://a1253247.info/blogs/2023/07/jodi_picoult-%e8%8c%b1%e8%bf%aa%e7%9a%ae%e8%80%83%e7%89%b9-%e5%87%a1%e5%a6%ae%e8%8e%8e%e7%9a%84%e5%a6%bb%e5%ad%90.html</p>
 好讀網站-異鄉人(卡謬)</p>
 https://a1253247.blogspot.com/p/blog-page_30.html</p>
-<H2>2025最新文章</H2></p>
+<H2>2026最新文章</H2></p>
+ebook-持續買進(尼克．馬朱利 Nick Maggiulli)</p>
+https://a1253247.info/blogs/2026/02/ebook-%e6%8c%81%e7%ba%8c%e8%b2%b7%e9%80%b2%e5%b0%bc%e5%85%8b%ef%bc%8e%e9%a6%ac%e6%9c%b1%e5%88%a9-nick-maggiulli.html</p>
+ebook/遠足文化-鋰戰（厄尼斯特·謝德）</p>
+https://a1253247.info/blogs/2026/01/ebook-%e9%81%a0%e8%b6%b3%e6%96%87%e5%8c%96-%e9%8b%b0%e6%88%b0%ef%bc%88%e5%8e%84%e5%b0%bc%e6%96%af%e7%89%b9%c2%b7%e8%ac%9d%e5%be%b7%ef%bc%89.html</p>
+<H2>2025</H2></p>
 窮人的經濟學</p>
 https://a1253247.info/pacermania/archive/2025-12.html</p>
 老派球迷的逆襲：挺球員、背紀錄、重情義，找回看球的初衷與樂趣</p>
