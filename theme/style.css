@@ -1,0 +1,33 @@
+.themeloading,
+			.themeloaded.wf-loading {
+				background: url(//static.tumblr.com/41ljbbi/dZjlnvr8e/ajax-loader-1.gif) no-repeat center center;
+			}
+
+			.themeloading body,
+			.themeloaded.wf-loading body {
+				left: -99999px;
+				position: absolute;
+				*overflow: hidden;
+			}
+			
+
+			
+			
+			
+
+			.bF, .bF * { background-color: #777777; }
+			.lF a, a.lF, .tF { color: #ffffff; }
+			.bP { background-color: #6CA516; }
+			.lP a, a.lP, .lS a:hover, a:hover.lS, .like_post a, .blogsmore, #tumblr-tweets .date:hover { color: #6CA516; }
+			.lS a, a.lS, #tumblr-tweets .date { color: #6e6e6e; }
+			.bT { background-color: #259096; }
+			.lT a, a.lT, .like_link a { color: #259096; }
+
+			/* Fonts */
+			body {
+				font-family: 'Droid Sans';
+			}
+
+			.fS {
+  				font-family: 'Yanone Kaffeesatz';
+			}
