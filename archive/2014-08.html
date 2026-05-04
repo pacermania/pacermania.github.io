@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":897,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>八月 2014</h1>
+
+
+<article class=photo id=p-95736985078>
+<p class=meta><span class=date>2014年08月25日 22時52分10秒</span>
+<a class=llink href=../posts/95736985078.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/95736985078 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_navamyzR0G1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_navamyzR0G1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_navamyzR0G1sjz8axo3_1280.jpg"></p>
+<p>這一次回台北把比比交給奶奶，下次見到比比大概是兩個月後的事情了。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/Polaroid>#Polaroid</a>
+<a href=http://pacermania.tumblr.com/tagged/magentatype>#magentatype</a>
+</p>
+</article>
+
+<article class=regular id=p-95284930783>
+<p class=meta><span class=date>2014年08月20日 23時03分00秒</span>
+<a class=llink href=../posts/95284930783.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/95284930783 rel=canonical>●</a></p>
+<h2>[PayPal]Hopshopgo代送服務</h2>
+<p><img alt="image" src="http://68.media.tumblr.com/691a66e513ea95f1c4611fede2140a61/tumblr_inline_nam05sX9Mp1snfajc.jpg"/></p>
+
+<p>雖然我很早以前就已經有 <a href="https://www.paypal.com/tw/webapps/mpp/home">PayPal</a>以及<a href="http://www.hopshopgo.com/jp/home.do?l=tw&c=TW"> Hopshopgo</a>的帳號了,但是一直都苦無機會使用 hopshopgo 的代送服務。一方面是因為很多在台灣沒有在賣的東西,露天拍賣都找的到,加上前一陣子經濟比較緊繃,就沒有想說要透過Hopshopgo 的服務來買東西了。</p>
+<p>不過由於我最近迷上使用 google 的服務之後,開始對 google 出的<br/><a href="http://www.google.com/chrome/devices/chromecast/">Chromecast</a>–這支目前只能在少數地方才買的到的東西,產生了興趣。由於 Chromecast 在<a href="http://www.amazon.com/">Amazon</a>購買,美國國內是免運費的,所以我就想到可<br/>以利用這個方式購買 Chromecast。</p>
+<p><br/>1.首先先進入 hopshopgo 網站,並登入帳號密碼。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/221dee01a3d5df2a87efeeb29425d8a8/tumblr_inline_nam06aYmHj1snfajc.png"/></p>
+
+<p>2.點選 hopshopgo 頁面的購物網站(如 Amazon),我是以 Amazon 為例子。記得也要在 Amazon 網站先申請帳號才行,然後選擇代送服務(如果你要在 Gap 買東西,你也要先申請 Gap 的帳號,以此類推)。如果使用代購服務就不用(代購服務教學請看<a href="http://mua2chichi.pixnet.net/blog/post/205608878-%E3%80%90%E5%8B%B8%E6%95%97%E3%80%91%E2%97%8Fhopshopgo%E2%97%8F-%E8%AE%93%E6%82%A8%E8%BC%95%E9%AC%86%E8%B2%B7%E9%81%8D%E7%BE%8E%E5%9C%8B(%E7%AB%A5%E8%A3%9D">這裡</a>)。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/d2a497279b3027620fb47f3094ec2c01/tumblr_inline_nam088tgZ21snfajc.png"/></p>
+
+<p>3.請在 Amazon 的貨物寄送地址填寫 Hopshopgo 提供的美國地址,以及 Hopshopgo提供的美國聯絡電話(如果需要填的話)。</p>
+<p><img src="http://68.media.tumblr.com/10d835b0571e2d65af729af04c600f8a/tumblr_inline_namqw2Kb5z1snfajc.png"/></p>
+<p>4.請在左側的欄位輸入在 Amazon 購物完成後所提供的訂單編號,以及該訂單的金額。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/e8dbb2df01067f7b83600bbdc3938489/tumblr_inline_nam0i0LYsx1snfajc.png"/></p>
+
+<p>5.接下來打開你的 email,你應該就會收到 Hopshopgo 寄來的通知了。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/992669f97bf4696f5f60897c48d6a0a0/tumblr_inline_nam0iyCZAM1snfajc.png"/></p>
+
+<p>6.你可以重複上述1.~5.的步驟在 Amazon 以及其他購物網站購買物品,然後再等這些物品全部都寄到 Hopshopgo 的美國地址後,就可以一次點選全部的物品,然後一次寄回台灣。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/159e80a16d8cc178c2b08e0aed25658a/tumblr_inline_nam0m0c5D71snfajc.png"/></p>
+
+<p>7.完成之後,Hopshopgo就會把你所點選要寄送的物品,準備開始寄送了.他們有快送和一般的選項,我是選一般.一般的話,我大約是一個星期(星期二寄,下星期二收到)就會收到了。</p>
+<p>P.S.<br/>不過 Hopshopgo 還蠻烏龍的,我有一件包裹明明已經到了美國地址,結果Hopshopgo的網站上還是沒有顯示,後來我就去客服詢問,結果這件包裹已經到了,後來客服處理之後兩三分鐘,我的待運送清單上就有了這個包裹,算是一件小插曲。不過他們的服務算是蠻不錯的。而且他們有中文的文字客服,不過中文客服是亞洲時間上午九點才開始上班,所以一大早是沒有辦法使用中文的文字客服的。</p>
+<p>另外,Hopshopgo也可以用來購買其他只有在美國販賣的產品,例如：Nexus, Chormebook等</p>
+<p>如果想用Hopshopgo購買Google Nexus4可參考<a href="http://www.mobile01.com/topicdetail.php?f=565&t=3212482">這篇</a>。</p>
+<p>如果想用Hopshopgo購買Chromebook可參考<a href="http://mtv77.blogspot.tw/search/label/Chromebook">這篇</a>。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Hopshopgo>#Hopshopgo</a>
+<a href=http://pacermania.tumblr.com/tagged/paypal>#paypal</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BB%A3%E9%80%81%E6%9C%8D%E5%8B%99>#代送服務</a>
+<a href=http://pacermania.tumblr.com/tagged/chromecast>#chromecast</a>
+<a href=http://pacermania.tumblr.com/tagged/HP%20Chromebook%2014>#HP Chromebook 14</a>
+<a href=http://pacermania.tumblr.com/tagged/google%20nexus4>#google nexus4</a>
+</p>
+</article>
+
+<article class=photo id=p-94338877268>
+<p class=meta><span class=date>2014年08月10日 22時16分00秒</span>
+<a class=llink href=../posts/94338877268.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/94338877268 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_na3gyqhsur1sjz8axo1_1280.jpg"></p>
+<p>有平板+巧虎真的是父母的救星呀！</p>
+<p>使用的平板為<a href="http://blog.xuite.net/wendy2074/warm/225621709-ASUS+Transformer+Pad+TF103C+%E8%AE%8A%E5%BD%A2%E5%B9%B3%E6%9D%BF~%E9%96%8B%E7%AE%B1">ASUS Transformer Pad TF103C</a></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%B9%B3%E6%9D%BF%E9%9B%BB%E8%85%A6>#平板電腦</a>
+<a href=http://pacermania.tumblr.com/tagged/ASUS%20Transformer%20Pad%20TF103C>#ASUS Transformer Pad TF103C</a>
+</p>
+</article>
+
+<article class=photo id=p-93653610238>
+<p class=meta><span class=date>2014年08月03日 12時59分21秒</span>
+<a class=llink href=../posts/93653610238.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/93653610238 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n9psiy37BE1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n9psiy37BE1sjz8axo2_1280.jpg"></p>
+<p>Snoopy in Kaohsiung.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/snoopy>#snoopy</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%AB%98%E9%9B%84>#高雄</a>
+<a href=http://pacermania.tumblr.com/tagged/kaohsiung>#kaohsiung</a>
+<a href=http://pacermania.tumblr.com/tagged/Polaroid>#Polaroid</a>
+<a href=http://pacermania.tumblr.com/tagged/the%20impossible%20project>#the impossible project</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

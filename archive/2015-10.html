@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":956,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十月 2015</h1>
+
+
+<article class=regular id=p-131755636143>
+<p class=meta><span class=date>2015年10月24日 00時59分14秒</span>
+<a class=llink href=../posts/131755636143.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/131755636143 rel=canonical>●</a></p>
+<h2>[Chromecast]Chromecast第二代,Chromecast Audio</h2>
+<figure class="tmblr-embed tmblr-full" data-provider="youtube" data-orig-width="540" data-orig-height="304" data-url="https%3A%2F%2Fyoutu.be%2FJc-LEG0T_4c"><iframe width="540" height="304" id="youtube_iframe" src="https://www.youtube.com/embed/Jc-LEG0T_4c?feature=oembed&enablejsapi=1&origin=https://safe.txmblr.com&wmode=opaque" frameborder="0"></iframe></figure><pre><br/></pre><pre><br/></pre><p>最近<a href="https://store.google.com/product/chromecast_2015">Chromecast出了第二代</a>，第二代不像第一代是HDMI和機身一體成形的，而是改成分開的設計。外型也變成puck(冰上曲棍球的冰球)狀，考驗著消費者對於新外型的接受度。不過新一代的Chromecast在天線的接收方面，在實際使用上跟第一代比起來真的是好些，另外也支援2.4和5GHz雙頻段，以下就是第一代及第二代的規格：</p><p><b>Chromecast第一代</b><br/></p><blockquote><p>Output: HDMI</p><p>Processor: Marvell Armada 1500 Mini 88DE3005 SoC, 1.2GHz ARM Cortex-A9 processor</p><p>RAM: 512MB</p><p>Storage: 2GB flash</p><p>Max. Output Video Resolution: 1080p</p><p>Dimensions: 72(L) x 35(W) x 12(H) mm</p><p>Weight: 34 g</p><p>Connectivity: 802.11 b/g/n (2.4GHz)</p><p>Power: microUSB (Power adapter included)</p></blockquote><pre><br/></pre><p><b>Chromecast第二代</b></p><blockquote><p>
+	Output:
+	HDMI</p><p>
+	Processor:
+	Marvell Armada 1500 Mini Plus 88DE3006 SoC, 1.2GHz dual ARM
+	Cortex-A7 processors</p><p>
+	RAM:
+	512MB</p><p>
+	Storage:
+	256MB flash</p><p>
+	Max.
+	Output Video Resolution: 1080p</p><p>
+	Dimensions:
+	51.9 in diameter, 13.49mm (H)</p><p>
+	Weight:
+	39.1 g</p><p>
+	Connectivity:
+	802.11 ac (2.4GHz/5GHz)</p><p>
+	Power:
+	microUSB (Power adapter included)</p></blockquote><figure data-orig-width="624" data-orig-height="349" class="tmblr-full"><img src="http://68.media.tumblr.com/c5a4a55c93409571dfb7b961b538e93f/tumblr_inline_nwomt3ELag1snfajc_540.png" alt="image" data-orig-width="624" data-orig-height="349"/></figure><blockquote><p>
+圖片來源：<a href="http://bgr.com/2015/09/29/google-announces-new-chromecast/">http://bgr.com/2015/09/29/google-announces-new-chromecast/</a></p></blockquote><p>這次Google還推出了專門為了音樂串流而設計的<a href="https://store.google.com/product/chromecast_audio">Chromecast Audio</a>，可以直接把你家中的普通音響升級成可音樂串流的音響，對於我這種音樂愛好者(我同時擁有Google
+Play
+Music、Pandora、Spotify、Tunein等帳號)來說真的是福音呀！這樣我就可以在我的電腦上同時播放兩種不同的音樂串流了。雖然不久之前在網路上也有人發展初一個專為Chromecast的套件<a href="https://www.kickstarter.com/projects/1752052318/joydrone-chromecast-music-adapter">JoyDrone</a>，插上後就可以跟Chromecast Audio一樣接上音響，也不失為不能購買Chromecast Audio時的替代方案(Chromecast第二代和Chromecast Audio目前台灣地區還未販售，目前官方管道還是只能買到第一代)。<br/></p><p>
+雖然定價跟第一代一樣只要35美金，感覺起來很廉價，但是質感各方面都不會讓你覺得是一個次級品，這就是Google厲害的地方。對於Google來說，Chromecast只是一個載具，是Google可以接觸消費者的方式之一，這樣Google就可以有機會推銷自己的服務，創造更多的商機，我想這才是Google最終的目的吧！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Chromecast%E7%AC%AC%E4%BA%8C%E4%BB%A3>#Chromecast第二代</a>
+<a href=http://pacermania.tumblr.com/tagged/Chromecast>#Chromecast</a>
+<a href=http://pacermania.tumblr.com/tagged/JoyDrone>#JoyDrone</a>
+<a href=http://pacermania.tumblr.com/tagged/chromecast%20audio>#chromecast audio</a>
+<a href=http://pacermania.tumblr.com/tagged/Google%20Cast>#Google Cast</a>
+</p>
+</article>
+
+<article class=regular id=p-130552405788>
+<p class=meta><span class=date>2015年10月05日 23時14分53秒</span>
+<a class=llink href=../posts/130552405788.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/130552405788 rel=canonical>●</a></p>
+<h2>[Nexus Player]IP以及DNS設定</h2>
+<figure class="tmblr-full" data-orig-height="1730" data-orig-width="3051"><img src="http://68.media.tumblr.com/907548650d0f1a03248cbc8f3066b3d3/tumblr_inline_nvr555MW5L1snfajc_540.jpg" data-orig-height="1730" data-orig-width="3051"/></figure><p><a href="http://pacermania.tumblr.com/post/103970443223/chromecastchromecast%E9%9B%BB%E8%A6%96%E6%A3%92%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97">Chromecast</a>跟<a href="http://pacermania.tumblr.com/search/Nexus+player">Nexus Player</a>相比，功能上除了Nexus Player的規格較高，可以安裝app之外，最重要的是還可以設定IP以及DNS，這對需要突破地理區域限制(Block)的使用者來說，真的是一大福音！Chromecast也不是不能突破地理區域限制，只是相較之下在設定上就麻煩許多，可能還要為此多添購一台Router(詳情請參閱<a href="http://pacermania.tumblr.com/post/117260676478/smart-dns%E6%87%89%E7%94%A8%E4%BD%BFchromecast%E5%8F%AF%E4%BB%A5%E5%9C%A8%E5%8F%B0%E7%81%A3%E4%BD%BF%E7%94%A8rdio%E7%AD%89%E6%9C%8D%E5%8B%99">這篇文章</a>)。</p><p>如今Google終於讓使用者可以在Nexus Player設定DNS，以下就是設定的步驟。</p><figure class="tmblr-full" data-orig-height="3120" data-orig-width="3120"><img src="http://68.media.tumblr.com/820433fdfc73f6a7a004a5bfba30722e/tumblr_inline_nvr5gwAoW81snfajc_540.jpg" data-orig-height="3120" data-orig-width="3120"/></figure><p>首頁就有無線網路的標示，請點擊進入。</p><figure class="tmblr-full" data-orig-height="1734" data-orig-width="3022"><img src="http://68.media.tumblr.com/f09ad30f1a8916a770f7dd6a5ccabd38/tumblr_inline_nvr5agDGSe1snfajc_540.jpg" data-orig-height="1734" data-orig-width="3022"/></figure><p>進入之後選擇你想要設定的wifi網路。</p><figure class="tmblr-full" data-orig-height="1730" data-orig-width="2963"><img src="http://68.media.tumblr.com/bce5ddb2c4cd14f9c0510e6604e03561/tumblr_inline_nvr5b6jMvf1snfajc_540.jpg" data-orig-height="1730" data-orig-width="2963"/></figure><p>請點選Advanced
+Option。</p><figure class="tmblr-full" data-orig-height="1631" data-orig-width="2863"><img src="http://68.media.tumblr.com/85178d30f5e161ba05171d1cff70c87a/tumblr_inline_nvr5bt6kdV1snfajc_540.jpg" data-orig-height="1631" data-orig-width="2863"/></figure><p>再點選IP
+Settings。</p><figure class="tmblr-full" data-orig-height="1739" data-orig-width="2997"><img src="http://68.media.tumblr.com/20639ceaffcc80967e0d592db806c704/tumblr_inline_nvr5c7hyaQ1snfajc_540.jpg" data-orig-height="1739" data-orig-width="2997"/></figure><p>然後會出現DHCP和Static兩個選項，請選擇Static。</p><figure class="tmblr-full" data-orig-height="1675" data-orig-width="2918"><img src="http://68.media.tumblr.com/53e7c547ee52acf5b3cd331b9d46133a/tumblr_inline_nvr5co6Pd91snfajc_540.jpg" data-orig-height="1675" data-orig-width="2918"/></figure><p>接著請設定IP，若你的Router的IP為192.168.0.1，你可以選擇192.168.0.21為你的固定IP，若你的Router的IP為192.168.1.1，那你就要選擇192.168.1.21為你的固定IP。</p><figure class="tmblr-full" data-orig-height="1645" data-orig-width="2863"><img src="http://68.media.tumblr.com/3f23c50e42908b72e8869278f7cc5f29/tumblr_inline_nvr5d3wk9b1snfajc_540.jpg" data-orig-height="1645" data-orig-width="2863"/></figure><p>Gateway請選擇你的Router的IP，例如192.168.0.1。</p><figure class="tmblr-full" data-orig-height="1630" data-orig-width="2868"><img src="http://68.media.tumblr.com/1ae35d43d402d2f7787316979b6a8cc6/tumblr_inline_nvr5df45M31snfajc_540.jpg" data-orig-height="1630" data-orig-width="2868"/></figure><p>Network
+Prefix length就使用原廠設定值24。</p><figure class="tmblr-full" data-orig-height="1690" data-orig-width="2932"><img src="http://68.media.tumblr.com/4fb2eb59dc5a736caf921ec6fb222e95/tumblr_inline_nvr5dru3aW1snfajc_540.jpg" data-orig-height="1690" data-orig-width="2932"/></figure><p>接下來就可以設定最重要的DNS了。例如你使用<a href="https://www.unblock-us.com">Unblock-us</a>的Smart
+DNS服務，你的DNS就要設定成208.122.23.22。</p><figure class="tmblr-full" data-orig-height="1670" data-orig-width="2883"><img src="http://68.media.tumblr.com/7cb559ea9f7916c14528caafa9031337/tumblr_inline_nvr5e5hkzG1snfajc_540.jpg" data-orig-height="1670" data-orig-width="2883"/></figure><p>第二個DNS比較不重要，你可以使用原廠預設值(Google的DNS)，8.8.4.4。</p><p>接下來就會出現設定完成的訊息，這樣就完成了整個設定，包含IP以及DNS。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Chromecast>#Chromecast</a>
+<a href=http://pacermania.tumblr.com/tagged/Nexus%20Player>#Nexus Player</a>
+<a href=http://pacermania.tumblr.com/tagged/Nexus%20Player%20DNS>#Nexus Player DNS</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20DNS%20unblock%20us>#Smart DNS unblock us</a>
+<a href=http://pacermania.tumblr.com/tagged/unblock-us>#unblock-us</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%9C%B0%E7%90%86%E5%8D%80%E5%9F%9F%E9%99%90%E5%88%B6>#地理區域限制</a>
+<a href=http://pacermania.tumblr.com/tagged/DNS%E5%9C%B0%E7%90%86%E8%A6%8F%E9%81%BF>#DNS地理規避</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":928,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>六月 2014</h1>
+
+
+<article class=regular id=p-89368139433>
+<p class=meta><span class=date>2014年06月21日 00時04分28秒</span>
+<a class=llink href=../posts/89368139433.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/89368139433 rel=canonical>●</a></p>
+<h2>[敗家]Kroten健走鞋</h2>
+<p>記得兩年前有一天跟女王一起去夢時代的PUMA專櫃,看到了這雙<a href="http://www.sportsnote.com.tw/running/view_article.aspx?id=367e0eec-c0fc-4301-9a0a-427a44103625">FAAS</a>,我就覺得這真的是為我所設計的鞋呀（好像會敗家的人都會講這樣的話）！話說FAAS系列雖然價格較高,但是這雙跑步鞋真的好穿.整雙鞋感覺很輕,也很透氣,但是卻沒有一般跑步鞋的那種包覆感不足的感覺,鞋底也很紮實,但又不會太硬.所以我平常上班或是外出都是穿這一雙鞋.</p>
+<p>不過幾天前被女王提醒我的那雙FAAS前面已經破洞了,聽到這個消息真的好傷心呀！畢竟這雙鞋不管外觀,用途還是舒適性都是極品.所以就在想說是不是要再買一雙跟FAAS類似的跑步鞋.</p>
+<p>結果就在前天,在逛costco的時候,發現有一區都是在賣鞋子的.原本只是抱著隨便看看的心理過去瞧瞧,沒想到居然發現了<a href="http://blog.xuite.net/chunmin40/blog/205095732">Kroten</a>這個牌子的健走鞋.</p>
+<p>這個牌子吸引我的地方主要有兩個：</p>
+<p>1.價格便宜,只要699(聽說<a href="http://goods.ruten.com.tw/item/show?21406192009576">以前賣的更便宜</a>).沒辦法！當了奶爸之後就要學會省吃儉用,手機從iphone變成Zenfone,鞋子也只能挑便宜的穿囉！</p>
+<p>2.外型還蠻潮的,可媲美外面一些運動知名品牌.</p>
+<p>所以我就買了兩雙！</p>
+<p><img src="http://68.media.tumblr.com/0d11eb6cc59d40fa0bc553778b2829f1/tumblr_inline_n7h56hexlC1snfajc.jpg"/></p>
+<p>這就是Kroten健走鞋的包裝,跟知名運動品牌的包裝沒甚麼差別.</p>
+<p><img src="http://68.media.tumblr.com/405980d326b74e59c4826151825053e9/tumblr_inline_n7h58ubF2z1snfajc.jpg"/></p>
+<p>就是這個外觀還有顏色！我看了第一眼就想帶回家！</p>
+<p><img src="http://68.media.tumblr.com/0b285ebd8e4a801edc70ab6fe8daac4e/tumblr_inline_n7h5acjFjA1snfajc.jpg"/></p>
+<p>鞋底據說是防滑設計</p>
+<p><img src="http://68.media.tumblr.com/31be464ad174f7f5cd30004b28a703e4/tumblr_inline_n7h5boxE1p1snfajc.jpg"/></p>
+<p>鞋子整體看起來還蠻透氣的.</p>
+<p><img src="http://68.media.tumblr.com/5aa942acfb190c7d4716510490c2e7cd/tumblr_inline_n7h5crH0VM1snfajc.jpg"/></p>
+<p>穿上去的感覺,包覆感還不錯,透氣性也不錯,穿起來蠻輕鬆舒適的（在網路上還有人這雙鞋說是水陸兩棲的）,但是鞋底感覺比較薄,沒有像之前的FAAS來的紮實,但是以這樣的價錢,拿來跟FAAS這種頂級跑步鞋比,說實在也沒什麼道理.反正這雙鞋只要不要拿來跑步或是拿來打球,應該都足以應付日常的需求了.</p>
+<p>另外,我在costco買的時候,Kroten健走鞋的數量已經不多了,一些顏色跟尺寸也沒有了,不知道以後costco還會不會進貨.</p>
+<p>所以想要買潮一點鞋,但是又不想花太多錢,Kroten是一個不錯的選擇.</p>
+<p>賣場資訊:</p>
+<p>costco中華店  高雄市前鎮區中華五路656號</p>
+<iframe frameborder="0" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.349060363873!2d120.30634040000001!3d22.6034368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0370633f885d%3A0x449753d1aa108b73!2z5Lit6I-v5LqU6LevNjU26Jmf!5e0!3m2!1szh-TW!2s!4v1403280192052" width="600"></iframe>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/kroten>#kroten</a>
+<a href=http://pacermania.tumblr.com/tagged/kroten%20%E5%81%A5%E8%B5%B0%E9%9E%8B>#kroten 健走鞋</a>
+<a href=http://pacermania.tumblr.com/tagged/puma%20faas>#puma faas</a>
+</p>
+</article>
+
+<article class=photo id=p-88907054653>
+<p class=meta><span class=date>2014年06月16日 08時31分56秒</span>
+<a class=llink href=../posts/88907054653.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/88907054653 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n78k57WmsC1sjz8axo1_500.png"></p>
+<p>100 posts!</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/100%20posts>#100 posts</a>
+<a href=http://pacermania.tumblr.com/tagged/tumblr%20milestone>#tumblr milestone</a>
+</p>
+</article>
+
+<article class=link id=p-88860311918>
+<p class=meta><span class=date>2014年06月15日 23時08分14秒</span>
+<a class=llink href=../posts/88860311918.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/88860311918 rel=canonical>●</a></p>
+<h2><a href="http://zh.wikipedia.org/wiki/%E5%81%B7%E6%9B%B8%E8%B3%8A">[電影]偷書賊</a></h2>
+<p>大概是近幾年來我看過最感人的電影之一,這部電影改編自Markus Zusak的原著小說偷書賊.也榮登各<a href="http://www.books.com.tw/products/0010369866">項暢銷書排行榜冠軍.</a></p>
+<p>這部小說最特別的地方就是以死神的觀點來看莉塞爾(女主角)的一生.透過死神詼諧幽默,有時又帶有冷酷的語氣,來看待二次世界大戰納粹德國的環境氛圍,並藉著納粹德國的獨裁專橫,襯托出小女孩的純真,以及親情與友情的可貴.</p>
+<p>不過讓我有點疑惑的是,為什麼是小女孩讓死神印象深刻？而不是那些我們認為有偉大情操的,例如安妮呢？也許作者是想要藉由這樣的觀點,來闡述真正偉大或是令人印象深刻的,往往不是英雄,名人,或偉大的一場戰役,而是在我們最一般的生活中,看似平凡無奇卻又如此真實又讓人感動的片段.也或許死神看過太多撒狗血/英雄式的片段,這些片段讓他變得麻木,反而是在最底層最平凡的人們生活的片段,對死神來說,反而相珍珠般的珍貴！</p>
+<p>若有餘力,可以先閱讀一下<a href="http://www.books.com.tw/products/0010525338">第三帝國興亡史</a>這一系列的書,或是google一下納粹德國的一些資料,這樣就會電影中納粹德國的環境氛圍會有更深的了解.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%81%B7%E6%9B%B8%E8%B3%8A>#偷書賊</a>
+<a href=http://pacermania.tumblr.com/tagged/the%20book%20thief>#the book thief</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%AC%AC%E4%B8%89%E5%B8%9D%E5%9C%8B%E8%88%88%E4%BA%A1%E5%8F%B2>#第三帝國興亡史</a>
+<a href=http://pacermania.tumblr.com/tagged/The%20Rise%20and%20Fall%20of%20The%20Third%20Reich>#The Rise and Fall of The Third Reich</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%B4%8D%E7%B2%B9>#納粹</a>
+</p>
+</article>
+
+<article class=photo id=p-88858172133>
+<p class=meta><span class=date>2014年06月15日 22時37分31秒</span>
+<a class=llink href=../posts/88858172133.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/88858172133 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n6pm9y6H5p1s6vy0io1_500.gif"></p>
+<p><a class="tumblr_blog" href="http://hellofromtumblr.com/post/88384819297/the-perfect-theme-have-a-vision-in-your-brain-of">hellofromtumblr</a>:</p>
+<blockquote>
+<h2>The Perfect Theme?</h2>
+<p>Have a vision in your brain of an exactly perfect blog theme? Make it come true using your fingers!</p>
+<p><a href="https://www.tumblr.com/docs/en/custom_themes">Read the instructions</a><br/><a href="https://dash.generalassemb.ly/tumblr">Take a class</a></p>
+</blockquote>
+<p>改天好好研究一下Tumblr的部落格語法.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/tumblr>#tumblr</a>
+<a href=http://pacermania.tumblr.com/tagged/tumblr%20themes>#tumblr themes</a>
+</p>
+</article>
+
+<article class=regular id=p-88175859043>
+<p class=meta><span class=date>2014年06月08日 22時50分00秒</span>
+<a class=llink href=../posts/88175859043.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/88175859043 rel=canonical>●</a></p>
+<h2>MTV EXCLUSIVE PREMIERE: FINAL MASQUERADE</h2>
+<p><a class="tumblr_blog" href="http://linkinpark.tumblr.com/post/88173056477/mtv-exclusive-premiere-final-masquerade">linkinpark</a>:</p>
+<blockquote>
+<p>“Final Masquerade” from The Hunting Party is premiering now on MTV. Listen now at <a href="http://linkinpark.mtv.com">http://linkinpark.mtv.com/</a></p>
+<iframe frameborder="0" height="272px" id="album_player" scrolling="no" src="http://www.mtv.com/artists/linkin-park/album-premiere/exclusive+premiere%3A+final+masquerade/embed/" width="100%"></iframe>
+<div><span>Get More: <a href="http://www.mtv.com/artists/linkin-park/">Linkin Park,</a></span><br/><span><a href="http://www.mtv.com/artists/linkin-park/music/">Linkin Park videos</a></span><a href="http://mtv.com/artists/"><img alt="image" height="31px" src="http://www.mtv.com/ap/images/brands/mtv_logo.png" width="172px"/></a></div>
+</blockquote>
+<p>又要出新專輯了！他們最近發新專輯的速度可真快呀！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Linkin%20Park>#Linkin Park</a>
+<a href=http://pacermania.tumblr.com/tagged/The%20Hunting%20Party>#The Hunting Party</a>
+</p>
+</article>
+
+<article class=photo id=p-88175484883>
+<p class=meta><span class=date>2014年06月08日 22時44分52秒</span>
+<a class=llink href=../posts/88175484883.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/88175484883 rel=canonical>●</a></p>
+<p><a href="http://instagram.com/p/o71pISktA_/"><img alt="" src="../images/tumblr_n6sg9wDXV01tv0tsdo1_1280.jpg"></a></p>
+<p><a class="tumblr_blog" href="http://yangzhiqiang8.tumblr.com/post/88061479429/happy-flock-follow-tbt-at">yangzhiqiang8</a>:</p>
+<blockquote>
+<p>快乐的羊群<br/> Happy flock<br/> #随手拍# #follow<br/> #tbt at # #instagood #followme #iphoneonly</p>
+</blockquote>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%BF%AB%E6%A8%82%E7%9A%84%E7%BE%8A%E7%BE%A4>#快樂的羊群</a>
+</p>
+</article>
+
+<article class=photo id=p-88064626373>
+<p class=meta><span class=date>2014年06月07日 17時02分43秒</span>
+<a class=llink href=../posts/88064626373.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/88064626373 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo4_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo5_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo6_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo7_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo8_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo9_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6sjsjdYb91sjz8axo10_1280.jpg"></p>
+<p>在大雨的空檔，帶比比去福德國小玩。@Taipei</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%A6%8F%E5%BE%B7%E5%9C%8B%E5%B0%8F>#福德國小</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%82%B2%E5%85%92>#育兒</a>
+</p>
+</article>
+
+<article class=regular id=p-87570148833>
+<p class=meta><span class=date>2014年06月02日 13時10分24秒</span>
+<a class=llink href=../posts/87570148833.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/87570148833 rel=canonical>●</a></p>
+<h2>[2014NHL]史坦利盃組合 NY Rangers vs LA Kings</h2>
+<p>相較於東區冠軍賽NY Rangers以4-2贏得這個系列,Blackhawks跟Kings就殺的難分難解.原本Kings已經取得3-1的優勢,沒想到後面兩場Blackhawks居然都擋住了壓力,硬把這個系列帶到了第七場比賽.</p>
+<p>我想今天這場比賽就不提了.相信不管是這個系列,還是這一場比賽,雙方都是進攻進攻再進攻,第一節雙方就總共攻進五球,第二節雙方又各進一球,第三節Kings在比賽只剩五分多鐘即將面臨淘汰之際,Marian Gaborik反手射門得分,又給了Kings一線生機.</p>
+<p>最後進入延長賽,Kings的Martinez射門,球打在Blackhawks隊員身上產生折射後,Crawford無法擋下這一球,而Kings就憑著這一球,進入了史坦利盃的冠軍決賽.</p>
+<p>其實這個系列,我想最大的贏家就是球迷,雙方都是毫無保留的進攻,尤其是Kings的進攻火力真的很驚人！如果沒有壓倒性的領先的話,很容易被Kings追平甚至翻盤.</p>
+<p>而Blackhawks其實我一開始也不看好,只是後來在關鍵時刻都有人跳出來逆轉戰局,所以才能打入西區冠軍決賽.不管如何,謝謝Blackhawks讓我在端午節能夠看到這樣有張力的比賽！</p>
+<p>Game 7</p>
+<p>Final                         1     2     3    OT1   Total</p>
+<p>Los Angeles             2     1     1       1        5</p>
+<p>Chicago                   3     1      0       0       4   </p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/NHL>#NHL</a>
+<a href=http://pacermania.tumblr.com/tagged/NY%20Rangers%20vs%20LA%20Kings>#NY Rangers vs LA Kings</a>
+<a href=http://pacermania.tumblr.com/tagged/Blackhawks>#Blackhawks</a>
+</p>
+</article>
+
+<article class=link id=p-87493647373>
+<p class=meta><span class=date>2014年06月01日 22時30分00秒</span>
+<a class=llink href=../posts/87493647373.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/87493647373 rel=canonical>●</a></p>
+<h2><a href="http://photo.xuite.net/pacermania/19087419/1.jpg">2014大東文化中心 @ 153932的相簿 @ 隨意窩 Xuite 相簿</a></h2>
+<blockquote class="link_og_blockquote">
+<div>2014大東文化中心P_20140601_212154_1.jpg</div>
+</blockquote>
+<p>今天帶比比去大東文化中心玩,順便用polaroid拍了兩張.</p>
+<p>不過大部分的照片都是用Zenfone拍的,顏色算是蠻鮮艷的.就算有些亮暗對比強烈的地方,不開HDR也都可以接受,也許是因為我是lomo派的關係吧！但是開了HDR效果之後,顏色就沒有那暗了.</p>
+<p><a href="http://photo.xuite.net/pacermania/19087419/17.jpg">有開HDR</a></p>
+<p><a href="http://photo.xuite.net/pacermania/19087419/16.jpg">沒開HDR</a></p>
+<p>真的是有差別,不過HDR存檔需要花一點時間,所以我一般用Zenfone拍攝的方式為,不開效果+對焦用無限遠,拍起來速度快畫質也可以接受.</p>
+<p>大東文化藝術中心</p>
+<p>地址:高雄市鳳山區光遠路161號</p>
+
+<iframe frameborder="0" height="350" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com.tw/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=%E9%AB%98%E9%9B%84%E5%B8%82%E9%B3%B3%E5%B1%B1%E5%8D%80%E5%85%89%E9%81%A0%E8%B7%AF%E5%A4%A7%E6%9D%B1%E6%96%87%E5%8C%96%E8%97%9D%E8%A1%93%E4%B8%AD%E5%BF%83&aq=0&oq=%E5%A4%A7%E6%9D%B1&sll=23.63446,120.970459&sspn=8.709338,9.162598&brcurrent=3,0x346e1b4fe3ed01b7:0xeeec1efd3252cd6,0,0x346e43517a7a741b:0x4826a24a54732a37&ie=UTF8&hq=%E5%A4%A7%E6%9D%B1%E6%96%87%E5%8C%96%E8%97%9D%E8%A1%93%E4%B8%AD%E5%BF%83&hnear=830%E9%AB%98%E9%9B%84%E5%B8%82%E9%B3%B3%E5%B1%B1%E5%8D%80%E5%85%89%E9%81%A0%E8%B7%AF&t=m&ll=22.624817,120.362672&spn=0.006295,0.006295&output=embed" width="425"></iframe><br/><small><a href="https://maps.google.com.tw/maps?f=q&source=embed&hl=zh-TW&geocode=&q=%E9%AB%98%E9%9B%84%E5%B8%82%E9%B3%B3%E5%B1%B1%E5%8D%80%E5%85%89%E9%81%A0%E8%B7%AF%E5%A4%A7%E6%9D%B1%E6%96%87%E5%8C%96%E8%97%9D%E8%A1%93%E4%B8%AD%E5%BF%83&aq=0&oq=%E5%A4%A7%E6%9D%B1&sll=23.63446,120.970459&sspn=8.709338,9.162598&brcurrent=3,0x346e1b4fe3ed01b7:0xeeec1efd3252cd6,0,0x346e43517a7a741b:0x4826a24a54732a37&ie=UTF8&hq=%E5%A4%A7%E6%9D%B1%E6%96%87%E5%8C%96%E8%97%9D%E8%A1%93%E4%B8%AD%E5%BF%83&hnear=830%E9%AB%98%E9%9B%84%E5%B8%82%E9%B3%B3%E5%B1%B1%E5%8D%80%E5%85%89%E9%81%A0%E8%B7%AF&t=m&ll=22.624817,120.362672&spn=0.006295,0.006295">顯示詳細地圖</a></small></p>
+<p>交通方式:</p>
+<p>可搭乘高雄捷運橘線至大東站,一出捷運大門就可以看到了！</p>
+<p>詳情可參考<a href="http://www.krtco.com.tw/train_info/service_1-O13.aspx">這裡</a></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/zenfone%205>#zenfone 5</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%A4%A7%E6%9D%B1%E6%96%87%E5%8C%96%E4%B8%AD%E5%BF%83>#大東文化中心</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/Polaroid>#Polaroid</a>
+<a href=http://pacermania.tumblr.com/tagged/hdr>#hdr</a>
+</p>
+</article>
+
+<article class=regular id=p-87492730153>
+<p class=meta><span class=date>2014年06月01日 22時18分00秒</span>
+<a class=llink href=../posts/87492730153.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/87492730153 rel=canonical>●</a></p>
+<h2>[法網2014] Su-Wei Hsieh and Shuai Peng</h2>
+<div class="eventinfo">晉級到第四輪,也就是八強了！希望能像去年溫網一樣,再拿一個大滿貫！</div>
+<div class="eventinfo"></div>
+<div class="eventinfo">Women’s Doubles - Round 3</div>
+<div class="crtset"></div>
+<div class="crtset">Court 1                                         </div>
+<div class="crtrow teamOne">
+<div class="crtset"><a class="alt2" href="http://www.rolandgarros.com/en_FR/players/overview/wta310053.html"><strong>Sw.Hsieh</strong></a> TPE (1) <a class="alt2" href="http://www.rolandgarros.com/en_FR/players/overview/wta160471.html"><strong>S.Peng</strong></a> CHN (1)            <span class="set1">6 </span><span class="set2">6</span></div>
+<div class="name doubles"></div>
+<div class="name doubles"><a class="alt2" href="http://www.rolandgarros.com/en_FR/players/overview/wta080258.html">L.Huber</a> USA (15) <a class="alt2" href="http://www.rolandgarros.com/en_FR/players/overview/wta180144.html">L.Raymond</a> USA (15)     0 2</div>
+</div>
+<div class="crticon"> </div>
+<div class="crtpts"></div>
+<div class="crtset"></div>
+<div class="crtset"><span class="set4"> </span></div>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Su-Wei%20Hsieh>#Su-Wei Hsieh</a>
+<a href=http://pacermania.tumblr.com/tagged/roland%20garros>#roland garros</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B3%95%E7%B6%B2>#法網</a>
+</p>
+</article>
+
+<article class=photo id=p-87457832643>
+<p class=meta><span class=date>2014年06月01日 11時54分41秒</span>
+<a class=llink href=../posts/87457832643.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/87457832643 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n6h1j5cYnf1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6h1j5cYnf1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n6h1j5cYnf1sjz8axo3_1280.jpg"></p>
+<p>比比自己坐進箱子裡，科科。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/polaroid>#polaroid</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>半藤一利-諾門罕之夏（Google圖書） - Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>五月 2025</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2025年05月01日 08時36分48秒</span> <a class="llink" href="../posts/103290594288.html">&para;</a> <a href="http://pacermania.tumblr.com/post/103290594288" rel="canonical">●</a></p>
+
+<h2>半藤一利-諾門罕之夏（Google圖書）</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="諾門罕之夏" id="諾門罕之夏" src="../images/S10985500.jpg" style="width: 1227px; height: 889px;" /></figure>
+
+<p>半藤一利-這位作者我以前沒有聽過，也不知道有這一本書的存在。不過在一次經過書友的介紹下，學會使用Google圖書買書，並且將Google圖書的書用Calibre解DRM。那一次為了試驗Google圖書解DRM，小弟正愁不知道買哪一本書，結果突然想到之前有email推播廣告給我，我就把信件打開，經過一陣挑選之後，就選擇了這一本諾門罕之夏。
+</p>
+
+<p>這本書搜集了很多關於這場戰役的人物，也有搜集一些其他作者的書籍，或者是一些史料以及官方文件，就如同其他的戰爭書籍一樣。當然也免不了的，會針對這場戰役的戰況作最詳細的描述。在描述的同時，又會以加上自己對於當時這個人物的心情還有想法進行揣摩，另外還會加上對於當時時空環境以及氛圍的建構，使讀者可以讀到史料以外的東西（作者的想法）。</p>
+
+
+<p>不過我覺得這本書最棒的部分，不是戰爭細節的描述，反而是當時外交的合縱連橫，真的是相當精彩。諾門罕事件會發生，當然與關東軍的失控有很大的關係，但是當時日本在滿洲成立滿洲國，而滿洲國很自然的會跟日本簽訂共同防禦協定，也就是滿洲國受到侵略，也就等於日本受到侵略，日本就有協防的義務。
+</p>
+<p>然而外蒙常常鬧滿洲國的邊界，關東軍一直希望日本本土可以派更多的軍隊，可以好好的教訓外蒙，讓外蒙不敢入侵滿洲國。然而，外蒙有蘇聯的撐腰，加上日本除了滿洲國這個戰線之外，還有中國地區的戰線（有大量的軍隊被困在中國），不可能有關東軍希望的大量兵力。
+
+</p>
+
+<p>日本也很希望藉由外交的方式，也就是與德國同盟，藉由德國牽制蘇聯西邊的戰線，讓蘇聯沒有多餘的兵力可以支援外蒙。但是與德國同盟會有一個問題，就是德國與英美是敵對狀態，如果跟德國同盟，是必有大概率會跟英美宣戰，所以就有一個問題，就是有必要為了滿洲國的邊境問題，得罪英國和美國嗎？即便當時在中國有發生日本與英國衝突的外交事件，日本基本上也是不希望跟英國交惡（宣戰）的。
+
+</p>
+<p>然而人算不如天算，德國為了可以併吞波蘭，居然跟蘇聯簽訂友好條約。如此一來，不僅德國可以毫無後顧之憂的侵略波蘭，蘇聯也可以暫時不需要顧慮西部戰線，可以把更多更精良的兵力投入外蒙與滿洲國的戰鬥當中。因此，最終就是關東軍不僅兵力少妤對方，連軍備/設備/補給都遠遠遜於蘇聯和外蒙的聯軍，也因此造成關東軍慘烈的傷亡。
+
+</p>
+
+
+
+<p>雖然關東軍的失控是戰敗的主要原因，不僅不理中央的指示，對於戰情還嚴重的判斷錯誤，但是根本原因還是在於兵力，武器還有補給也完全不足。另外，外交上的失利以及中國戰場的拖累，也是造成這場戰爭失敗的原因。
+
+</p>
+
+
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+
+
+
+
+<p><a href="https://play.google.com/store/books/details/%E5%8D%8A%E8%97%A4%E4%B8%80%E5%88%A9_%E8%AB%BE%E9%96%80%E7%BD%95%E4%B9%8B%E5%A4%8F?id=QkaEEAAAQBAJ" target="_blank">諾門罕之夏: 菁英之惡引領日本走向的戰爭大道</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%8D%8A%E8%97%A4%E4%B8%80%E5%88%A9" target="_blank">半藤一利_Wiki</a></p>
+
+<p><a href="../archive/2024-09.html" target="_blank">賈德．戴蒙-槍砲、病菌與鋼鐵</a></p>
+<a href="https://a1253247.blogspot.com/2023/06/blog-post.html">天下雜誌出版-晶片戰爭(克里斯˙米勒)</a>
+<p><a href="https://medium.com/@a1253247/kindle-%E4%BD%BF%E7%94%A8calibre-dedrm-%E5%B9%AB%E4%BD%A0%E5%8E%BB%E9%99%A4%E4%BA%9E%E9%A6%AC%E9%81%9C-amazon-%E9%9B%BB%E5%AD%90%E6%9B%B8%E7%9A%84drm-85da165e2051" target="_blank">[Kindle]使用Calibre+DeDRM，幫你去除亞馬遜(Amazon)電子書的DRM</a></p>
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p><a href="https://www.youtube.com/shorts/TDEwYyjAx_M" target="blank">野獸媽媽|熱愛旅行和下廚的兩男媽</a></p>
+
+<p></p>
+
+<h2><p><a href="https://a1253247.info/pacermania" rel="nofollow" target="_blank">回首頁</a></p></h2>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

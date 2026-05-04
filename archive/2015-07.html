@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":897,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>七月 2015</h1>
+
+
+<article class=regular id=p-125157737208>
+<p class=meta><span class=date>2015年07月27日 16時55分01秒</span>
+<a class=llink href=../posts/125157737208.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/125157737208 rel=canonical>●</a></p>
+<h2>[Google Music]Google Music推出線上電台(Radio)功能</h2>
+<figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/65eab0202aaed48162d8501a2c7c84f5/tumblr_inline_ns51x4lv8z1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>在Apple Music推出之下，Google
+Music就如同Spotify及Rdio一樣，也推出了Radio的功能。具Google的說法，由於大多數想要嘗試Google
+Music的時候，必須要有信用卡，很多人因此對Google Music打退堂鼓。以下是Google的
+
+Zahavah Levine的說法:</p><blockquote><p>
+
+ Until now, “millions of people open the Google Play app, and many close it immediately, because the first thing they see is a request for a credit card,” said Zahavah Levine, who heads up Google Play’s music business. “The key is that this radio tier is part of a holistic range of offerings.”
+
+<br/></p></blockquote><p>所以，Google現在的戰略也很明確，就是與Spotify如出一轍，用免費的線上Radio來拉攏使用者，然後再想辦法讓其訂閱。</p><p>Google的Radio很特別，會根據一天之中的時段，為你推薦適合的音樂型態。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/ae1b614b28c1efba65d06b156247db89/tumblr_inline_ns51w4LkRT1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>當然你也可以自己尋找某個歌手或是某一首歌的Radio，不過自己尋找的Radio的推歌都不是很OK，所以基本上還是以Google推薦的推歌為主比較保險。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/3b102dbac515f2b7d34ae6689e685cf4/tumblr_inline_ns51wu6CtE1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>看來Google除了On-Demand之外，也開始要加入Radio的戰局了。</p><p>
+
+資料來源:<a href="http://recode.net/2015/06/23/google-adds-free-web-radio-to-its-music-subscription-service/">http://recode.net/2015/06/23/google-adds-free-web-radio-to-its-music-subscription-service/</a> </p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Google%20Music>#Google Music</a>
+<a href=http://pacermania.tumblr.com/tagged/Google%20Radio>#Google Radio</a>
+<a href=http://pacermania.tumblr.com/tagged/Spotify>#Spotify</a>
+<a href=http://pacermania.tumblr.com/tagged/Rdio>#Rdio</a>
+<a href=http://pacermania.tumblr.com/tagged/apple%20music>#apple music</a>
+</p>
+</article>
+
+<article class=regular id=p-123736379833>
+<p class=meta><span class=date>2015年07月11日 01時00分22秒</span>
+<a class=llink href=../posts/123736379833.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/123736379833 rel=canonical>●</a></p>
+<h2>[APPLE]APPLE MUSIC試用心得</h2>
+<figure data-orig-width="963" data-orig-height="768" class="tmblr-full"><img data-orig-width="963" data-orig-height="768" src="http://68.media.tumblr.com/63e42dc1e04b2a2f0e84827dbd773eb7/tumblr_inline_nra4vqolv51snfajc_540.png"/></figure><p>令人矚目的<a href="https://www.apple.com/music/">APPLE
+MUSIC</a>終於在6月30日上線了。不過可惜的是，台灣並沒有在第一波上線的名單內，所以如果要聽APPLE
+MUSIC的話，就必須擁有APPLE的外國ID。而我有幸有一個英國的APPLE
+ID，因此就很幸運的可以用Itunes來收聽APPLE
+MUSIC了。</p><p>和<a href="http://pacermania.tumblr.com/post/92245949738/chromebook-google-music">Google Music一</a>樣(只是APPLE做的比較炫)，APPLE
+MUSIC一開始會要你選擇你喜歡的音樂類型和歌手，以方便APPLE去計算你喜歡的音樂，來推送你會有興趣的歌單，如下圖所示。<br/></p><figure data-orig-width="963" data-orig-height="768" class="tmblr-full"><img data-orig-width="963" data-orig-height="768" src="http://68.media.tumblr.com/e95cb0922505f35c14eea3ffab974438/tumblr_inline_nra4zuXXyg1snfajc_540.png"/></figure><p>設定好喜歡的音樂類型和歌手之後，APPLE就會列出推荐的歌單列表，個人覺得還不錯。<br/></p><figure data-orig-width="963" data-orig-height="768" class="tmblr-full"><img data-orig-width="963" data-orig-height="768" src="http://68.media.tumblr.com/3faebbc402a4226bcf6ca483065f6ec7/tumblr_inline_nra56bOHqW1snfajc_540.png"/></figure><p>最新精選的部份，你可以聽到最新的音樂之外，還有許多音樂類型的歌單可以選，甚至還有Rolling Stone、NME、Q、MOJO等專業的音樂雜誌所挑選的歌單！真的很令人興奮！<br/></p><figure data-orig-width="963" data-orig-height="768" class="tmblr-full"><img data-orig-width="963" data-orig-height="768" src="http://68.media.tumblr.com/6958a35ff26832f84aeea03b136c89ab/tumblr_inline_nra59hbVA91snfajc_540.png"/></figure><p>你還可以把你喜歡的歌手或是歌，用成廣播電台(類似Google Music的instant mix)，APPLE會幫你找類似的歌手或是類似的這首歌的音樂，不過有時候這個功能會出鎚，像是我播放<a href="https://en.wikipedia.org/wiki/Yiruma">Yiruma</a>(一位韓國鋼琴家)的廣播電台，結果居然還會播韓國的流行音樂，甚至中年大叔唱的歌，所以在放非英語係國家的音樂要特別留意。但是我播放<a href="https://en.wikipedia.org/wiki/Helen_Jane_Long">Helen Jane Long</a>的廣播電台就沒有這樣的問題，推送的音樂都是我喜歡的。<br/></p><figure data-orig-width="964" data-orig-height="768" class="tmblr-full"><img data-orig-width="964" data-orig-height="768" src="http://68.media.tumblr.com/26cf60733120543272af0f2178ac785a/tumblr_inline_nra5g2oTYS1snfajc_540.png"/></figure><p>Connect這個區域，歌迷可以看到歌手的最新動態，也可以回覆，達到可以跟歌手或樂團互動的功能。<br/></p><figure data-orig-width="963" data-orig-height="768" class="tmblr-full"><img data-orig-width="963" data-orig-height="768" src="http://68.media.tumblr.com/30e996510949609ba955ca34522a36e6/tumblr_inline_nra5pnhuzB1snfajc_540.png"/></figure><p>最近幾天試聽的結果，發現這個具有全球最大的數位音樂資源的龍頭，並沒有好好的統合線上音樂串流、廣播(Beats
+1)、個人音樂資料庫、itunes
+store、iCloud音樂資料庫、歌單推荐歌曲等資源，似乎是有意的讓各種服務發揮其各自的特色。不過話說回來，這也很有可能是APPLE除了之前的釋疑之外，能夠說服<a href="http://technews.tw/2015/06/26/taylor-swift-to-put-1989-on-apple-music/">Taylor
+Swift不在APPLE下架</a>的原因，APPLE的策略也就是不讓線上串流干擾或侵蝕到數位音樂下載的利潤。</p><p>跟Google
+Music比起來，Google
+Music的整合就強很多。Google可以把你所有的音樂資源，不管是在Google
+Music上購買的音樂，或是自行上傳的音樂，以及訂閱的線上串流服務，通通整合起來。所以當你要播放鋼琴類的instant
+mix，Google
+Music就會把你在Google
+Music上購買的音樂，或是自行上傳的音樂，以及訂閱的線上串流服務的音樂弄成播放列表，讓你聆聽音樂的資源可以最大化。</p><p>而APPLE
+MUSIC就歌單推荐歌曲就是數位音樂下載，廣播就是廣播，線上串流就是線上串流，這三者似乎沒有太大的相關，儘管搜尋的時候可以把上述三者APPLE都可以同時搜尋，但是由於版權的關係，有些歌曲只能數位下載，在使用類似Google
+Music的instant
+mix的功能時，APPLE
+MUSIC似乎也不會整合你資料庫的音樂(數位下載+數位版權+iCloud+自己的音樂庫)。</p><p>不過APPLE最大的優勢在於很多明星跟歌手都挺它，不會像<a href="http://buzzorange.com/techorange/2014/11/14/why-taylor-swift-spotify/">Spotify那樣顧人怨</a>，況且Google再怎麼厲害，也很難扳倒在數位音樂耕耘已久的APPLE，而APPLE這次總算補足了他們之前沒有在線上音樂串流耕耘的缺憾。</p><p>後記：</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img data-orig-width="1024" data-orig-height="768" src="http://68.media.tumblr.com/6dac633b5d21445bab10816ff7220ac6/tumblr_inline_nra73o5hub1snfajc_540.png"/></figure><p>要有APPLE國外的ID，基本上要有國外當地的聯絡地址(基本上不可以是地圖上找不到的地址)，國外當地的電話，還有國外當地的信用卡。ID除了可以用新增的方式外，若原本就有APPLE ID又不想新增，可以用<a href="http://iphone4.tw/forums/showthread.php?t=185772">這個方法</a>，我當時選英國是因為我想看NOWTV，加上我有英國當地的電話(手機易付卡)，而國外地址可以上網查，信用卡的部份可以用APPLE的Gift Card來取代，<a href="http://tw.taobao.com/search/search.htm?_ksTS=1436546251996_101&spm=a213z.1224559.20141209.1&_input_charset=utf-8&navigator=all&json=on&q=apple%20gift%20card%20%E8%8B%B1%E5%9B%BD&callback=__jsonp_cb&cna=tPUaDuC4RmsCAXp1lgjO9wGc&abtest=_AB-LR492-LR501-LR517-PR492-PR501-PV517_1273">APPLE Gift Card可以在淘寶上找到</a>，所以我就這樣成功的申請到英國的ID了。APPLE MUSIC服務並不是鎖IP位置，而是看你的ID是否符合資格(跟Google的作法一樣)。<br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E7%B7%9A%E4%B8%8A%E9%9F%B3%E6%A8%82%E4%B8%B2%E6%B5%81>#線上音樂串流</a>
+<a href=http://pacermania.tumblr.com/tagged/apple%20music>#apple music</a>
+<a href=http://pacermania.tumblr.com/tagged/Google%20Music>#Google Music</a>
+<a href=http://pacermania.tumblr.com/tagged/icloud>#icloud</a>
+<a href=http://pacermania.tumblr.com/tagged/apple%20gift%20card>#apple gift card</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B7%98%E5%AF%B6>#淘寶</a>
+<a href=http://pacermania.tumblr.com/tagged/streaming%20music>#streaming music</a>
+<a href=http://pacermania.tumblr.com/tagged/yiruma>#yiruma</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

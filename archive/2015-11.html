@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":1000,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十一月 2015</h1>
+
+
+<article class=regular id=p-132783264693>
+<p class=meta><span class=date>2015年11月08日 15時18分19秒</span>
+<a class=llink href=../posts/132783264693.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/132783264693 rel=canonical>●</a></p>
+<h2>[Amazon]不使用美國信用卡也可購買Amazon Prime Music的服務</h2>
+<img src="http://68.media.tumblr.com/6d0a7af0936ee5055ce3dd537049c315/tumblr_inline_nxhivjJf8L1snfajc_540.png" alt="image"/>
+
+
+
+<pre><br/></pre><p><br/></p><pre>最近使用<a href="http://www.spotify.com">Spotify</a>之後，雖然Spotify的電台推播功能已經有明顯改善，價格上也不</pre>
+
+<pre>貴，只是它的Streaming一直很不順常常會leg，真的很讓人受不了。於是我的腦</pre>
+
+<pre>筋就動到Amazon Prime Music上面了。說實話，Amazon Prime Music其實跟各</pre>
+
+<pre>大線上音樂串流服務來比並沒有比較出色，但是由於Amazon Prime Music不會鎖</pre>
+
+<pre>IP，加上除了音樂之外，Amazon Prime還有美國國內兩天免費送貨到府</pre>
+
+<pre>(Free Two-Day Shipping)，還有一些電影和影集可以線上觀看(Prime Video)，</pre>
+
+<pre>加上每個月會送你一本電子書(當然不是所有的Amazon裡面的書都可以選)，無限</pre>
+
+<pre>量的相片上傳空間(Prime Photos)等，而且每年只要99鎂，算起來應該是很划算</pre>
+
+<pre>的。
+</pre>
+
+<pre>但是Amazon的Prime服務原則上是要美國的信用卡才可以申辦，是否有可以不需</pre>
+
+<pre>要美國信用卡就可以買Amazon Prime呢？答案是有的！我後來在網路上看到[<a href="https://www.reddit.com/r/Beermoneyguides/comments/33jyzz/how_to_purchase_amazon_prime_for_yourself_with/">這</a></pre>
+
+<pre><a href="https://www.reddit.com/r/Beermoneyguides/comments/33jyzz/how_to_purchase_amazon_prime_for_yourself_with/">篇文章</a>]。但是前提是你的Balance裏面要有</pre>
+
+<pre>至少99鎂以上的錢，才有足夠的Balance來購買Prime服務。如何增加Amazon帳</pre>
+
+<pre>號的Balance，請參考[<a href="http://pacermania.tumblr.com/post/103290594288/%E9%9F%B3%E6%A8%82%E5%A6%82%E4%BD%95%E8%B3%BC%E8%B2%B7amazon%E7%9A%84%E6%95%B8%E4%BD%8Dmp3%E9%9F%B3%E6%A8%82">這篇</a>]or[<a href="http://shulamitewhisper.blogspot.tw/2013/10/amazonhow-to-buy-amazon-mp3-ebook.html">這篇</a>]。</pre><p><br/></p>
+
+<pre>1.首先要先進入Amazon Prime的首頁(請參考<a href="http://smile.amazon.com/Amazon-Prime-One-Year-Membership/dp/B00DBYBNEE?sa-no-redirect=1">這裡</a>)</pre><p><br/></p>
+
+<p>2.請點選"Give the gift of Prime"的選項(在"Get Started" 的選項之下)。</p>
+
+<p>3.點選"Add Prime to Cart"</p>
+
+<p>4,點選"Proceed to Checkout"</p>
+
+<p>5.填寫收件者的電子郵件信箱</p>
+
+<p>6.點選右上角的"Save gift options"</p>
+
+<p>7.選擇使用Amazon Balance去支付Prime的99鎂(如下圖所示)</p>
+
+<figure data-orig-width="973" data-orig-height="539" class="tmblr-full"><img src="http://68.media.tumblr.com/618b8697405683334a235b13522ce01a/tumblr_inline_nxhjdyBohx1snfajc_540.png" alt="image" data-orig-width="973" data-orig-height="539"/></figure><pre>8.填寫寄帳單的地址，請選擇實體的美國地址</pre><p><br/></p>
+
+<p>9.接下來就點選”Place your order”來下訂囉(如下圖所示)！</p>
+
+<figure data-orig-width="972" data-orig-height="572" class="tmblr-full"><img src="http://68.media.tumblr.com/d3ebf7ce8b1cc957aae31ade6874a8fc/tumblr_inline_nxhjebZqJI1snfajc_540.png" alt="image" data-orig-width="972" data-orig-height="572"/></figure><pre>之後假設都沒有問題的話，你的電子郵件應該會收到這樣的信息(如下圖所示)。</pre>
+
+<figure data-orig-width="717" data-orig-height="602" class="tmblr-full"><img src="http://68.media.tumblr.com/b694a219257737a5979865578ec2323e/tumblr_inline_nxhjelVCYG1snfajc_540.png" alt="image" data-orig-width="717" data-orig-height="602"/></figure><pre>點選信件裡面的網址之後，需要輸入Amazon的帳號及密碼，接下來就是要確認是</pre>
+
+<pre>否要兌換(redeem)這個Prime的服務了(當然要點continue囉)。</pre>
+
+<figure data-orig-width="995" data-orig-height="614" class="tmblr-full"><img src="http://68.media.tumblr.com/8ee694c9130b166da82da80866f53f9d/tumblr_inline_nxhjf4Vagv1snfajc_540.png" alt="image" data-orig-width="995" data-orig-height="614"/></figure><pre>最後就會出現你已經是Prime會員的信息了。</pre>
+
+<figure data-orig-width="992" data-orig-height="621" class="tmblr-full"><img src="http://68.media.tumblr.com/6003025342efb1918d7195257649692a/tumblr_inline_nxhjfkwfNA1snfajc_540.png" alt="image" data-orig-width="992" data-orig-height="621"/></figure><pre>這兩天使用的結果，我發現Prime Music也沒有那麼的不堪使用，雖然他的電台及</pre>
+
+<pre>歌單比較少，加上之前跟環球唱片一直沒有談隴線上串流的版權，所以一直沒法</pre>
+
+<pre>與其他如Spotify等業者競爭，如今補足了環球這一塊，相信Prime Music還是有一</pre>
+
+<pre>定的競爭力的。不過實際上Prime也只是Amazon要強化本身主要業務(增加銷售量</pre>
+
+<pre>)所延伸出的服務(詳細的原理我就不多說了)，所以Prime Music說穿了也只是</pre>
+
+<pre>Amazon付帶的服務罷了！不過付帶的服務可做到這個規模，也只能說Amazon在</pre>
+
+<pre>線上這一區塊真的是實力堅強呀！
+</pre>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon>#Amazon</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Prime>#Amazon Prime</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Prime%20Music>#Amazon Prime Music</a>
+<a href=http://pacermania.tumblr.com/tagged/Spotify>#Spotify</a>
+<a href=http://pacermania.tumblr.com/tagged/Free%20Two-Day%20Shipping>#Free Two-Day Shipping</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%BE%8E%E5%9C%8B%E5%9C%8B%E5%85%A7%E5%85%A9%E5%A4%A9%E5%85%8D%E8%B2%BB%E9%80%81%E8%B2%A8%E5%88%B0%E5%BA%9C>#美國國內兩天免費送貨到府</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%B7%9A%E4%B8%8A%E9%9F%B3%E6%A8%82%E4%B8%B2%E6%B5%81>#線上音樂串流</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%BE%8E%E5%9C%8B%E4%BF%A1%E7%94%A8%E5%8D%A1>#美國信用卡</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Balance>#Amazon Balance</a>
+<a href=http://pacermania.tumblr.com/tagged/Prime%20Video>#Prime Video</a>
+<a href=http://pacermania.tumblr.com/tagged/Prime%20Photos>#Prime Photos</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

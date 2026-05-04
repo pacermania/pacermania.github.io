@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":980,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>五月 2014</h1>
+
+
+<article class=regular id=p-86702080268>
+<p class=meta><span class=date>2014年05月25日 00時28分00秒</span>
+<a class=llink href=../posts/86702080268.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/86702080268 rel=canonical>●</a></p>
+<h2>[zenfone 5]使用心得</h2>
+<p>最近因為覺得之前的iphone 4s螢幕太小,加上執行一些程式會常常閃退,所以在多方比較之下,就選擇了目前最夯的zenfone 5了.不過我在4月底訂貨的時候,已經要排到5/30才能出貨.好在華碩5/21就出貨,我在隔天就拿到了期待已久的zenfone 5(我買的是2G /16G版本).</p>
+<p>我想在外觀上或是性能上網路已經有太多<a href="http://www.saydigi.com/2014/04/zenfone-5.html">開箱文</a>了！隨便下個關鍵字zenfone就可以找到相關評價.</p>
+<p>所以我想寫一下用zenfone照相的心得吧！</p>
+<p>我個人在用過iphone的照相功能之後,大概就很少手機的照相功能能和iphone相抗衡,目前我是用過大概就是Sony的Z1可以媲美iphone的對焦和拍攝速度(謎之音:HTC ONE的相機功能不管是色調,對焦,畫素,快門反應都是慘不忍睹呀！)zenfone 5的照相功能基本上與Sony相當,而且還有很多華碩自家的功能.以下是我拍攝的照片</p>
+<p><img alt="image" src="http://68.media.tumblr.com/467081224d9ac0b90693a7f6849aa6de/tumblr_inline_n635zjdNAF1snfajc.jpg"/></p>
+
+<p><img alt="image" src="http://68.media.tumblr.com/92372c193667eddac75d9b44af4eacc1/tumblr_inline_n63607AqEH1snfajc.jpg"/></p>
+
+<p>拍起來的感覺雖然沒有iphone好,而且之前有聽說華碩把<a href="http://mi.ezbox.idv.tw/thread-2529-1-1.html">相片圖檔的壓縮比調的很高</a>,造成圖片失真,加上圖片四個角落因為球面像差的關係有廣角鏡的感覺,不過對於一支5000元以內的手機,這樣的對焦速度和圖片品質我已經很滿足了！相較於我老婆那支HTC ONE的畫質,我還覺得zenfone算是物超所值了！</p>
+<p>另外,zenfone還有無限遠對焦功能,下面這張是用無限遠的模式照的.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/6e6009d1552af6f52c8b342e8d7a9cd1/tumblr_inline_n636giCt4h1snfajc.jpg"/></p>
+<p><img src="http://68.media.tumblr.com/9e9473a42ed68d4163cd89c7b3bb2bfc/tumblr_inline_n64hqsHG6M1snfajc.jpg"/></p>
+<p><img src="http://68.media.tumblr.com/db0ca71e5f6115e894a9357c395a6a6e/tumblr_inline_n64hrk7m4Z1snfajc.jpg"/></p>
+
+<p></p>
+<p>如果真的等不及對焦,可以用無限遠模式看看,基本上我覺得拍起來沒差,除非你真的要拍近物才會有差,所以開無限遠的話,你就可以把zenfone用lomo相機的手法來拍啦！而且zenfone在光線不足的時候還會提醒你打開低光源模式,真的是很貼心的設計.</p>
+<p>所以如果你只是要一個隨時可以拍照po臉書或是上網分享照片,看影片的手機,zenfone應該是可以列入選項之一.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/zenfone>#zenfone</a>
+<a href=http://pacermania.tumblr.com/tagged/asus>#asus</a>
+</p>
+</article>
+
+<article class=video id=p-86110334563>
+<p class=meta><span class=date>2014年05月18日 22時50分09秒</span>
+<a class=llink href=../posts/86110334563.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/86110334563 rel=canonical>●</a></p>
+<iframe width="400" height="225"  id="youtube_iframe" src="https://www.youtube.com/embed/3j944FOWUE0?feature=oembed&enablejsapi=1&origin=http://safe.txmblr.com&wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<p><a class="tumblr_blog" href="http://godzillamovie.tumblr.com/post/85944770865/now-playing-tv-spot">godzillamovie</a>:</p>
+<blockquote>
+<div class="_wk fwb"><a href="https://www.facebook.com/photo.php?v=760968490600224">Godzilla - Now Playing</a></div>
+<div class="_wk fwb"></div>
+<div>
+<div class="_wk">The wait is over. <a class="_58cn" href="https://www.facebook.com/hashtag/godzilla" data-ft='{"tn":"*N","type":104}'>GODZILLA</a> has arrived: <a href="http://bit.ly/GZtickets" rel="nofollow nofollow">http://bit.ly/GZtickets</a></div>
+</div>
+</blockquote>
+<p>太久沒看電影啦！我要看酷斯拉啦！</p>
+<p><a href="https://www.youtube.com/watch?v=3j944FOWUE0">Original</a></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E9%85%B7%E6%96%AF%E6%8B%89>#酷斯拉</a>
+<a href=http://pacermania.tumblr.com/tagged/godzilla>#godzilla</a>
+</p>
+</article>
+
+<article class=regular id=p-85821273643>
+<p class=meta><span class=date>2014年05月15日 22時55分00秒</span>
+<a class=llink href=../posts/85821273643.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/85821273643 rel=canonical>●</a></p>
+<h2>[NHL]2013/14 Chicago Blackhawks季後賽 2nd round</h2>
+<p>Fri May 2, 2014 Wild Blackhawks<br/> 8:30 PM FINAL <span>MIN (2)</span> - <span class="black">CHI (5)</span> <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,231&lang=en" title="Minnesota Wild vs Chicago Blackhawks Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030231">Recap</a>  </p>
+<p>Sun May 4, 2014 Wild Blackhawks<br/> 2:00 PM FINAL <span>MIN (1)</span> - <span class="black">CHI (4)</span> <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,232&lang=en" title="Minnesota Wild vs Chicago Blackhawks Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030232">Recap</a> </p>
+<p>Tue May 6, 2014 Blackhawks Wild<br/> 8:00 PM FINAL <span>CHI (0)</span> - <span class="black">MIN (4)</span> <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,233&lang=en" title="Chicago Blackhawks vs Minnesota Wild Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030233">Recap</a>  </p>
+<p>Fri May 9, 2014 Blackhawks Wild<br/> 8:30 PM FINAL <span>CHI (2)</span> - <span class="black">MIN (4)</span> <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,234&lang=en" title="Chicago Blackhawks vs Minnesota Wild Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030234">Recap</a>  </p>
+<p>Sun May 11, 2014 Wild Blackhawks<br/> 8:00 PM FINAL <span>MIN (1)</span> - <span class="black">CHI (2)</span> <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,235&lang=en" title="Minnesota Wild vs Chicago Blackhawks Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030235">Recap</a>  </p>
+<p>Tue May 13, 2014 Blackhawks Wild<br/> 8:00 PM FINAL <span class="black">CHI (2)</span> - <span>MIN (1)</span> OT <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,236&lang=en" title="Chicago Blackhawks vs Minnesota Wild Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030236">Recap</a></p>
+<p>以上取自http://blackhawks.nhl.com官網</p>
+<p>經過第1輪慘烈的"加班"拼戰之後,第2輪恢復了黑鷹隊該有的節奏.尤其是狂野隊居然淘汰了具有防守出色門將的雪崩隊,對黑鷹隊無疑是一個好消息.</p>
+<p>第2輪除了第3戰較為失常,第6戰打到OT才由Kane打入致勝分外,前兩戰維持對Blues的手感得分較多,到第3戰以後,狂野隊拿出驚人的防守,讓黑鷹隊的進攻倍感壓力,所以說狂野隊擊敗雪崩隊不是沒有原因的.好在第5戰和第6戰都頂住低得分的壓力,尤其第5戰第3節又是隊長打入關鍵的1分,使黑鷹隊取得第5戰的勝利,最後黑鷹隊這個系列還是以4-2晉級西區冠軍戰.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/2013/14%20NHL>#2013/14 NHL</a>
+<a href=http://pacermania.tumblr.com/tagged/nhl>#nhl</a>
+<a href=http://pacermania.tumblr.com/tagged/nhl%20playoffs>#nhl playoffs</a>
+<a href=http://pacermania.tumblr.com/tagged/Blackhawks>#Blackhawks</a>
+</p>
+</article>
+
+<article class=regular id=p-85820224443>
+<p class=meta><span class=date>2014年05月15日 22時38分00秒</span>
+<a class=llink href=../posts/85820224443.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/85820224443 rel=canonical>●</a></p>
+<h2>[NHL]2013/14 Chicago Blackhawks季後賽 1st round</h2>
+<p>Thu Apr 17, 2014 Blackhawks Blues<br/> 7:00 PM FINAL <span>CHI (3)</span> - <span class="black">STL (4)</span> 3rd OT <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,161&lang=en" title="Chicago Blackhawks vs St. Louis Blues Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030161">Recap</a>  </p>
+<p>Sat Apr 19, 2014 Blackhawks Blues<br/> 2:00 PM FINAL <span>CHI (3)</span> - <span class="black">STL (4)</span> OT <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,162&lang=en" title="Chicago Blackhawks vs St. Louis Blues Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030162">Recap</a>  </p>
+<p>Mon Apr 21, 2014 Blues Blackhawks<br/> 7:30 PM FINAL <span>STL (0)</span> - <span class="black">CHI (2)</span> <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,163&lang=en" title="St. Louis Blues vs Chicago Blackhawks Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030163">Recap</a>  </p>
+<p>Wed Apr 23, 2014 Blues Blackhawks<br/> 8:30 PM FINAL <span>STL (3)</span> - <span class="black">CHI (4)</span> OT <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,164&lang=en" title="St. Louis Blues vs Chicago Blackhawks Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030164">Recap</a>  </p>
+<p>Fri Apr 25, 2014 Blackhawks Blues<br/> 7:00 PM FINAL <span class="black">CHI (3)</span> - <span>STL (2)</span> OT <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,165&lang=en" title="Chicago Blackhawks vs St. Louis Blues Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030165">Recap</a>  </p>
+<p>Sun Apr 27, 2014 Blues Blackhawks<br/> 2:00 PM FINAL <span>STL (1)</span> - <span class="black">CHI (5)</span> <a href="http://video.blackhawks.nhl.com/videocenter/console?hlg=20132014,3,166&lang=en" title="St. Louis Blues vs Chicago Blackhawks Video" target="_blank"><img alt="image" border="0" src="http://blackhawks.nhl.com/v2/images/video.gif?v=7.29"/></a>   <a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013030166">Recap</a>  </p>
+<p>以上取自http://blackhawks.nhl.com官網</p>
+<p>我只能說前兩戰黑鷹隊運氣真的很差,兩場打到OT都輸.還好第3戰隊長Jonathan Toews和門將Corey Crawford的出色演出下,取得了重要的一場勝利.</p>
+<p>接下來第4戰OT,年輕小將Kane攻下致勝分,把整個系列拉成2-2平手.</p>
+<p>第5戰OT又是靠著隊長一個單刀的機會,把球打進對方大門,這一球等於是壓垮Blues的最後一根稻草.可以說黑鷹隊贏就贏在第5戰.</p>
+<p>第6戰可以說Blues第3節士氣整個崩盤,黑鷹隊在第3節大爆發拿下4分,終場就以5-1狂勝.晉級第二輪.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/2013/14%20NHL>#2013/14 NHL</a>
+<a href=http://pacermania.tumblr.com/tagged/nhl%20playoffs>#nhl playoffs</a>
+<a href=http://pacermania.tumblr.com/tagged/Blackhawks>#Blackhawks</a>
+</p>
+</article>
+
+<article class=link id=p-85815597028>
+<p class=meta><span class=date>2014年05月15日 21時20分53秒</span>
+<a class=llink href=../posts/85815597028.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/85815597028 rel=canonical>●</a></p>
+<h2><a href="http://alansh546.blogspot.tw/2014/03/ubuntulinewine-ubuntu-install-naver.html">萬芳山上- 工程師的路: [Ubuntu]Ubuntu上安裝Line(使用Wine執行) Ubuntu Install NAVER Line (Run with Wine)</a></h2>
+<p>還好有這篇文章,讓我的Ubuntu可以用電腦版的LINE！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/ubuntu>#ubuntu</a>
+<a href=http://pacermania.tumblr.com/tagged/Ubuntu%2014.04>#Ubuntu 14.04</a>
+<a href=http://pacermania.tumblr.com/tagged/line>#line</a>
+<a href=http://pacermania.tumblr.com/tagged/wine>#wine</a>
+</p>
+</article>
+
+<article class=photo id=p-85426050423>
+<p class=meta><span class=date>2014年05月11日 23時25分35秒</span>
+<a class=llink href=../posts/85426050423.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/85426050423 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n5f1inqXqE1sjz8axo1_1280.png"></p>
+<p>母親節快樂！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/mother%27s%20day>#mother's day</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AF%8D%E8%A6%AA%E7%AF%80>#母親節</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AF%8D%E8%A6%AA%E7%AF%80%E5%BF%AB%E6%A8%82>#母親節快樂</a>
+</p>
+</article>
+
+<article class=regular id=p-84923383038>
+<p class=meta><span class=date>2014年05月06日 22時10分00秒</span>
+<a class=llink href=../posts/84923383038.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/84923383038 rel=canonical>●</a></p>
+<h2>[2014WorldCup]小組分組</h2>
+<p><strong>Group A</strong></p>
+<div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/bra.png"/></span></div>
+<div class="t-n"><span class="t-nText">Brazil</span></div>
+<div class="t-n"></div>
+</div>
+<div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/cro.png"/></span></div>
+<div class="t-n"><span class="t-nText">Croatia</span></div>
+<div class="t-n"></div>
+</div>
+<div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/mex.png"/></span></div>
+<div class="t-n"><span class="t-nText">Mexico</span></div>
+<div class="t-n"></div>
+</div>
+<div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/cmr.png"/></span></div>
+<div class="t-n"><span class="t-nText">Cameroon</span></div>
+<div class="t-n"><span class="t-nText"></span></div>
+<div class="t-n"></div>
+</div>
+<div class="group-wrap">
+<div class="anchor"><strong>Group B</strong><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/esp.png"/></span></div>
+<div class="t-n"><span class="t-nText">Spain</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/ned.png"/></span></div>
+<div class="t-n"><span class="t-nText">Netherlands</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/chi.png"/></span></div>
+<div class="t-n"><span class="t-nText">Chile</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/aus.png"/></span></div>
+<div class="t-n"><span class="t-nText">Australia</span></div>
+<div class="t-n"></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span></div>
+</div>
+<div class="group-wrap">
+<div class="anchor"><strong>Group C</strong></div>
+<div class="anchor"><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/col.png"/></span></div>
+<div class="t-n"><span class="t-nText">Colombia</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/gre.png"/></span></div>
+<div class="t-n"><span class="t-nText">Greece</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/civ.png"/></span></div>
+<div class="t-n"><span class="t-nText">Côte d'Ivoire</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/jpn.png"/></span></div>
+<div class="t-n"><span class="t-nText">Japan</span></div>
+<div class="t-n"><span class="t-nText"></span></div>
+<div class="t-n"></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span></div>
+</div>
+<div class="group-wrap">
+<div class="anchor"><strong>Group D</strong><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/uru.png"/></span></div>
+<div class="t-n"><span class="t-nText">Uruguay</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/crc.png"/></span></div>
+<div class="t-n"><span class="t-nText">Costa Rica</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/eng.png"/></span></div>
+<div class="t-n"><span class="t-nText">England</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/ita.png"/></span></div>
+<div class="t-n"><span class="t-nText">Italy</span></div>
+<div class="t-n"><span class="t-nText"></span></div>
+<div class="t-n"></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span></div>
+</div>
+<div class="group-wrap">
+<div class="anchor"><strong>Group E</strong></div>
+<div class="anchor"><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/sui.png"/></span></div>
+<div class="t-n"><span class="t-nText">Switzerland</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/ecu.png"/></span></div>
+<div class="t-n"><span class="t-nText">Ecuador</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/fra.png"/></span></div>
+<div class="t-n"><span class="t-nText">France</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/hon.png"/></span></div>
+<div class="t-n"><span class="t-nText">Honduras</span></div>
+<div class="t-n"></div>
+<div class="t-n"></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span></div>
+</div>
+<div class="group-wrap">
+<div class="anchor"><strong>Group F</strong></div>
+<div class="anchor"><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/arg.png"/></span></div>
+<div class="t-n"><span class="t-nText">Argentina</span></div>
+</div>
+<br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/bih.png"/></span></div>
+<div class="t-n"><span class="t-nText">Bosnia and Herzegovina</span></div>
+</div>
+<br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/irn.png"/></span></div>
+<div class="t-n"><span class="t-nText">Iran</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/nga.png"/></span></div>
+<div class="t-n"><span class="t-nText">Nigeria</span></div>
+<div class="t-n"><span class="t-nText"></span></div>
+<div class="t-n"></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span></div>
+</div>
+<div class="group-wrap">
+<div class="anchor"><strong>Group G</strong></div>
+<div class="anchor"><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/ger.png"/></span></div>
+<div class="t-n"><span class="t-nText">Germany</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/por.png"/></span></div>
+<div class="t-n"><span class="t-nText">Portugal</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/gha.png"/></span></div>
+<div class="t-n"><span class="t-nText">Ghana</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/usa.png"/></span></div>
+<div class="t-n"><span class="t-nText">USA</span></div>
+<div class="t-n"><span class="t-nText"></span></div>
+<div class="t-n"></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span></div>
+</div>
+<div class="group-wrap">
+<div class="anchor"><strong>Group H</strong></div>
+<div class="anchor"><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/bel.png"/></span></div>
+<div class="t-n"><span class="t-nText">Belgium</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/alg.png"/></span></div>
+<div class="t-n"><span class="t-nText">Algeria</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/rus.png"/></span></div>
+<div class="t-n"><span class="t-nText">Russia</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><br/><div class="t">
+<div class="t-i i-4"><span class="t-i-wrap"><img alt="" class="i-4-flag flag" src="http://img.fifa.com/images/flags/4/kor.png"/></span></div>
+<div class="t-n"><span class="t-nText">Korea Republic</span></div>
+</div>
+<span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="text"></span><span class="qlink-link last"></span></div>
+</div>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E4%B8%96%E7%95%8C%E7%9B%83worldcup%202014>#世界盃worldcup 2014</a>
+<a href=http://pacermania.tumblr.com/tagged/WolrdCUP2014>#WolrdCUP2014</a>
+<a href=http://pacermania.tumblr.com/tagged/2014worldcup%E5%88%86%E7%B5%84>#2014worldcup分組</a>
+</p>
+</article>
+
+<article class=photo id=p-84578409338>
+<p class=meta><span class=date>2014年05月03日 10時48分43秒</span>
+<a class=llink href=../posts/84578409338.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/84578409338 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo4_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo5_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo6_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo7_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo8_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo9_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n4z9573FHC1sjz8axo10_1280.jpg"></p>
+</article>
+
+<article class=regular id=p-84424776418>
+<p class=meta><span class=date>2014年05月01日 22時38分00秒</span>
+<a class=llink href=../posts/84424776418.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/84424776418 rel=canonical>●</a></p>
+<h2>[ubuntu]如何在ubuntu系統無法開機的情形下備份資料</h2>
+<p>首先你要會製作一個<a href="http://zh.wikipedia.org/wiki/Live_CD">ubuntu開機光碟</a>或是ubuntu的<a href="http://gordon168.tw/?p=323/">可開機的隨身碟</a>.</p>
+<p>然後開機之後,你會很自然的認為,那個無法開機的硬碟中的資料（使用ubuntu系統）,應該就是可以直接copy/paste,之後就是等資料全部都救到隨身硬碟後,就可以把硬碟重灌ubuntu了.</p>
+<p>但是事實上沒那樣簡單,因為硬碟裡面的資料的owner,都會變成user #1000！這是什麼鬼?原來在某些版本的UID_MIN值就是1000(<a href="http://linux.vbird.org/linux_basic/0410accountmanager/0410accountmanager-fc4.php#account_id">參考鳥哥的私房菜</a>),所以一般使用者的身份就是從1000起跳囉！</p>
+<p>那要怎麼樣才能把我原先硬碟中的資料的owner變更呢？</p>
+<p>很簡單,只要打開終端機,先把權限提升到root.</p>
+<p>$ sudo -i</p>
+<p>然後輸入</p>
+<p>$ chown -R root /home/(你的使用者名稱)/</p>
+<p>這樣基本上在你的使用者名稱底下的檔案和資料夾owner就會變成root了.只是有時候還是會遇到權限的問題,例如無法進入資料夾的問題.這時就可以用更改檔案權限chmod的方式.</p>
+<p>同樣的要取得root的權限.</p>
+<p>然後輸入</p>
+<p>$ chmod -R 777 /home/(你的使用者名稱)/</p>
+<p>這樣就等於硬碟中你的使用者名稱底下的檔案和資料夾任何人都可以讀取/存取/執行了.</p>
+<p>我這幾天就是遇到電腦嚴重到無法開機,只好用這一招來備份電腦中的資料,基本上99%的資料都可以就的回來.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/ubuntu>#ubuntu</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%82%99%E4%BB%BD>#備份</a>
+<a href=http://pacermania.tumblr.com/tagged/backup>#backup</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

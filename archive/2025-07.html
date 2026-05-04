@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>柳美里-『JR上野駅公園口』 - Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>七月 2025</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2025年07月01日 09時57分02秒</span> <a class="llink" href="../posts/103290594288.html">&para;</a> <a href="http://pacermania.tumblr.com/post/103290594288" rel="canonical">●</a></p>
+
+<h2>柳美里-『JR上野駅公園口』</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="JR上野駅公園口" id="JR上野駅公園口" src="../images/E95AB7506B81.jpg" style="width: 889px; height: 1040px;" /></figure>
+
+<p>柳美里-在知道這本書之前，我對於韓國作家或是韓國有關的文學，大抵就是描述從北韓逃離到中國，輾轉逃到南韓的脫北者的故事。或是在描寫在日本殖民朝鮮期間，一群為了要生存下去的朝鮮人，離鄉背井來到日本，雖然語言不通，雖然備受歧視，但是他們終究在這樣的逆境中，在日本生存下來，進而認同日本這個國家。柳美里是韓裔日本人，也是具有相同的背景，再加上無意間看到了這一本JR上野駅公園口，使我心生好奇，於是我就在博客來網站訂購了這本書。
+</p>
+
+<p>原本我期待這一本書會是類似，日劇池袋西口公園的劇情，要在種種蛛絲馬跡下，找到真正的犯人。但是這本書雖然也是以公園為主題，但是卻是描寫流浪漢的生活，這也是一個相當有趣的題材。到底作者會如何描寫流浪漢的生活？到底是要遭遇到什麼樣的挫折，才會讓人拋棄一切，寧可選擇生活在公園裡，以拾荒的方式維持生計？我真的很佩服作者可以去細膩的描寫流浪漢在公園裡的生活，是要如何與公園中的各種族群共存，面對警察搜山的時候，又該如何應變，如何自處？</p>
+
+
+<p>但是話說回來，每一個人變成流浪漢的原因或是理由都不盡相同，但是絕非是一成不變的從富有到貧窮落魄，最後只好流落街頭的劇本。書中的主角就是一個原本是來東京打零工，賺取金錢來供應自己鄉下的家庭所需，結果沒想到他的兒子還沒讀完大學就意外過世，妻子也在不久之後在睡夢中過世，人生遭逢這樣的打擊，但又沒有勇氣結束自己的生命，只好流落街頭（公園）放逐自己。
+</p>
+<p>或許流浪漢在一個城市中是一個討厭的存在，不管政府單位或是一般人民，都會投以厭惡的眼光。但是如果在了解他們的故事之後，是否會不會比較同理選擇流浪的人的心理呢?雖然流浪者需要在這樣的眼光下生存，但是他們已經習慣(或是說不在乎)旁人的眼光，他們更在乎的是自己到底能不能被自己接納，自己的痛苦能不能被理解，還是只能向同為流浪者的人訴苦?主角最終在一次警察搜山的行動中，拖著生病的身體，從上野出發回到老家。回到老家時，卻發現海嘯正來襲，而她的孫女正好開車時遇上海嘯，沒能躲過這次的劫難。
+
+</p>
+
+<p>這本書充滿著悲傷的基調，柳美里擅長把自己的隱私寫成小說，把她不幸及悲慘的遭遇訴諸文字。這次他也選擇以文字的方式，以這本書來紀念311受災的人們。
+
+
+</p>
+
+
+
+
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+
+
+
+
+<p><a href="https://www.books.com.tw/products/E050153858?sloc=main" target="_blank">JR上野站公園口 (電子書)</a></p>
+<p><a href="https://a1253247.blogspot.com/2024/04/blog-post.html" target="_blank">蓋亞文化-柏青哥(李珉貞)</a></p>
+
+<p><a href="../archive/2024-12-1.html" target="_blank">因為討厭韓國-張康明(布克文化出版事業部)</a></p>
+<a href="https://a1253247.info/pacermania/archive/2025-02-1.html">漫遊者文化-少年來了（韓江）</a>
+<p><a href="https://readmoo.com/book/210033744000101" target="_blank">擁有七個名字的女孩：一個北韓叛逃者的真實故事 - 李晛瑞</a></p>
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p><a href="https://www.youtube.com/shorts/TDEwYyjAx_M" target="blank">野獸媽媽|熱愛旅行和下廚的兩男媽</a></p>
+
+<p></p>
+
+<h2><p><a href="https://a1253247.info/pacermania" rel="nofollow" target="_blank">回首頁</a></p></h2>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

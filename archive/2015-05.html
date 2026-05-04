@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":2720,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>五月 2015</h1>
+
+
+<article class=regular id=p-118865765358>
+<p class=meta><span class=date>2015年05月13日 22時43分14秒</span>
+<a class=llink href=../posts/118865765358.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/118865765358 rel=canonical>●</a></p>
+<h2>[Nexus Player]安裝Sideload app與其他app</h2>
+<figure data-orig-width="800" data-orig-height="800" class="tmblr-full"><img src="http://68.media.tumblr.com/4a33bab8035e1bbbb3c766c5ed83cb19/tumblr_inline_noal4dU8mH1snfajc_540.png" alt="image" data-orig-width="800" data-orig-height="800"/></figure><p>最近由於老媽把<a href="https://www.google.com.tw/intl/zh-TW/chrome/devices/chromecast/?utm_souce=google&utm_campaign=tw-zh-dsk-bk&utm_medium=ha&utm_content=text&utm_term=chromecast">Chromecast</a>拿去用了，雖然說我們家還有apple
+tv可以使用，但是Chromecast到底還是比較威，也比較可以用一些有的沒的app，蘋果就是只能用它主機本身所提供的功能(雖然apple提供的功能確實是最大眾化的)。</p><p>原本只是想找另一支二手的Chromecast，但是後來發現Nexus
+Player也具有Google
+Cast的功能，另外還有一些內建的app可以使用，可以說是apple
+tv+Chromecast的合體，於是後來就買了Nexus
+Player了。</p><p>不過Nexus
+Player有一個問題，就是Nexus
+Player的Google
+Play商店和一般Android手機的商店所提供app不一樣，Nexus
+Player的商店只提供專門為Nexus
+Player設計的app（如Pandora,
+Netflax, Hulu Plus等），所以實際上Nexus
+Player並不是我們所想的一樣，要灌什麼app就灌什麼app。</p><p><a></a>
+所以這時候就要先用電腦，進入Google
+Play商店，把sideload這個app先灌進Nexus
+Player（可參考<a href="http://ahuiliao.pixnet.net/blog/post/30585703-%5B%E6%95%99%E5%AD%B8%5D-nexus-player-%E5%AE%89%E8%A3%9D%E8%87%AA%E8%A8%82-apk-%E7%A8%8B%E5%BC%8F%E6%96%B9%E6%B3%95">[教學]
+Nexus Player 安裝自訂
+APK
+程式方法</a>
+這篇文章）。</p><p>可是現在的<a href="https://play.google.com/store/apps/details?id=com.estrongs.android.pop&hl=en">es
+file explorer</a>已經不能使用上述方法來灌進Nexus
+Player了，因此我們必須尋找其他的方式來安裝。後來我發現可以使用USB連線的方式，來將你想要灌的app灌進去。</p><p>首先你必須到<a href="http://forum.xda-developers.com/showthread.php?p=48915118#post48915118">這個網站</a>下載adb。</p><p>接下來，就是要將你的Nexus
+Player用成Developer
+Mode。這花了我好久的時間才搞定。原來就是要在從Setting(路徑)Setting–>About–>Build
+Number，如下圖所示。</p><figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/6ed05dc6936516767d6599a837aa5c72/tumblr_inline_noalgrlwvs1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>然後在<a href="http://forum.xda-developers.com/nexus-player/general/guide-nexus-player-how-to-unlock-t2961989">Build
+Number上一直按</a>（就像打大台電玩雷電一樣，一直連按就對了，如下圖所示。</p><figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/5a8d1c92760be48a8e74bd038f933ece/tumblr_inline_noaliyYcCo1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>這樣Nexus
+Player就可以進入Developer
+Mode了。</p><p>這時電腦就可以用USB轉OTG接線連接Nexus
+Player，並且進入Windows的終端機視窗(cmd)輸入以下指令（可參考<a href="http://forum.xda-developers.com/nexus-player/help/help-es-file-explorer-wont-install-t3090250/page2">這個網站</a>）。</p><p>adb
+devices 
+</p><p>若有連接成功，終端機視窗應該會出現以下訊息：</p><p>List
+of devices</p><p>xxxxxxxxxxx
+→ 你的Nexus
+Player的名稱，例如 Asus
+Nexus Player</p><p>然後再到你儲存APK檔的目錄下，執行以下指令。</p><p>adb
+install 你的APK檔名（例如：adb
+install Google_Drive.apk或adb
+install ES File Explorer.apk)</p><p>把上述app
+sideload到你的Nexus
+Player裡面。</p><figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/65f1c0ab65c7c8fa1b9e70b3fb833fd0/tumblr_inline_noalcqBa2o1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>如果沒有意外的話，你的Nexus
+Player會多出一個Sideload的圖示。</p><p>點進去之後，就可以看到你Sideload進去的app了。</p><figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/aeeb55c41a24e7c8b9dd3e3ab017ca23/tumblr_inline_noale9YVpm1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>若各位有興趣，可以在<a href="http://search.ruten.com.tw/search/s000.php?searchfrom=indexbar&k=Nexus+player&t=0">露天拍賣輸入關鍵字Nexus Player</a>，就可以找到賣家了。</p><p>以下是分隔線</p><p>——————————————————————-</p><p>我個人額外推薦兩個app，分別是Google_Drive.apk以及I-Love-TV-Drama-mahooq.com.apk（我愛連續劇）。安裝Google
+Drive app就可以不用透過USB連線的方式，直接將你的apk檔拋到Google
+Drive，直接在Google
+Drive上Install
+apk檔，真的超方便。另外，I-Love-TV-Drama-mahooq.com.apk這個app可以讓你看遍台日中韓目前最新最夯的連續劇，這樣Nexus
+Player就可以媲美市售的android電視棒了。</p><p>Google_Drive.apk<br/></p><p><a href="http://sync.hamicloud.net/_oops/pacermania/0ov">連結1</a>  <a href="https://drive.google.com/file/d/0BxLoHIThJzOXeG5fMVl0bTQ0b2s/view?usp=sharing">連結2</a></p><p>I-Love-TV-Drama-mahooq.com.apk（我愛連續劇）<br/></p><p><a href="http://sync.hamicloud.net/_oops/pacermania/07i">連結1</a>  <a href="https://drive.google.com/file/d/0BxLoHIThJzOXR1NIWEFBYTJvMTA/view?usp=sharing">連結2</a></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/nexus%20player>#nexus player</a>
+<a href=http://pacermania.tumblr.com/tagged/google%20cast>#google cast</a>
+<a href=http://pacermania.tumblr.com/tagged/sideload>#sideload</a>
+<a href=http://pacermania.tumblr.com/tagged/USB%E8%BD%89OTG%E6%8E%A5%E7%B7%9A>#USB轉OTG接線</a>
+<a href=http://pacermania.tumblr.com/tagged/adb>#adb</a>
+<a href=http://pacermania.tumblr.com/tagged/SideLoad%20Launcher>#SideLoad Launcher</a>
+<a href=http://pacermania.tumblr.com/tagged/Chromecast>#Chromecast</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%88%91%E6%84%9B%E9%80%A3%E7%BA%8C%E5%8A%87>#我愛連續劇</a>
+<a href=http://pacermania.tumblr.com/tagged/I-Love-TV-Drama-mahooq.com.apk>#I-Love-TV-Drama-mahooq.com.apk</a>
+<a href=http://pacermania.tumblr.com/tagged/Google_Drive.apk>#Google_Drive.apk</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

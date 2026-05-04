@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":909,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>七月 2014</h1>
+
+
+<article class=photo id=p-93011306893>
+<p class=meta><span class=date>2014年07月27日 21時49分02秒</span>
+<a class=llink href=../posts/93011306893.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/93011306893 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n9didqQeTM1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n9didqQeTM1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n9didqQeTM1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n9didqQeTM1sjz8axo4_1280.jpg"></p>
+<p>跟爺爺奶奶在夢時代合照。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%A4%A2%E6%99%82%E4%BB%A3>#夢時代</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%A4%A2%E6%99%82%E4%BB%A3%E5%B9%BC%E5%85%92%E6%8E%A8%E8%BB%8A>#夢時代幼兒推車</a>
+</p>
+</article>
+
+<article class=photo id=p-93003190733>
+<p class=meta><span class=date>2014年07月27日 18時43分23秒</span>
+<a class=llink href=../posts/93003190733.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/93003190733 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n9d9sbnKzt1sjz8axo1_1280.jpg"></p>
+<p>難得爺爺來高雄，跟爺爺一起在夢時代品辣吃晚餐!</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%93%81%E8%BE%A3%E5%A4%A2%E6%99%82%E4%BB%A3>#品辣夢時代</a>
+</p>
+</article>
+
+<article class=quote id=p-92615054073>
+<p class=meta><span class=date>2014年07月23日 15時39分00秒</span>
+<a class=llink href=../posts/92615054073.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/92615054073 rel=canonical>●</a></p>
+<blockquote><p>Google Voice 打電話、傳簡訊不用錢，取得美國電話號碼(美加地區免費)</p>
+
+<p>整個申請流程大概是：申請SIP→申請IPKall→IPKall電話綁到SipDroid→掛VPN→申請Google Voice→ 用SipDroid接收電話認證通知→取得Google Voice電話→離開VPN→免換IP永久使用Google Voice。</p>
+
+<p>取自http://sofree.cc/google-voice/</p></blockquote>
+<p>其實萬變不離其宗,雖然我沒有去ipkall申請網路電話門號,而是去<a href="http://www.virtualphoneline.com/">virtualphoneline</a>申請一個網路電話門號,原本想說只要利用virtualphoneline內建綁定skype的功能,就可以用skype來接聽.</p>
+<p>只是我在輸入google voice認證碼的時候欲到了困難,我沒辦法在我的linux版的skype上拉出數字鍵盤,所以一直認證失敗.</p>
+<p>於是我在iptel.org申請了一個Sip的帳號,讓virtualphoneline來綁定這個Sip帳號.</p>
+<p>路徑:my number->view all my numbers</p>
+<p>進入之後,點選forwarded to:Sip,然後輸入你在iptel申請的帳號,例如yourname@iptel.org</p>
+<p>最後一步就是在android手機上安裝<a href="http://sofree.cc/sipdroid/">Sipdroid</a>,輸入帳號密碼及主機名稱（iptel.org）,基本上你就可以在手機上接聽Sip帳號的來電.</p>
+<p>所以我的步驟是virtualphoneline的電話號碼綁iptel,Sipdroid再來綁iptel,這樣就可以接google voice的認證電話了.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Google%20voice>#Google voice</a>
+<a href=http://pacermania.tumblr.com/tagged/google%20voice%E9%96%8B%E9%80%9A>#google voice開通</a>
+<a href=http://pacermania.tumblr.com/tagged/VPN>#VPN</a>
+<a href=http://pacermania.tumblr.com/tagged/DOTVPN>#DOTVPN</a>
+<a href=http://pacermania.tumblr.com/tagged/virtualphoneline>#virtualphoneline</a>
+<a href=http://pacermania.tumblr.com/tagged/iptel.org>#iptel.org</a>
+<a href=http://pacermania.tumblr.com/tagged/sipdroid>#sipdroid</a>
+</p>
+</article>
+
+<article class=regular id=p-92245949738>
+<p class=meta><span class=date>2014年07月20日 00時05分00秒</span>
+<a class=llink href=../posts/92245949738.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/92245949738 rel=canonical>●</a></p>
+<h2>[Chromebook]在台灣開通Google Music</h2>
+<p><img alt="image" src="http://68.media.tumblr.com/d3673dd2642383a27c3903adfffe307b/tumblr_inline_n8yt2aWk0E1snfajc.jpg"/></p>
+
+<p>最近在網路上看到許多網友都在推Google Music,對於一個音樂狂熱分子來說,能夠在許多設備(不管電腦,手機,平板),只要能夠連上網路,登入google帳號,你就可以在任何地方聽你這多年來累積的音樂,而且google本身還提供20000首歌曲的容量讓你儲存,真的是爽翻啦！</p>
+<p>然而Google Music目前僅開放美國以及其他少數國家的使用者可以使用.之前我曾經使用網路上的VPN大法,利用<a href="https://plus.google.com/+XizheSun/posts/SWAtzE3hDea">美國IP登入Google Play商店購買一些免費書籍</a>,藉此"偽裝"成美國人,不過我使用VPN登入Google Play商店,商店內的書籍都是土耳其文,想必Google一定試看穿了這招,故意把這個IP視為土耳其的IP,讓我沒辦法用這招"偽裝"成美國人.</p>
+<p>雖然網路上還是有勇者另外申請<strong>純美國google帳號</strong>+<strong>VPN</strong>+<strong>設定google wallet</strong>來開通Google Music,但是另外申請一個帳號實在麻煩,加上申請美國帳號還要有美國的電話號碼,被識破的風險依然存在.這時我看到我不常使用的Chromebook突然靈機一動,想說何不試試利用Chromebook來玩一下呢？反正Chromebook本身有附贈Google Music其他付費功能免費使用30天,如果運氣好一點,甚至還可以免費使用額外功能30天！</p>
+<p>簡單來說,我的邏輯是,Chromebook基本上來說只有美國人才有機會拿的到,其他國家是沒有直接輸入的Chromebook！所以基本上有Chromebook有很大的機會被認定是美國人！</p>
+<p>於是我先把我的google帳號的語言設成英語系(美國),然後就拿出我的Chromebook（<a href="http://pacermania.tumblr.com/post/82586060896/chromeos-hp-chromebook-14">要購買請參考我的HP Chromebook 14一文</a>）,再利用Chrome商店的小程式DotVPN(用Zenmate也可以),就可以完成開通了！開通之後,就不須要再用VPN登入Google Music了！以下是我的步驟：</p>
+<p><img alt="image" src="http://68.media.tumblr.com/119e1e43dfd8defe70bc597c25ad7e64/tumblr_inline_n8yt544l7X1snfajc.jpg"/></p>
+<p>基本上設定好DotVPN的國家為美國,在Chromebook的瀏覽器網址欄輸入music.google.com,就會進入這個令人感動的畫面.畫面中有standard跟All access(可免費使用30天之後每個月會跟你收錢)選項.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/9f5aa79a363735c5ac80845521081eff/tumblr_inline_n8ytnlpt7F1snfajc.jpg"/></p>
+
+<p>不過另一個選項我後來在付費的地方用paypal,但是我paypal的地址是台灣(被google抓包),所以還是沒辦法使用google music的付費功能,所以我就選擇了standard的選項.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/b5dfc2119f0e4cb75bcc1cdf836f53ad/tumblr_inline_n8ytqcQQwe1snfajc.jpg"/></p>
+<p>接著就是一直按繼續.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/675f7a9f3704d5e8a6e0bd2650dac29c/tumblr_inline_n8yts2ldlr1snfajc.jpg"/></p>
+<p>跳出google wallet的畫面,雖然還是要輸入卡號,但是這裡就不用擔心輸入的是否為美國的信用卡,我是用中國信託的VISA卡,地址用英文隨便亂打,郵遞區號我就隨便寫了90210(飛越比佛利！).</p>
+<p><img alt="image" src="http://68.media.tumblr.com/22a4eeee4e565f3177e305b5f79778c9/tumblr_inline_n8yty2PFFl1snfajc.jpg"/></p>
+<p>完成後出現這個畫面,就代表你可以從你的裝置上傳音樂到google music了！此時你就可以選擇忽略,</p>
+<p><img alt="image" src="http://68.media.tumblr.com/4504fc992e3b95b315dc61771b41450c/tumblr_inline_n8yu1vzzLL1snfajc.jpg"/></p>
+<p>然後接下來Chromebook就會下載google play music應用程式,這樣你的Chromebook才能播放你的google music.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/e16142265638682d1bf40edfd41cbcfe/tumblr_inline_n8yuy1sVMl1snfajc.png"/></p>
+<p>安裝玩應用程式後關掉你的Chromebook,然後打開你其他有裝"很多"音樂的裝置.進入google music頁面(不須VPN),點選右上角upload music選項.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/79c65815351373f1686ec555b8256c5e/tumblr_inline_n8yv25wWEc1snfajc.png"/></p>
+<p>下載並安裝music manager這個程式,才能很方便的上傳音樂到google music！</p>
+
+<p></p>
+<p><img alt="image" src="http://68.media.tumblr.com/c6afe5e899710052b7066c4d7498a56b/tumblr_inline_n8yu7qqQEW1snfajc.jpg"/></p>
+<p>google music會要你選擇你要存放音樂的資料夾(存放路徑).我是選other folders.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/696fc30a3fec7d522e1e8dab25c8c530/tumblr_inline_n8yu9roOA61snfajc.jpg"/></p>
+<p>接下來就問你以後這個資料夾有新增音樂,是否要自動上傳到google music.我是選擇"YES".</p>
+<p><img alt="image" src="http://68.media.tumblr.com/964a7a0e4b49c747fa0feb9101f2050b/tumblr_inline_n8yukzPLBV1snfajc.jpg"/></p>
+<p>然後就會叫你點選"NEXT"來安裝google music manager上傳音樂.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/b57be8e68607f921ba1f0bfdfa59dda6/tumblr_inline_n8yuquS0nI1snfajc.jpg"/></p>
+<p>然後就會從你的電腦開始上傳音樂了！</p>
+<p><img alt="image" src="http://68.media.tumblr.com/c4f3d6941b7d3bdbae8e3d213a1273e0/tumblr_inline_n8yv56jYBE1snfajc.jpg"/></p>
+<p>接下來等整個批音樂上傳完成,你就可以隨時隨地在其他裝置上,聽你多年來蒐集的音樂了！</p>
+<p>P.S. 不過我五千多首音樂從下午4點,到凌晨12點都還沒傳完,應該不是google的問題,純粹是我的音樂太多了吧！</p>
+
+<p></p>
+
+<p></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Chromebook>#Chromebook</a>
+<a href=http://pacermania.tumblr.com/tagged/HP%20Chromebook%2014>#HP Chromebook 14</a>
+<a href=http://pacermania.tumblr.com/tagged/Google%20Music>#Google Music</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%96%8B%E9%80%9AGoogle%20Music>#開通Google Music</a>
+</p>
+</article>
+
+<article class=regular id=p-91949590033>
+<p class=meta><span class=date>2014年07月16日 22時12分00秒</span>
+<a class=llink href=../posts/91949590033.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/91949590033 rel=canonical>●</a></p>
+<h2>[環法]2014 Stage11 Besançon / Oyonnax</h2>
+<p><img alt="image" src="http://68.media.tumblr.com/213fbacf7a186635d765cb9c4f4285cd/tumblr_inline_n8t3lqnODN1snfajc.png"/></p>
+<p>今年因為世足賽的關係,環法似乎就這樣被忽略掉了！不過今年的環法也出現了一些讓人意想不到的變數.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/41086ad0e6e705dc250569b2b2ece279/tumblr_inline_n8t57fa7Oa1snfajc.jpg"/></p>
+
+<p>去年勇奪環法最高榮譽黃衫的<a href="http://en.wikipedia.org/wiki/Chris_Froome">Froome</a>,沒想到今年環法Stage 5就因在比賽中crash而提前退賽.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/a2b205dcc2ed3963ff1da2f35574c947/tumblr_inline_n8t5ansxV31snfajc.jpg"/></p>
+
+<p>而具有競爭力的<a href="http://en.wikipedia.org/wiki/Alberto_Contador">Condator</a>也是在Stage 10因為crash傷了脛骨,最後也不得不退賽.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/59d6c32b1af6a6c10bb0455ae5219c24/tumblr_inline_n8t5krIYOS1snfajc.jpg"/></p>
+
+<p>目前黃衫的擁有者–<a href="http://en.wikipedia.org/wiki/Vincenzo_Nibali">Vincenzo NIBALI</a>,前十站贏了兩站的單站冠軍,尤其在Stage 10山路段殺出重圍,如果能繼續在接下來的山路段維持優勢與時間差距,看來今年Vincenzo NIBALI披上黃衫的機會很高！</p>
+
+<p>另外,今年也有對岸的選手(<a href="http://zh.wikipedia.org/wiki/%E8%AE%A1%E6%88%90_%28%E8%87%AA%E8%A1%8C%E8%BD%A6%E8%BF%90%E5%8A%A8%E5%91%98%29">Ji Cheng</a>)參加,雖然是吊車尾,不過環法這種比賽,一輩子參加一次應該此生就不會有遺憾了吧！其實在參加環法之前,2012年Ji Cheng就參加過環西,成為第一個參加且完賽的華人,2013年也參加過環義,成為第一為參加環義的華人.Ji Cheng加油吧！希望你能在2014環法完賽！</p>
+<p>以下是目前(跑完前10個stage後)的成績排名:</p>
+<p>1.<span class="picto16 flag-ita"></span><a href="http://www.letour.com/le-tour/2014/us/riders/astana-pro-team/nibali-vincenzo.html">NIBALI V.  </a><a href="http://www.letour.com/le-tour/2014/us/teams.html#ast">AST   </a>                  45h 29’ 33’’</p>
+<p>2.<span class="picto16 flag-aus"></span><a href="http://www.letour.com/le-tour/2014/us/riders/team-sky/porte-richie.html">PORTE R. </a><a href="http://www.letour.com/le-tour/2014/us/teams.html#sky">SKY      </a>                      02’ 23’’</p>
+<p>3.<span class="picto16 flag-esp"></span><a href="http://www.letour.com/le-tour/2014/us/riders/movistar-team/valverde-belmonte-alejandro.html">VALVERDE BELMONTE A.</a><a href="http://www.letour.com/le-tour/2014/us/teams.html#mov">MOV</a> 02’ 47’’</p>
+<p>4.<span class="picto16 flag-fra"></span><a href="http://www.letour.com/le-tour/2014/us/riders/ag2r-la-mondiale/bardet-romain.html">BARDET R.  </a><a href="http://www.letour.com/le-tour/2014/us/teams.html#alm">ALM</a>                         03’ 01’’</p>
+<p>5.<span class="picto16 flag-fra"></span><a href="http://www.letour.com/le-tour/2014/us/riders/lotto-belisol/gallopin-tony.html">GALLOPIN T. </a><a href="http://www.letour.com/le-tour/2014/us/teams.html#ltb">LTB            </a>           03’ 12’’</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E7%92%B0%E6%B3%95>#環法</a>
+<a href=http://pacermania.tumblr.com/tagged/le%20tour%20de%20france>#le tour de france</a>
+<a href=http://pacermania.tumblr.com/tagged/ji%20cheng>#ji cheng</a>
+<a href=http://pacermania.tumblr.com/tagged/vincenzo%20nibali>#vincenzo nibali</a>
+</p>
+</article>
+
+<article class=link id=p-91551480603>
+<p class=meta><span class=date>2014年07月12日 22時52分00秒</span>
+<a class=llink href=../posts/91551480603.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/91551480603 rel=canonical>●</a></p>
+<h2><a href="http://www.ithome.com.tw/news/89319">微軟將於明年1月終止Windows 7 的主流支援</a></h2>
+<blockquote class="link_og_blockquote">
+<div>此次的宣布也代表Windows 7將在明年1月之後進入延伸支援階段。一般使用者並不需擔心，因為在延伸支援階段，微軟還是會繼續提供定期的安全更新。</div>
+</blockquote>
+<p>真是一家邪惡的公司！</p>
+<p>完全只顧自身的利益著想,WIN8賣不出去就用賤招！</p>
+<p>為了反抗微軟,我都一直使用Ubuntu(Linux).筆記型電腦我使用Chromebook.文書處理用google docs(google drive).</p>
+<p>請大家多多支持正版免費軟體及免費作業系統.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Windows%207>#Windows 7</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%81%9C%E6%AD%A2%E4%B8%BB%E6%B5%81%E6%94%AF%E6%8F%B4>#停止主流支援</a>
+<a href=http://pacermania.tumblr.com/tagged/2015%E5%B9%B41%E6%9C%88>#2015年1月</a>
+</p>
+</article>
+
+<article class=regular id=p-91459569203>
+<p class=meta><span class=date>2014年07月11日 23時36分00秒</span>
+<a class=llink href=../posts/91459569203.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/91459569203 rel=canonical>●</a></p>
+<h2>[spotify]測試嵌入功能(Michael Jackson-Xscape)</h2>
+<iframe frameborder="0" height="380" src="https://embed.spotify.com/?uri=spotify:track:0xzSpvDboL5Imo8cP1vMXm" width="300"></iframe>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/spotify>#spotify</a>
+<a href=http://pacermania.tumblr.com/tagged/embedded>#embedded</a>
+<a href=http://pacermania.tumblr.com/tagged/michael%20jackson>#michael jackson</a>
+<a href=http://pacermania.tumblr.com/tagged/xscape>#xscape</a>
+</p>
+</article>
+
+<article class=regular id=p-91259214573>
+<p class=meta><span class=date>2014年07月09日 23時49分00秒</span>
+<a class=llink href=../posts/91259214573.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/91259214573 rel=canonical>●</a></p>
+<h2>[Linux]安裝Spotify-Client</h2>
+<p>最近覺得Spotify的網路音樂不錯,於是就申請了一個帳號,用web來聽免費歌曲.只是萬一要在Linux系統的電腦使用Spotify的額外功能（不包含下載）,那就非得安裝spotify不可啦！</p>
+<p>我原先是用wine的方式安裝,只是wine太吃資源了,只好用spotify官網建議的方式安裝Linux版的Spotify.</p>
+<p>首先先申請一個免費的spotify帳號,然後登入<a href="https://www.spotify.com/tw/">spotify網站</a>.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/49f6a6e31dc09879e2e032df4d047c15/tumblr_inline_n8gb7uibeA1snfajc.png"/></p>
+<p>接著點選下載.就會出現官網的指示.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/792fa4e9f70dbb1965ddda880f30a954/tumblr_inline_n8gba1Wvz51snfajc.png"/></p>
+<p>只是有看沒有懂.其實只要把官網建議的來源(deb http://…)加入source.list檔,其他的按照官網的步驟來就可以啦！只是我們要在終端機模式下,先要用sudo gedit打開source.list檔（用sudo是為了取得root權限),才能把來源加進去.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/c827dceb14a8d7b8ff2b380a69e432bd/tumblr_inline_n8gbf8nuBX1snfajc.png"/></p>
+<p>點開在/etc/apt/底下的source.list檔,並在最後一行加入</p>
+<pre>deb <a href="http://repository.spotify.com">http://repository.spotify.com</a> stable non-free</pre>
+
+<p>接著新增公共金鑰</p>
+<pre>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59</pre>
+<p>執行apt-get</p>
+<pre>sudo apt-get update
+</pre>
+<p>安裝Spotify</p>
+<pre>sudo apt-get install spotify-client</pre>
+<p>然後就完成了！就可以跟windows使用者一樣使用spotify的界面了！</p>
+<p><img alt="image" src="http://68.media.tumblr.com/70ee34c3fcecb78c40a9911bc0b8695f/tumblr_inline_n8gbsiIXuh1snfajc.png"/></p>
+
+<p></p>
+
+<p></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/spotify>#spotify</a>
+<a href=http://pacermania.tumblr.com/tagged/linux>#linux</a>
+<a href=http://pacermania.tumblr.com/tagged/debian>#debian</a>
+</p>
+</article>
+
+<article class=regular id=p-91150561243>
+<p class=meta><span class=date>2014年07月08日 22時16分00秒</span>
+<a class=llink href=../posts/91150561243.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/91150561243 rel=canonical>●</a></p>
+<h2>[Fisheye]2013日月潭</h2>
+<p>這卷沈寂許久的底片,上個星期終於有機會拿去沖洗,雖然拍<a href="http://shop.lomography.com/tw/cameras/fisheye-family/fisheye-one-white">fisheye</a>沒什麼大技巧,只要拿起相機,按下快門,其他就是隨機了.不管是亮度不足,還是沒有拍出fisheye該有的效果,這樣似乎很符合我喜歡作實驗的風格.只是有了比比之後,拍照的時間少了,甚至連洗片的時間的沒有,所以最後不是用手機拍照,就是用<a href="https://www.the-impossible-project.com/">impossible project</a>的拍立得拍照.</p>
+<p>在難得的一次出遊,帶著父母,女王,比比還有fisheye一起暢遊日月潭,享受在日月潭的美好時光.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/2eef6719399b48655d456df36a27487b/tumblr_inline_n8eci848Xg1snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/95c510b68d06c5ab33c5b6a5485d4573/tumblr_inline_n8eciuP6Dd1snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/4133440cbbe37f01d2ae2540343e008d/tumblr_inline_n8ecjmwJUO1snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/961a819916c0daad5a6ed9d0e9a06d95/tumblr_inline_n8eck6huFY1snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/56e2239de7268b3a2bef3ec13d386fed/tumblr_inline_n8ecpyRSid1snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/647aba16fcc69e679ef3d56a372879f0/tumblr_inline_n8ecqrp6t41snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/ef9ed354f372f7d1a0cf3fb0d4e35de8/tumblr_inline_n8ecreG8LY1snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/cab3ff4a4c781dd8b2d80dd6a9835f4e/tumblr_inline_n8ecs68o3Z1snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/79ee6c7fbe26f4f39826545e48c9d296/tumblr_inline_n8ecstR0yg1snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/8645106cad017332ed61f08b42306b79/tumblr_inline_n8ectjYp8G1snfajc.jpg"/></p>
+
+<p><img alt="image" src="http://68.media.tumblr.com/f71d7ca3651a0319d9b60ca7404ca9eb/tumblr_inline_n8ecvdGx2M1snfajc.jpg"/></p>
+<p><img alt="image" src="http://68.media.tumblr.com/a463727b7fbf849ba8263cad7c9fa808/tumblr_inline_n8ecw9XV6L1snfajc.jpg"/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/fisheye>#fisheye</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%97%A5%E6%9C%88%E6%BD%AD>#日月潭</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%B4%99%E6%95%99%E5%A0%82>#紙教堂</a>
+<a href=http://pacermania.tumblr.com/tagged/sun%20moon%20lake>#sun moon lake</a>
+</p>
+</article>
+
+<article class=link id=p-90661343818>
+<p class=meta><span class=date>2014年07月03日 23時00分04秒</span>
+<a class=llink href=../posts/90661343818.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/90661343818 rel=canonical>●</a></p>
+<h2><a href="http://quest.keitheis.org/post/6713569631/pip-install-on-windows-linux-mac">在 Windows、Linux，以及 Mac 上安裝 pip - Python 套件管理程式</a></h2>
+<blockquote class="link_og_blockquote">這篇是寫給沒用過 virtualenv 與 pip 的 Python 套件管理攻略。 PycTW 2011 上應該沒時間講這種事，還是先在這邊還攻略債吧。 步驟 先講一下原則上的建議安裝方式（同 pip 官方文件上的建議）：利用 virtualenv 內建的 pip 下載 virtualenv.py python virtualenv.py [新專案環境目錄名] 進入 virtualenv 環境(在這個環境下安裝的東西不會影響到整個系統) 開始使用 pip 安裝套件   Linux 或 Mac 上的指令參考 $ curl -O <a href="https://raw.github.com/pypa/virtualenv/master/virtualenv.py">https://raw.github.com/pypa/virtualenv/master/virtualenv.py</a> $ python virtualenv.py my_new_env $ . my_new_env/bin/activate (my_new_env)$ pip install … 通常這樣就完成了 Linux 與 Mac 上的攻略。   Windows 上的指令參考 儲存那個網頁，命名檔案為 virtualenv.py 打開 terminal(cmd.exe 之類的)，cd 到你要放專案資料夾的地方 (例： cd C:\Users\Keith ) python virtualenv.py my_new_env my_new_env\Scripts\activate.bat pip install …  2013-06-24 Update: Windows 的 virtualenv 可能會遇到一些安裝 PIL 的問題，所以你可能會想要跳過 virtualenv 直接安裝 setuptools （小註：已於 0.7 版合併了 distribute）與 pip： 下載 <a href="https://raw.github.com/pypa/pip/master/contrib/get-pip.py">https://raw.github.com/pypa/pip/master/contrib/get-pip.py</a> 執行 pyhton get-pip.py 附錄 如何使用 pip 安裝一個名為 xxx(bottle, nose, Requests, SQLAlchemy, Pyramid, … 等等) 的套件？ pip install xxx 移除套件？ pip uninstall xxx</blockquote>
+<p>我只能說python真是個強大的東西呀！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/python>#python</a>
+<a href=http://pacermania.tumblr.com/tagged/pip%20install>#pip install</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

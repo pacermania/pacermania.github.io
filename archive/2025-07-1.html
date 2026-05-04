@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>2025年7月：利用Raspberry Pi設置軟路由(以NORDVPN為例) | Pacermania的部落格</title>
+
+    <meta name="description" content="但是關於要如何使用NORDVPN在RaspberryPi的軟路由上，網路上的文章不是沒有，只是多數文章推薦的作法都較為複雜，且使用的方式都是OPENVPN的協定，占用的資源較多，所以小弟就在網路上蒐集相關資訊後，找出了比較容易的作法。
+">
+
+    <link rel="canonical" href="https://a1253247.info/pacermania/archive/2025-07-1.html" />
+
+    </head>
+
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>七月 2025</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2025年07月20日 00時30分38秒</span> <a class="llink" href="../posts/153117938918.html">&para;</a> <a href="http://pacermania.tumblr.com/post/153117938918" rel="canonical">●</a></p>
+
+<h2>利用Raspberry Pi設置軟路由(以NORDVPN為例)
+ </h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="NORDVPN" id="NORDVPN" src="../images/nordvpn1.png" style="width: 889px; height: 640px;" /></figure>
+
+<p>相信大家對於NORDVPN一定不陌生，只要有使用VPN的人，不可能不知道這個各大YT網紅都在置入性行銷的VPN服務商。小弟也是NORDVPN的使用者，小弟最早是使用PUREVPN，只是PUREVPN破解能力有限，所以就轉戰NORDVPN以及EXPRESSVPN了。NORDVPN雖然在連線速度不及EXPRESSVPN，但是其價格較便宜，功能也較EXPRESSVPN更多，因此不外乎很多網友/網紅都會推薦使用這個品牌的VPN。但是關於要如何使用NORDVPN在RaspberryPi的軟路由上，網路上的文章不是沒有，只是多數文章推薦的作法都較為複雜，且使用的方式都是OPENVPN的協定，占用的資源較多，所以小弟就在網路上蒐集相關資訊後，找出了比較容易的作法。
+
+</p>
+
+<h3>安裝NORDVPN
+ </h3>
+
+<p>在RaspberryPi終端機的畫面，輸入以下指令，安裝NORDVPN。
+</p>
+
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
+ </span></pre><p></p>
+
+<h3>在RaspberryPi(軟路由)中登入NORDVPN帳號</h3>
+
+<p>先用電腦瀏覽器登入NORDVPN網頁，輸入帳號密碼後，進入個人首頁>NordVPN>取得存取權杖的頁面之後，點選取得新權杖，當然你如果怕麻煩，可以在產生新權杖的時候選擇Doesn't expire(而不是Set to expire in 30 days)。然後複製新權杖。接者在RaspberryPi終端機的畫面，輸入以下指令。</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">nordvpn login --token <此處貼上你剛才複製的新權杖>  </span></pre><p> </p>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="NORDVPN" id="NORDVPN" src="../images/nordvpn2.png" style="width: 889px; height: 640px;" /></figure>
+
+<p>這樣你的RaspberryPi(軟路由)就正式登入NORDVPN了。</p>
+
+<h3>避免斷線啟動自動接續功能</h3>
+
+<p>另外，為了避免連上VPN後會因為某些狀況斷線，請在RaspberryPi(軟路由)的終端機畫面輸入以下指令，讓軟路由可以在斷線後自動連線。</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">nordvpn set autoconnect on</span></pre><p></p>
+
+<p>另外，為了避免連上VPN後，導致區域網路的電腦無法連線至軟路由，請在RaspberryPi(軟路由)的終端機畫面輸入以下指令。
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">
+nordvpn set lan-discovery enable
+nordvpn whitelist add subnet 192.168.X.X/24 <---你的區網網域，例如192.168.1.xxx/24</span></pre><p></p>
+
+<p>最後，為了取得比較快的VPN連線速度，請輸入以下指令啟用Nordlynx通訊協定。</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">
+nordvpn set technology NordLynx</span></pre><p></p>
+
+<h3>常用的NORDVPN指令</h3>
+
+<p>你可以輸入以下指令，啟動VPN連線。
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">nordvpn connect jp538</span></pre><p></p>
+
+<p>或者
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">nordvpn connect United_States</span></pre><p></p>
+
+<p>若要中斷連線就執行以下指令
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">nordvpn disconnect</span></pre><p></p>
+
+<p>要查看連線狀態就執行以下指令
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">nordvpn status</span></pre><p></p>
+
+<h3>制訂軟路由的網路流量規則</h3>
+
+<p>輸入以下指令，在RaspberryPi(軟路由)上制訂軟路由的網路流量規則。
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">
+sudo iptables -t nat -A POSTROUTING -o nordlynx -j MASQUERADE
+sudo iptables -A FORWARD -i nordlynx -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i wlan0 -o nordlynx -j ACCEPT</span></pre><p></p>
+
+<p>當然，如果有顯示錯誤訊息，請輸入以下指令安裝iptables
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">
+sudo apt-get install iptables 
+sudo apt-get install iptables-persistent</span></pre><p></p>
+
+<h3>Apple TV上的設定</h3>
+
+<p>接下來就是在Apple TV上的設定了，首先要知道RPi4的IP位置，IP位置可以用以下指令找出。
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">hostname -I</span></pre><p></p>
+
+<p>再來就是在Apple TV上的設定了，簡單來說就是手動將Apple TV上路由的ip位置，改成你的軟路由器的ip位置，DNS則是可以選擇8.8.8.8或是1.1.1.1，基本上就完成了。</p>
+
+
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+<a href="https://nordvpn.com/zh-tw/">NORDVPN官網</a>
+
+<p><a href="../archive/2025-02.html" target="_blank">利用Raspberry Pi設置軟路由(以Express VPN為例)</a></p>
+
+<p><a href="https://vpn-perfect.com/nordvpn-linux" target="_blank">NordVPNをLinux（Ubuntu、Raspberry pi）にインストールする方法と使い方</a></p>
+<a href="https://www.hitoshiarakawa.com/blogs/2025/2025-05-20_settings-in-nordvpn/">[Raspberry Pi] NordVPN の各種設定</a>
+
+<p><a href="https://support.nordvpn.com/hc/en-us/articles/20286980309265-How-to-use-a-token-with-NordVPN-on-Linux?nv_tri=TC_14848244022483792_1747830204864&nv_trs=1752903490231_1752903709074_5_90">How to use a token with NordVPN on Linux</a></p>
+
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，歡迎參觀我的TikToK</span></p>
+
+<p><a href="https://www.tiktok.com/@vinyl_in_homepod" target="_blank">@vinyl_in_homepod</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p><a href="https://www.youtube.com/embed/TDEwYyjAx_M" target="blank">野獸媽媽|熱愛旅行和下廚的兩男媽</a></p>
+
+<p></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vvT5TIY9Uu0?si=XDvhjTiyv8W4ZnHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2><p><a href="https://a1253247.info/pacermania" rel="nofollow" target="_blank">回首頁</a></p></h2>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+<a href=https://www.tiktok.com/@vinyl_in_homepod>#vinyl_in_homepod</a>
+<a href=../archive/2024-08.html>#PLEX</a>
+
+</p>
+
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":840,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十二月 2015</h1>
+
+
+<article class=photo id=p-135509863418>
+<p class=meta><span class=date>2015年12月20日 00時02分01秒</span>
+<a class=llink href=../posts/135509863418.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/135509863418 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_nzm4jdKFCo1sjz8axo1_1280.jpg"></p>
+<p>聖保羅幼兒園聖誕節活動。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E8%81%96%E4%BF%9D%E7%BE%85%E5%B9%BC%E5%85%92%E5%9C%92>#聖保羅幼兒園</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%81%96%E8%AA%95%E7%AF%80%E6%B4%BB%E5%8B%95>#聖誕節活動</a>
+</p>
+</article>
+
+<article class=regular id=p-134985068768>
+<p class=meta><span class=date>2015年12月11日 22時57分11秒</span>
+<a class=llink href=../posts/134985068768.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/134985068768 rel=canonical>●</a></p>
+<h2>[LaTex]新手使用心得</h2>
+<figure data-orig-width="565" data-orig-height="530" class="tmblr-full"><img src="http://68.media.tumblr.com/6138a63472ea11df57946d06a9c63659/tumblr_inline_nz77x6UJCt1snfajc_540.png" alt="image" data-orig-width="565" data-orig-height="530"/></figure><p>會用這個投影片(or文章)編輯軟體，也可以說是一種因緣際會。最近因應主管要求，必須製作投影片和在會議上簡報，原先我是使用類office powerpoint軟體來編輯，但是在預演的時候主管不是很滿意我的投影片，但是偏偏時間上又很趕，於是我就拿出這個我最近在練習的投影片編輯軟體LaTex(說穿了也是為了省錢，畢竟M$ Office真的很貴，而LaTex完全不用錢…)。</p><p>這個軟體一開始雖然比較難上手(因為LaTex主要的編輯工作是透過程式碼)，但是只要上手後，速度就快很多。只要是投影片屬於圖、表、文字及數學公式類型的，LaTex的速度絕對超快，不僅Theme，配色還是文字方塊和圖的位置擺放，你只要把文字和圖檔路徑放進去tex檔，在經過轉換之後，就會變成你想要的投影片。</p><p>不過要安裝LaTex我可是吃盡苦頭，雖然網路上多是建議安裝MikTeX (with XeLaTeX) + Texmaker，這個組合的好處是只要在轉換過程中發現有沒有安裝的package，MikTex就會自動幫你找package安裝。雖然說這樣的設計已經很懶人了，在但是安裝後也是經過許多測試，才摸索出如何將tex檔，經過XeLaTax轉換後，輸出成pdf檔。</p><p>以下是Texmaker的作業畫面</p><figure class="tmblr-full" data-orig-height="718" data-orig-width="1024"><img src="http://68.media.tumblr.com/d8df9f750b44078f2e0410448ced0ac2/tumblr_inline_nz78eimbnx1snfajc_540.png" data-orig-height="718" data-orig-width="1024"/></figure><p>以下是輸出成pdf的畫面</p><figure data-orig-width="993" data-orig-height="671" class="tmblr-full"><img src="http://68.media.tumblr.com/88355a94a7b27772a3f031b746d4360d/tumblr_inline_nz781b5fBv1snfajc_540.png" alt="image" data-orig-width="993" data-orig-height="671"/></figure><p>如果你的投影片沒有動畫的需求，有大量數學運算公式的需求，又很討厭每次被微軟逼迫花錢升級，或討厭自己的投影片用其他電腦的office開格式會走掉，那LaTex絕對是你最佳的選擇。</p><p>參考網址：</p><p>1. <a href="http://leavedcorn.pixnet.net/blog/post/24773932-%E6%96%B0%E6%89%8B%E5%AE%89%E8%A3%9Dlatex%E6%87%B6%E4%BA%BA%E6%95%99%E5%AD%B8%28step-by-step%29">新手安裝LaTeX懶人教學(Step by step)</a> <br/></p><p>2. <a href="http://yenlung.km.nccu.edu.tw/home/index.php?f=contentList&courseID=12&order=title&precedence=DESC&page=1">炎龍老師的教學研究網</a> (政大蔡炎龍老師)<br/></p><p>3. <a href="http://www.xm1math.net/texmaker/">Texmaker</a>官網</p><p>4. <a href="http://www.miktex.org/">MikTex</a>官網<br/><br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/latex>#latex</a>
+<a href=http://pacermania.tumblr.com/tagged/xelatex>#xelatex</a>
+<a href=http://pacermania.tumblr.com/tagged/miktex>#miktex</a>
+<a href=http://pacermania.tumblr.com/tagged/texmaker>#texmaker</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%82%8E%E9%BE%8D%E8%80%81%E5%B8%AB%E7%9A%84%E6%95%99%E5%AD%B8%E7%A0%94%E7%A9%B6%E7%B6%B2>#炎龍老師的教學研究網</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%96%B0%E6%89%8B%E5%AE%89%E8%A3%9DLaTeX%E6%87%B6%E4%BA%BA%E6%95%99%E5%AD%B8%28Step%20by%20step%29>#新手安裝LaTeX懶人教學(Step by step)</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%94%BF%E5%A4%A7%E8%94%A1%E7%82%8E%E9%BE%8D%E8%80%81%E5%B8%AB>#政大蔡炎龍老師</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

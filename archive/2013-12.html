@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":842,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十二月 2013</h1>
+
+
+<article class=link id=p-71636834954>
+<p class=meta><span class=date>2013年12月30日 22時50分17秒</span>
+<a class=llink href=../posts/71636834954.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/71636834954 rel=canonical>●</a></p>
+<h2><a href="http://edition.cnn.com/2013/12/29/sport/motorsport/michael-schumacher-skiing-f1-motorsport/">Michael Schumacher in critical condition after skiing accident</a></h2>
+<blockquote class="link_og_blockquote">Retired Formula One driver Michael Schumacher is in critical condition after a skiing accident in the French Alps Sunday.</blockquote>
+<p>希望大舒可以安然度過這場意外.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/F1>#F1</a>
+<a href=http://pacermania.tumblr.com/tagged/michael%20schumacher>#michael schumacher</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%88%92%E9%A6%AC%E5%85%8B>#舒馬克</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%A4%A7%E8%88%92>#大舒</a>
+</p>
+</article>
+
+<article class=regular id=p-71415651522>
+<p class=meta><span class=date>2013年12月28日 23時05分53秒</span>
+<a class=llink href=../posts/71415651522.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/71415651522 rel=canonical>●</a></p>
+<h2>[NFL]49ers vs Cardinals</h2>
+<p><img src="http://68.media.tumblr.com/1c947de85787fb1dca9df357e21239e2/tumblr_inline_myiv2aMyHI1snfajc.jpg"/></p>
+
+<p></p>
+<p>NFC West Team</p>
+<p>y- <a href="http://www.nfl.com/teams/profile?team=SEA">Seattle Seahawks</a>12W3L</p>
+<p>y- <a href="http://www.nfl.com/teams/profile?team=SF">San Francisco 49ers</a>11W4L</p>
+<p><a href="http://www.nfl.com/teams/profile?team=ARI">Arizona Cardinals</a>10W5L</p>
+<p><a href="http://www.nfl.com/teams/profile?team=STL">St. Louis Rams</a>7W8L</p>
+<p>我只能說NFC(國家聯會)的西區真的瘋了！你能相信10W5L只能在西區排名第三爭外卡嗎？要是把這種戰績套用在NFC北區或東區,老早就翹腳等季後賽了！</p>
+<p>雖然Cardinals有王牌接球員Larry Fitzgerald(有超級盃經驗),但是49ers有去年差點讓烏鴉隊翻船的四分衛<a class="player-card-tooltip" href="http://www.49ers.com/team/roster/Colin-Kaepernick/6e4c644b-16eb-48cd-96b7-f4ee48868219" rel="/cda-web/person-card-module.htm?mode=data&id=6e4c644b-16eb-48cd-96b7-f4ee48868219" title="Kaepernick, Colin">Kaepernick</a>,這個戲碼放在今年例行賽最後一週再適合也不過了！不過平心而論,49ers除了進攻不錯外,他們的防守也是相當出色的,前年的NFC冠軍賽只能說運氣差,輸給了防守更強悍的Giants.去年超級盃也是輸給了防守見長的烏鴉.所以Cardinals是否可以發揮他們的進攻火力是最大的關鍵.</p>
+<p>我想這場比賽應該是全美關注的焦點吧！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/NFL>#NFL</a>
+<a href=http://pacermania.tumblr.com/tagged/49ers>#49ers</a>
+<a href=http://pacermania.tumblr.com/tagged/arizona%20cardinals>#arizona cardinals</a>
+</p>
+</article>
+
+<article class=photo id=p-71248942696>
+<p class=meta><span class=date>2013年12月27日 08時00分50秒</span>
+<a class=llink href=../posts/71248942696.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/71248942696 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_mt5qwt5V7Q1r59hw8o1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mt5qwt5V7Q1r59hw8o2_1280.jpg"></p>
+<blockquote>
+<blockquote>
+<p><em>I didn’t do anything I’ve never done before…but when the camera moves in on that Bergman’s face, and she’s saying she loves you, it would make anybody look romantic - </em><span>Humphrey Bogart</span></p>
+<div><em>I think he is absolutely wonderful, I mean, I’m so pleased when I see, that he looks at me with such love in his eyes…it’s very flattering</em> - Ingrid Bergman</div>
+</blockquote>
+<div>Humphrey Bogart and Ingrid Bergman on each other’s performance in <em>Casablanca</em> (1942)</div>
+</blockquote>
+<p>這一部真是經典中的經典，男的帥女的美，最後的結局也是讓人噴淚呀!</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Casablanca>#Casablanca</a>
+<a href=http://pacermania.tumblr.com/tagged/Ingrid%20Bergman>#Ingrid Bergman</a>
+</p>
+</article>
+
+<article class=regular id=p-71109251297>
+<p class=meta><span class=date>2013年12月25日 23時33分48秒</span>
+<a class=llink href=../posts/71109251297.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/71109251297 rel=canonical>●</a></p>
+<h2>[Bosch洗碗機]sms50e02tc使用心得</h2>
+<p>其實在很早女王剛從台北調回高雄工作的時候,其實心裡就有買一台洗碗機的念頭.只是這樣的想法,被女王嗤之以鼻,認為這只是我想要逃避洗碗的藉口罷了!確實,我的確不喜歡洗碗,我甚至寧願餐餐吃外面,或是隨便煮一煮,就是為了不要洗太多的碗筷.一直到我們的比比出生開始學會走路後,洗碗這項工作開始變得沉重,連原本對買洗碗機這種想法嗤之以鼻的女王,也開始認同我買洗碗機的想法.</p>
+<p>於是我們就開始上網辜狗,只是洗碗機的廠牌何其多,網路上又一堆廣告部落格,後來在考量我們的洗碗機要可以洗小型鍋,但是又不用嵌入廚櫃的情形下,我們選擇了Bosch的<a href="http://www.bosch-home.com.tw/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/%E6%B4%97%E7%A2%97%E6%A9%9F/%E7%8D%A8%E7%AB%8B%E5%BC%8F%E6%B4%97%E7%A2%97%E6%A9%9F/SMS63M02TC.html?source=browse">SMS63M02TC</a>的次一級機種–<a href="http://www.bosch-home.com.tw/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/%E6%B4%97%E7%A2%97%E6%A9%9F/%E7%8D%A8%E7%AB%8B%E5%BC%8F%E6%B4%97%E7%A2%97%E6%A9%9F/SMS50E02TC.html">sms50e02tc</a>.雖然Bosch的主力機種是SMS63M02TC,而且網路上多半是SMS63M02TC的文章,但是我們只是需要一台洗碗機,只要有基本的洗碗功能就可以了,再加上百貨公司週年慶打折,原價39000的洗碗機,一些零零總總的折扣下來,結果變成34100!我和女王沒有多說什麼就買了下來.</p>
+<p><img src="http://68.media.tumblr.com/a9fdbb386ec96d5e7ac23d0d32319dc8/tumblr_inline_mydak4OVhb1snfajc.jpg"/></p>
+<p>sms50e02tc的面板比較簡單,只有五種洗程可以選,不過應付一般家庭洗碗應該綽綽有餘了!</p>
+<p><img src="http://68.media.tumblr.com/09229f9fc6436938e399fc9a0d79843e/tumblr_inline_mydarxuxmf1snfajc.jpg"/></p>
+<p>這是洗碗機內部.個人覺得sms50e02tc與SMS63M02TC的內部應該是一樣的.</p>
+<p><img src="http://68.media.tumblr.com/e0ab7a058bb5718ee4cea0f8d3bf8a6f/tumblr_inline_mydaugLaZW1snfajc.jpg"/></p>
+<p>上面的洗碗架,碗架底下有旋轉式的噴嘴.</p>
+<p><img src="http://68.media.tumblr.com/71a99f1bc189bdbc8b8677484c08b97f/tumblr_inline_mydax6Jfi41snfajc.jpg"/></p>
+<p>底層的碗架.還附有一個籃子,這個籃子是專門放置筷子湯匙用的.同樣的底層碗架也有對應一個旋轉式噴嘴,不過噴嘴在機器裡面,這裡看不到.</p>
+<p><img src="http://68.media.tumblr.com/b69c07fd8667ba86f2a6260b4bfbc85c/tumblr_inline_mydb2oPChA1snfajc.jpg"/></p>
+<p>這是我們在洗碗機裝好後當天,就拿晚餐後的鍋碗瓢盆放進洗碗機的情形.當然在洗之前,要先添加<strong>洗碗機專用的洗碗粉,亮光劑,還有最重要的軟化鹽</strong>,可以把原本是硬水的自來水變成軟水.</p>
+<p>接下來就是成果驗收了!其實很多人不買洗碗機的理由,除了機器太貴了之外,再來就是擔心洗碗機洗不乾淨.於是底下就是我們測試的情形啦!</p>
+<p><img src="http://68.media.tumblr.com/ed45b523fecfbca8c7840ddf7fa228c5/tumblr_inline_mydbd0j4D41snfajc.jpg"/></p>
+<p>在使用eco洗程(2小時40分鐘,水溫50度)洗完之後,餐具上還是有殘留水氣,不過可以藉由機器的餘熱,稍微打開一下洗碗機,到明天早上應該就會乾了.</p>
+<p><img src="http://68.media.tumblr.com/b4a1f2e4d4a398304fe2d4b5b78c8b46/tumblr_inline_mydbirtu6D1snfajc.jpg"/></p>
+<p>女王二話不說拿起鍋子一看,這張照片真的不足以顯示鍋子的乾淨程度,女王看到直說比自己手洗的還要乾淨,以前洗鍋子或洗碗,不管刷的多用力,洗碗精倒的再多,餐具都還是會油油的.這些餐具經過洗碗機洗後,你只會感覺到這些餐具似乎脫去了一層外衣,甚至可以感覺到餐具的"乾澀'感.之前對於洗碗機的疑慮,在這次測試之後一掃而空,女王甚至有相見恨晚的感覺,後悔為什麼沒有提早買洗碗機 XD</p>
+<p>Bosch的說明書有一段話,<strong>洗碗機每年至少可以為你省下200個小時,讓你可以有更多的時間去享受更重要的事情,如為你的稚齡孩童念一段床邊故事,傾聽叛逆青少年子女的心聲,或是僅僅悠閒地聽聽音樂,享受心靈的放鬆.</strong>這段話真的道盡了我們的心聲!當洗碗成為壓垮女王的最後一根稻草之際,有了洗碗機,女王心情除了頓時變好了之外,女王有終於有時間可以整理思緒,寫出撩撥心弦的文章.此外,有了洗碗機,女王終於可以火力全開,不必顧慮要洗多少碗盤餐具,專心研發出令人食指大動,療癒人心的料理!用39000買這樣的幸福,真的是太划算了!</p>
+<p>p.s. 有時間也可以逛一下<a href="http://ishing0208.pixnet.net/blog">女王(ishing)的部落格</a>唷!</p>
+
+<p></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/bosch%E6%B4%97%E7%A2%97%E6%A9%9F>#bosch洗碗機</a>
+<a href=http://pacermania.tumblr.com/tagged/bosch>#bosch</a>
+<a href=http://pacermania.tumblr.com/tagged/sms50e02tc>#sms50e02tc</a>
+</p>
+</article>
+
+<article class=link id=p-70687195383>
+<p class=meta><span class=date>2013年12月21日 23時19分00秒</span>
+<a class=llink href=../posts/70687195383.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/70687195383 rel=canonical>●</a></p>
+<h2><a href="http://www.youtube.com/attribution_link?u=/watch?v=elzJmRJQd1g&feature=share&a=SI1gEXHsEcZ0pQpS_vZY3Q">[比比]20131221</a></h2>
+<iframe frameborder="0" height="315" src="//www.youtube.com/embed/elzJmRJQd1g" width="420"></iframe>
+
+<p>音浪太強,不晃會被撞到地上！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+</p>
+</article>
+
+<article class=regular id=p-70663202772>
+<p class=meta><span class=date>2013年12月21日 14時50分00秒</span>
+<a class=llink href=../posts/70663202772.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/70663202772 rel=canonical>●</a></p>
+<h2>[英超]Manchester City vs Arsenal</h2>
+<p><img alt="image" src="http://68.media.tumblr.com/e032b0c8300cb45196425120d5b06a93/tumblr_inline_my5896V1U01snfajc.jpg"/></p>
+<p>圖片來源:Arsenal官方網站</p>
+<p>Arsenal可以說最近的狀態不好,周中的歐冠賽事差點就在Napoli的強攻下,在歐冠小組賽出局.幸好Napoli覺醒的太晚,加上多特蒙德贏馬賽的情形下,才驚險的進入十六強.</p>
+<p>在這場對曼城的比賽,Walcott傷癒歸隊,對槍手來說是個好消息.但是在比賽開始後,曼城在主場優勢之下,控球時間明顯多於槍手,槍手只能伺機打反擊.然而曼城在一次角球的機會,Aguero在禁區凌空抽射入網,打破了這場比賽的僵局,註定了這場比賽槍手要與曼城打對攻戰.</p>
+<p>槍手在被進一球之後展開反擊,Walcott在一次反擊中在禁區外圍中路起腳,球穿過兩名防守球員及守門員,槍手扳平比分.但是槍手在急於搶攻之下,在第38分鐘槍手左路露出空檔,讓Zabareta在又路橫傳給Negredo,Negredo將球送入大門.</p>
+<p>下半場第50分鐘,槍手在後場傳球時發生致命失誤,球讓曼城搶到之後,Fernadinho在禁區外起腳,將比分擴大為3:1,雖然隨後Walcott再進一球將比分拉近,但是不久曼城立即展開反攻,Navas一次精彩的右路突破,將球恆傳給禁區埋伏的Silva,Silva將球推射入網,從此大局底定.終場曼城就以6：3戰勝槍手.</p>
+<p>此役雙方在下半場總共進了6球,尤其在傷停補時雙方還各進一球,喜歡看進攻戰的球迷應該會大呼過癮.只是槍手真的很可惜,進攻方面發揮算是正常,但是防守方面的失誤太多,是這次比賽的致命傷.</p>
+<p>曼城也靠著這次的勝利,跟槍手的積分拉近,雙方只剩下兩分的差距,加上槍手下星期要與切爾西作戰,槍手聯賽第一名的地位岌岌可危,不過也就是這樣子英超聯賽才會如此刺激,如此的扣人心弦呀！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E8%8B%B1%E8%B6%85>#英超</a>
+<a href=http://pacermania.tumblr.com/tagged/premier%20league>#premier league</a>
+</p>
+</article>
+
+<article class=link id=p-70196060238>
+<p class=meta><span class=date>2013年12月17日 00時01分44秒</span>
+<a class=llink href=../posts/70196060238.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/70196060238 rel=canonical>●</a></p>
+<h2><a href="http://www.uefa.com/uefachampionsleague/news/newsid=2038325.html">[2014歐冠]16強抽籤結果</a></h2>
+<blockquote class="link_og_blockquote">FC Bayern München face Arsenal FC in the round of 16 for the second season running while the draw also served up a Chelsea FC reunion for Galatasaray AŞ’s Didier Drogba.</blockquote>
+<p>英西德這三個國家就佔了11個名額！</p>
+<p>不過個人還蠻期待Man City跟Barcelona這個對戰.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AD%90%E5%86%A0>#歐冠</a>
+<a href=http://pacermania.tumblr.com/tagged/UEFA%20Champions%20League>#UEFA Champions League</a>
+</p>
+</article>
+
+<article class=link id=p-69963451605>
+<p class=meta><span class=date>2013年12月14日 18時08分46秒</span>
+<a class=llink href=../posts/69963451605.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/69963451605 rel=canonical>●</a></p>
+<h2><a href="http://www.fifa.com/worldcup/matches/index.html?cid=tumblr_share">The matches of the 2014 FIFA World Cup Brazil™</a></h2>
+<p>The Official Match Schedule for the 2014 FIFA World Cup Brazil</p>
+</article>
+
+<article class=regular id=p-69935071818>
+<p class=meta><span class=date>2013年12月14日 10時29分00秒</span>
+<a class=llink href=../posts/69935071818.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/69935071818 rel=canonical>●</a></p>
+<h2>[WorldCup2014]小組賽分組名單出爐</h2>
+<p>Group A  Team  <a href="http://www.fifa.com/worldcup/teams/team=43924/index.html" title="Brazil">BRA</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43938/index.html" title="Croatia">CRO</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43911/index.html" title="Mexico">MEX</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43849/index.html" title="Cameroon">CMR</a>0</p>
+<div>Group B  Team  <a href="http://www.fifa.com/worldcup/teams/team=43969/index.html" title="Spain">ESP</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43960/index.html" title="Netherlands">NED</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43925/index.html" title="Chile">CHI</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43976/index.html" title="Australia">AUS</a>0</div>
+<div> </div>
+<div>Group C  Team  <a href="http://www.fifa.com/worldcup/teams/team=43926/index.html" title="Colombia">COL</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43949/index.html" title="Greece">GRE</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43854/index.html" title="Côte d'Ivoire">CIV</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43819/index.html" title="Japan">JPN</a>0</div>
+<div> </div>
+<div>Group D  Team  <a href="http://www.fifa.com/worldcup/teams/team=43930/index.html" title="Uruguay">URU</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43901/index.html" title="Costa Rica">CRC</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43942/index.html" title="England">ENG</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43954/index.html" title="Italy">ITA</a>0</div>
+<div> </div>
+<div>Group E  Team  <a href="http://www.fifa.com/worldcup/teams/team=43971/index.html" title="Switzerland">SUI</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43927/index.html" title="Ecuador">ECU</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43946/index.html" title="France">FRA</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43909/index.html" title="Honduras">HON</a>0</div>
+<div> </div>
+<div>Group F  Team  <a href="http://www.fifa.com/worldcup/teams/team=43922/index.html" title="Argentina">ARG</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=44037/index.html" title="Bosnia-Herzegovina">BIH</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43817/index.html" title="Iran">IRN</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43876/index.html" title="Nigeria">NGA</a>0</div>
+<div> </div>
+<div>Group G  Team  <a href="http://www.fifa.com/worldcup/teams/team=43948/index.html" title="Germany">GER</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43963/index.html" title="Portugal">POR</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43860/index.html" title="Ghana">GHA</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43921/index.html" title="USA">USA</a>0</div>
+<div> </div>
+<div>Group H  Team  <a href="http://www.fifa.com/worldcup/teams/team=43935/index.html" title="Belgium">BEL</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43843/index.html" title="Algeria">ALG</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43965/index.html" title="Russia">RUS</a> 0 <a href="http://www.fifa.com/worldcup/teams/team=43822/index.html" title="Korea Republic">KOR</a>0</div>
+<div> </div>
+<div>資料來源:http://www.fifa.com/worldcup/index.html</div>
+<div> </div>
+<div>我覺得最有趣的是上屆冠亞軍居然被分在同一組  XD</div>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/wolrdcup2014>#wolrdcup2014</a>
+</p>
+</article>
+
+<article class=photo id=p-69860142718>
+<p class=meta><span class=date>2013年12月13日 13時59分24秒</span>
+<a class=llink href=../posts/69860142718.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/69860142718 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo4_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo5_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo6_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo7_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo8_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo9_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mxqdz17RFM1sjz8axo10_1280.jpg"></p>
+<p>比比的相親行程。Leo’s play land 價位果然是天龍國的價位，但是服務也是天龍國等級的。<br/>
+參考網址<br/>
+<a href="http://www.leosplayland.com">http://www.leosplayland.com</a></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/Leo%27s%20playland>#Leo's playland</a>
+</p>
+</article>
+
+<article class=regular id=p-69173648615>
+<p class=meta><span class=date>2013年12月06日 23時25分08秒</span>
+<a class=llink href=../posts/69173648615.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/69173648615 rel=canonical>●</a></p>
+<h2>[Virtualbox]使用橋接器(非NAT)連上外部網路(上網)</h2>
+<p>有興趣的可以參考<a href="http://mic1491.pixnet.net/blog/post/30213936--sun-virtualbox-2.2.x%E7%B6%B2%E8%B7%AF%E8%A8%AD%E5%AE%9A%E8%AA%AA%E6%98%8E">這篇.</a></p>
+<p>因為最近電腦更新的緣故,原本可以使用NAT連外部網路的方式突然不能使用,搞了很久NAT始終搞不定,於是在網路上就搜尋到可以使用橋接的方式,連上外部網路.</p>
+<p>首先打開virtualbox–>設定值–>網路–>介面卡1–>橋接介面卡.</p>
+<p><img src="http://68.media.tumblr.com/17c30264f0e1f3163e380b3e367883e8/tumblr_inline_mxe54norqc1snfajc.png"/></p>
+<p>接下來進入XP系統.若你的主機連線是用adsl的方式連線,在virtualbox裡的系統也要用adsl的方式,才可以連上外部網路.如果<span><span><span>是連接ip分享器的方式,virtualbox裡的系統應該會<span><span><span>透過dhcp</span></span></span>取得新內部的IP,連上外部網路.以下是連上adsl的ip資訊.</span></span></span></p>
+<p><span><span><span><img src="http://68.media.tumblr.com/3346cdcabaa5b4e025f67448132f77c2/tumblr_inline_mxe5dgkzCh1snfajc.png"/></span></span></span></p>
+<p>如果沒有意外,應該就可以連上網路囉！</p>
+<p><img src="http://68.media.tumblr.com/3db12d411ac4c124cb1664b36c95d3b1/tumblr_inline_mxe5fxaZlO1snfajc.png"/></p>
+
+<p></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/virtualbox>#virtualbox</a>
+<a href=http://pacermania.tumblr.com/tagged/bridge%20adapter>#bridge adapter</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%A9%8B%E6%8E%A5%E5%99%A8>#橋接器</a>
+</p>
+</article>
+
+<article class=regular id=p-68572628987>
+<p class=meta><span class=date>2013年12月01日 00時47分35秒</span>
+<a class=llink href=../posts/68572628987.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/68572628987 rel=canonical>●</a></p>
+<h2>[tumblr]簡易的讓你的tumblr部落格可以打廣告</h2>
+<p>如果你要在tumblr插入廣告,若你不是很懂html,大概就只能用置頂或是reblog的方式"廣告"你要的文章.不過如果你只是想要在你tumblr部落格的右側新增一小格類似gif圖檔的小廣告,可以試著用這個方法.</p>
+<p>1.首先先在你原先登錄的帳號,用create new blog的方式,創建新的帳號.</p>
+
+<p><img src="http://68.media.tumblr.com/be4e6c4d3af30716b24e6c21e7acf7a4/tumblr_inline_mx34g5FdB21snfajc.png"/></p>
+<p>2.新的帳號設定完成之後,請用點選photo貼圖po文.</p>
+<p><img src="http://68.media.tumblr.com/325b93e11ea38870afafca6612b2bb45/tumblr_inline_mx34ktFbaY1snfajc.png"/></p>
+<p>3.選擇你要貼圖的相片.</p>
+<p><img src="http://68.media.tumblr.com/5c40b8d4c44929e37ab90a8336ac18a2/tumblr_inline_mx34nz5iKF1snfajc.png"/></p>
+
+<p></p>
+<p>4.選完圖片之後,在圖片上有一個連結圖示,點選後會要你輸入網址,就輸入你想要打廣告的網址.</p>
+<p><img src="http://68.media.tumblr.com/b1c8c982dc47c831f6448b0ad51c0030/tumblr_inline_mx34p5R1L71snfajc.png"/></p>
+<p>5.切換到新帳號的部落格頁面,接下來就利用tumblr的愛心(like)功能,把這篇文章收入變成posts I like.</p>
+<p><img src="http://68.media.tumblr.com/650e0f05322d89a9bb3c1866a131a943/tumblr_inline_mx34siFSBz1snfajc.png"/></p>
+
+<p></p>
+<p>6.最後你就可以在你的post I like上,看到你的廣告啦！</p>
+<p><img src="http://68.media.tumblr.com/081be53cd957bc042982f5a55b42a6d4/tumblr_inline_mx350egKNL1snfajc.png"/></p>
+<p>其實講白一點,就是利用like+某些部落格的模板可以有post I like的功能,加上一個專門用來廣告的新帳號,讓這個圖檔的廣告可以出現在部落格的右側.只是這個作法在參觀者點進去圖示之後,會出現你新帳號的部落格,而不是你要導引對方要去的"網頁",算是這個方法的缺點.如果你要讓你的廣告完美的導引參觀者進入你要導引的網站,那還是乖乖的學html語法,或是花錢買別人作好的部落格模板吧！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%BB%A3%E5%91%8A>#廣告</a>
+<a href=http://pacermania.tumblr.com/tagged/tumblr%E5%BB%A3%E5%91%8A>#tumblr廣告</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

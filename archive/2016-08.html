@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":987,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>八月 2016</h1>
+
+
+<article class=regular id=p-149387030253>
+<p class=meta><span class=date>2016年08月24日 06時38分06秒</span>
+<a class=llink href=../posts/149387030253.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/149387030253 rel=canonical>●</a></p>
+<h2>[Amazon亞馬遜]使用Fire tv Stick收聽Youtube</h2>
+<figure data-orig-width="716" data-orig-height="481" class="tmblr-full"><img src="http://68.media.tumblr.com/006ee9ed09795452c67ba0347edafaa4/tumblr_inline_ocdve6Gd881snfajc_540.png" alt="image" data-orig-width="716" data-orig-height="481"/></figure><p>之前我有分享過用<a href="http://pacermania.tumblr.com/post/138479218568/amazon%E4%BB%A5amazon-fire-stick-joy-drone%E5%8F%96%E4%BB%A3amazon-echo">Fire tv Stick+joy-drone</a>的方式，讓我可以直接把Fire tv Stick變成<a href="https://www.amazon.com/Amazon-Echo-Bluetooth-Speaker-with-WiFi-Alexa/dp/B00X4WHP5E/ref=sr_1_1?ie=UTF8&qid=1472084068&sr=8-1&keywords=echo">Amazon Echo</a>，我就可用Fire tv Stick直接聽<a href="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=prime+music">Prime Music</a>或是<a href="https://www.spotify.com/tw/">Spotify</a>等其他的音樂串流。不過想到Fire tv Stick也可以看(以及安裝)<a href="https://www.amazon.com/gp/product/B00I0GS2SS/ref=s9_acsd_aas_bw_c_x_3?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-5&pf_rd_r=73SWNN9BM2A1GTFZXRHV&pf_rd_t=101&pf_rd_p=2100337942&pf_rd_i=9766812011">Youtube</a>，於是就想說是否可以直接用這樣的方式，而不是透過電視的方式，聽Youtube上的音樂。</p><p>至於要如何在Fire tv Stick安裝Youtube，請在google上搜尋amazon fire tv youtube，下載並傳送Youtube app到你的amazon帳號，之後只要Fire tv Stick一開機，基本上就會安裝了。或是將你的Fire tv Stick接上電視，直接在Fire tv Stick搜尋/安裝Youtube就可以了。安裝後請登入你的Youtube或Google帳號，基本上就Youtube的設定就完成了。</p><p>接著就要利用你的電腦連上Youtube，並且搜尋你想要的音樂視頻，並且一直點選相關的音樂視頻，直到你的Youtube網頁頁面的Recommended欄位都是你想要的或相關的音樂視頻為止。以我的例子，我搜尋到巧虎之後，就一直狂點巧虎，直到Youtube網頁頁面的Recommended欄位都是巧虎為止(如下圖所示)。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/dc224054fdc2f92cc5a6a2bea12e192e/tumblr_inline_ocdvo0GrFG1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>之後你先對著Fire tv Stick遙控器喊”Launch Youtube”的指令後，基本上Fire tv Stick聽得懂的話就會回覆"Here is Youtube”。聽到回覆後，請等待約30秒，讓Fire tv Stick跑完載入Youtube App的程序。</p><p>接下來請按照以下步驟，這些步驟/動作最好有1~2秒的間隔。</p><p>1.按一下遙控器的中間鍵</p><figure data-orig-width="234" data-orig-height="602"><img src="http://68.media.tumblr.com/3d030666ab3e0186c20f33bd8a3d18fc/tumblr_inline_ocdvwv5X8p1snfajc_540.png" alt="image" data-orig-width="234" data-orig-height="602"/></figure><p>2.再按向右鍵</p><figure data-orig-width="228" data-orig-height="606"><img src="http://68.media.tumblr.com/e7882644090bd19a219908c0152a7692/tumblr_inline_ocdvysUMJ21snfajc_540.png" alt="image" data-orig-width="228" data-orig-height="606"/></figure><p>3.再按中間鍵</p><figure data-orig-width="233" data-orig-height="601"><img src="http://68.media.tumblr.com/b3b6494e65269a996f67bb96a7f0d709/tumblr_inline_ocdvzb3rQK1snfajc_540.png" alt="image" data-orig-width="233" data-orig-height="601"/></figure><p>若沒有問題，在經過一陣廣告的音頻之後，就會聽到你之前在Youtube選擇的視頻了。對我來說，使用Fire tv Stick來聽巧虎，就不用擔心小屁孩巧虎看太久視力會變差的問題，就算連放四小時我都可以很安心，對我這個奶爸來說，這真是騙小屁孩的絕佳道具之一。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20Fire%20Stick>#Amazon Fire Stick</a>
+<a href=http://pacermania.tumblr.com/tagged/fire%20tv%20stick>#fire tv stick</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Prime%20Music>#Amazon Prime Music</a>
+<a href=http://pacermania.tumblr.com/tagged/Youtube>#Youtube</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Youtube%20App>#Amazon Youtube App</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Echo>#Amazon Echo</a>
+</p>
+</article>
+
+<article class=regular id=p-148368766003>
+<p class=meta><span class=date>2016年08月03日 06時35分31秒</span>
+<a class=llink href=../posts/148368766003.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/148368766003 rel=canonical>●</a></p>
+<h2>[Amazon亞馬遜]Echo dot</h2>
+<figure data-orig-width="1607" data-orig-height="1391" class="tmblr-full"><img src="http://68.media.tumblr.com/faef685235ead18232e3bd6a4d9ca222/tumblr_inline_obaz9bK50X1snfajc_540.jpg" alt="image" data-orig-width="1607" data-orig-height="1391"/></figure><p>之前買了一個Amazon Tap（可參考<a href="http://pacermania.tumblr.com/post/142745127503/amazon%E4%BA%9E%E9%A6%AC%E9%81%9Camazon-tap">這裡</a>），原本想說可以自己用，沒想到女王看到之後龍心大悅，那台Amazon Tap幾乎就變成女王的『玩具』了。所以，我就考慮另一台跟Amazon Echo很像，但是沒有音箱的<a href="https://www.amazon.com/b/?node=14047587011">Echo dot</a>。想買Echo dot的原因不外乎就是價格比Echo便宜一些，加上家中還有一些音箱可以使用，所以買Echo dot就可以滿足需求了。</p><p>可是沒想到，一上到amazon網站搜尋Echo dot，就發現Echo dot已經不賣了。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/8d19e2d448f6d31266800aa95facd2bd/tumblr_inline_obazcrV8f91snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>然後去ebay上搜尋，發現Echo dot的價錢幾乎快要跟Echo一樣，這比Apple的飢餓行銷還厲害呀！於是我看在Echo dot已經斷貨的份上，雖然價格偏貴，但是還是只好閉著眼睛下單了。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/62b2d453c5f5eb9e43361bbce8d25c14/tumblr_inline_obazgbvS4w1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>等了十幾天，我的Echo dot終於搭著Fedex來到家中，我只能說，ebay畢竟是最老牌的網拍品牌，淘寶再牛還是沒辦法完全取代ebay。</p><figure data-orig-width="1936" data-orig-height="2592" class="tmblr-full"><img src="http://68.media.tumblr.com/d039fbd5aa9ce091bb0eb205796a6bf0/tumblr_inline_obazkcIxoN1snfajc_540.jpg" alt="image" data-orig-width="1936" data-orig-height="2592"/></figure><p>Echo dot的外殼包裝，基本上和Amazon Tap類似，只是Echo dot的體積小，自然盒子就小很多。<br/></p><figure data-orig-width="1357" data-orig-height="1694" class="tmblr-full"><img src="http://68.media.tumblr.com/c5ccf35fd7d75a7cb49a2fafe0f30280/tumblr_inline_obazoacMvX1snfajc_540.jpg" alt="image" data-orig-width="1357" data-orig-height="1694"/></figure><p>後來在使用上還遇到了一個小插曲，就是一開始我用Alexa app一直沒辦法跟Echo dot配對，於是我就上網搜尋是否有人也遇到同樣的問題。後來才發現Echo dot需要把前一位amazon的使用者deregister，才能讓新的amazon使用者註冊（register）。不過我把此項訊息告訴ebay賣家後，ebay賣家跟我說他已經deregister了。那…不就沒解了嗎？最後我就想到Echo dot有reset鍵，只要把迴紋針插進去5秒左右，就會自動reset，也就可以把前一位amazon的使用者洗掉了。</p><p>另外，Echo dot還可以配對藍芽音箱，只要在Alexa app中完成藍芽配備的設定（可參考<a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=202011820">這裡</a>），就可以與藍芽音箱連接，真的太神奇了。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/c4c9cd05ef7276c8e7967114eb1da854/tumblr_inline_obazugwtVb1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>以下是我的Echo dot搭配JS的藍芽小音箱，聽Amazon Prime Music的效果還算不錯。</p><figure data-orig-width="1614" data-orig-height="1654" class="tmblr-full"><img src="http://68.media.tumblr.com/ff37078051258ee2bea705d32a1482ac/tumblr_inline_obazyjugvf1snfajc_540.jpg" alt="image" data-orig-width="1614" data-orig-height="1654"/></figure><p>希望日後亞馬遜可以恢復Echo dot出貨（不要再斷貨了），否則Echo dot的價格以後真的會比Echo貴。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Echo%20dot>#Echo dot</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon>#Amazon</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Echo>#Amazon Echo</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Tap>#Amazon Tap</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%20app>#Alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa>#Alexa</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C%E6%9C%83%E5%93%A1>#亞馬遜會員</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Prime%20Music>#Amazon Prime Music</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

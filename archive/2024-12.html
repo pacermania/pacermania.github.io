@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>摩伊希斯．奈姆-以民主之名的獨裁(商周出版)</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十二月 2024</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2024年12月01日 01時10分55秒</span> <a class="llink" href="../posts/153117938918.html">&para;</a> <a href="http://pacermania.tumblr.com/post/153117938918" rel="canonical">●</a></p>
+
+<h2>摩伊希斯．奈姆-以民主之名的獨裁(商周出版)</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="以民主之名的獨裁" id="以民主之名的獨裁" src="../images/S12083232.jpg" style="width: 1227px; height: 889px;" /></figure>
+
+<p>這本書"以民主之名的獨裁"，會吸引我的原因，是因為有一次在LINE的群組有人鑒於現在不僅台灣，各國的政治也趨向民粹政治。原本採用民主政治的國家，左派和右派會相互競爭，相互監督，相互制衡，在這樣的情形下，左派和右派保持這樣的平衡關係，雖然效率低落，但是可以確保權力不會集中在某一個獨裁者的手上。然而由於左派及右派的失能，沒有辦法藉由上述方式，改善人民的生活，若這時有一個不屬於左派或右派的人選，又站在底層階級的一方，並且不停地攻擊左派及右派的菁英階層，這個人選自然就會受到支持。<p>
+
+這個人選，也就是後來所謂的3P獨裁者，透過頗為民主的方式獲得權力，再以民粹主義(Populism)、兩極分化(Polarization)、後真相(Post-truth)的手段拆掉行政權上的制衡系統，藉此鞏固權力。<p>
+
+民粹主義通常是站在菁英主義的對立面。支持民粹主義的人認為，就是因為菁英在帶領國家的這個位置上待得太久了，他們沒辦法聽進人民的聲音，沒有辦法做出對人民有利的決定。儘管菁英是依照嚴謹的論點以及程序，來做出決定，但是往往效率低下，甚至做出可能不利於人民的決定(儘管可能有利於國家)。這時3P獨裁者就利用這樣的心理，藉由人民對菁英階級的長久以來的厭惡，來達成他的目的。<p>
+
+兩極分化在於藉由激化兩方的對立，並利用民主制度上(選舉)的缺陷，讓3P獨裁者有機可乘。他只需要鞏固他的支持者及粉絲，操作議題及政見讓對立激化，即可達到目的，他的政見是否合理不重要，只要能夠堅定穩度既有的粉絲及支持者，並且加深支持者及反對者之間的仇恨，即可達到目的。<p>
+
+後真相的手法不在於要闢謠或是抹黑對手，而是利用一些似是而非的科學論述，或是利用一些可能看起來很像是真實的信息，來混淆大眾的認知，讓大眾分不清真正的事實或真偽。尤其現在網路及社群媒體的發達，以往舊有傳播媒體的把關機制已經失效，因為如果傳統媒體沒有跟風報導導致失去收視率，傳統媒體將無法在現在社會生存下去。後真相時代大家已經不在乎事實，反而在乎的是自己主觀認定的事實。<p>
+
+難道我們的社會或是世界就會在這樣的狂潮下，成為3P獨裁者壟斷的情形嗎?當然不是。我們除了可以堅守民主的信念外，我們也可以藉由制度的設計，讓選舉選出來的人可以貼近大多數人的共識，而不是因為制度上的缺失，造成只有少數人支持的候選人反而當選的現象。作者認為，排名選擇投票制(ranked-choice voting)就是現有改革方案中，最有可能壓制3P獨裁者的野心的一個。在這個制度中，每個人不只投一票，而是按照喜好依序排出第一、第二、第三順位的候選人，這樣得到最多最低順位的候選人，就不可能當選，如此就可以避免極端的投票情形(得到少數激進選票的人，票數沒有過半卻當選的情況)。<p>
+
+本書除了討論3P獨裁者之外，亦有針對超大型跨國企業，會利用本身的優勢或是獨佔性，欺負其他較弱勢的企業，造成商業上失去競爭，進而形成商業上的壟斷及獨裁情形。對於商業上壟斷的探討，也是這本書十分特別的地方。<p>
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+<a href="https://www.instagram.com/p/B-cd_K3D6DE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">永久檔案-愛德華史諾登</a>
+
+<p><a href="https://medium.com/@a1253247/kindle-%E4%BD%BF%E7%94%A8calibre-dedrm-%E5%B9%AB%E4%BD%A0%E5%8E%BB%E9%99%A4%E4%BA%9E%E9%A6%AC%E9%81%9C-amazon-%E9%9B%BB%E5%AD%90%E6%9B%B8%E7%9A%84drm-85da165e2051" target="_blank">[Kindle]使用Calibre+DeDRM，幫你去除亞馬遜(Amazon)電子書的DRM</a></p>
+
+<p><a href="../archive/2024-08-1.html" target="_blank">卡洛斯．魯依斯．薩豐《天使遊戲》</a></p>
+
+<p><a href="https://a1253247.blogspot.com/p/blog-page.html">電子書-大數據的傲慢與偏見</a></p>
+
+<p><a href="https://a1253247.info/pacermania/archive/2024-09.html">賈德．戴蒙-槍砲、病菌與鋼鐵</a></p>
+
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p></p>
+
+<p><a href="https://www.instagram.com/beastmama.cooking/" rel="nofollow" target="_blank">野獸媽媽|懶人料理x越吃越瘦x零廚藝</a></p>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+<a href=../2024-08.html>#PLEX</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

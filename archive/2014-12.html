@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":899,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十二月 2014</h1>
+
+
+<article class=regular id=p-106364534873>
+<p class=meta><span class=date>2014年12月28日 09時01分00秒</span>
+<a class=llink href=../posts/106364534873.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/106364534873 rel=canonical>●</a></p>
+<h2>[電影]名嘴出任務-電影院和Google Play同時上映！</h2>
+<p><img alt="image" src="http://68.media.tumblr.com/6e10e6ab353ff60c511d0803c86c4c61/tumblr_inline_nh9nexhnJA1snfajc.png"/></p>
+<p>這部電影的爭議還有延伸的事件我就不談了。不過因為這部電影挑起北韓和美國的政治敏感神經，導致一開始索尼影業打算取消放映，但是後來在美國國內一堆反對聲浪跟輿論壓力下，索尼又決定在聖誕節當天放映這部電影，只是一些主流電影院仍然不鬆口，所以索尼只好尋求其他平台來放影這部電影。以下是索尼影業的CEO的聲明</p>
+<blockquote>
+<p>“我们不会放弃上映《The Interview》……同时，我们将继续我们的努力，让它登陆更多的平台和影院，让尽可能多的人可以看到它。”</p>
+</blockquote>
+<p>不過網路平台跟電影院同時上映，很明顯的就打破了影業的潛規則。而那個網路平台，在聖誕節前索尼影業仍沒有公佈。但是，同時上映絕對會影響電影院的生意，因為看電影是算人頭進場的，但網路平台可以一家三口或是三五好友一起觀看，這絕對會影響電影院跟票房。所以以下是這篇文章”电影院里看不到《The Interview》，索尼说，那要不咱在家看？”文章裡的觀點：</p>
+<blockquote>
+<p>不过，这个举动带来的影响并不仅仅是让人们可以更自由地观看《The Interview》那么简单。它触碰到了一块微妙的雷区：影片到底可以不可以在影院和点播平台同时上线？</p>
+<p>至少在《The Interview》之前，影院在这场拉锯战中是占主要优势的：他们一直在和同步视频点播服务抗争，强烈反对电影在上映的时候，提供点播服务。</p>
+<p>所 以最开始，影片上映12到16周后视频点播服务才能播出；到后来，当发行商们决定把“窗口期”缩短为8周时，很多人都恐慌了，包括詹姆斯·卡梅隆、彼得· 杰克逊等在内的23位颇具影响力的好莱坞著名导演和制片人甚至联名发表了名为《请保护观众的观影体验》的公开信，反对新片视频点播的做法。</p>
+</blockquote>
+<p><img alt="image" src="http://68.media.tumblr.com/4b323537a0b7df70a08e8d7671c2f44d/tumblr_inline_nh9oiplFRA1snfajc.png"/></p>
+<p>不過索尼影業還是選擇的同時上映，這可能是有使以來第一次打破潛規則的電影。目前在美國的Google Play商店以及一些網路平台（但不包含Apple iTunes）已經可租或是買下這部電影，然後在家或是用手機或平板觀看。會選擇Google Play以及其他平台，這樣的結果也是當初索尼始料未及的吧！</p>
+<p>我昨天晚上抵擋不了那個會殺死一隻貓的好奇心，就用Google Play看了這一部電影。簡單來說就是一部惡搞片，有電影<a href="http://zh.wikipedia.org/wiki/%E6%83%A1%E6%A3%8D%E7%89%B9%E5%B7%A5">惡混特工</a>的影子，很好笑但是笑料都蠻低級的，也難怪北韓會去駭美國索尼影業了！</p>
+<p>關於”电影院里看不到《The Interview》，索尼说，那要不咱在家看？”的詳細內容，可參考<a href="http://dy.qq.com/article.htm?id=20141225A0007S00">這裡</a>。</p>
+<p><!-- more --></p>
+<p>以下關於這部電影的一些評論：</p>
+<p>維基百科</p>
+<p><a href="http://zh.wikipedia.org/wiki/%E9%87%87%E8%AE%BF_%28%E7%94%B5%E5%BD%B1%29">http://zh.wikipedia.org/wiki/%E9%87%87%E8%AE%BF_%28%E7%94%B5%E5%BD%B1%29</a></p>
+<h3 class="entry-title">羅瑩雪部長，您知道 《名嘴出任務》 今天在網路上映了嗎？</h3>
+<p><a href="http://www.inside.com.tw/2014/12/25/what-we-learn-from-the-release-of-the-movie-the-interview-online-freedom-is-not-automatic">http://www.inside.com.tw/2014/12/25/what-we-learn-from-the-release-of-the-movie-the-interview-online-freedom-is-not-automatic</a></p>
+<p>imdb的影片簡介</p>
+<p><a href="http://www.imdb.com/title/tt2788710/?ref_=nv_sr_2">http://www.imdb.com/title/tt2788710/?ref_=nv_sr_2</a></p>
+<p>「名嘴出任務」 盜版風行</p>
+<p><a href="http://udn.com/NEWS/BREAKINGNEWS/BREAKINGNEWS8/9154227.shtml">http://udn.com/NEWS/BREAKINGNEWS/BREAKINGNEWS8/9154227.shtml</a></p>
+
+<p></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/the%20interview>#the interview</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%90%8D%E5%98%B4%E5%87%BA%E4%BB%BB%E5%8B%99>#名嘴出任務</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%BD%9B%E8%A6%8F%E5%89%87>#潛規則</a>
+<a href=http://pacermania.tumblr.com/tagged/google%20play>#google play</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%83%A1%E6%B7%B7%E7%89%B9%E5%B7%A5>#惡混特工</a>
+<a href=http://pacermania.tumblr.com/tagged/ingloriousbxstards>#ingloriousbxstards</a>
+</p>
+</article>
+
+<article class=photo id=p-106311338873>
+<p class=meta><span class=date>2014年12月27日 19時18分22秒</span>
+<a class=llink href=../posts/106311338873.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/106311338873 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_nh8nem7G4v1sjz8axo1_1280.jpg"></p>
+<p>冬天就是要吃coldstone才過癮!</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/coldstone>#coldstone</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%86%AC%E5%A4%A9%E5%90%83%E5%86%B0>#冬天吃冰</a>
+</p>
+</article>
+
+<article class=regular id=p-105419579253>
+<p class=meta><span class=date>2014年12月17日 14時06分00秒</span>
+<a class=llink href=../posts/105419579253.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/105419579253 rel=canonical>●</a></p>
+<h2>[Flickr相簿]可快速上傳/同步電腦中相片的應用程式--flickrsmartsync</h2>
+<p><span id="docs-internal-guid-4a87ad33-56d0-784d-84a2-f41e8bd394ae"><img alt="image" height="435px;" src="https://lh6.googleusercontent.com/aBdTTKwzSVl8HYeyRk2m6Ix5rld4upTf3PMQMlSJDdbwvRGmgUN2qxtlBBVal3e-rRQerMTuvAKVSh8NJzBEG0GoePesh_k4aXMi1jtzuh0qZRGmzJCXN6XVRVbKiqLmPw" width="580px;"/></span></p>
+<p id="docs-internal-guid-4a87ad33-56d0-b1dd-728c-4bd56a3f2d73"><span>由於之前好友有給我一堆他們在國外的相片檔案，因為怕把相片檔案一直存在電腦或是隨身硬碟，若是哪一天不小心壞軌，資料就會蒸發了!另外，這些相片檔我又想跟我好友的朋友(也是我的朋友)一起分享，所以後來在FTP、BT以及網路相簿這三者中，我選擇了後者。</span></p>
+<p><span>但是，我的好友一次給我14GB的檔案，我接到的時候都快暈倒了!如果使用一般的網路相簿，按照一般上傳照片的模式，不知道要上傳到何年何日。後來在廣泛的搜尋之後，發現<a href="https://www.flickr.com/">Flickr</a>有很多很好的上傳相片的工具，可以讓你的電腦擺著，就可以輕鬆的同步你資料夾裏的照片，速度也比Flickr提供的上傳模式快。只是最近Flickr將連線模式改為HTTPS，所以很多之前為Flickr量身訂做的程式都沒辦法使用，而目前看起來大概只有flickrsmartsync有為這個更動/更改做更新，所以我就選擇flickrsmartsync作為我的上傳相片的工具。</span></p>
+<p><span>申請Flickr的帳號也很簡單，只要有yahoo!奇摩的帳號，就自動成為Flickr的會員。一般會員可享有1TB的空間，也沒有以往的上傳流量限制，只是會有一些廣告，據說只要是付費會員就不會有廣告出現。</span></p>
+<p><span>接著就是要下載及安裝flickrsmartsync這支用Python寫的程式了。所以在使用前先確定你的電腦有安裝Python。大家可以在<a href="https://pypi.python.org/packages/source/f/flickrsmartsync/flickrsmartsync-0.1.18.tar.gz">這裡</a>下載flickrcmartsync</span><span>。</span></p>
+<p><span> 下載完成後解壓縮，在解完壓縮的目錄下(預設是/</span><span>flickrsmartsync 0.1.18這個目錄)</span></p>
+<p><span>輸入以下指令:</span></p>
+<p><span>python setup.py install</span></p>
+<p><span>執行完後就完成安裝程序。</span></p>
+<p><span>————————————————–<br/></span></p>
+<p><span>接著在解完壓縮的目錄下輸入:</span></p>
+<p><span>python flickrsmartsync</span></p>
+<p><span>電腦就會開始上傳相片到flickr上了。這支程式聰明的地方在於，他會自動搜尋<span>在解完壓縮的目錄下</span>的所有相片檔(圖檔)，並且會以相片檔所在的資料夾名稱(假設你存放相片的資料夾名稱為A1)，這支程式就會以A1作為這本相簿的名稱，並且將這個資料夾下所有的相片檔都上傳至Flickr上名稱為A1的相簿中。</span></p>
+<p><span>不過值得注意的是:</span></p>
+<p><span>1.我在解完壓縮的目錄下直接輸入flickrsmartsync按執行，不過電腦並沒有進行任何動作，但是我輸入python flickrsmartsync後按執行，第一次執行電腦會先開啟瀏覽器進入Flickr API應用網頁，在取得API KEY之後，往後在執行python flickrsmartsync的時候，Flickr就是用這支API KEY來確認使用者的身分的。</span></p>
+<p><span>2.上傳檔案時記得要把相片移動到解完壓縮的目錄下，執行python flickrsmartsync，這樣電腦才會上傳你要上傳的相片。你在原本存放相片的目錄下執行python flickrsmartsync，電腦是不會執行任何動作的。</span></p>
+<p><span> </span></p>
+<p><span>其他細節可參考這兩個網站:</span></p>
+<p><a href="https://pypi.python.org/pypi/flickrsmartsync"><span><a href="https://pypi.python.org/pypi/flickrsmartsync">https://pypi.python.org/pypi/flickrsmartsync</a></span></a></p>
+<p><a href="https://github.com/faisalraja/flickrsmartsync"><span><a href="https://github.com/faisalraja/flickrsmartsync">https://github.com/faisalraja/flickrsmartsync</a></span></a></p>
+<p><span> </span></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Flickr>#Flickr</a>
+<a href=http://pacermania.tumblr.com/tagged/flickrsmartsync>#flickrsmartsync</a>
+<a href=http://pacermania.tumblr.com/tagged/python>#python</a>
+<a href=http://pacermania.tumblr.com/tagged/api%20key>#api key</a>
+<a href=http://pacermania.tumblr.com/tagged/yahoo%E5%A5%87%E6%91%A9>#yahoo奇摩</a>
+</p>
+</article>
+
+<article class=regular id=p-104844351608>
+<p class=meta><span class=date>2014年12月10日 22時58分00秒</span>
+<a class=llink href=../posts/104844351608.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/104844351608 rel=canonical>●</a></p>
+<h2>[Chromecast]運用Chromecast電視棒的Offer來解鎖(再次解鎖)Google Play美版Play商店</h2>
+<p><img alt="image" src="http://68.media.tumblr.com/11f4153f06af70ed455c75a00b33e469/tumblr_inline_ngdcv6nFhI1snfajc.png"/></p>
+
+<p>雖然我之前就已經用過這位高人的方法來<a href="https://plus.google.com/109372943089547963083/posts/3jBkcG4KUwG">解鎖美版的Google Play商店</a>，讓我可以享受美國民眾才可以享受的服務。只是有一天因為手殘，在手機的google play買東西，不小心把原本已經變成"美版Google Play商店"google帳號，又打回原形(台灣Google Play商店)。於是我就想辦法找出可以讓我的帳號恢復美國版本的方法，但是我在網路上搜尋的結果，都是只要用手機的Google play買過東西之後，就無法恢復原來的狀態，簡單來說這個過程就是不可逆的。</p>
+<p>不過最近我看到<a href="https://support.google.com/chromecast/answer/6008760?hl=en">Chromecast電視棒（以下簡稱Chromecast）有特別的offer活動</a>，其中有兩項是All Music Access和X-men的電影贈送活動。我就想用我的Chromecast來試試看，看看能不能redeem這兩個google送給Chromecast用戶的大禮。後來我發現用後者的方法可以讓我的Google Play市場由台灣變成美國，真的是無意中的驚人發現！</p>
+<p><span>所以要準備的工具是:</span></p>
+<p><span>1.準備一支美國版的Chromecast(我不確定臺灣版的Chromecast可不可以)</span></p>
+<p><span>2.可以支援Chromecast app的手機(可能需要Android 4.3以上的版本)</span></p>
+<p><span>3.Openvpn app</span></p>
+<p><span>4.手機跟Chromecast要在同一個區域網路裡面（也就是要用同一個AP或是具有wifi的IP分享器）</span></p>
+<p><span>由於我的Google帳號以前有變成美國版本過，所以如果各位沒有辦法成功，也有可能是這個緣故。</span></p>
+<p><span>我的作法為:</span></p>
+<p><span>＊1.先開通All Music Access</span></p>
+<p><span>2.再開通X-men的贈送活動（活動只到2015年2月28日，請把握）</span></p>
+<p><span> 第一項有可能不是必要的步驟，而且步驟跟第二項差不多，所以我就講解第二項。</span></p>
+<p><span><span>首先先點選手機桌面的Chromecast app，記得要把Chromecast插上電源（如下圖）。</span></span></p>
+<p><span><img alt="image" src="http://68.media.tumblr.com/b8feeec50bf3ac85faee6cac0296e887/tumblr_inline_ngdd144P511snfajc.jpg"/></span></p>
+
+<p>打開Chromecast app後，點選裝置來搜尋你的Chromecast。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/886cb7b0eb43753be1ea8e0030b0f500/tumblr_inline_ngdd7jMAVl1snfajc.jpg"/></p>
+<p>出現下圖的狀況就代表你的手機已經跟你的Chromecast在同一個網域了。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/ab1526bf6d8c8af35f91a777d40b5ab6/tumblr_inline_ngddbepdPv1snfajc.jpg"/></p>
+<p>點選你的Chromecast（以上圖為例是Chromecast 9341），就會出現下列圖示。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/d8d5b48327ae01ce29b45ca2cfefa1bc/tumblr_inline_ngddezzW261snfajc.jpg"/></p>
+<p>點選螢幕右上角的點點，就會出現查詢優惠的選項，請點選查詢優惠。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/96e2b6400b6d8db1dad6da84875c3b09/tumblr_inline_ngddhzeiV71snfajc.jpg"/></p>
+<p>接著就會進入查詢優惠的頁面（如下圖所示）。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/45a19e28f423e145ce8983a995d47a2a/tumblr_inline_ngddkwCdrT1snfajc.jpg"/></p>
+
+<p></p>
+<p>查詢過程中，會叫你選擇用哪一項應用程式來開啟優惠，這時請選擇Chrome瀏覽器。開啟完成後，就會出現如優惠（如下圖），只是沒有出現我們要的X-men的優惠。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/fdd94668e6b536446a6dfc7fca665e9b/tumblr_inline_ngddnl1ION1snfajc.jpg"/></p>
+<p>這時我們就要開啟Openvpn的程式，網路上有一堆教學，我就不贅述了。記得要選擇連往美國的伺服器設定檔（Ovpn）。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/3c144cdcf91eb0f5da0d950013902239/tumblr_inline_ngdds5mO1D1snfajc.jpg"/></p>
+<p>然後連線，確定連線之後，再回到剛剛的Chrome瀏覽器。</p>
+<p><img alt="image" src="http://68.media.tumblr.com/acd210e37cac6587308054548e25cf9d/tumblr_inline_ngddvycFyl1snfajc.jpg"/></p>
+<p>再把你的Chrome瀏覽器Reload或Refresh一次。</p>
+
+<p><img alt="image" src="http://68.media.tumblr.com/7dc46e613616172c5475d96962d296a8/tumblr_inline_ngddzieftk1snfajc.jpg"/></p>
+<p><span>就會出現4個優惠！然後點選最左邊的X-men優惠，接下來的步驟我就不再詳述了，按照步驟下去應該就可以把你原本的帳號變成美國版本了！</span></p>
+<p><span><img alt="image" src="http://68.media.tumblr.com/b2b5ec6bf77edcd4e8ba4da31416422b/tumblr_inline_ngde4e4vA31snfajc.jpg"/></span></p>
+
+<p>不過過程中要注意，因為使用VPN跟Chromecast會相互影響，所以要先開Chromecast，等手機抓到Chromecast之後（這樣Google才抓的到Chromecast電視棒的序號），再開啟VPN，才不會相衝。</p>
+<p>關於第1項，步驟跟前面雷同，只是就不須要再ReloadChrome瀏覽器了。接下來的步驟應該就跟<a href="http://pacermania.tumblr.com/post/92245949738/chromebook-google-music" title="[Chromebook]在台灣開通Google Music">[Chromebook]在台灣開通Google Music</a>很像，只是因為All Music Access只能給第一次訂閱的使用者，我因為已經使用過了，所以在Google Wallet的部份，就一定要填信用卡資料（儘量用美國運通卡）跟美國的聯絡地址（網路上有很多教學），填完之後點確認，就會完成All Music Access的訂閱，就可以享受Google Music的服務了！</p>
+<p><img alt="image" src="http://68.media.tumblr.com/6e35f9c7f7d3228ab6c361b1aaa6319c/tumblr_inline_ngdfw43VPE1snfajc.png"/></p>
+
+<p>如果你成功訂閱了All Music Access服務，你還可以使用youtube music key服務，享受連續觀賞最近最夯的MV，且完全沒有廣告插入的服務（這才是真正的youtube呀！），這樣好的福利，不趕快訂閱All Music Access服務怎行呢？！</p>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Chromecast>#Chromecast</a>
+<a href=http://pacermania.tumblr.com/tagged/Chromecast%20Offer>#Chromecast Offer</a>
+<a href=http://pacermania.tumblr.com/tagged/All%20Music%20Access>#All Music Access</a>
+<a href=http://pacermania.tumblr.com/tagged/Openvpn>#Openvpn</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%BE%8E%E7%89%88play%E5%95%86%E5%BA%97>#美版play商店</a>
+<a href=http://pacermania.tumblr.com/tagged/youtube%20music%20key%E6%9C%8D%E5%8B%99>#youtube music key服務</a>
+<a href=http://pacermania.tumblr.com/tagged/youtube%20music%20key>#youtube music key</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%A7%A3%E9%8E%96Google%20Play%E7%BE%8E%E7%89%88Play%E5%95%86%E5%BA%97>#解鎖Google Play美版Play商店</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%86%8D%E6%AC%A1%E8%A7%A3%E9%8E%96%E7%BE%8E%E7%89%88Play%E5%95%86%E5%BA%97>#再次解鎖美版Play商店</a>
+</p>
+</article>
+
+<article class=regular id=p-104249670923>
+<p class=meta><span class=date>2014年12月04日 00時10分21秒</span>
+<a class=llink href=../posts/104249670923.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/104249670923 rel=canonical>●</a></p>
+<h2>【電影咖週刊 Vol.15】我就是我：珍妮佛蘿倫絲</h2>
+<p><a class="tumblr_blog" href="http://yahootwmovie.tumblr.com/post/103190424383/movie-weekly-vol15-1">yahootwmovie</a>:</p>
+<blockquote>
+<p><img alt="image" src="http://68.media.tumblr.com/694837f252b608f0202536faaa71f684/tumblr_inline_nfdrlxQUxd1ssda3h.jpg"/></p>
+<p>一名好萊塢演員要成為一線巨星有許多方式，有《太陽帝國》童星轉變成蝙蝠俠巨星的克里斯丁貝爾（Christian Bale），也有如小勞勃道尼（Robert Downey Jr.）大起大落的勵志故事，</p>
+<p><a href="http://yahootwmovie.tumblr.com/post/103190424383/movie-weekly-vol15-1">Read More</a></p>
+</blockquote>
+<p>不過我還是比較喜歡他在<a href="http://zh.wikipedia.org/wiki/%E4%B9%8C%E4%BA%91%E8%83%8C%E5%90%8E%E7%9A%84%E5%B9%B8%E7%A6%8F%E7%BA%BF">派特的幸福劇本</a>中的演出！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E7%8F%8D%E5%A6%AE%E4%BD%9B%E8%98%BF%E5%80%AB%E7%B5%B2>#珍妮佛蘿倫絲</a>
+<a href=http://pacermania.tumblr.com/tagged/jennifer%20lawrence>#jennifer lawrence</a>
+<a href=http://pacermania.tumblr.com/tagged/Silver%20Linings%20Playbook>#Silver Linings Playbook</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B4%BE%E7%89%B9%E7%9A%84%E5%B9%B8%E7%A6%8F%E5%8A%87%E6%9C%AC>#派特的幸福劇本</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>利用Raspberry Pi設置軟路由(以Express VPN為例) - Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>二月 2025</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2025年02月01日 01時00分01秒</span> <a class="llink" href="../posts/153117938918.html">&para;</a> <a href="http://pacermania.tumblr.com/post/153117938918" rel="canonical">●</a></p>
+
+<h2>利用Raspberry Pi設置軟路由(以Express VPN為例) </h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="ExpressVPN" id="ExpressVPN" src="../images/expressvpn3.jpg" style="width: 889px; height: 640px;" /></figure>
+
+<p>雖然以前小弟就有用過用軟路由的方式，讓apple tv可以藉由VPN的方式，觀看國外的節目。國外的很多節目因為授權區域的緣故，必須去防止使用在該國/該區域以外的Ip位置的裝置觀看。但是由於許多體育節目只有國外才有，例如板球，最俗又大碗的選擇就是Willow TV，但是你就必須使用美國或加拿大的IP，才能觀看。不過後來由於向亞馬遜的Fire Stick以及Apple TV相繼都可以安裝VPN服務商的app，因此想要看國外有授權限制的節目，只要先執行Apple TV上的VPN服務商的app，就可以輕易地解決問題。
+
+</p>
+
+<p>只是Apple TV上的VPN服務商的app都不太穩，雖然也可以使用Smart DNS的方式來解決，但是由於小弟想要節省Smart DNS的費用(就是想省錢)，也因此又重回到軟路由的懷抱。只是之前製作的軟路由是Nordvpn，而且製作過程複雜，而且小弟現在是使用Express vpn，所以我又重新搜尋了一下用Express vpn製作軟路由的方法，後來發現用Express vpn的方式更簡單，因此就把大概的重點分享改大家了。</p>
+
+<p>原則上還是要準備一張SD card，用Raspberry Pi官方燒入軟體把Raspberry Pi的OS燒入SD card，操作基本上非常的無腦，甚至連SSH、wifi連線都可以事先預設好然後燒入SD Card，只是小弟建議還是以有線網路連線比較好。主機原則上RPi3以上應該都可跑得很順了，但這次小弟剛好多了一台空的RPi4，所以我就用RPi4來做一台軟路由了。</p>
+
+<p>當開機完成之後，要先訂定網路規則，請執行以下三行指令。</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">sudo iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+sudo iptables -A FORWARD -i tun0 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i eth0 -o tun0 -j ACCEPT </span></pre><p></p>
+
+<p>若無法執行，可能是因為OS內還沒有iptables這個軟體，所以請輸入以下兩行指令安裝。</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">sudo apt-get install iptables 
+sudo apt-get install iptables-persistent</span></pre><p> </p>
+
+<p>安裝完成之後，請先至Express VPN的官網下載linux版本的安裝檔。下載完成後，請輸入以下指令安裝(本次是以安裝檔在Home或是Home/你登入帳號的名稱的目錄下前提) 。</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">sudo dpkg -i expressvpn_3.76.0.4-1_armhf.deb</span></pre><p></p>
+
+<p>安裝完成之後，要輸入啟動碼activate，請先輸入以下指令。</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">expressvpn activate</span></pre><p></p>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592">
+<p><img alt="ExpressVPN" src="../images/expressvpn1.jpg" style="width: 839px; height: 540px;" /></p></figure>
+
+
+
+<p>啟動碼應該在你的Express VPN的Dashboard上都可以找的到，輸入完成後，你就可以正式在你的Raspberry Pi上使用/建立VPN連線了。
+
+以下是幾個簡單且常用的指令</p>
+
+<p>列出VPN伺服器</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">expressvpn list</span></pre><p></p>
+
+<p>建立VPN連線，後面的代碼為伺服器所在地的代碼，例如加拿大的多倫多，代碼就是cato
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">expressvpn connect cato</span></pre><p></p>
+
+<p>若要中斷連線就執行以下指令
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">expressvpn disconnect</span></pre><p></p>
+
+<p>要查看連線狀態就執行以下指令
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">expressvpn status</span></pre><p></p>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592">
+<p><img alt="ExpressVPN" src="../images/expressvpn2.jpg" style="width: 839px; height: 540px;" /></p></figure>
+
+
+<p>接下來就是在Apple TV上的設定了，首先要知道RPi4的IP位置，IP位置可以用以下指令找出。
+</p>
+
+<pre style="background: rgb(238, 238, 238); border-bottom-color: initial; border-bottom-style: initial; border-image: initial; border-left-color: initial; border-left-style: initial; border-radius: 10px; border-right-color: initial; border-right-style: initial; border-top-color: rgb(221, 221, 221); border-top-style: solid; border-width: 5px 0px 0px; color: #444444; font-family: &quot;Courier New&quot;, Courier, monospace; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1.5em; margin-top: 0px; overflow-wrap: normal; overflow: auto; padding: 12px; vertical-align: baseline;"><span style="font-size: 13px;">hostname -I</span></pre><p></p>
+
+
+
+<p>再來就是在Apple TV上的設定了，簡單來說就是手動將Apple TV上路由的ip位置，改成你的軟路由器的ip位置，DNS則是可以選擇8.8.8.8或是1.1.1.1，基本上就完成了。</p>
+
+
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+<a href="https://raspberrytips.com/expressvpn-on-raspberry-pi/">ExpressVPN on Raspberry Pi: The Ultimate Guide</a>
+
+<p><a href="https://www.expressvpn.com/setup#linux" target="_blank">ExpressVPN Activation Code</a></p>
+
+<p><a href="https://pimylifeup.com/raspberry-pi-nordvpn/" target="_blank">How to Set Up NordVPN on the Raspberry Pi</a></p>
+<a href="../archive/2025-01-1.html">SiriusXM-美國在線廣播和播客平台</a>
+
+<p><a href="https://medium.com/@a1253247/raspberry-pi-%E4%BD%BF%E7%94%A8%E6%A8%B9%E8%8E%93%E6%B4%BE-%E5%81%9A%E4%B8%80%E5%80%8B%E5%85%B7%E6%9C%89vpn%E5%8A%9F%E8%83%BD%E7%9A%84%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AFrepeater-e1bebc9461cc">[Raspberry_Pi]使用樹莓派，做一個具有VPN功能的無線網路Repeater</a></p>
+
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p><a href="https://www.youtube.com/shorts/TDEwYyjAx_M" target="blank">野獸媽媽|熱愛旅行和下廚的兩男媽</a></p>
+<p></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vvT5TIY9Uu0?si=XDvhjTiyv8W4ZnHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2><p><a href="https://a1253247.info/pacermania" rel="nofollow" target="_blank">回首頁</a></p></h2>
+<p></p>
+
+
+
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+<a href=../archive/2024-08.html>#PLEX</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

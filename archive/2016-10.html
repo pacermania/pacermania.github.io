@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":847,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十月 2016</h1>
+
+
+<article class=regular id=p-152191283083>
+<p class=meta><span class=date>2016年10月23日 15時15分29秒</span>
+<a class=llink href=../posts/152191283083.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/152191283083 rel=canonical>●</a></p>
+<h2>[Kenmore洗衣機]楷模（Kenmore）洗衣機（型號：41382 亮白色）</h2>
+<figure data-orig-width="2592" data-orig-height="1936" class="tmblr-full"><img src="http://68.media.tumblr.com/d719c80d3ad8e8542881617ea2de1559/tumblr_inline_ofhlmcMjjn1snfajc_540.jpg" alt="image" data-orig-width="2592" data-orig-height="1936"/></figure><p>我們家原本是用<a href="http://seller.pcstore.com.tw/S113654671/C1005304149.htm">法國唐姆笙小型的滾筒洗衣機</a>，這種型式的洗衣機從我高中開始，我媽就是用這種滾筒洗衣機，當然順理成章的，我的新家也是用這種洗衣機。我以前都不知道唐姆笙洗衣機有什麼好，只知道他真的很小台，在寸土寸金的台北市，真的可以節省蠻多空間的。後來，我家女王使用唐姆笙洗衣機之後，他就誇讚滾筒洗衣機洗衣服好乾淨呀！原來，以前我視衣服丟進洗衣機就會洗乾淨這件事，在他眼中是這樣的稀奇。所以，基本上滾筒是洗衣機的洗淨能力是毋庸置疑的。</p><p>但是唐姆笙洗衣機有個優點（或是缺點），就是體積太小了！每次能處理衣服的量不是很多。以前家中只有兩個成員，唐姆笙還可以勉強檔著用，但是現在家中有4個成員，每天製造的髒衣服量驚人的多，要是一天不洗，隔天至少就要洗兩次衣服。雖然衣服都是洗衣機在洗，但是洗完總是要拿出來晾，要是一天晾個兩三次是件很煩人的工作，所以心中就然起想要換新洗衣機的念頭</p><p>於是我們這次換洗衣機的目標就是：</p><p><b>1.一定要是滾筒的</b></p><p><b>2.容量一定要大（至少14公斤以上）</b></p><p>所以上網搜尋的一陣之後，基本上就是Pansonic和惠而浦（LG則不考慮）在做抉擇。但是，我家女王有詢問他哥哥他們家<a href="http://www.pcstore.com.tw/kalebo/M21643411.htm">Panasonic滾筒洗衣機</a>的情形，結果很令人震驚的，就是Panasonic滾筒洗衣機洗的不乾淨！因此我們就開始鎖定<a href="http://www.whirlpool.com.tw/Product/WFW87HEDW">惠而浦的滾筒</a>了。</p><p>後來發現我們家附近就有一家專門賣惠而浦家電的家電行，於是就進去跟家電行詢問。結果家電行的老闆娘就說，惠而浦因為之前跟代理商新禾有糾紛，現在是台灣惠而浦接手，在售後服務上可能會有疑慮，所以老闆娘就跟我們推荐<a href="http://www.kenmore.com.tw/prd/w41382.html">Kenmore洗衣機</a>，而且Kenmore的代理商茂年興業已經代理30多年了，比較不會有問題。所以，我們最後就很曲折離奇選擇了這個冷門品牌–<i>Kenmore楷模的洗衣機（15公斤，型號：41382）</i>。</p><p>這就是Kenmore洗衣機的外觀，跟唐姆笙比起來簡直是龐然大物，重達100多公斤的重量，讓兩個搬洗衣機的師傅氣喘如牛。</p><figure data-orig-width="2592" data-orig-height="1936" class="tmblr-full"><img src="http://68.media.tumblr.com/0d0973b4b23309ed78830d08915adb91/tumblr_inline_ofhmzyEKkp1snfajc_540.jpg" alt="image" data-orig-width="2592" data-orig-height="1936"/></figure><p>Kenmore洗衣機的面板跟惠而浦很像，我得到的訊息是，Kenmore洗衣機是惠而浦代工的。</p><figure data-orig-width="1936" data-orig-height="2592" class="tmblr-full"><img src="http://68.media.tumblr.com/eaadb3be748ef08b3111bb0ee5745444/tumblr_inline_ofhn76w93I1snfajc_540.jpg" alt="image" data-orig-width="1936" data-orig-height="2592"/></figure><p>他的洗衣量真的很大，一次可以洗以前唐姆笙兩倍的量都沒問題，以下是Kenmore洗衣機的洗衣槽。</p><figure data-orig-width="1936" data-orig-height="2592" class="tmblr-full"><img src="http://68.media.tumblr.com/8f7137033966c55d34a388637d21e132/tumblr_inline_ofhnhm0U5t1snfajc_540.jpg" alt="image" data-orig-width="1936" data-orig-height="2592"/></figure><p>經過這幾個月的使用，除了洗淨力比唐姆笙稍差之外，其他方面都表現的很出色。當然最出色的表現就是他的大容量，以前我家女王天天都要洗衣服，有時候甚至一天還要洗兩次;現在可能只要兩三天洗一次就可以了，洗衣的壓力瞬間減輕了！而且，Kenmore洗衣機也會判斷衣服量自動延長或縮短洗衣時間，以前的唐姆笙都是制式的行程，沒辦法自動判斷衣服的量，這點真的蠻厲害的。所以如果家裡後陽台的空間如果夠大的話，建議可以買Kenmore洗衣機試試看。</p><p>在高雄的人也可以去這家店看一看唷！</p><p>名稱：宗泰電化有限公司<br/></p><p>電話：07-272-7966</p><p>地址：高雄市三民區立德里三民街278號1樓(<a href="https://www.google.com.tw/maps/place/No.+278,+Sanmin+St,+Sanmin+District,+Kaohsiung+City,+807/@22.6348736,120.2893151,19z/data=!4m5!3m4!1s0x346e0466838c8401:0xa12e5238e9903daa!8m2!3d22.6348773!4d120.2892105?hl=en">Google Map Link</a>)</p><p>Google Map</p><figure data-orig-width="879" data-orig-height="589" class="tmblr-full"><img src="http://68.media.tumblr.com/65d39ac9d1b436a69e2385c9ac9b6fbb/tumblr_inline_ofhoh6kFWf1snfajc_540.png" alt="image" data-orig-width="879" data-orig-height="589"/></figure>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/kenmore>#kenmore</a>
+<a href=http://pacermania.tumblr.com/tagged/sears%20kenmore>#sears kenmore</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%A5%B7%E6%A8%A1%E5%AE%B6%E9%9B%BB>#楷模家電</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%8C%82%E5%B9%B4%E8%88%88%E6%A5%AD>#茂年興業</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%86%99%E7%88%BE%E4%BB%95%E6%A5%B7%E6%A8%A1>#熙爾仕楷模</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%AE%97%E6%B3%B0%E9%9B%BB%E5%8C%96%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8>#宗泰電化有限公司</a>
+<a href=http://pacermania.tumblr.com/tagged/Kenmore%E6%B4%97%E8%A1%A3%E6%A9%9F>#Kenmore洗衣機</a>
+<a href=http://pacermania.tumblr.com/tagged/Kenmore%E6%BB%BE%E7%AD%92%E6%B4%97%E8%A1%A3%E6%A9%9F>#Kenmore滾筒洗衣機</a>
+<a href=http://pacermania.tumblr.com/tagged/Kenmore%E6%B4%97%E8%A1%A3%E6%A9%9F%2041382%20%E4%BA%AE%E7%99%BD%E8%89%B2>#Kenmore洗衣機 41382 亮白色</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%9E%8B%E8%99%9F%EF%BC%9A41382%20%E4%BA%AE%E7%99%BD%E8%89%B2>#型號：41382 亮白色</a>
+</p>
+</article>
+
+<article class=regular id=p-151706598073>
+<p class=meta><span class=date>2016年10月12日 23時12分03秒</span>
+<a class=llink href=../posts/151706598073.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/151706598073 rel=canonical>●</a></p>
+<h2>[Dyson吸塵器]Dyson V8 Fluffy無線吸塵器(型號：SV10 FF)</h2>
+<figure data-orig-width="2120" data-orig-height="1346" class="tmblr-full"><img src="http://68.media.tumblr.com/de4bc7ebcb8016bfc7dadd6c73b41df9/tumblr_inline_oexu2d5ow71snfajc_540.jpg" alt="image" data-orig-width="2120" data-orig-height="1346"/></figure><p>Dyson的東西真的不錯，但是由於他的產品價格真的”高貴”，因此在買Dyson吸塵器前只入手過Dyson的無葉片電風扇。</p><p>不過由於家中的二寶誕生，尤其是年紀較小的弟弟常常有皮膚癢的問題，所以為了避免過敏原造成弟弟皮膚發癢的問題，所以家中的女王就打算趁這次去沖繩旅遊的期間，扛一台Dyson吸塵器回家。</p><p>但是到了沖繩，不管是在新都心（Omoromachi單軌車站附近）的Best電氣，美國村Aeon Mall中的Best電氣，或是國際通上的驚安殿堂，價格都沒有想像中的便宜。以Dyson SV10 FF為例，大概都要78000日幣，就算是免稅，也要71800日幣左右，價格還是偏高。加上在買之前沒有認真做功課，所以我和女王一到賣場，都被這些V8、V6、Fluffy、Fluffy+、Absolute等這些代號給打敗。</p><p>後來，有在網路上看到這篇文章『<a href="http://agl527.pixnet.net/blog/post/391020583-dyson-v8-fluffy%2B-(sv10-ff-com)-%E7%84%A1%E7%B7%9A%E5%90%B8%E5%A1%B5%E5%99%A8--%E9%96%8B%E7%AE%B1%E6%96%87">Dyson V8 Fluffy+(SV10 FF COM)無線吸塵器開箱文</a>』之後，才對Dyson吸塵器的型號，以及V6與V8的差別有所了解。另外，我們也發現大部份去沖繩旅遊的人都會去新開幕的<a href="https://www.google.com.tw/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiphdTkvNXPAhXLrFQKHQ2ZA8QQFggkMAE&url=http%3A%2F%2Fcht.okinawarycom-aeonmall.com%2F&usg=AFQjCNFZSUifQbfVqQhdK5dlhjaaUVByJg&sig2=AXf7KCOFBl5eoRTA4cW6ng">永旺夢樂城沖繩來客夢</a>，去其中的Bic Camera購買電器。只是這個Mall距離我們的飯店（位於那霸市）也是有一段距離，如果殺去那裡只為了買吸塵器，未免也太瞎了。</p><p>但是Bic Camera的價格真的很殺，跟日本亞馬遜不分上下。所以就只好找看看那霸市是否有Bic Camera了。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/fcb55ed58a81e32c01ce848b1d945cab/tumblr_inline_oexvk6uAWI1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>結果後來發現，Bic Camera在那霸市有分店（如下圖所示），只是大部份去沖繩旅遊的人都不會去這一家買電器。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/8dc9c77e44652c03e1cc82f290c85d10/tumblr_inline_oexvngIRLd1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>於是我們就殺去這家位於那霸安謝的Bic Camera了。一到店裡，我們就看到了Dyson的吸塵器，原本我們是要買SV10 FF COM的，不過經過店員解釋SV10 FF也有可以吸床墊的吸頭，於是我們就改買SV10 FF了，而且更重要的是，這家的Dyson的價格可以說是那霸市最便宜的了，未稅價為63800日幣，加上秀出台灣的悠遊卡可以再扣7%，所以最後就是以59334日幣（台幣大約17900元）的價格買到這台在台灣，以<a href="http://www.books.com.tw/products/N010958252">博客來為例</a>，定價為台幣29900元的Dyson V8 Fluffy！</p><figure data-orig-width="2592" data-orig-height="1936" class="tmblr-full"><img src="http://68.media.tumblr.com/f8409a568741e5f61fa59b1326f77f31/tumblr_inline_oexwkxD1mM1snfajc_540.jpg" alt="image" data-orig-width="2592" data-orig-height="1936"/></figure><p>經過幾次使用之後，發現Dyson的吸力真的不是蓋的！才吸沒幾下，就看到網路上傳說中的灰塵，出現在吸塵器的集塵室，可見我們日常生活中，有多少塵蟎藏在床墊、枕頭、沙發椅套上。所以家中有過敏體質的人，可以入手一台Dyson吸塵器，這樣對於過敏的改善應該會有所幫助。<br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Dyson>#Dyson</a>
+<a href=http://pacermania.tumblr.com/tagged/Dyson%20V8%20Fluffy>#Dyson V8 Fluffy</a>
+<a href=http://pacermania.tumblr.com/tagged/Kojima%20X%20Bic%20Camera>#Kojima X Bic Camera</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B2%96%E7%B9%A9Bic%20Camera>#沖繩Bic Camera</a>
+<a href=http://pacermania.tumblr.com/tagged/Dyson%E5%90%B8%E5%A1%B5%E5%99%A8>#Dyson吸塵器</a>
+<a href=http://pacermania.tumblr.com/tagged/Dyson%E7%84%A1%E7%B7%9A%E5%90%B8%E5%A1%B5%E5%99%A8>#Dyson無線吸塵器</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

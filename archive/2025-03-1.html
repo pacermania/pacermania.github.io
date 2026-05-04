@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>2025年3月：Picoreplayer-將音樂轉發至homepod上 | Pacermania的部落格</title>
+
+    <meta name="description" content="後來發現picoreplayer這套軟體雖然架構很簡單，但是只要安裝LMS還有其他插件，就可以變身成一套功能強大的音樂播放軟體。加上還有支援藍芽播放，以及支援將外界input音樂轉發至其他renderer或裝置的功能，實在不得不叫人躍躍欲試啊！由於我剛好有黑膠音樂轉發至homepod的需求，所以我就索性把這台picoreplayer拿來，把黑膠音樂轉發到homepod上。">
+
+    <link rel="canonical" href="https://a1253247.info/pacermania/archive/2025-03-1.html" />
+
+    </head>
+
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>三月 2025</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2025年03月03日 11時57分49秒</span> <a class="llink" href="../posts/153117938918.html">&para;</a> <a href="http://pacermania.tumblr.com/post/153117938918" rel="canonical">●</a></p>
+
+<h2>Picoreplayer-將音樂轉發至homepod上</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="Picoreplayer" id="Picoreplayer" src="../images/IMG0683.jpeg" style="width: 889px; height: 640px;" /></figure>
+
+<p>Picoreplayer-每次只要我的樹莓派Zero W卸下某個階段性的任務的時候，我就會幫它開始找下一個任務。尤其是這台Zero W效能並不是很高，能夠執行的任務及功能越來越少，加上Zero W又沒有有線網路孔，可以應用的範圍就更少了。就在想不到要如何賦予Zero W任務的時候，就想到之前沒用過picoreplayer這套音樂管理及播放軟體，於是我就安裝了這套軟體。</p>
+
+<p>後來發現picoreplayer這套軟體雖然架構很簡單，但是只要安裝LMS還有其他插件，就可以變身成一套功能強大的音樂播放軟體。加上還有支援藍芽播放，以及支援將外界input音樂轉發至其他renderer或裝置的功能，實在不得不叫人躍躍欲試啊！由於我剛好有黑膠音樂轉發至homepod的需求，所以我就索性把這台picoreplayer拿來，把黑膠音樂轉發到homepod上。</p>
+<p>所需的材料有：樹莓派一台、USB音效擷取卡、一台支援airplay播放協定的音響、一張32G的micro SD卡、picoreplayer的iso檔
+</p>
+
+<p>首先要把從網路上抓下來的picoreplayer的iso檔，用etcher軟體燒入micro SD卡上。若是你的樹莓有有線網路孔，你就可以直接插網路孔就可以連上網路，否則就要在開機前先在micro SD的設定檔上，設定wifi帳號密碼（詳情請自行搜尋如何設定picoreplayer的wifi），或是在終端機畫面設定wifi。</p>
+<p>連上網路後，可以在瀏覽器的網址列輸入192.168.xxx.xxx：9000（你的樹莓派的IP位置及port），就可以進入LMS Player的頁面了。接著進入plugin的標籤頁，然後把waveinput這個plugin打勾。
+</p>
+
+<p><img alt="Picoreplayer" src="../images/Airplay_Bridge4.jpg" style="width: 889px; height: 640px" /></p>
+
+<p><img alt="Picoreplayer" src="../images/Airplay_Bridge5.jpg" style="width: 889px; height: 640px" /></p>
+
+<p><img alt="Picoreplayer" src="../images/Airplay_Bridge3.jpg" style="width: 889px; height: 640px" /></p>
+
+<p>另外，要進入Plugin頁面，要先在LMS Player(Logitech Media Server Player)的主頁面左下角點選setting，才能打開並進入Plugin頁面。 把waveinput這個plugin打勾之後，回到LMS Player(Logitech Media Server Player)的主頁面，打開左手邊的favorites，點選new favorites的按鈕後，於新增的網址列輸入wavin:default，名稱則可以自訂。
+
+</p>
+
+<p>在LMS Player的主頁面右上角的下拉式選單可以點選你要轉發的裝置，例如homepod。
+不過小弟之前的LMS Player一直抓不到HomePod，後來是在LMS Player的Advanced的頁面，下拉式選單選擇Airplay Bridge，將Configuration file欄位，點選Erase後再點選Generate(重新建立raopbridge.xml檔)，多重複幾次就可以抓到了。
+
+
+</p>
+
+
+<p><img alt="Picoreplayer" src="../images/Airplay_Bridge.jpg" style="width: 889px; height: 640px" /></p>
+
+<p><img alt="Picoreplayer" src="../images/Airplay_Bridge2.jpg" style="width: 889px; height: 640px" /></p>
+
+
+<p>完成後就可以把這個項目加入清單(歌單)內。然後現在可以把USB音效擷取卡插在樹梅派上，再把你的音源(ipod、黑膠唱機)接在你的音效擷取卡上。連接完成後，在LMS Player的主頁面按下播放鍵，理論上現在樹梅派已經在把它從USB音效擷取卡上擷取的音樂，轉發至HomePod上了。接下來就好好享受HomePod播放出來的音樂吧!
+</p>
+
+
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+<a href="https://www.audiosciencereview.com/forum/index.php?threads/how-to-integrate-your-turntable-analog-source-in-your-streaming-system-step-by-step-instructions-for-dummies.33528/">How to integrate your turntable/analog source in your streaming system - Step by step instructions for dummies</a>
+
+<p><a href="https://a1253247.blogspot.com/p/pimusicbox-tunein.html" target="_blank">Pi_Musicbox-用樹莓派播放Tunein電台</a></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/06/qobuz.html" target="_blank">Qobuz-播放高音質音樂的音樂平台</a></p>
+<a href="../archive/2024-09-1.html">Airplay-於HomePod上聆聽黑膠唱機/轉盤音樂</a>
+
+<p><a href="../archive/2024-08.html">PLEX-好用的多媒體伺服器軟體</a></p>
+
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p><a href="https://www.youtube.com/shorts/TDEwYyjAx_M" target="blank">野獸媽媽|熱愛旅行和下廚的兩男媽</a></p>
+
+<p></p>
+
+<h2><p><a href="https://a1253247.info/pacermania" rel="nofollow" target="_blank">回首頁</a></p></h2>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+<a href=../archive/2024-08.html>#PLEX</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

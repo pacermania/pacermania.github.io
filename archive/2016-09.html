@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":1298,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>九月 2016</h1>
+
+
+<article class=regular id=p-150730995158>
+<p class=meta><span class=date>2016年09月22日 00時04分14秒</span>
+<a class=llink href=../posts/150730995158.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/150730995158 rel=canonical>●</a></p>
+<h2>[Opera瀏覽器]解決更新版本後(39.0版本以後)無法顯示中文的問題</h2>
+<figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/26f93fd4b7cf9d9933be57813f69cf93/tumblr_inline_odv3ggc8Ds1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>自從在ubuntu作業系統開始用<a href="http://www.opera.com">Opera瀏覽器</a>之後，就被Opera簡潔的介面，還有飛快的速度所吸引，所以即便有Firefox和Chrome兩大瀏覽器可供選擇，一般來說，我還是會使用Opera做我我日常使用的瀏覽器。只是最近我在更新Opera的時候，突然發現Opera瀏覽器無法顯示中文，這真是個天大的打擊！幸好後來有找到解決的方法，才不至於讓我的Opera瀏覽器淪為只能瀏覽國外的網站。以下就是我解決的步驟。</p>
+
+<p>1.先進入edit > preferences，進入Opera的基本設定畫面。但是如果你的Opera瀏覽器預設是中文介面，就會像下圖一樣。所以如果升級後無法顯示中文，建議先移除更新的版本，再重灌原來的版本，並且把介面設為英文後再次升級成更新的版本。<br/></p>
+
+<figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/337408b82baf96b1685a415069f12d27/tumblr_inline_odv3tnxpT11snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>2.在順利的進入preferences的設定畫面後，請點選websites > Font Size > Customize Fonts來進行字型設定，如下圖所示。</p>
+
+<figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/e974825c1a132d80505dfe57314549e3/tumblr_inline_odv42xF2c41snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>3.接下來就是最弔詭的部份。以我的Ubuntu系統為例，原本在Opera設定的字型，會導致某些中文字型無法顯示，如下圖所示。這也是無法在網頁中顯示中文字型的原因。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/9cda7a10141cc9f580c3417a8a2b8f15/tumblr_inline_odv4jtixrt1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>4.所以就是要不斷的嘗試，以我的例子，我是在全字庫宋正體EXT-B、全字庫正體、全字庫正體EXT-B、全字庫正楷體等這些字型，在Standard Font、Serif Font、Sans Serif Font、Fixed-width Font之間不斷的排列組合，直到所有的中文字型可以正常顯示為止，如下圖所示。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/24e29f52841eab146ef279eb02661a61/tumblr_inline_odv4rvyMQL1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>5.設定完成後，在點進去之前的中文網頁，應該就可以看到中文字了。</p><figure data-orig-width="1024" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/809656b9118b3f0a371d5b6ef5e1494b/tumblr_inline_odv4trVXIb1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/opera%20browser>#opera browser</a>
+<a href=http://pacermania.tumblr.com/tagged/opera>#opera</a>
+<a href=http://pacermania.tumblr.com/tagged/ubuntu>#ubuntu</a>
+<a href=http://pacermania.tumblr.com/tagged/opera%E7%84%A1%E6%B3%95%E9%A1%AF%E7%A4%BA%E4%B8%AD%E6%96%87>#opera無法顯示中文</a>
+<a href=http://pacermania.tumblr.com/tagged/Opera%E7%80%8F%E8%A6%BD%E5%99%A8>#Opera瀏覽器</a>
+<a href=http://pacermania.tumblr.com/tagged/linux>#linux</a>
+<a href=http://pacermania.tumblr.com/tagged/Opera%2040.0.2308.54>#Opera 40.0.2308.54</a>
+</p>
+</article>
+
+<article class=regular id=p-149934318123>
+<p class=meta><span class=date>2016年09月04日 23時37分12秒</span>
+<a class=llink href=../posts/149934318123.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/149934318123 rel=canonical>●</a></p>
+<h2>[小米]小米wifi放大器</h2>
+<figure data-orig-width="1490" data-orig-height="1425" class="tmblr-full"><img data-orig-width="1490" data-orig-height="1425" src="http://68.media.tumblr.com/2cf4bccf9f3e70687c8055e717652032/tumblr_inline_oczk7nhHP61snfajc_540.jpg"/></figure><p>最近小米推出了許多產品，除了推出可以媲美<a href="http://www.mi.com/mibookair/">APPLE
+AIR的筆記型電腦</a>之外，也推出了一些與路由器相關的產品。由於小弟家中的書房是小屁孩遊戲的地方，為了可以讓我的<a href="https://www.amazon.com/Amazon-Fire-TV-Stick-with-Voice-Remote-Streaming-Media-Player/dp/B00ZVJAF9G/ref=sr_1_2?ie=UTF8&qid=1473002606&sr=8-2&keywords=fire+tv+stick">Fire
+tv
+Stick</a>可以正常放網路音樂串流或是Youtube，而不會發生wifi信號強度不足，而無法播放的現象，我就買了<a href="http://item.mi.com/1153200003.html?cfrom=search">小米wifi放大器放</a>在書房，加強wifi的訊號。</p><p>這就是小米wifi放大器的包裝。</p><figure data-orig-width="872" data-orig-height="1834" class="tmblr-full"><img data-orig-width="872" data-orig-height="1834" src="http://68.media.tumblr.com/12fcbcd0c07551283dc268a97928b1a8/tumblr_inline_oczkejBdjQ1snfajc_540.jpg"/></figure><p>包裝的背面有用來設定小米wifi放大器的APP下載位置(QR
+code)。<br/></p><figure data-orig-width="839" data-orig-height="1733" class="tmblr-full"><img data-orig-width="839" data-orig-height="1733" src="http://68.media.tumblr.com/d2fd51c5dec68c6004ccbf26c38766cb/tumblr_inline_oczk8tRnvA1snfajc_540.jpg"/></figure><p>正面看起來很像放大版的隨身碟。</p><figure data-orig-width="1564" data-orig-height="409" class="tmblr-full"><img data-orig-width="1564" data-orig-height="409" src="http://68.media.tumblr.com/bc6f1b020b4d46c0a09664aaa681adb2/tumblr_inline_oczk97GO6G1snfajc_540.jpg"/></figure><style type="text/css">p { margin-bottom: 0.25cm; line-height: 120%; }a:link {  }</style><p style="margin-bottom: 0cm; line-height: 100%">背面則有重設用的孔還有訊號燈。</p>
+
+<figure data-orig-width="1613" data-orig-height="434" class="tmblr-full"><img data-orig-width="1613" data-orig-height="434" src="http://68.media.tumblr.com/b779ff64b43e75ef6b9d2fc899f23dd9/tumblr_inline_oczk9hxDOV1snfajc_540.jpg"/></figure><style type="text/css">p { margin-bottom: 0.25cm; line-height: 120%; }a:link {  }</style><p style="margin-bottom: 0cm; line-height: 100%"><font face="Liberation Serif, serif"><font style="font-size: 12pt" size="3"><span lang="en-US">USB</span></font></font>接頭可以<font face="Liberation Serif, serif"><font style="font-size: 12pt" size="3"><span lang="en-US">180</span></font></font>度轉動。</p>
+
+<figure data-orig-width="1547" data-orig-height="431" class="tmblr-full"><img data-orig-width="1547" data-orig-height="431" src="http://68.media.tumblr.com/03cbeb1ee8317419d55d279ace7713d2/tumblr_inline_oczk9u3i1l1snfajc_540.jpg"/></figure><style type="text/css">p { margin-bottom: 0.25cm; line-height: 120%; }a:link {  }</style><p style="margin-bottom: 0cm; line-height: 100%">實際使用的情形，直接插在手機充電用的變壓器上就可以使用，個人覺得相當方便。</p><figure data-orig-width="2592" data-orig-height="1936" class="tmblr-full"><img data-orig-width="2592" data-orig-height="1936" src="http://68.media.tumblr.com/f5be76e76f16a1373239c322b2b0a26b/tumblr_inline_oczkibCNx61snfajc_540.jpg"/></figure><style type="text/css">p { margin-bottom: 0.25cm; line-height: 120%; }a:link {  }</style><p>不過一開始使用要先下載米家<font face="Liberation Serif, serif"><font size="3">APP</font></font>（如下圖紅色正方形框起來的位置）。</p>
+
+
+
+<figure data-orig-width="1536" data-orig-height="2048" class="tmblr-full"><img data-orig-width="1536" data-orig-height="2048" src="http://68.media.tumblr.com/53139a96bc929192f1d8cbe7e66c0106/tumblr_inline_oczkamd3is1snfajc_540.png"/></figure><style type="text/css">p { margin-bottom: 0.25cm; line-height: 120%; }a:link {  }</style><p style="margin-bottom: 0cm; line-height: 100%">然後要登輸入小米帳號和密碼（可上官網申請），區域一定要選中國大陸，要不然米家<font face="Liberation Serif, serif"><font style="font-size: 12pt" size="3"><span lang="en-US">APP</span></font></font>中的裝置清單不會出現小米<font face="Liberation Serif, serif"><font style="font-size: 12pt" size="3"><span lang="en-US">wifi</span></font></font>放大器的選項。如果完成了帳號登入，也成功的搜尋到小米<font face="Liberation Serif, serif"><font style="font-size: 12pt" size="3"><span lang="en-US">wifi</span></font></font>放大器，接下來米家<font face="Liberation Serif, serif"><font style="font-size: 12pt" size="3"><span lang="en-US">APP</span></font></font>就會提示要切換至小米<font face="Liberation Serif, serif"><font style="font-size: 12pt" size="3"><span lang="en-US">wifi</span></font></font>放大器的<font face="Liberation Serif, serif"><font style="font-size: 12pt" size="3"><span lang="en-US">wifi</span></font></font>訊號，才能對小米<font face="Liberation Serif, serif"><font style="font-size: 12pt" size="3"><span lang="en-US">wifi</span></font></font>放大器做設定。<br/></p><figure data-orig-width="1536" data-orig-height="2048" class="tmblr-full"><img data-orig-width="1536" data-orig-height="2048" src="http://68.media.tumblr.com/654feda0eced4c081a69f68ea1ca4085/tumblr_inline_oczkb1TIFE1snfajc_540.png"/></figure><p>設定完成後就可以使用啦！個人覺得小米的強項就是在他們的UI，雖然現在這個領域的後進者很多，但是小米在UI上還是有獨到之處，希望小米可以繼續做出價格不貴品質優良的產品囉！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%B0%8F%E7%B1%B3>#小米</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%B0%8F%E7%B1%B3wifi%E6%94%BE%E5%A4%A7%E5%99%A8>#小米wifi放大器</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%B0%8F%E7%B1%B3wifi>#小米wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%B1%B3%E5%AE%B6APP>#米家APP</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

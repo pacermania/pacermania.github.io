@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>窮人的經濟學 - Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十二月 2025</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2025年12月01日 10時01分26秒</span> <a class="llink" href="../posts/103290594288.html">&para;</a> <a href="http://pacermania.tumblr.com/post/103290594288" rel="canonical">●</a></p>
+
+<h2>窮人的經濟學</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="窮人的經濟學" id="窮人的經濟學" src="../images/IMG_1809.jpeg" style="width: 889px; height: 1040px;" /></figure>
+
+<p>很多書真的是一種緣分。又是一本不在原本計畫範圍內的書，但是不同於以往都是接到電子郵件的推銷廣告（精準投放），引發我的想要閱讀這本書的動力。這次反而是一位認識的朋友，最近買了電子書閱讀器，但是找不到這本電子書，所以就來問我找不找得到。雖然後來朋友還是買了實體書，而我卻找到了電子書，也因此我就這樣糊裡糊塗地開始閱讀這本書。
+
+</p>
+
+<p>這本書的命題，說實話真的很吸引我的興趣，因為以我以前有限的知識，我會認為經濟學應該是不分窮人富人一體適用的，對於消費儲蓄應該都會有類似的認知，就算有差異也不會差太多。然而事實上，窮人的金錢觀，對於健康、衛生、儲蓄甚至教育，都與富人的看法有極大的落差，若執政者仍是以一般人/富人的角度及思維來看待改善窮人生活的政策，不僅事倍功半，甚至還會徒勞無功。
+</p>
+
+
+<p>一般人如果有資金需求，一般都會去找銀行貸款，而不是放貸業者（高利貸）。因為前者利率較低，可以以較低的成本借錢，後者是不會去考慮的。可是窮人卻無法去銀行貸款，因為對窮人來說，銀行借款有很多的限制，窮人都無法符合，所以窮人只能轉向對他們來說比較方便，限制少的放貸業者借錢，儘管會讓他們借款的成本大幅增加。也因此後來才會有針對窮人設計的小額信貸的產生，使窮人在借款上有了新的選擇。
+
+</p>
+<p>另外，也有理論認為，窮人相較於富人，窮人飲食佔其總支出的佔比，比起富人來說要大得多。也就是如果窮人的收入減少，很有可能會影響到他們的飲食，他們就有可能縮衣節食，導致窮人沒有足夠的熱量來工作，導致收入更進一步降低，形成一種惡性循環(貧窮陷阱)。也因此政府往往會有針對窮人的糧食進行補貼，但是效果有限。雖然政府針對特定具有高營養價值的食物進行補貼，希望可以改善窮人的生活，但是窮人往往在生活改善後，選擇去買營養價值低但是美味的食物，政府的美意也因此大打折扣。
+
+</p>
+
+<p>窮人對於健康的看法也與富人不同。富人或一般人因為有足夠的知識，除非不得已，他們會選擇成本較低廉的方式來維持健康或衛生，例如會打預防針以及掛蚊帳防止傳染病。但是窮人除非免費送蚊帳給他們，否則即便蚊帳是便宜又有效的傳染病預防的工具，他們也不會買。預防針也是如此，窮人發現打預防針還是會生病(它們不知道不同的疾病要打不同的預防針)，他們就會認為打預防針是無效的，窮人寧花更多的錢去找醫療水準參差不齊的醫生甚至密醫，來治療他們的疾病。在生育方面，窮人跟富人/一般人的想法也是南轅北轍，一般人會認為多生孩子會造成家裡龐大的經濟開銷，所以基本上都不會生太多孩子;而窮人明知道多生孩子會造成家裡經濟負擔，但是因為基於養兒防老的觀念，窮人就會多生幾個以確保他們老年的生活。當然如果政府有好的福利政策可以讓老人有好的照顧，窮人的生育率是會有所下降的。
+
+
+</p>
+<p>這本書顛覆了我以前一些對於社會福利或是經濟學的觀念。對於窮人或貧窮國家，我們不能用開發中或是已開發國家的眼光或思維，來看待窮人。我們反而要站在窮人的角度去思考，去實際了解他們的生活，這樣才能夠真正的制定出適合他們的政策和措施，幫助他們走出貧窮。</p>
+
+
+
+
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+
+
+
+
+<p><a href="https://www.books.com.tw/products/0010706231" target="_blank">窮人的經濟學：如何終結貧窮？</a></p>
+<p><a href="../archive/2024-10.html" target="_blank">赤字迷思-現代貨幣理論和為人民而生的經濟(史蒂芬妮‧凱爾頓)</a></p>
+
+<p><a href="https://medium.com/@a1253247/%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1-%E7%B4%84%E7%BF%B0-%E5%8D%9A%E6%A0%BC-john-c-bogle-%E5%85%B1%E5%90%8C%E5%9F%BA%E9%87%91%E5%B8%B8%E8%AD%9810%E9%80%B1%E5%B9%B4%E7%B4%80%E5%BF%B5%E7%89%88-bab3f6e3c159" target="_blank">[投資理財]約翰·博格(John C. Bogle)共同基金常識10週年紀念版</a></p>
+<a href="https://a1253247.info/pacermania/archive/2024-11-1.html">致富心態-摩根.豪瑟(天下文化)</a>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7312787147319582720/" target="_blank">Readmoo-蜜蜂與遠雷(恩田陸)</a></p>
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p><a href="https://www.youtube.com/shorts/TDEwYyjAx_M" target="blank">野獸媽媽|熱愛旅行和下廚的兩男媽</a></p>
+
+<p></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vvT5TIY9Uu0?si=XDvhjTiyv8W4ZnHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<h2><p><a href="https://a1253247.info/pacermania" rel="nofollow" target="_blank">回首頁</a></p></h2>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

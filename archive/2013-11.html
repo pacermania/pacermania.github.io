@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":849,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十一月 2013</h1>
+
+
+<article class=regular id=p-67956338826>
+<p class=meta><span class=date>2013年11月24日 22時59分00秒</span>
+<a class=llink href=../posts/67956338826.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/67956338826 rel=canonical>●</a></p>
+<h2>[歐冠]2013/14小組賽第四輪</h2>
+<p>這一輪小組賽曼聯和兵工廠的局勢非常的詭異.在曼聯對皇家社會的比賽,曼聯掌控整個局勢,香川也打出相當的水準,可惜球就是進不了門框,最後整場比賽就以0:0收場.在A組曼聯雖然排名第1,但是跟第二名只差1分,跟第三名只差3分.如果接下來的比賽沒辦法贏任何一場,就有被淘汰的可能.</p>
+<p>Clubs                                      P Pts</p>
+<p><a href="http://www.uefa.com/uefachampionsleague/season=2014/clubs/club=52682/index.html"><img alt="Manchester United FC" height="18" src="http://img.uefa.com/imgml/TP/teams/logos/18x18/52682.png" title="Manchester United FC" width="18"/> Manchester United FC     </a>4  8</p>
+<p><a href="http://www.uefa.com/uefachampionsleague/season=2014/clubs/club=50109/index.html"><img alt="Bayer 04 Leverkusen" height="18" src="http://img.uefa.com/imgml/TP/teams/logos/18x18/50109.png" title="Bayer 04 Leverkusen" width="18"/> Bayer 04 Leverkusen       </a>4  7</p>
+<p><a href="http://www.uefa.com/uefachampionsleague/season=2014/clubs/club=52707/index.html"><img alt="FC Shakhtar Donetsk" height="18" src="http://img.uefa.com/imgml/TP/teams/logos/18x18/52707.png" title="FC Shakhtar Donetsk" width="18"/> FC Shakhtar Donetsk       </a>4  5</p>
+<p><a href="http://www.uefa.com/uefachampionsleague/season=2014/clubs/club=50123/index.html"><img alt="Real Sociedad de Fútbol" height="18" src="http://img.uefa.com/imgml/TP/teams/logos/18x18/50123.png" title="Real Sociedad de Fútbol" width="18"/> Real Sociedad de Fútbol  </a>4  1</p>
+<p>兵工廠在小組賽第三輪打出漂亮的進攻,整場可以說是壓著青春風暴多特蒙德打,可是多特蒙德硬是抓住兩次關鍵的反擊機會,讓具有地利人和的兵工廠在主場吞敗.第四輪同樣的劇本,只是苦主變成多特蒙德,掌握了整場的優勢,就是沒辦法進球,反倒兵工廠就是抓住了唯一的一次機會,讓Ramsey打進關鍵的一球.所以這一組原本情勢一片大好的多特蒙德,現在反而開始緊張了！兵工廠反而有後來居上的態勢,多特蒙德現在只有6分,與Napoli和兵工廠差距3分,如果不把握接下來的比賽,青春風暴很有可能在小組賽就被淘汰！</p>
+<p>Clubs                                   P Pts</p>
+<p><a href="http://www.uefa.com/uefachampionsleague/season=2014/clubs/club=52280/index.html"><img alt="Arsenal FC" height="18" src="http://img.uefa.com/imgml/TP/teams/logos/18x18/52280.png" title="Arsenal FC" width="18"/> Arsenal FC </a>                    4 9</p>
+<p><a href="http://www.uefa.com/uefachampionsleague/season=2014/clubs/club=50136/index.html"><img alt="SSC Napoli" height="18" src="http://img.uefa.com/imgml/TP/teams/logos/18x18/50136.png" title="SSC Napoli" width="18"/> SSC Napoli</a>                     4 9</p>
+<p><a href="http://www.uefa.com/uefachampionsleague/season=2014/clubs/club=52758/index.html"><img alt="Borussia Dortmund" height="18" src="http://img.uefa.com/imgml/TP/teams/logos/18x18/52758.png" title="Borussia Dortmund" width="18"/> Borussia Dortmund</a>        4 6</p>
+<p><a href="http://www.uefa.com/uefachampionsleague/season=2014/clubs/club=52748/index.html"> <img alt="Olympique de Marseille" height="18" src="http://img.uefa.com/imgml/TP/teams/logos/18x18/52748.png" title="Olympique de Marseille" width="18"/> Olympique de Marseille </a>4 0</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AD%90%E5%86%A0>#歐冠</a>
+<a href=http://pacermania.tumblr.com/tagged/uefa%20champions%20league>#uefa champions league</a>
+</p>
+</article>
+
+<article class=photo id=p-67746171755>
+<p class=meta><span class=date>2013年11月22日 20時10分46秒</span>
+<a class=llink href=../posts/67746171755.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/67746171755 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo4_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo5_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo6_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo7_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo8_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo9_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwnz5zPjsY1sjz8axo10_1280.jpg"></p>
+<p>日月潭之旅。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%97%A5%E6%9C%88%E6%BD%AD>#日月潭</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%90%91%E5%B1%B1%E9%81%8A%E5%AE%A2%E4%B8%AD%E5%BF%83>#向山遊客中心</a>
+</p>
+</article>
+
+<article class=photo id=p-67257107038>
+<p class=meta><span class=date>2013年11月17日 22時29分57秒</span>
+<a class=llink href=../posts/67257107038.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/67257107038 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_mwew9xRVxz1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwew9xRVxz1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mwew9xRVxz1sjz8axo3_1280.jpg"></p>
+<p>比比跟媽咪一起在中山大學逛大街！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%8D%81%E4%B8%80%E5%80%8B%E6%9C%88>#十一個月</a>
+</p>
+</article>
+
+<article class=link id=p-66779590101>
+<p class=meta><span class=date>2013年11月12日 22時54分00秒</span>
+<a class=llink href=../posts/66779590101.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/66779590101 rel=canonical>●</a></p>
+<h2><a href="http://www.techbang.com/posts/15527-asus-took-out-dell-then-what-essence-of-innovation-guru-clayton-christensen-of-harvard-professors-to-lecture-in-taiwan"> 華碩幹掉了 DELL，然後呢？哈佛創新大師 CLAYTON CHRISTENSEN 教授在台演講精華  </a></h2>
+<p>我覺得他講的一針見血！現在的老闆一心只想Cost Down，反正Cost Down當道，外包正夯，殊不知現在世界上就是資金太多，不讓人才消磨資金，沒有創造性的投創，自然就不會創造出新的工作機會！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/CLAYTON%20CHRISTENSEN>#CLAYTON CHRISTENSEN</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%93%88%E4%BD%9B%E5%89%B5%E6%96%B0%E5%A4%A7%E5%B8%AB>#哈佛創新大師</a>
+</p>
+</article>
+
+<article class=link id=p-66679113074>
+<p class=meta><span class=date>2013年11月11日 23時16分53秒</span>
+<a class=llink href=../posts/66679113074.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/66679113074 rel=canonical>●</a></p>
+<h2><a href="http://blackhawks.nhl.com/gamecenter/en/recap?id=2013020258&navid=DL|CHI|home">Edmonton Oilers at Chicago Blackhawks - 11/10/2013</a></h2>
+<blockquote class="link_og_blockquote">The Official Site of the Chicago Blackhawks</blockquote>
+<blockquote class="link_og_blockquote">最近Blackhawks的進攻火力旺盛，連兩場都進五球。不過今天對Oilers結束前，防守球員<a href="http://blackhawks.nhl.com/club/player.htm?id=8465058">Michal Rozsival在場邊遭到球擊中下巴，希望沒有大礙！</a></blockquote>
+<blockquote class="link_og_blockquote">Late in the third, Blackhawks defenseman <a href="http://blackhawks.nhl.com/club/player.htm?id=8465058">Michal Rozsival</a> was hit in the mouth by Perron’s dump-in attempt as he sat on the bench. Quenneville expects him to be OK, but did say the blueliner was “getting some work done” after the game.</blockquote>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/nhl>#nhl</a>
+<a href=http://pacermania.tumblr.com/tagged/chicago%20blackhawks>#chicago blackhawks</a>
+<a href=http://pacermania.tumblr.com/tagged/blackhawks>#blackhawks</a>
+</p>
+</article>
+
+<article class=photo id=p-66670567189>
+<p class=meta><span class=date>2013年11月11日 20時24分37秒</span>
+<a class=llink href=../posts/66670567189.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/66670567189 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_mw1tir0mcT1slx81go1_1280.jpg"></p>
+<p><a href="http://robsparkman.tumblr.com/post/66564149677/yon" class="tumblr_blog">robsparkman</a>:</p>
+
+<blockquote><p>Yon</p></blockquote>
+
+<p>拍立得重曝。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/polaroid>#polaroid</a>
+</p>
+</article>
+
+<article class=regular id=p-66551736299>
+<p class=meta><span class=date>2013年11月10日 16時26分26秒</span>
+<a class=llink href=../posts/66551736299.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/66551736299 rel=canonical>●</a></p>
+<h2>[拍立得]駁二</h2>
+<p>最近天氣比較涼，適合用Impossible Project的底片來拍。不過剛開始陰天的時候，進光量調小好像跟沒調一樣，但是拍出來的效果很不錯。這是PX680最後一批底片，之後就要用新一代的Color 600來拍了。</p>
+<p><img src="http://68.media.tumblr.com/e9e949025463205f4f99a25bd763b724/tumblr_inline_mw1gpfl5MA1snfajc.jpg"/></p>
+<p><img src="http://68.media.tumblr.com/a4e8eceeacab9fa4a1826d4999df027b/tumblr_inline_mw1gpqVAK31snfajc.jpg"/></p>
+<p><img src="http://68.media.tumblr.com/ff21faf2a43e27d879a5fb7f2ebccde7/tumblr_inline_mw1gq4dyvO1snfajc.jpg"/></p>
+<p><img src="http://68.media.tumblr.com/2aff46b1e3e9ba080b72ade942ba1e57/tumblr_inline_mw1gqiiSRR1snfajc.jpg"/></p>
+<p><img src="http://68.media.tumblr.com/736e30aec5523f67bc0f5a2180595266/tumblr_inline_mw1gqzQfpn1snfajc.jpg"/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Impossible%20project>#Impossible project</a>
+<a href=http://pacermania.tumblr.com/tagged/polaroid>#polaroid</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%8B%8D%E7%AB%8B%E5%BE%97>#拍立得</a>
+</p>
+</article>
+
+<article class=photo id=p-66279548570>
+<p class=meta><span class=date>2013年11月07日 22時53分18秒</span>
+<a class=llink href=../posts/66279548570.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/66279548570 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_mvg05ubmPn1sgc5tho1_500.gif"></p>
+<p>cool stuff</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/gif>#gif</a>
+</p>
+</article>
+
+<article class=photo id=p-66230658151>
+<p class=meta><span class=date>2013年11月07日 08時18分28秒</span>
+<a class=llink href=../posts/66230658151.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/66230658151 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_mvkbubj5NJ1rsdpaso1_500.gif"></p>
+<p>tumblr的優勢之ㄧ，就是可以擺GIF動畫。</p>
+<p><a class="tumblr_blog" href="http://kidmograph.tumblr.com/post/65661680903/out-run-run-run-run-run">kidmograph</a>:</p>
+<blockquote>
+<p>Out-Run-Run-Run-Run-Run</p>
+</blockquote>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/GIF>#GIF</a>
+</p>
+</article>
+
+<article class=regular id=p-66094448261>
+<p class=meta><span class=date>2013年11月05日 23時18分00秒</span>
+<a class=llink href=../posts/66094448261.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/66094448261 rel=canonical>●</a></p>
+<h2>[日劇]パンとスープとネコ日和</h2>
+<p>
+<script src="http://www.xiami.com/widget/player-single?uid=0&sid=1772006787&mode=js" type="text/javascript"></script></p>
+<p>這首歌パンとスープとネコ日和</p>
+<p>也是我最近在看這齣日劇的主題歌，淡淡的，也許這樣淡淡的過一生也不錯！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E3%83%91%E3%83%B3%E3%81%A8%E3%82%B9%E3%83%BC%E3%83%97%E3%81%A8%E3%83%8D%E3%82%B3%E6%97%A5%E5%92%8C>#パンとスープとネコ日和</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%97%A5%E5%8A%87>#日劇</a>
+</p>
+</article>
+
+<article class=regular id=p-65702674047>
+<p class=meta><span class=date>2013年11月02日 00時58分14秒</span>
+<a class=llink href=../posts/65702674047.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/65702674047 rel=canonical>●</a></p>
+<h2>[音樂]Linkin Park-Recharged</h2>
+<p><img src="http://68.media.tumblr.com/f04e25a48847fb319ca8467afb28e31c/tumblr_inline_mvlge0bIGD1snfajc.jpg"/></p>
+
+<p>從幾何時，Linkin Park也變成老牌團體，連聽Linkin Park都有可能被歸類為老人！從Hybrid Theory以來，已經出過collision course這張令人驚訝的混音專輯。collision course找來Jay-Z來操刀，成功的把Linkin Park的經典歌曲Numb，附與嘻哈的靈魂。讓原本是屬於New Metal/電子搖滾的音樂，衝撞出不一樣的火花。</p>
+<p>而Recharged這張混音專輯，歌曲大多是選自Living Things專輯的歌曲，如Powerless、<span>Burn It Down、<span>I’ll Be Gone、<span>Castle of Glass等歌曲。雖然Linkin Park試圖要找回第1張及第2張專輯的感覺，但是Living Things給我的感覺則是雖然有第一張專輯的元素，但是更多時候是向電子樂靠攏。像Powerless、I’ll be Gone雖有點Numb及<span>In The End的味道，但吉他音牆的力道就弱了些。</span></span></span></span></p>
+<p><span><span><span>所以我個人認為，相較於collision course相比，Recharged比較像是每個電子樂單曲EP後面混音版本的專輯，並且多加了一首A light that never comes單曲，所以衝突感並沒有那麼大，不會像collision course那樣一翻兩瞪眼。從開始的A light that never comes及Castle of Glass就具有4/4拍House風格， 但是到了Lost in the Echo、Victimized、I’ll be Gone則混入了最近最夯的元素–Dub Step，原本濃濃的嘻哈味，被濃稠的Bass和不規則碎拍代替。Powerless、Burn it Down則被改造成4/4 Trance舞曲。</span></span></span></p>
+<p><span><span><span>其實這張專輯有些歌曲如Until it Breaks，就有Dub Step和另一種版本像是Break Beat板本，A light that never comes除了開頭的4/4 House版本之外，也有像Moby的</span></span></span><span class="watch-title  yt-uix-expander-head" id="eow-title" title="Natural Blues - Moby">Natural Blues的版本作為收尾。我想這張專輯有多電子的元素，喜愛電子樂的人應該都可以在這張專輯找到自己喜歡的單曲，最令人驚豔的是他們也把Dub Step加了進去，或許有一天我們也可以在Step Up系列電影聽到Linkin Park的混音歌曲也不一定。</span></p>
+<p><span class="watch-title  yt-uix-expander-head" title="Natural Blues - Moby">歌單：</span></p>
+<p>1.“<a href="http://en.wikipedia.org/wiki/A_Light_That_Never_Comes" title="A Light That Never Comes">A Light That Never Comes</a>" (with <a href="http://en.wikipedia.org/wiki/Steve_Aoki" title="Steve Aoki">Steve Aoki</a>)3:49</p>
+<p>2.”<a href="http://en.wikipedia.org/wiki/Castle_of_Glass" title="Castle of Glass">Castle of Glass</a>“ (<a href="http://en.wikipedia.org/wiki/Mike_Shinoda" title="Mike Shinoda">M. Shinoda</a> Remix)6:20</p>
+<p>3.”<a href="http://en.wikipedia.org/wiki/Lost_in_the_Echo" title="Lost in the Echo">Lost in the Echo</a>“ (KillSonik Remix)5:09</p>
+<p>4."Victimized" (M. Shinoda Remix)3:00</p>
+<p>5.”<a href="http://en.wikipedia.org/wiki/I%27ll_Be_Gone" title="I'll Be Gone">I’ll Be Gone</a>“ (Vice Remix) (featuring <a href="http://en.wikipedia.org/wiki/Pusha_T" title="Pusha T">Pusha T</a>)4:00</p>
+<p>6.”<a href="http://en.wikipedia.org/wiki/Lies_Greed_Misery" title="Lies Greed Misery">Lies Greed Misery</a>“ (<a href="http://en.wikipedia.org/wiki/Dirtyphonics" title="Dirtyphonics">Dirtyphonics</a> Remix)4:50</p>
+<p>7."Roads Untraveled" (Rad Omen Remix) (featuring <a href="http://en.wikipedia.org/wiki/Bun_B" title="Bun B">Bun B</a>)5:28</p>
+<p>8.”<a href="http://en.wikipedia.org/wiki/Powerless_(song)" title="Powerless (song)">Powerless</a>“ (Enferno Remix)6:07</p>
+<p>9.”<a href="http://en.wikipedia.org/wiki/Burn_It_Down_(Linkin_Park_song)" title="Burn It Down (Linkin Park song)">Burn It Down</a>“ (<a href="http://en.wikipedia.org/wiki/Tom_Swoon" title="Tom Swoon">Tom Swoon</a> Remix)4:46</p>
+<p>10."Until It Breaks" (Datsik Remix)6:00</p>
+<p>11."Skin to Bone" (Nick Catchdubs Remix) (featuring Cody B. Ware and <a href="http://en.wikipedia.org/wiki/Styles_of_Beyond" title="Styles of Beyond">Ryu</a>)3:54</p>
+<p>12."I’ll Be Gone" (Schoolboy Remix)6:11</p>
+<p>13."Until It Breaks" (<a href="http://en.wikipedia.org/wiki/Money_Mark" title="Money Mark">Money Mark</a> Headphone Remix)4:29</p>
+<p>14."A Light That Never Comes" (<a href="http://en.wikipedia.org/wiki/Rick_Rubin" title="Rick Rubin">Rick Rubin</a> Reboot)4:40</p>
+<div><strong>Total length:</strong></div>
+<p><strong>68:43</strong></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/linkin%20park>#linkin park</a>
+<a href=http://pacermania.tumblr.com/tagged/recharged>#recharged</a>
+<a href=http://pacermania.tumblr.com/tagged/dub%20step>#dub step</a>
+</p>
+</article>
+
+<article class=photo id=p-65685231010>
+<p class=meta><span class=date>2013年11月01日 19時37分15秒</span>
+<a class=llink href=../posts/65685231010.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/65685231010 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_mvl1m4uKW11sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mvl1m4uKW11sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mvl1m4uKW11sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_mvl1m4uKW11sjz8axo4_1280.jpg"></p>
+<p>在夢時代選鞋，好像很亢奮的樣子 囧</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%B5%B0%E8%B7%AF>#走路</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%81%B8%E9%9E%8B>#選鞋</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

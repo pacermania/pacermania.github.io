@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>八月 2015</h1>
+
+
+<article class=photo id=p-127402745638>
+<p class=meta><span class=date>2015年08月24日 00時41分54秒</span>
+<a class=llink href=../posts/127402745638.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/127402745638 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_ntjnpubj6B1sjz8axo1_1280.jpg"></p>
+<p>台南南紡夢時代<br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%8F%B0%E5%8D%97%E5%8D%97%E7%B4%A1%E5%A4%A2%E6%99%82%E4%BB%A3>#台南南紡夢時代</a>
+</p>
+</article>
+
+<article class=link id=p-127299966538>
+<p class=meta><span class=date>2015年08月22日 15時52分55秒</span>
+<a class=llink href=../posts/127299966538.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/127299966538 rel=canonical>●</a></p>
+<h2><a href="http://pinterest.com/pin/494973815273632941/?s=3&m=tumblr">Check this out on Pinterest.</a></h2>
+<p>今天造訪南紡夢時代。 -</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%8D%97%E7%B4%A1%E5%A4%A2%E6%99%82%E4%BB%A3>#南紡夢時代</a>
+</p>
+</article>
+
+<article class=regular id=p-126816522028>
+<p class=meta><span class=date>2015年08月16日 17時40分23秒</span>
+<a class=llink href=../posts/126816522028.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/126816522028 rel=canonical>●</a></p>
+<h2>[Panasonic麵包機]Panasonic SD-BH1000T麵包機</h2>
+<figure class="tmblr-full" data-orig-height="3120" data-orig-width="3120"><img data-orig-height="3120" data-orig-width="3120" alt="image" src="http://68.media.tumblr.com/e8766652d2f5139365b6f0f3615e8603/tumblr_inline_nt651kgiQd1snfajc_540.jpg"/></figure><p>我家女王在一次拜訪樓下鄰居的過程中，吃到了由Panasonic麵包機做出的麵包之後，對於Panasonic麵包機做出來的麵包的手感念念不忘。於是接下來就是我們搜尋麵包機的過程。原先我們有在網路上找鄰居的麵包機型號<b>SD-BMT1000T</b>，不過由於價格超出我們的預算(我們有預算嗎？)太多，所以我們就去百貨公司找。結果百貨公司也只有賣高等級的機型，我們就用價格的方式來縮小我們的選擇範圍，最後在價格方面就只有<b>SD-BMS105T、SD-BM103TS、SD-BH1000T</b>符合我們的要求。不過SD-BMS105T價格稍貴、
+SD-BM103TS功能又太陽春，因此最後就是選擇<a href="http://24h.pchome.com.tw/prod/DMAG3Y-A9006A6O8?q=/S/DMAG3Y">SD-BH1000T</a>啦！</p><p>此外，<b>SD-BH1000T</b>的粉紅色系也是勝出的關鍵，若不是因為粉紅色，可能還真的很難選擇呢！</p><figure class="tmblr-full" data-orig-height="3120" data-orig-width="3120"><img data-orig-height="3120" data-orig-width="3120" alt="image" src="http://68.media.tumblr.com/852f73e11d0bed2f25417449edb234f1/tumblr_inline_nt652bEbLp1snfajc_540.jpg"/></figure><p>在經過多次試驗之後，女王已經抓住做麵包的訣竅了！實際上這台要上手真的很簡單，只要照著MENU上的指示，然後在麵包機上按一按，機器就會自動開始工作，所以幾乎是不會失敗的！而且自從開始用麵包機做麵包之後，每天早上女王都是被麵包的香味叫醒，我也好想要這種天天被麵包(機)叫醒的生活呀
+XD</p><p>做好後的麵包就像這樣，光看圖就好像聞到香味了！</p><figure class="tmblr-full" data-orig-height="3120" data-orig-width="3120"><img data-orig-height="3120" data-orig-width="3120" alt="image" src="http://68.media.tumblr.com/10422ad6387f6e93d988359bbf1f821c/tumblr_inline_nt655lbzOy1snfajc_540.jpg"/></figure><p>接著就要準備把麵包拿出來囉！</p><figure class="tmblr-full" data-orig-height="3120" data-orig-width="3120"><img data-orig-height="3120" data-orig-width="3120" alt="image" src="http://68.media.tumblr.com/6addd9eb4064a90cddcc8a7911e28cf6/tumblr_inline_nt656zoCFS1snfajc_540.jpg"/></figure><p>倒出來的麵包，看起應該是成功的，酵母發酵的很好，沒有塌陷。</p><figure class="tmblr-full" data-orig-height="3120" data-orig-width="3120"><img data-orig-height="3120" data-orig-width="3120" alt="image" src="http://68.media.tumblr.com/b280f57fb2c5e2af686645940b7c87f5/tumblr_inline_nt659dUHlZ1snfajc_540.jpg"/></figure><p>我只能說這台麵包機真是好物呀！</p><figure class="tmblr-full" data-orig-height="3120" data-orig-width="3120"><img data-orig-height="3120" data-orig-width="3120" alt="image" src="http://68.media.tumblr.com/7c73a3bc1ba1fce80bc2f2823fdce4e5/tumblr_inline_nt65b2HiE61snfajc_540.jpg"/></figure><p>尤其是現在食安問題嚴重，加上之前胖達人事件，麵包機真的是我們生活當中不可缺少的工具呢！<br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Panasonic>#Panasonic</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%BA%B5%E5%8C%85%E6%A9%9F>#麵包機</a>
+<a href=http://pacermania.tumblr.com/tagged/SD-BH1000T>#SD-BH1000T</a>
+</p>
+</article>
+
+<article class=regular id=p-126145681708>
+<p class=meta><span class=date>2015年08月08日 11時29分17秒</span>
+<a class=llink href=../posts/126145681708.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/126145681708 rel=canonical>●</a></p>
+<h2>[HP Stream 13]WIN8.1 with Bing升級為WIN10</h2>
+<figure data-orig-width="1366" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/5c29cc8897e48bc4b20017819864f21a/tumblr_inline_nsqu220LKu1snfajc_540.png" alt="image" data-orig-width="1366" data-orig-height="768"/></figure><p>自從微軟開放WIN7和WIN8.1免費升級之後，我就想說我的<a href="http://pacermania.tumblr.com/post/113604186083/hp-stream-13hp-stream-13%E7%B0%A1%E6%98%93%E9%96%8B%E7%AE%B1%E6%96%87%E9%9A%A8%E6%A9%9F%E9%99%84%E8%B4%88office">HP Stream 13筆記型電腦</a>是否也可以升級成WIN10。雖然之前有在網路上爬過文，說<a href="http://h30434.www3.hp.com/t5/Notebook-Operating-Systems-and-Software/HP-Sstream-13-Windows-10-upgrade/td-p/4897679">HP STREAM 13有可能無法升級</a>(因為硬碟壓縮的關係)，以下式這段敘述的原文。</p><blockquote><p>Earlier releases of Windows 10 allowed for an in-place upgrade of a Windows 8.1 WIMBoot system.  The “Windows can’t be installed because this PC uses a compressed operating system.” error was introduced with the latest Windows 10 build 9926 so hopefully later releases and the final release will not have this restriction. <br/></p></blockquote><p>不過我在升級的過程中，發現微軟會有將隨身碟插入的選項，這樣似乎就可以解決升級時硬碟的問題了。</p><p>如果你已經有<a href="http://pacermania.tumblr.com/post/125600112293/windows-10%E5%B7%B2%E7%B6%93%E9%96%8B%E5%A7%8B%E6%8E%A8%E9%80%81">順利接獲通知</a>，並且有訊息提示你要更新(升級)，你應該就可以看到下面的畫面。</p><figure data-orig-width="1366" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/6fe179e8f4df58e4822d74e9f45991c3/tumblr_inline_nsqufzhVV61snfajc_540.png" alt="image" data-orig-width="1366" data-orig-height="768"/></figure><p>接著系統就會開始準備升級前的前置作業。<br/></p><figure data-orig-width="1366" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/e94d758e28043bfd998b036b050081c7/tumblr_inline_nsquh1YLkc1snfajc_540.png" alt="image" data-orig-width="1366" data-orig-height="768"/></figure><p>經過很長的一段時間，終於升級完成了，看到這樣的升級成功畫面，有沒有很感動？</p><figure data-orig-width="1366" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/d3e600f76f54b57f6219d4e76ec369c3/tumblr_inline_nsqukgwnKO1snfajc_540.png" alt="image" data-orig-width="1366" data-orig-height="768"/></figure><p>WIN10的賣點之一，Edge瀏覽器，感覺上跑起來就比IE輕快許多，而且還有一些我覺得不錯的功能。</p><figure data-orig-width="1366" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/c526c9254397de8efb9200344aeb5ac6/tumblr_inline_nsqumhyv7D1snfajc_540.png" alt="image" data-orig-width="1366" data-orig-height="768"/></figure><p>Edge結合Onenote的功能，可以把在Edge上做的筆記儲存在Onenote上，這樣跟別人分享真的很方便呢！</p><figure data-orig-width="1366" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/55bfb98c0f42eddef2ddc250f492a1aa/tumblr_inline_nsqup03OpY1snfajc_540.png" alt="image" data-orig-width="1366" data-orig-height="768"/></figure><p>另外，Edge瀏覽器另一個很讚的功能就是閱讀模式。以下是網頁原先的排版。</p><figure data-orig-width="1366" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/04a0852a391ea7268b34b96329371223/tumblr_inline_nsquri3QJr1snfajc_540.png" alt="image" data-orig-width="1366" data-orig-height="768"/></figure><p>開啟閱讀模式之後，是否覺得清爽許多呢？</p><figure data-orig-width="1366" data-orig-height="768" class="tmblr-full"><img src="http://68.media.tumblr.com/ea42cb20a34d4346efe059d5ad22d95a/tumblr_inline_nsquufljSw1snfajc_540.png" alt="image" data-orig-width="1366" data-orig-height="768"/></figure><p>雖然升級成WIN10之後，炫麗的動態磚被被縮至開始列，但是這樣的設計應該會使大家更能接受WIN10吧！我用到現在，我一點都不後悔升級成WIN10，況且微軟這樣免費的大手筆，加上Edge瀏覽器這樣強大的功能，這一定要支持一下的啦！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/WIN10>#WIN10</a>
+<a href=http://pacermania.tumblr.com/tagged/WIN8.1%20UPGRADE>#WIN8.1 UPGRADE</a>
+<a href=http://pacermania.tumblr.com/tagged/WIN8.1>#WIN8.1</a>
+<a href=http://pacermania.tumblr.com/tagged/HP%20Stream%2013>#HP Stream 13</a>
+<a href=http://pacermania.tumblr.com/tagged/Edge%E7%80%8F%E8%A6%BD%E5%99%A8>#Edge瀏覽器</a>
+<a href=http://pacermania.tumblr.com/tagged/onenote>#onenote</a>
+</p>
+</article>
+
+<article class=regular id=p-125600112293>
+<p class=meta><span class=date>2015年08月01日 23時38分09秒</span>
+<a class=llink href=../posts/125600112293.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/125600112293 rel=canonical>●</a></p>
+<h2>[WINDOWS 10]已經開始推送</h2>
+<figure class="tmblr-full" data-orig-height="677" data-orig-width="802"><img src="http://68.media.tumblr.com/ee079a4dcab8c790c3b611164af6e49b/tumblr_inline_nset6oDZrv1snfajc_540.png" data-orig-height="677" data-orig-width="802"/></figure><p>最近沒有意外的話，很多使用WINDOWS作業系統的接到免費的升級通知。不過我卻遲遲沒有收到通知，於是就上網找了一些資料。發現有一個小檔案，win10fix_full.bat，可以幫助提早獲得推送通知。</p><p><a href="http://www.filecritic.com/how-to-fix-the-missing-get-windows-10-app-gwx-icon-on-your-windows-7-or-8-or-8-1-computer/">獲得推送WIN10教學</a></p><p><a href="https://www.dropbox.com/s/drsnww7cnrqylkf/win10fix_full.bat?dl=0">下載位置</a></p><p>如果有依照這個檔案的指示應該就可以獲得推送通知(如下圖)。</p><figure class="tmblr-full" data-orig-height="558" data-orig-width="758"><img src="http://68.media.tumblr.com/5f105887d82d050d0f1e96a8d8ec8acc/tumblr_inline_nsetl4Ox1z1snfajc_540.png" data-orig-height="558" data-orig-width="758"/></figure>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/windows%2010>#windows 10</a>
+<a href=http://pacermania.tumblr.com/tagged/win%2010>#win 10</a>
+<a href=http://pacermania.tumblr.com/tagged/win%2010%20%E6%8E%A8%E9%80%81>#win 10 推送</a>
+<a href=http://pacermania.tumblr.com/tagged/win10fix_full>#win10fix_full</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":968,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>四月 2014</h1>
+
+
+<article class=link id=p-83692889109>
+<p class=meta><span class=date>2014年04月24日 12時59分49秒</span>
+<a class=llink href=../posts/83692889109.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/83692889109 rel=canonical>●</a></p>
+<h2><a href="http://ithelp.ithome.com.tw/question/10138105">[完全用 GNU/Linux 工作] 28. 使用 Live CD 修復 Debian/Ubuntu 系統 - iT邦幫忙::IT知識分享社群</a></h2>
+<p>前天從ubuntu 13.10升級至14.04(使用圖形化的升級介面)，升級到一半突然當機，關掉電源後重新啟動也沒辦法開機。要是沒有這一篇，我的電腦現在還沒辦法開機!</p>
+<p>看來以後我都要用<a href="http://ithelp.ithome.com.tw/question/10137591"> tty1 (Ctrl + Alt + F1) 使用 Ubuntu Server 的方式升級</a>，就不會出事了。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/ubuntu>#ubuntu</a>
+<a href=http://pacermania.tumblr.com/tagged/ubuntu%2014.04>#ubuntu 14.04</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%87%8D%E4%BB%81%E7%9A%84%E7%AD%86%E8%A8%98>#凍仁的筆記</a>
+<a href=http://pacermania.tumblr.com/tagged/linux>#linux</a>
+</p>
+</article>
+
+<article class=video id=p-83691795409>
+<p class=meta><span class=date>2014年04月24日 12時44分38秒</span>
+<a class=llink href=../posts/83691795409.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/83691795409 rel=canonical>●</a></p>
+<iframe src="http://instagram.com/p/nJpu5_C4Yu/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+<p><a class="tumblr_blog" href="http://linkinpark.tumblr.com/post/83663312191/sometimes-you-gotta-know-which-buttons-to-push">linkinpark</a>:</p>
+<blockquote>
+<p>“Sometimes you gotta know which buttons to push.” #TheHuntingParty 6.17.14</p>
+</blockquote>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Linkin%20Park>#Linkin Park</a>
+</p>
+</article>
+
+<article class=regular id=p-82586060896>
+<p class=meta><span class=date>2014年04月13日 23時22分00秒</span>
+<a class=llink href=../posts/82586060896.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/82586060896 rel=canonical>●</a></p>
+<h2>[ChromeOS] HP Chromebook 14</h2>
+<iframe frameborder="0" height="315" src="//www.youtube.com/embed/-zXQLXkbEhk" width="560"></iframe>
+
+<p>之前從<a href="http://www.techbang.com/posts/15113-hp-chromebook-11">T客邦</a>就得知有這種專門為Chrome OS量身訂作的筆記型電腦.不過由於Google的銷售政策的關係,台灣沒有列在Google的銷售範圍裡面,所以只能透過網拍或是水貨的方式購買或取得.</p>
+<p>於是就在開箱文的誘惑之下,就開始比較<a href="http://www.chinatimes.com/realtimenews/20131011002692-260412">HP Chromebook 11</a>及<a href="http://www.mobile01.com/topicdetail.php?f=232&t=3687122">ACER Chromebook C720</a>的差別.以外型來說,HP的外型確實比較能夠吸引目光,只是聽說有時播放Youtube影片會累格;而C720明顯在效能上就勝過HP,只是外型真的就很普通.原本想說反正外型不是很重要,快要下標C720的同時,這時網拍出現了這個選項–<a href="http://goods.ruten.com.tw/item/show?21312096098472">HP Chromebook 14</a>！他不僅補足HP Chromebook11效能上的不足,同時外型上也不會太Boring,螢幕也比C720大,雖然價格比C720貴,但是看在外型(好看+14吋的螢幕)的份上,最後就決定下標了！</p>
+<p><img alt="image" src="http://68.media.tumblr.com/171923671eec5131b2cd62a87ee920b3/tumblr_inline_n3z591UCwP1snfajc.jpg"/></p>
+<p>這就是裝HP Chromebook 14的紙箱,個人覺得設計的還不錯.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/5248c517d4e8d51dee6be51d62fa278c/tumblr_inline_n3z5b5ejbA1snfajc.jpg"/></p>
+<p>這就是Chromebook 14的外觀,內附電源線.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/a931565d3337e9e4332200ace744edb7/tumblr_inline_n3z5fz2r6W1snfajc.jpg"/></p>
+<p>這就是Chrome OS正常開機後的畫面,當然一切都是要先申請google的帳號後才能使用.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/1381cc44670bd483061d0b7d603fb6af/tumblr_inline_n3z5itgxri1snfajc.jpg"/></p>
+
+<p>裡面有一些應用程式,絕大多數都是要使用Chrome瀏覽器才能使用.雖然如此,但是一些像google docs以及其他試算表(xls)或投影片(ppt)都是可以離線讀取和修改儲存.只是google的文書處理上,還是沒有像M$來的那麼強大,但是除非你真的很喜歡用動畫或特效,否則一般投影片在Chrome OS上播放是沒什麼問題的.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/88e27465b74ef38ad9c36844d06a6134/tumblr_inline_n3z5s1Z1yz1snfajc.jpg"/></p>
+
+<p>當然筆電最重要的功能之一,就是看影片了.根據官方的說法,Chromebook可以觀看mp4和mkv檔案格式的影片,但是根據我測試的結果,mkv播放的時候音效會出不來,不知道是不是我設定的問題.而MP4就很ok,目前為止都沒甚麼問題.</p>
+<p>如果你是一個google重度使用者,而且平常只是用筆電拿來上網,處理基本文書,看看影片youtube,我想chromebook絕對可以滿足你的需求！只要你肯改變對微軟(Microsoft)的依賴的話,Chromebook真的是暨Macbook air之外,另一項不錯的選擇.</p>
+<p>P.S. 只要你購買chromebook,google會免費送你100GB的空間兩年(只要你你打開你的chromebook用你的google帳號登入,再連入<a href="https://www.google.com/intl/zh-TW/chrome/devices/goodies.html">這個網址</a>,google就會自動偵測你的chromebook是否符合升級100GB的條件),像我現在的google帳號,原本只有15GB的空間,在連線註冊後馬上升級成115GB！真的是爽！害我現在都不想用Dropbox來備份檔案了！</p>
+<p>官方售價:約299美金(<a href="http://www.shopping.hp.com/en_US/home-office/-/products/Laptops/Chromebook/F0G99UA?HP-Chromebook-14-q010nr-ENERGY-STAR-">參考HP網站</a>)</p>
+<p>網拍價格:大約11980元(露天拍賣,賣家<a href="http://class.ruten.com.tw/user/index00.php?s=ai_tec">Ai-tec</a>)</p>
+
+<p></p>
+
+<p></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/chrome%20os>#chrome os</a>
+<a href=http://pacermania.tumblr.com/tagged/hp%20chromebook%2014>#hp chromebook 14</a>
+</p>
+</article>
+
+<article class=regular id=p-81862670325>
+<p class=meta><span class=date>2014年04月06日 15時54分00秒</span>
+<a class=llink href=../posts/81862670325.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/81862670325 rel=canonical>●</a></p>
+<h2>[親子]屏東六堆客家文化園區</h2>
+<p><img src="http://68.media.tumblr.com/77e4ef4472d2bd7ba3bb7b5dad648f25/tumblr_inline_n3lnj1olE21snfajc.jpg"/></p>
+
+<p>最近週末因為工作的需要<span>,</span>週五晚上跟週六整天都要去上課<span>,</span>能夠在家裡陪小孩或是跟女王一起出遊的機會實在不多<span>.</span>原本以為這個清明節應該也是會在上課中度過<span>,</span>沒想到很貼心的<span>,</span>老師沒有打算在清明節上課<span>,</span>於是就這樣<span>,</span>多了一個三天的假期<span>.</span></p>
+<p>但是該去哪裡呢？原先我是很想去義大世界<span>,</span>只是聽說義大的遊樂園很小門票很貴<span>,</span>加上觀光客和大陸客人潮會很可觀<span>,</span>於是就打消去義大的念頭<span>(</span>明明就是不喜歡義大就隨便找一個藉口吧！<span>).</span>後來女王的好姊妹有推薦一個行程<span>,</span>就是<a href="http://thcc.hakka.gov.tw/wSite/mp?mp=12">六堆客家文化園區</a><span>.</span>後來就決定要去六堆客家文化園區了<span>.</span></p>
+<p>這個園區真的很不錯<span>,</span>園區有包含停車場<span>(</span>免費<span>),</span>飲食區<span>,</span>中央舞台<span>,</span>菸樓古蹟<span>,</span>草地和湖<span>,</span>稻田<span>,</span>以及介紹客家文物的場館<span>(</span>有介紹美濃油紙傘<span>).</span>算是一個很有規模的園區<span>,</span>個人覺得比松山菸廠文化園區好玩多了！加上中央舞台會有一些團體<span>,</span>例如大獅兄<span>,</span>還有客家電視台的主持人<span>(</span>很像東森幼幼台的主持人<span>)</span>跟小朋友帶動唱<span>,</span>真的很適合帶小朋友在這裡耗上一整天！</p>
+<p><img alt="image" src="http://68.media.tumblr.com/e195d67e7245b247f33a70f9eaea0c54/tumblr_inline_n3lmrtbeFk1snfajc.jpg"/></p>
+<p>有大獅兄的出現,小朋友都好開心</p>
+<p><img alt="image" src="http://68.media.tumblr.com/51497b336f51edaa1e4393524fe0b08d/tumblr_inline_n3llnkj1711snfajc.jpg"/></p>
+<p>跟比比一起對牛彈琴？</p>
+<p><img alt="image" src="http://68.media.tumblr.com/fbd3b7aca43291db177f08f38a2e34eb/tumblr_inline_n3llon8c5S1snfajc.jpg"/></p>
+<p>跟女王和比比一起在象徵客家精神的菸樓前拍照</p>
+<p><img alt="image" src="http://68.media.tumblr.com/7518db39232c7def739771fbdce2414c/tumblr_inline_n3llpptjI81snfajc.jpg"/></p>
+<p>這裡有很多像斗笠的建築物廣場,這些斗笠的通風效果很好,在大太陽的情形下,在斗笠底下依舊很涼爽</p>
+<p><img alt="image" src="http://68.media.tumblr.com/22455ebda70fb3d07906ecc9611c6469/tumblr_inline_n3llslAk171snfajc.jpg"/></p>
+<p>比比和他的小阿姨在玩溜滑梯</p>
+<p><img alt="image" src="http://68.media.tumblr.com/e3554f67b0fab38926aeb92d253d33ae/tumblr_inline_n3lltsWj811snfajc.jpg"/></p>
+<p>可惜沒有帶沙器,要不然比比就可以玩沙了！</p>
+<p><img alt="image" src="http://68.media.tumblr.com/b27c701e326625c39e86c2f0fde2117b/tumblr_inline_n3lmu3WIBE1snfajc.jpg"/></p>
+<p>園區裡面有湖,旁邊有步道,可以散步或是騎腳踏車遊湖</p>
+<p><img alt="image" src="http://68.media.tumblr.com/250124338a1f85b2b8ca0dee58321e36/tumblr_inline_n3lmycq10U1snfajc.jpg"/></p>
+<p>這邊也有餐飲店,肚子餓了也不必跑到園區以外的地方(聽說裡面的粄條很好吃,有人吃過之後念念不忘)</p>
+<p><img src="http://68.media.tumblr.com/838635e09bd53303db1791ba839acd12/tumblr_inline_n3lnkejElr1snfajc.jpg"/></p>
+
+<p>最後放上比比的相親照(意者請洽<a href="http://ishing0208.pixnet.net/blog">女王</a>,非誠勿擾)</p>
+<p>以下是補充資訊<span>:</span></p>
+<p>西元<span>1721</span>年爆發朱一貴事變<span>,</span>當時散布在屏東平原的客家人<span>,</span>為保衛鄉里<span>,</span>依所在地理位置組成民間義勇<span>,</span>共同抵禦外侮<span>,</span>待亂世平定後<span>,</span>再解散回庄<span>.</span>從此以後<span>,</span>民間義勇便長存於鄉里間<span>,</span>成為南部客家人捍衛聚落<span>,</span>保護家園的團體組織<span>,</span>也是六堆的前身<span>.</span>六堆的形成<span>,</span>展現出人與人之間<span>,</span>更加緊密<span>,</span>團結的合作關係<span>.</span>因此<span>,</span>六堆並非行政區域<span>,</span>而是同一族系精神的結合體<span>.</span></p>
+<p>六堆地區橫跨高雄屏東行政區<span>,</span>範圍涵蓋右堆<span>(</span>美濃<span>,</span>高樹<span>,</span>杉林<span>,</span>六龜<span>,</span>甲仙<span>);</span>前堆<span>(</span>麟洛<span>,</span>長治<span>);</span>後堆<span>(</span>內埔<span>);</span>中堆<span>(</span>竹田<span>);</span>先鋒堆<span>(</span>萬巒<span>);</span>左堆<span>(</span>新埤<span>,</span>佳冬<span>).</span></p>
+<p><span>(</span>節錄自園區簡介<span>)</span></p>
+<p>園區位置</p>
+<iframe frameborder="0" height="350" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=%E5%B1%8F%E6%9D%B1%E7%B8%A3%E5%85%A7%E5%9F%94%E9%84%89%E5%BB%BA%E8%88%88%E6%9D%91%E4%BF%A1%E7%BE%A9%E8%B7%AF588%E8%99%9F&ie=UTF8&hq=&hnear=912%E5%8F%B0%E7%81%A3%E5%B1%8F%E6%9D%B1%E7%B8%A3%E5%85%A7%E5%9F%94%E9%84%89%E4%BF%A1%E7%BE%A9%E8%B7%AF588%E8%99%9F&ll=22.658419,120.558816&spn=0.064638,0.077162&t=m&z=14&output=embed" width="425"></iframe><br/><small><a href="https://maps.google.com/maps?q=%E5%B1%8F%E6%9D%B1%E7%B8%A3%E5%85%A7%E5%9F%94%E9%84%89%E5%BB%BA%E8%88%88%E6%9D%91%E4%BF%A1%E7%BE%A9%E8%B7%AF588%E8%99%9F&ie=UTF8&hq=&hnear=912%E5%8F%B0%E7%81%A3%E5%B1%8F%E6%9D%B1%E7%B8%A3%E5%85%A7%E5%9F%94%E9%84%89%E4%BF%A1%E7%BE%A9%E8%B7%AF588%E8%99%9F&ll=22.658419,120.558816&spn=0.064638,0.077162&t=m&z=14&source=embed">顯示詳細地圖</a></small></p>
+<p>地址：屏東縣內埔鄉建興村信義路588號</p>
+<p>如果從高雄市區出發,可以先走國道1號,然後在從國道1號轉接88號快速道路,在竹田交流道轉接國道3號,在麟洛交流道下之後路上都會有路標,一直沿著路標就會找到了.</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%85%AD%E5%A0%86%E5%AE%A2%E5%AE%B6%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80>#六堆客家文化園區</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

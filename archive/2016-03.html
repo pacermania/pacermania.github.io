@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":1242,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>三月 2016</h1>
+
+
+<article class=regular id=p-141552846968>
+<p class=meta><span class=date>2016年03月24日 00時51分22秒</span>
+<a class=llink href=../posts/141552846968.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/141552846968 rel=canonical>●</a></p>
+<h2>[照明]飛利浦80W LED遙控吸頂燈</h2>
+<figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/9fe9e300c90ff44224d6de71d2b7672c/tumblr_inline_o4i1e2lLEc1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>我家女王從以前開始就覺得我們家的書房燈光很昏暗，雖然之前已經有把燈換成LED燈泡，並且把瓦數加大，只是改善幅度依舊有限，因此書房的燈光昏暗成為我們家的缺憾之一。</p><p>所以，身為家中唯一的科技宅，就在網路上搜尋適合的燈具。不過在網路搜尋之後，才發現燈具不僅要滿足亮度足之外，還要兼顧美觀、省電等功能，於是在考慮之後，決定採用LED遙控吸頂燈。但是這種型式的LED燈眾多，有<a href="http://wolflsi.pixnet.net/blog/post/60234019-panasonic-hh-lc769a-%E6%96%B0%E6%AC%BE%E9%AB%98%E6%95%88%E7%8E%87led%E5%90%B8%E9%A0%82%E7%87%88%E9%96%8B%E7%AE%B1%E5%8F%8A%E5%AE%89">Panasonic</a>、<a href="http://blog.xuite.net/my7b1703/1/244923917-TOSHIBA+LED+%E6%90%96%E6%8E%A7%E5%90%B8%E9%A0%82%E7%87%88%EF%BC%88%E6%96%87%E9%95%B7%E5%9C%96%E5%A4%9A%EF%BC%89">Toshiba</a>和飛利浦的，在多次考量之後，我們選擇了C/P值高的<a href="https://tw.bid.yahoo.com/item/%E7%8F%BE%E8%B2%A8%E5%85%8D%E9%81%8B%E8%B2%BB-Philips-%E9%A3%9B%E5%88%A9%E6%B5%A6-33349%E6%81%86%E5%85%B8-80w-LED-%E9%81%99%E6%8E%A7%E8%AA%BF-100106926108">Philips 飛利浦 33349恆典 80w LED遙控吸頂燈</a>。而且如果要價格優惠，日系品牌的LED吸頂燈還有代買+國際運送的問題，這也是我們選擇飛利浦的原因之一。</p><p>由於這款LED吸頂燈高雄永興的價格最優惠，於是我們就去永興把燈搬回家。另外永興老闆娘還幫我們介紹安裝的師傅，所以就又省去的在網路上找師傅的麻煩囉！</p><p>下圖就是整箱燈具的外觀。</p><figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/4eeec00765427caa020bedb72ae140a6/tumblr_inline_o4i26gNloR1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>燈具未安裝前的樣子。</p><figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/90bdb9779a9c3faff7c12c55618c7e90/tumblr_inline_o4i2k8pb9y1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>以下是原本的燈具的亮度。<br/></p><figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/c77030fa2af53339e58db677da055555/tumblr_inline_o4i2mqWboA1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>安裝之後的亮度。</p><figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/5e65d000df2faeb17f3e353f80ec7eeb/tumblr_inline_o4i2paU1Im1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>安裝之後，改善了我們家原本燈具的亮度的問題( 不過誰叫我一開始在書房就選了這個亮度不足的燈具，真是拿石頭砸自己的腳 >_< )，加上以前燈具照明上會有很多死角，即使原始亮度足夠，也會有光度不足(不均勻)的感覺，這個燈具改善了這個問題，死角減少很多，室內的亮度瞬間提升許多。不過安裝的師傅說，我們用的這個吸頂燈，大多數人都是用在客廳，可見我們的書房真的需要亮度足的照明。</p><p>不過<a href="https://tw.bid.yahoo.com/item/%E7%8F%BE%E8%B2%A8%E5%85%8D%E9%81%8B%E8%B2%BB-Philips-%E9%A3%9B%E5%88%A9%E6%B5%A6-33349%E6%81%86%E5%85%B8-80w-LED-%E9%81%99%E6%8E%A7%E8%AA%BF-100106926108">Philips 飛利浦 33349恆典 80w LED遙控吸頂燈</a>不只提供足夠的亮度，還有提供多種情境燈光，並且還可以用遙控的方式開/關燈，只是我們目前還沒有想到要使用情境這個功能，但遙控還真的蠻實用的。</p><figure data-orig-width="1507" data-orig-height="2082" class="tmblr-full"><img src="http://68.media.tumblr.com/9af4925b59c16a4f7bc2d599e211a5a5/tumblr_inline_o4i44hvFI21snfajc_540.jpg" alt="image" data-orig-width="1507" data-orig-height="2082"/></figure><p>我想未來家庭燈具的趨勢，大致會走向LED+遙控(手機遙控或聲控)的方向發展吧！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%90%B8%E9%A0%82%E7%87%88>#吸頂燈</a>
+<a href=http://pacermania.tumblr.com/tagged/LED%E5%90%B8%E9%A0%82%E7%87%88>#LED吸頂燈</a>
+<a href=http://pacermania.tumblr.com/tagged/Philips%20%E9%A3%9B%E5%88%A9%E6%B5%A6%2033349%E6%81%86%E5%85%B8%2080w%20LED>#Philips 飛利浦 33349恆典 80w LED</a>
+<a href=http://pacermania.tumblr.com/tagged/LED%E9%81%99%E6%8E%A7%E5%90%B8%E9%A0%82%E7%87%88>#LED遙控吸頂燈</a>
+</p>
+</article>
+
+<article class=regular id=p-140747951528>
+<p class=meta><span class=date>2016年03月10日 00時05分35秒</span>
+<a class=llink href=../posts/140747951528.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/140747951528 rel=canonical>●</a></p>
+<h2>[拍立得]Polaroid Snap</h2>
+<figure data-orig-width="1508" data-orig-height="1947" class="tmblr-full"><img data-orig-width="1508" data-orig-height="1947" src="http://68.media.tumblr.com/6d87e6604335b81e9a08f8c033a3997b/tumblr_inline_o3s3dtXzXc1snfajc_540.jpg"/></figure><p>說起來Snap跟以前的拍立得風格還是相差蠻大的，而且我一開始還不是很能接受這種數位化輸出的產品，因為相較於純光學+化學反應的底片，這種數位化的底片終究是缺少溫度，卻多了冰冷的感覺。但是在時代的洪流之下，連Polaroid也不得不向數位靠攏，就好比Blackberry也不得不在夾縫中求生存一樣，必須犧牲掉以前所堅持的個性。</p><p>但是看在那曾經也陪我度過年輕歲月的Polaroid的份上，就抱著姑且一試的心情，入手了這個Snap。</p><figure data-orig-width="2172" data-orig-height="1807" class="tmblr-full"><img data-orig-width="2172" data-orig-height="1807" src="http://68.media.tumblr.com/57b53f318af5dcb0bcc1c671b8abc54b/tumblr_inline_o3s3r6aJs81snfajc_540.jpg"/></figure><p>前面看起來與一般的數位相機差別不大，但是還是保留了Polaroid招牌的彩虹標誌。<br/></p><figure data-orig-width="2352" data-orig-height="1442" class="tmblr-full"><img data-orig-width="2352" data-orig-height="1442" src="http://68.media.tumblr.com/adc11c72966adcdd408718cb2b6f372b/tumblr_inline_o3s3u7AYHK1snfajc_540.jpg"/></figure><p>上視圖看來，除了一般快門外，還多了10秒鐘延遲以及色調選擇(黑白、彩色、墨綠？)</p><figure data-orig-width="2181" data-orig-height="2181" class="tmblr-full"><img data-orig-width="2181" data-orig-height="2181" src="http://68.media.tumblr.com/bc44d90bd78b6cd5101395a5250b64ca/tumblr_inline_o3s3ymMPX61snfajc_540.jpg"/></figure><p>相機背面可打開安裝底片。另外，相機下方有腳架孔，可以把Snap架在腳架上，算是不錯的功能。</p><figure data-orig-width="1338" data-orig-height="1756" class="tmblr-full"><img data-orig-width="1338" data-orig-height="1756" src="http://68.media.tumblr.com/e69c38d56e644b00f8d68dd93c03ba4d/tumblr_inline_o3s41r2xeE1snfajc_540.jpg"/></figure><p>接下來就是輸出的相片了。其實Snap的相片不大，只有2 x 3而已，但是畫質算是相當不錯的，像素也比傳統的Polaroid細緻。尤其是Polaroid捨棄了以往使用化學反應的顯影方式，而是採用熱感應式的相紙<a href="http://polaroid.com/products/2x3-zink-paper">Zink</a>。所以與傳統的Polaroid(impossible project)或是<a href="http://shopping.udn.com/mall/cus/cat/Cc1c02.do?dc_cargxuid_0=U001110595&gclid=Cj0KEQiAsP-2BRCFl4Lb2NTJttEBEiQAmj2tbaP-2O4w2BHa0QipRXR7-5S0dNjrLEa5lZla6Xmf8pUaApyD8P8HAQ&gclsrc=aw.ds">fujifilm instax</a>相比，這樣的相紙成本就低很多了，況且傳統的Polaroid或是fujifilm instax相片的顯影時間都不短，相較之下，Snap的輸出(顯影)時間就短很多了。看來我以後就應該會拿這台來玩了(impossible project的相紙真的太貴了！)。<br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%8B%8D%E7%AB%8B%E5%BE%97>#拍立得</a>
+<a href=http://pacermania.tumblr.com/tagged/Polaroid>#Polaroid</a>
+<a href=http://pacermania.tumblr.com/tagged/Polaroid%20Snap>#Polaroid Snap</a>
+<a href=http://pacermania.tumblr.com/tagged/snap>#snap</a>
+<a href=http://pacermania.tumblr.com/tagged/the%20impossible%20project>#the impossible project</a>
+<a href=http://pacermania.tumblr.com/tagged/fujifilm%20instax>#fujifilm instax</a>
+<a href=http://pacermania.tumblr.com/tagged/Zink>#Zink</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Kindle-火藥時代（歐陽泰） - Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十月 2025</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2025年10月01日 09時14分07秒</span> <a class="llink" href="../posts/103290594288.html">&para;</a> <a href="http://pacermania.tumblr.com/post/103290594288" rel="canonical">●</a></p>
+
+<h2>Kindle-火藥時代（歐陽泰）</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="火藥時代" id="火藥時代" src="../images/IMG_9823.png" style="width: 889px; height: 1040px;" /></figure>
+
+<p>我個人其實沒有看專門講述歷史的書籍的習慣，所以一般來說，我的電子郵件推薦的書多半都是小說類，或是理財有關的書籍。但是由於最近有接觸一些非主流歷史書籍，故我的信箱現在偶爾也會推播歷史書籍。歐陽泰就是其中之一，他是西方人卻精通中國的歷史，因為讀書群有人提示說外國人對於中國的歷史，會有截然不同的看法，也因此燃起我的興趣。於是我就選擇了火藥時代來閱讀。
+
+</p>
+
+<p>一般來說，十九世紀末的中國都被認為是積弱不振，因為儒家思想的餘毒，導致科學和科技都遠遠落後西方。然而中國都是一直積弱不振的嗎？其實並不盡然。中國在明代的時候，不僅先發展出火藥技術，在火器上的使用也領先西方。儘管後來西方在火器技術上有趕上中國的腳步，但是中國又發展出火槍陣，又有不差的軍事訓練，所以中國儘管一直受到西方或外來勢力威脅，但是中國一直都可以與之相抗衡。
+</p>
+
+
+<p>但是到了清末，尤其經過乾隆這一段較為太平的時段，沒有外來的競爭，就沒有發展軍事科技的動力，甚至連軍務都開始廢弛，就在這種情形下，就形成了清朝時期中國極弱不振的形象。但是那時的中國真的都沒有發展嗎？武器都不精良嗎？其實在甲午戰爭時，中國的船艦其實是優於日本海軍的，只是中國人不明白船堅炮利的背後，其實是有深厚的科學基礎，還有改變之後的制度來支撐。如果沒有科學基礎（例如不會畫工程圖），沒有良好的行政制度（效率低下的政府），再好的武器都無法發揮效果。
+
+</p>
+<p>本書也有講到一些一般史學家未提到的觀念。例如為何中國不傾向發展大口徑的大砲，即便本身已經有可以發展大口徑大砲的能力?作者認為當時歐洲與中國城牆的設計是截然不同的，中國的城牆非常的厚實，即便像西洋大砲這種武器，也很難將城牆毀壞或打穿，如果你是中國的領導人或是中國的軍事人員，你會極力的發展大口徑的大砲嗎?另外，大口徑的大砲在火藥的裝填上，炮管的冷卻上，都大大的限制大口徑大砲的應用。反觀火槍或是弓箭，不僅在當時已經技術成熟，加上火槍或是弓箭的陣型，只要經過精良的訓練，就可以源源不絕的射出弓箭或子彈，對敵軍造成極大的殺傷力。大家必須要想像，以當時的技術，火槍和弓箭是沒有連發的，所以必須要分成三排，當第一排發射完成後，直接退到最後一排裝填彈藥或是弓箭，第二排就上前至第一排發射，第三排裝填完成就上前至第二排預備。這樣就可以組成綿密的火槍或弓箭的陣型。
+
+</p>
+
+<p>所以這本書，我覺得某些觀念跟槍炮、鋼鐵與病菌這本書有異曲同工之妙。國家都必須要經歷不斷的威脅，才有機會發展軍事科技。因為只有發展或跟上鄰國的腳步，自己才不會處於劣勢，甚至滅亡。而且這本書也不會像傳統主流歷史一樣，講述千篇一律的陳腔濫調，是值得一看的歷史書。
+
+</p>
+
+
+
+
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+
+
+
+
+<p><a href="https://www.books.com.tw/products/0010773342" target="_blank">火藥時代：為何中國衰弱而西方崛起？決定中西歷史的一千年</a></p>
+<p><a href="https://a1253247.blogspot.com/2023/06/blog-post.html" target="_blank">天下雜誌出版-晶片戰爭(克里斯˙米勒)</a></p>
+
+<p><a href="https://a1253247.info/pacermania/archive/2024-09.html" target="_blank">賈德．戴蒙-槍砲、病菌與鋼鐵</a></p>
+<a href="https://a1253247.info/pacermania/archive/2025-06.html">半藤一利-諾門罕之夏（Google圖書）</a>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7312787147319582720/" target="_blank">Readmoo-蜜蜂與遠雷(恩田陸)</a></p>
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p><a href="https://www.youtube.com/shorts/TDEwYyjAx_M" target="blank">野獸媽媽|熱愛旅行和下廚的兩男媽</a></p>
+
+<p></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vvT5TIY9Uu0?si=XDvhjTiyv8W4ZnHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<h2><p><a href="https://a1253247.info/pacermania" rel="nofollow" target="_blank">回首頁</a></p></h2>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

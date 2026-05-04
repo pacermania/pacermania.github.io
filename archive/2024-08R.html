@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>八月 2024</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2024年08月12日 21時38分05秒</span> <a class="llink" href="../posts/153117938918.html">&para;</a> <a href="http://pacermania.tumblr.com/post/153117938918" rel="canonical">●</a></p>
+
+<h2>PLEX-好用的多媒體伺服器軟體</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="PLEX" id="PLEX" src="../images/PLEX-1.jpg" style="width: 1227px; height: 889px;" /></figure>
+
+<p>PLEX-雖然以前就聽過這一套多媒體伺服器軟體，但是因為以前沒有在手機或是其他Client聽電腦內音樂檔案的需求，所以就沒有很在意PLEX這個軟體。不過後來因為接觸Hi-Res的音樂，對於音樂音質的要求越來越高，所以就先後安裝了ROON，Audirvāna，Foobar2000。前者是支援度還有介面都做得最好的軟體，只是每個月12鎂實在太貴所以就忍痛放棄。Audirvāna較為便宜，但是它只能安裝在PC，MAC還有Linux上，也不能用Audirvana聽自己電腦內的音樂檔（ROON和Foobar2000都可以遠端連線聽自己電腦內的音樂）。Foobar2000則是免費，而且免費的資源最多，但是因為介面陽春，加上遠端連線聽電腦內的音樂比較麻煩，所以就只好放棄。</p>
+
+<p>後來在搜尋的過程中，又突然想到PLEX這個軟體，看到這個軟體似乎還蠻符合我現在的需求，所以我就下載安裝了。PLEX不僅可以整理/管理音樂檔案和播放Tidal的功能，也可以整理影片檔，而且PLEX本身有強大的資料庫，你把影片檔放進PLEX，多半都可以找到影片的資料。另外，PLEX也有整理照片的功能，不過我本身沒有使用所以就不介紹了。一個軟體月租只要5鎂，還可以整理音樂，影片，照片的功能，真的是太划算了。</p>
+
+<p>但是PLEX也有缺點，它只能用Chromecast的方式將音樂投放至其他支援Chromecast的裝置，否則你就只能在平板或是手機上聽自己電腦內的音樂。這也難怪縱使PLEX這麼便宜，音樂愛好者依舊不會使用它（因為音樂愛好者都用upnp或airplay，Chromecast是幾乎沒人用的）。</p>
+
+<p>好在PLEX有針對音樂愛好者推出PLEXAMP這個軟體，這個軟體有行動裝置版本以及PC的版本。在行動裝置上，要收聽Hi-Res甚至24bit的音樂都不成問題。只是如果要從PC用airplay的方式，投射到其他設備上，就勢必會受到airplay的限制(16bit/44.1KHz)。但是如果假設你的前級DAC或是NAA可以Upsampling，那也不失為一個增加聆聽體驗的一個方案。如果用在PC使用airplay的方式投射音樂，推薦使用Tuneblade，簡單好用，只要把delay調到3秒以上，在聆聽方面基本上都不會遇到播到一半中斷的情形。</p>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592">
+<p><img alt="PLEX" src="../images/PLEX-2.jpg" style="width: 332px; height: 839px;" /></p>
+
+<p><img alt="PLEX" src="../images/PLEX-3.jpg" style="width: 624px; height: 457px;" /></p>
+
+<p><img alt="PLEX" src="../images/PLEX-4.jpg" style="width: 302px; height: 289px;" /></p>
+</figure>
+
+<p>最後，如果想要可以在電視上顯示PLEX Client目前前正在播放的音樂，可以在Raspberry Pi安裝Tautulli，只要在播放時連線到http://你的raspberrypi IP位置:8181，就可以看到你目前播放的歌曲了。所以PLEX真的比想像中的還要強大，比想像中的還要好用啊!</p>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592">
+<p><img alt="PLEX" src="../images/PLEX-5.jpg" style="width: 1225px; height: 896px;" /></p>
+</figure>
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+<a href="https://a1253247.blogspot.com/2023/07/audirvana-origin.html">Audirvana Origin-電腦音樂整合的另一個選擇</a>
+
+<p><a href="https://a1253247.blogspot.com/2022/10/roon-roon.html" target="_blank">ROON-利用電腦及樹莓派佈署ROON</a></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/06/qobuz.html" target="_blank">Qobuz-播放高音質音樂的音樂平台</a></p>
+<a href="http://www.tuneblade.com/">Tuneblade官網</a>
+
+<p><a href="https://www.plex.tv/">PLEX官網</a></p>
+
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p></p>
+
+<p><a href="https://www.instagram.com/beastmama.cooking/" rel="nofollow" target="_blank">野獸媽媽|懶人料理x越吃越瘦x零廚藝</a></p>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

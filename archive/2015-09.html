@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":1056,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>九月 2015</h1>
+
+
+<article class=photo id=p-129849484048>
+<p class=meta><span class=date>2015年09月25日 23時09分53秒</span>
+<a class=llink href=../posts/129849484048.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/129849484048 rel=canonical>●</a></p>
+<p><img alt="" src="../images/birthday2_1280.jpg"></p>
+<p>Pacermania的部落格 turned 2 today!</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/tumblr%20birthday>#tumblr birthday</a>
+<a href=http://pacermania.tumblr.com/tagged/tumblr%20milestone>#tumblr milestone</a>
+</p>
+</article>
+
+<article class=photo id=p-129766447438>
+<p class=meta><span class=date>2015年09月24日 15時15分13秒</span>
+<a class=llink href=../posts/129766447438.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/129766447438 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_ntkbbe0ypF1s31cgmo1_1280.jpg"></p>
+<p><a class="tumblr_blog" href="http://jeremyscurto.tumblr.com/post/129758663537">jeremyscurto</a>:</p>
+<blockquote>
+<p><b>Girl In The Window</b></p>
+<p>[Contax G2, 45mm f2, Kodak TMAX400]</p>
+<p><a href="http://jeremyscurto.tumblr.com/"><i>Jeremyscurto.tumblr.com</i></a></p>
+</blockquote>
+</article>
+
+<article class=regular id=p-129762025813>
+<p class=meta><span class=date>2015年09月24日 13時19分46秒</span>
+<a class=llink href=../posts/129762025813.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/129762025813 rel=canonical>●</a></p>
+<h2>[LINE]LINE在Chrome商店推出LINE WEB APP，Chromebook的使用者也可以使用LINE</h2>
+<figure class="tmblr-full" data-orig-height="1024" data-orig-width="1280"><img src="http://68.media.tumblr.com/b88398a6c2316c754880f4d83186ac82/tumblr_inline_nv61g9ZAf61snfajc_540.png" data-orig-height="1024" data-orig-width="1280"/></figure><p>詳情可參閱<a href="https://briian.com/8074/line-web.html">重灌狂人-最新！ LINE 網頁版（免裝軟體，電腦、平板適用）</a></p><p>這篇文章。</p><p>以前Linux的使用者要使用LINE這個軟體，就必須使用WINE的方式才能達成。如今LINE推出WEB版本，只需要安裝Google Chrome瀏覽器，在Chrome WEB APP商店下載即可。</p><p>另外，WEB版本也讓翻牆者有了另一個選擇。原本在大陸使用電腦版的LINE必須使用VPN的方式才能使用，否則就會被GFW(功夫網)擋掉。有了WEB版本，就可以透過<a href="http://blog.xuite.net/vexed/tech/22157888-%E7%94%A8+PuTTY+%E7%9A%84+SSH+Tunnel+%E7%80%8F%E8%A6%BD%E7%B6%B2%E9%A0%81">SSH Tunnel的方式</a>，只要在瀏覽器的proxy作設定，並且在家裡的電腦先架設好SSH Server，就可以建立SSH Tunnel，突破GFW的封鎖。</p><p>
+
+若是使用Chromebook來建立SSH Tunnel，可以參考<a href="http://pacermania.tumblr.com/post/96946188148/chrome-os%E4%BD%BF%E7%94%A8ssh%E5%9C%A8%E5%A4%A7%E9%99%B8%E7%BF%BB%E7%89%86">這篇</a>。
+
+<br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/LINE>#LINE</a>
+<a href=http://pacermania.tumblr.com/tagged/Naver%20LINE>#Naver LINE</a>
+<a href=http://pacermania.tumblr.com/tagged/LINE%20Web%E7%89%88%E6%9C%AC>#LINE Web版本</a>
+<a href=http://pacermania.tumblr.com/tagged/LINE%20Web%20App>#LINE Web App</a>
+<a href=http://pacermania.tumblr.com/tagged/LINE%20Chrome%20Web%20App>#LINE Chrome Web App</a>
+<a href=http://pacermania.tumblr.com/tagged/SSH%20Tunnel>#SSH Tunnel</a>
+<a href=http://pacermania.tumblr.com/tagged/LINE%20Chromebook>#LINE Chromebook</a>
+<a href=http://pacermania.tumblr.com/tagged/GFW>#GFW</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%BF%BB%E7%89%86>#翻牆</a>
+<a href=http://pacermania.tumblr.com/tagged/VPN>#VPN</a>
+</p>
+</article>
+
+<article class=regular id=p-128487092788>
+<p class=meta><span class=date>2015年09月07日 00時08分55秒</span>
+<a class=llink href=../posts/128487092788.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/128487092788 rel=canonical>●</a></p>
+<h2>[VPN翻牆]使用VPN Split Tunneling(Purevpn)突破封鎖</h2>
+<figure data-orig-width="516" data-orig-height="313" class="tmblr-full"><img src="http://68.media.tumblr.com/f02cecf8ca64e8e3f269244ffa8c423e/tumblr_inline_nu9jkxpuis1snfajc_540.png" alt="image" data-orig-width="516" data-orig-height="313"/></figure><p>說實話，若不是要解決電腦的LINE被網管封鎖的這個問題，我還真不知道<a href="https://en.wikipedia.org/wiki/Split_tunneling">Split Tunneling這個術語</a>。Split Tunneling簡單來說就是可以讓你想要隱藏IP的程式，使用VPN或是<a href="http://pacermania.tumblr.com/post/96946188148/chrome-os%E4%BD%BF%E7%94%A8ssh%E5%9C%A8%E5%A4%A7%E9%99%B8%E7%BF%BB%E7%89%86">SSH</a>的服務，但是其他使用網路的程式還是維持正常的IP(不隱藏)。這樣講大家或許還是聽不懂我在講什麼，我就舉一個例子，假設我今天只想要IE瀏覽器使用美國IP，但是遠端遙控仍要使用區域網路，也就是要讓VPN和原區域網路(非VPN主機端的區域網路)同時存在，這時候就可以考慮使用Split Tunneling。</p><p>其實一般來說，大多數的程式基本上是不太需要這樣做的。因為如果你要讓你的瀏覽器可以Tunneling或突破網管的封鎖，只需要在瀏覽器加入Proxy+Socks5的設定，你的瀏覽器就可以突破封鎖，但是其他網路相關的程式卻還是使用原本的網路，達到分流(Split Tunneling)的效果。又或者你的網管封鎖了SKYPE或其他IM軟體的PORT，你也可以在SKYPE中找出Proxy以及SOCKS5加以設定，就可以突破封鎖。</p><p>但是萬一遇到<strike>雞歪</strike>不可更改Proxy設定的軟體，最有名的就是LINE，這時你就要跟你的VPN供應商下載對應的Split Tunneling的專屬軟體了。以<a href="http://www.purevpn.com/order/?utm_expid=53149299-12.dkwckAgVRtG5w9mK05zsYQ.0">Purevpn</a>為例，你可以下載Purevpn的專屬Split Tunneling軟體，經過一些設定，你就可以讓你的電腦突破網管的封鎖使用LINE，但是卻又可以在區網內使用遠端遙控，控制區網內的電腦，是不是很神奇呢？</p><p>以下就是Purevpn的Split Tunneling的教學。</p><p><a href="http://support.purevpn.com/split-tunnelling-guide-for-windows-client">http://support.purevpn.com/split-tunnelling-guide-for-windows-client</a><br/></p><p>以下是Purevpn的Split Tunneling軟體的下載連結。</p><p><a href="https://www.dropbox.com/s/64ibunf129ybssv/purevpn_setup%20%28tseyao-LIVA-XBAT2NBW-464%29.exe?dl=0">Dropbox</a></p><p><a href="https://drive.google.com/file/d/0BxLoHIThJzOXYTRCdlhFYlVQV28/view?usp=sharing">Google Drive</a><br/></p><p><a href="http://1drv.ms/1NkgRrH">Onedrive</a><br/></p><p><a href="http://sync.hamicloud.net/_oops/pacermania/gyv">Xuite</a></p><p>Purevpn雖然可以突破封鎖，但是Purevpn畢竟還是要付費，如果不是為了要使用LINE，基本上我會自己架設SSH伺服器，加上Proxy+SOCKS5的方法就可以突破了(窮人的VPN)。</p><p>參考資料<br/><b>VPN vs. SSH Tunnel: Which Is More Secure?</b><br/><a href="http://www.howtogeek.com/118145/vpn-vs.-ssh-tunnel-which-is-more-secure/">http://www.howtogeek.com/118145/vpn-vs.-ssh-tunnel-which-is-more-secure/</a></p><p><b>Split Tunneling Guide for Windows Client</b><br/><a href="http://support.purevpn.com/split-tunnelling-guide-for-windows-client">http://support.purevpn.com/split-tunnelling-guide-for-windows-client</a></p><p><b><b>[Chrome OS]使用ssh在大陸翻牆</b></b><br/><a href="http://pacermania.tumblr.com/post/96946188148/chrome-os%E4%BD%BF%E7%94%A8ssh%E5%9C%A8%E5%A4%A7%E9%99%B8%E7%BF%BB%E7%89%86">http://pacermania.tumblr.com/post/96946188148/chrome-os%E4%BD%BF%E7%94%A8ssh%E5%9C%A8%E5%A4%A7%E9%99%B8%E7%BF%BB%E7%89%86</a><br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/split%20tunneling>#split tunneling</a>
+<a href=http://pacermania.tumblr.com/tagged/purevpn>#purevpn</a>
+<a href=http://pacermania.tumblr.com/tagged/vpn>#vpn</a>
+<a href=http://pacermania.tumblr.com/tagged/vpn%E7%BF%BB%E7%89%86>#vpn翻牆</a>
+<a href=http://pacermania.tumblr.com/tagged/ssh>#ssh</a>
+<a href=http://pacermania.tumblr.com/tagged/proxy%2Bsocks>#proxy+socks</a>
+<a href=http://pacermania.tumblr.com/tagged/line%20proxy>#line proxy</a>
+<a href=http://pacermania.tumblr.com/tagged/line%20vpn>#line vpn</a>
+<a href=http://pacermania.tumblr.com/tagged/line%E6%9B%B4%E6%94%B9proxy>#line更改proxy</a>
+<a href=http://pacermania.tumblr.com/tagged/line%E8%A8%AD%E5%AE%9Aproxy>#line設定proxy</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%B6%B2%E7%AE%A1%E5%B0%81%E9%8E%96>#網管封鎖</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

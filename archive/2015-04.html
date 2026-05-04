@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":1043,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>四月 2015</h1>
+
+
+<article class=regular id=p-117260676478>
+<p class=meta><span class=date>2015年04月25日 00時28分30秒</span>
+<a class=llink href=../posts/117260676478.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/117260676478 rel=canonical>●</a></p>
+<h2>[Smart DNS應用]使Chromecast可以在台灣使用Rdio等服務</h2>
+<figure class="tmblr-full" data-orig-height="286" data-orig-width="900"><img data-orig-height="286" data-orig-width="900" alt="image" src="http://68.media.tumblr.com/6aee4b843c46e5a34b38370c831ddc6c/tumblr_inline_nnbk6052lY1snfajc_540.png"/></figure><p>來源:<a href="https://twitter.com/unblock_us">unblock us的twitter</a></p><p>之前有介紹過，<a href="http://pacermania.tumblr.com/post/115940359598/vpn-vpn-chromecast-pandora">使用VPN的方式就可以使Chromecast可以播放Pandora或Rdio等其他有地理限制的音樂串流服務</a>。但是VPN的速度比起Smart
+DNS就是慢，所以如果你要看得是Hulu或是Netflix這種對頻寬要求較大的，勢必就得使用Smart
+DNS。</p><p>可是Smart
+DNS必須設定DNS，Chromecast沒有辦法設定DNS，所以舊只能從外部的方式下手。外部的方式就是用Router去強迫Chromecast內部預設的DNS轉向至Smart
+DNS廠商的DNS。</p><p>假如你去<a href="http://www.dd-wrt.com/site/support/router-database">DD-WRT網站上</a>得知你的router可以刷DD-WRT的話，你可以就可以用下列兩個步驟就可以完成設定。</p><p>1.將你的router的DNS設定成<a href="https://support.unblock-us.com/customer/portal/articles/291581">Smart
+DNS廠商的DNS</a>(此次是使用unblock us為範例)。</p><p>2.在Dnsmasq
+options加入以下指令</p><p>iptables
+-t nat -A PREROUTING -d 8.8.8.8 -j DNAT —to-destination
+208.122.23.22<br/>iptables -t nat -A PREROUTING -d 8.8.4.4 -j DNAT
+—to-destination 208.122.23.23</p><p>如果不能刷或不想刷DD-WRT，那就得尋找可以static
+routing（靜態路由）的功能的router，我則是使用<a href="http://www.tp-link.tw/products/details/?model=TL-WR941ND#over">TP-LINK
+TL-WR941ND</a>。</p><p>1.設定步驟也是把router的DNS設成Smart
+DNS廠商的DNS。</p><p>2.則是在Static
+Routing的Table中加入將8.8.8.8以及8.8.4.4這兩個ip，如下所示</p><figure class="tmblr-full" data-orig-height="228" data-orig-width="729"><img data-orig-height="228" data-orig-width="729" alt="image" src="http://68.media.tumblr.com/d896d9bfc446767b995823a2225581ec/tumblr_inline_nnbk57dMnU1snfajc_540.png"/></figure><p>來源:<a href="http://postimg.org/image/pyaxmlzfb/">http://postimg.org/image/pyaxmlzfb/</a></p><p>這樣Chromecast預設的DNS就會失去效用了，自然就會使用router內部預設的DNS囉！</p><p>不過有點遺憾的是，我的Smart
+DNS的廠商(unblock-us)，在我使用手機投射pandora的時候會發生問題，但是Rdio就很正常。希望以後我要使用Netflix的時候，也不要發生這樣的問題才好。</p><p>——————————</p><p>2015.04.25</p><p>今天測試的結果，已經可以使用上述方法，讓Chromecast可以播放Pandora。<br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Smart%20DNS%20unblock%20us>#Smart DNS unblock us</a>
+<a href=http://pacermania.tumblr.com/tagged/Pandora>#Pandora</a>
+<a href=http://pacermania.tumblr.com/tagged/Rdio>#Rdio</a>
+<a href=http://pacermania.tumblr.com/tagged/Chromecast>#Chromecast</a>
+<a href=http://pacermania.tumblr.com/tagged/dd-wrt>#dd-wrt</a>
+<a href=http://pacermania.tumblr.com/tagged/tp-link>#tp-link</a>
+<a href=http://pacermania.tumblr.com/tagged/TL-WR941ND>#TL-WR941ND</a>
+</p>
+</article>
+
+<article class=regular id=p-115940359598>
+<p class=meta><span class=date>2015年04月09日 22時05分19秒</span>
+<a class=llink href=../posts/115940359598.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/115940359598 rel=canonical>●</a></p>
+<h2>[VPN應用]如何利用VPN+Chromecast在電視上播放Pandora</h2>
+<figure data-orig-width="650" data-orig-height="430" class="tmblr-full"><img src="http://68.media.tumblr.com/007f42ecfc030019848a351d468b0588/tumblr_inline_noaoqytJgK1snfajc_540.jpg" alt="image" data-orig-width="650" data-orig-height="430"/></figure><p>其實如果<a href="http://www.pandora.com/">Pandora</a>可以開放台灣的使用者收聽，其實也就不用這麼麻煩了。就是因為Pandora有地域的限制（目前只有美國,澳洲,紐西蘭有Pandora的服務），美國,澳洲,紐西蘭以外的其他地區的IP都會被地理屏蔽。</p><p>為了要突破屏蔽的限制，可以使用VPN的方式，但是問題是Chromecast沒有可以設定VPN的地方，所以如果要使用VPN方式，就勢必要在源頭，也就是家中的Router來設定，只要源頭可以用VPN的方式將IP偽裝成美國IP，Pandora或是Chromecast的地理屏蔽就會失效。</p><p>為了達到這樣得目的，你必須準備：</p><p>1.一台Chromecast，若你有閒錢，也可以買Amazon的<a href="http://www.amazon.com/Fire-TV-streaming-media-player/dp/B00CX5P8FC/ref=sr_1_2?ie=UTF8&qid=1428589268&sr=8-2&keywords=fire+tv">Fire TV</a>，同樣也可以在電視上播放Pandora。</p><p>2.一台可以VPN的Router，我萬萬沒有想到，我家唯一可以VPN的Router居然是這台<a href="http://24h.pchome.com.tw/prod/DRAF5L-A76574324">TOTOLINK iPUPPY</a>，真的太讓我意外了！</p><p>3.一台裝有Pandora app的平板或手機。不過大家會遇到問題是，使用台灣網路以及台灣的Google帳號是沒有辦法下載Pandora app的。所以就必須要<a href="http://www.appguru.com.tw/appguru/blog/20670/android-openvpn-allows-your-cell-phone-free-climbing-walls-national-savings-as-you-download-google-play">重新申請一個美國版Google帳號</a>，或是把自己<a href="https://plus.google.com/+Xiz">原來的Google帳號改成美國帳號</a>，或是參考”<a href="http://pacermania.tumblr.com/post/104844351608/chromecast-chromecast-offer-google" title="[Chromecast]運用Chromecast電視棒的Offer來解鎖(再次解鎖)Google Play美版Play商店">運用Chromecast電視棒的Offer來解鎖(再次解鎖)Google Play美版Play”</a>中的方法。簡單來說，一定要是美國版的Google Play商店才會有/才能下載Pandora app。</p><p>4.選擇一個VPN的供應商，我是選擇<a href="http://www.purevpn.com">Purevpn</a>，目前使用上還OK，只要不是跑高清的視頻，基本上都吃得開，加上一個帳號可提供5台電腦/設備使用，個人覺得還蠻划算的。費用大概是每個月5鎂。</p><p>Purevpn還有一個最令我激賞的地方，就是他的Tutorial非常詳盡，除非對電腦完全外行，否則應該都很好上手。雖然我的iPUPPY不在名單中，不過設定上也差不多就是這樣了，況且<a href="http://www.purevpn.com/config/router/dlink.php">Purevpn還提供各大主流Router的教學</a>呢！</p><p>若上述設定都沒問題，基本上用只要Chromecast和手機/平板是使用同一個Router（網路訊號來源），你在平板或手機上打開Pandora的app，播放你要播放的電台，基本上就會看見這樣的符號（如下圖）。</p><figure data-orig-width="323" data-orig-height="321" class="tmblr-full"><img src="http://68.media.tumblr.com/63d23ab5afdf8f00aeafc88fbdf4770b/tumblr_inline_noap88oTbG1snfajc_540.png" alt="image" data-orig-width="323" data-orig-height="321"/></figure><p>點選這個符號之後，你就可以將Pandora投射在你的電視上了。</p><p>如果你覺得這首歌很好聽，還可以按讚（如下圖）;反之可以跳過或按噓，這樣子Pandora可以藉由你的feedback，就可以更精準的推播歌曲囉！</p><figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/f09bfb9b58a5719dc70fcfb712e3f482/tumblr_inline_noap5dihfa1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p>Pandora由於許多國家對於廣播類的線上音樂有法令限制，加上市場考量，目前只考慮在美國,澳洲,紐西蘭發展，相較於<a href="https://www.spotify.com/tw/">Spotify</a>的全球發展，真的差很多。不過Pandora在美國是線上音樂的龍頭之一，一時之間還不至於衰退。而且Pandora的推播精準度，可以說是我目前使用過最好的，目前大概只有<a href="http://www.rdio.com/">Rdio</a>的推播精準度勉強可以跟Pandora競爭，所以對音樂推播（尤其是西洋音樂）有高度要求的，最好還是選擇Pandora，才能滿足需求。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/pandora>#pandora</a>
+<a href=http://pacermania.tumblr.com/tagged/chromecast>#chromecast</a>
+<a href=http://pacermania.tumblr.com/tagged/vpn>#vpn</a>
+<a href=http://pacermania.tumblr.com/tagged/purevpn>#purevpn</a>
+<a href=http://pacermania.tumblr.com/tagged/TOTOLINK%20iPUPPY>#TOTOLINK iPUPPY</a>
+<a href=http://pacermania.tumblr.com/tagged/VPN%E6%87%89%E7%94%A8>#VPN應用</a>
+<a href=http://pacermania.tumblr.com/tagged/router>#router</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

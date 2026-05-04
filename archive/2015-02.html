@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":969,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>二月 2015</h1>
+
+
+<article class=regular id=p-112138374888>
+<p class=meta><span class=date>2015年02月26日 23時37分05秒</span>
+<a class=llink href=../posts/112138374888.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/112138374888 rel=canonical>●</a></p>
+<h2>[黑莓機]Blackberry Passport</h2>
+<figure><img alt="image" src="http://68.media.tumblr.com/a1b69a98b93787d4689554f003ef43f8/tumblr_inline_nkdup2nwub1snfajc.jpg"/></figure><p>圖片來源:www.amazon.com</p><p>現在用黑莓機的人真的算是少數，在觸控螢幕當道的年代，黑莓機的一些機種仍然保留鍵盤的特色，對鍵盤具有依戀的使用者，自然就會對黑莓機有興趣。於是我就在嘗鮮的心情之下，在<a href="http://www.pcstore.com.tw/tphoneusa/">pchome商店街</a>的<a href="http://www.tphoneusa.com/">Tphone</a>，買了這支Blackberry
+Passport。</p><p>對我來說，黑莓的樂趣就是在於，可以用兩隻手同時打字，尤其是英文，速度真的是超快！在使用瀏覽器時感覺特別明顯，對於使用瀏覽器有強烈需求的人，建議可以試試看黑莓機。</p><p>不過黑莓機在全球的市場佔有率不斷的委縮也是事實，甚至連微軟都打敗這個曾經叱吒智慧型手機市場的品牌。直到後來在<a href="http://zh.wikipedia.org/wiki/%E7%A8%8B%E5%AE%88%E5%AE%97">程守宗</a>接手之後，情況才有了改觀。</p><p>講了這麼多，其實就是黑莓在<a href="http://tech.sina.com.cn/t/2014-08-15/23499556607.shtml">穩固市場佔有率之後</a>，在2014年終於推出這款4.5吋螢幕的黑莓旗艦機passport。這款手機主要的特點就在於他很正方，正方是優點也是缺點。優點在於瀏覽文件和網頁確實比較舒服，不會像一般智慧型手機一樣需要不斷的上下滑動。然而切點就在於正方形的螢幕，看youtube或是16:9的影片，會相當吃力，加上螢幕是正方的關係，passport的體型特別的寬，不過因為我本身就是屬於手掌很大的人，所以對我來說不是什麼太大的問題。</p><figure><img src="http://68.media.tumblr.com/730b4ab4e4879cb65e58a3ae5953adb7/tumblr_inline_nkdw6wIHPr1snfajc.png"/></figure><p>黑莓目前的OS是10.3，而且已經與大部分的android
+app相容，所以對android仍有些依賴的人，在轉換成黑莓使用者上也不會有太大的困難。</p><figure><img src="http://68.media.tumblr.com/54741fe120c64ae2b6440855a601a649/tumblr_inline_nkdwf0ISfo1snfajc.png"/></figure><p>一些我們常用的app，例如facebook，Linkedin，Line等等都有黑莓的版本，雖然可能沒有android的好用，但是基本上的功能已經足夠了。若使用上不習慣，也可以安裝android版本。</p><p>黑莓還有一項最令人稱道的就是他的Hub，這個Hub可以集中所有訊息，舉凡email，手機簡訊，Facebook訊息，手機app更新，Google行事曆，未接來電以及黑莓本身的BBM通信app的信息，全部都集中在這個Hub。這個Hub有點像是android或是iphone的信息列，但是黑莓的Hub信息更為集中，而且都把這些信息當成email的形式來處理。</p><p>關於這一台黑莓機的照相品質，我只能說品質還不差，只是你要習慣1:1尺寸的照片，當然也可以改成16:9，但是基本上只要習慣了，用1:1的尺寸拍起照來也別有一番風味。</p><figure><img src="http://68.media.tumblr.com/f89e2b1bf67927cc135396502f1d7bae/tumblr_inline_nkdxfgLCUw1snfajc.jpg"/></figure><figure><img src="http://68.media.tumblr.com/9616ba299b7cb8a5bcf664e668110812/tumblr_inline_nkdxglp4801snfajc.jpg"/></figure><figure><img src="http://68.media.tumblr.com/c5d384e3dd7aaaf02e28980534bc7f30/tumblr_inline_nkdxh48WUh1snfajc.jpg"/></figure><p>若對Blackberry Passport有興趣的人，可參考<a href="http://www.mobile01.com/topicdetail.php?f=384&t=4123978">這篇</a>。<br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E9%BB%91%E8%8E%93%E6%A9%9F>#黑莓機</a>
+<a href=http://pacermania.tumblr.com/tagged/blackeberry>#blackeberry</a>
+<a href=http://pacermania.tumblr.com/tagged/blackberry%20passport>#blackberry passport</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%AD%B7%E7%85%A7%E6%A9%9F>#護照機</a>
+</p>
+</article>
+
+<article class=regular id=p-111085890373>
+<p class=meta><span class=date>2015年02月16日 00時35分00秒</span>
+<a class=llink href=../posts/111085890373.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/111085890373 rel=canonical>●</a></p>
+<h2>[淘寶購物]Diono安全汽車座椅</h2>
+<figure><img alt="image" src="http://68.media.tumblr.com/8c230d59ea2d6cf2804f0c0e08ccc618/tumblr_inline_njtn84rbyo1snfajc.jpg"/></figure><p><br/></p><p>過年快到了！由於去年二寶誕生，所以勢必又要入手第二個汽車安全座椅，才能展開我們的過年返鄉之旅，雖然我們之前是在網拍上買了一寶的Aprica汽車安全座椅，但是Aprica的座椅除了透氣這個優點之外，其他可以說是一無是處，不僅佔空間，座椅的調整各方面相當的不直覺，有時安全帶的扣鎖鎖了快十分鐘還鎖不上，所以這次又把腦筋動到國內還沒有進口的DionoRXT上。Diono的優點就是比較不佔空間，操作上也稍微直覺一些，如果可以還可以用後背的方式隨身攜帶…這麼多優點，不入手一個真的太可惜了。</p><p>以下是其他部落客的Diono汽座開箱文。</p><p><a href="http://reader.roodo.com/brian06/archives/25350048.html">http://reader.roodo.com/brian06/archives/25350048.html</a></p><p><a href="http://reader.roodo.com/brian06/archives/25350048.html"></a><a href="http://bikegoods.pixnet.net/blog/post/57642945">http://bikegoods.pixnet.net/blog/post/57642945</a></p><p>但是前面已經提到，Diono台灣還沒有代理，到底要去哪裡買才會有呢？於是我就在Amazon搜尋，果然有賣Diono，只是運到台灣的運費很可能就快要比汽座還要多了。</p><p><br/></p><p>後來我想到我家女王最近有在淘寶買台灣沒有的東西，於是我就想，或許淘寶也會有人賣Diono的安全座椅吧！上網搜尋後果然不出我所料，淘寶果然有一票賣家都在賣Diono座椅，真的太好啦！</p><p><br/></p><figure><img alt="image" src="http://68.media.tumblr.com/a6c9af5f00b34e7addaa4433fcdf8038/tumblr_inline_njtn8tfeBc1snfajc.png"/></figure><p><br/></p><p>後來我下單之後，發現<b>信用卡綁支付寶只能支付2000人民幣以下的貨款，2000以上就要使用ATM綁支付寶的方式付款。</b>付款之後，賣家也很快的就出貨了。但是淘寶的貨物如果沒有特別指定黑貓或順豐的話，一般都會集運（圓通速遞），所以時間會比較長。我這次也是選用集運的方式。</p><p>過
+了幾天之後，我在淘寶查詢我的貨品狀態，結果一直是在上海已清關。後來實在受不了了，在網路上查到淘寶台灣的客服電話後，就打電話給淘寶的客服
+（02-7706-3088）。其實說實話淘寶的客服算是不錯的，他也答應會幫我催促圓通，雖然我對他的話半信半疑，不過也只能接受了。過了大概兩天之
+後，一家清關公司打電話給我，說我的汽座因為<b>台灣安全法規的問題，現在卡在海關</b>，不過他們會負責幫我清關，只要我幫忙填具一些資料就可以了。以下是清關公司給我的來信內容：</p><blockquote>先生您好~<br/><b>​      ​您​於淘寶網購​的商品為​正式報關貨，海關要求​須改​為​正式報單​進口​，麻煩您提供以下​報關文件以利報關​~<br/></b><b>(資料備齊後，請用拍照圖檔或掃瞄檔回覆mail)​<br/></b><b>一、委任書​(請見附檔)​：<br/></b><b>​       1.​請​只​填寫委任人的部分​(​</b><b>統一編號即身份證字號，地址及電話也要填寫)</b><b>，名字的後面要蓋個人私章（紅章）共2處​</b><b>​，請不要蓋在線​上。</b><b>​​</b><b>    ​ ​  2.受任人及其它部分不用填寫我們會填​。​<br/><br/></b><b><br/></b><b><br/></b><b>二、身份証正反面影本：身份証正反面影本請提供彩色圖檔​。​<br/></b><b>三、商業發票(格式如附檔)​​：有範例可供參考​​。​ P.S 幣​​別​一定要填(台幣或人民幣)<br/></b><b>四、正式報單費​(報關+驗貨+EDI傳輸)​​+稅金： ​於貨清出時會再電聯您匯款，謝謝！<br/></b><b>​五、報關文件提供完整後需5~7個處理工作天，謝謝您的耐心等候！​<br/></b><b>戶名：XX國際運通有限公司<br/></b><b>銀行：</b><b>XXXXXXXXXXX<br/></b><b><b>帳號：XXXXXXXXXXX</b></b><b>​</b><b>​</b><br/><br/><b>如有疑問請再回信或來電詢問，謝謝！</b></blockquote><p>這時，我心中的大石頭終於放下了。經過幾天的清關之後，我的Diono汽座終於到貨了。以下是我的簡易開箱。<br/></p><p>寄來的時候箱子是長這樣。</p><figure><img alt="image" src="http://68.media.tumblr.com/39248d5043d1530fc5ef8684b179f810/tumblr_inline_njtnb7h2vH1snfajc.jpg"/></figure><p><br/></p><p>汽座的側面。</p><figure><img alt="image" src="http://68.media.tumblr.com/73caa341f8524fb592ff72bc4274c8f4/tumblr_inline_njtnblvOO61snfajc.jpg"/></figure><p><br/></p><p>汽座的正面（座椅還未放下）。</p><figure><img alt="image" src="http://68.media.tumblr.com/5f6850ec40615003b7a702f4a33e62b3/tumblr_inline_njtnbxwo7S1snfajc.jpg"/></figure><p><br/></p><p>汽座的正面（座椅已放下）。</p><figure><img alt="image" src="http://68.media.tumblr.com/f9dd2d8d64dea1be6f3331fef0887012/tumblr_inline_njtnc4SSCI1snfajc.jpg"/></figure><p><br/></p><p>如果以後有一些台灣沒有的潮品，或是一些台灣沒有的3C產品，就可以用淘寶來買啦！只是要把貨品會因為一些安規問題被檔關的問題考慮進去就是了。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%B7%98%E5%AF%B6>#淘寶</a>
+<a href=http://pacermania.tumblr.com/tagged/Diono%20RXT>#Diono RXT</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%9C%93%E9%80%9A%E9%80%9F%E9%81%9E>#圓通速遞</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B5%B7%E9%97%9C%E6%AA%94%E9%97%9C>#海關檔關</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AA%94%E9%97%9C>#檔關</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B8%85%E9%97%9C>#清關</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%AE%89%E5%85%A8%E6%B3%95%E8%A6%8F>#安全法規</a>
+<a href=http://pacermania.tumblr.com/tagged/amazon>#amazon</a>
+</p>
+</article>
+
+<article class=photo id=p-110320051118>
+<p class=meta><span class=date>2015年02月07日 14時41分23秒</span>
+<a class=llink href=../posts/110320051118.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/110320051118 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo4_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo5_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo6_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo7_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo8_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo9_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nje2kzeADY1sjz8axo10_1280.jpg"></p>
+<p>台南高鐵站</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%8F%B0%E5%8D%97%E9%AB%98%E9%90%B5%E7%AB%99>#台南高鐵站</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%8F%B0%E5%8D%97%E5%B8%82%E6%AD%B8%E4%BB%81%E5%8D%80>#台南市歸仁區</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AD%B8%E4%BB%81%E5%8D%80>#歸仁區</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%8F%B0%E5%8D%97>#台南</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AD%B8%E4%BB%81>#歸仁</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

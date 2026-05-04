@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":1103,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十月 2014</h1>
+
+
+<article class=photo id=p-101252273113>
+<p class=meta><span class=date>2014年10月29日 20時32分25秒</span>
+<a class=llink href=../posts/101252273113.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/101252273113 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_ne7hi21TBE1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_ne7hi21TBE1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_ne7hi21TBE1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_ne7hi21TBE1sjz8axo4_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_ne7hi21TBE1sjz8axo5_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_ne7hi21TBE1sjz8axo6_1280.jpg"></p>
+<p>比比，歡迎你回來。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+</p>
+</article>
+
+<article class=photo id=p-99710810018>
+<p class=meta><span class=date>2014年10月11日 15時32分40秒</span>
+<a class=llink href=../posts/99710810018.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/99710810018 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_nd9rmgYM8O1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nd9rmgYM8O1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nd9rmgYM8O1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nd9rmgYM8O1sjz8axo4_1280.jpg"></p>
+<p>今天跟兜比一起參加洗澡課程。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%85%9C%E6%AF%94>#兜比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B4%97%E6%BE%A1>#洗澡</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%BC%9F%E5%BC%9F>#弟弟</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B4%97%E6%BE%A1%E8%AA%B2%E7%A8%8B>#洗澡課程</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%A6%A8%E8%95%99%E9%A6%A8%E9%86%AB%E9%99%A2>#馨蕙馨醫院</a>
+</p>
+</article>
+
+<article class=regular id=p-99627153443>
+<p class=meta><span class=date>2014年10月10日 13時35分49秒</span>
+<a class=llink href=../posts/99627153443.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/99627153443 rel=canonical>●</a></p>
+<h2>[Kindle]Duokan多看系統</h2>
+<p><img src="http://68.media.tumblr.com/37d8fa829e3abffc3956d0aec1af2107/tumblr_inline_nd7ocvhEh31snfajc.jpg"/></p>
+
+<p>其實不管現在iphone、ipad還是android的手機平板，功能再強大，應用軟體或遊戲再豐富，在閱讀上的體驗，終究是沒有Kindle來的舒服。我大約在<a href="http://blog.xuite.net/pacermania/a1253247/56748661">3年前買了Kindle Touch</a>，我也用它讀完了村上村樹的1Q84，只是Kindle出了美國領土之後，它的功能就只剩下閱讀器(如果在美國本土似乎還可以下載電子書)，它的功能沒有辦法完全的釋放出來。</p>
+<p>最近，我在<a href="http://www.duokan.com/">大陸多看(duokan)</a>買了電子書(就是大陸目前最火的<a href="http://www.duokan.com/book/62575">歷史轉折中的鄧小平</a>)，雖然在電腦上和手機上都可以觀看電子書，但是畢竟這樣的閱讀方式有違我讀小說的習慣，於是我就把腦筋動到了我的Kindle身上。況且，大陸的書本身就很便宜，如果再轉成電子書，這價格根本就是跳樓的價格，就以<span>歷史轉折中的鄧小平來說，台灣在博客來上賣300多，多看電子書只賣10元人民幣，這…我當然選擇看電子書囉!</span></p>
+<p>在多看的官網上，就有<a href="http://www.miui.com/thread-1991341-1-1.html">把Kindle刷成多看的教學</a>，也提供程式的下載。而且，刷完之後也不用擔心回不到Kindle的原生系統，所以Duokan真的是好物呀!刷duokan的步驟我也不多提了，大致上就是把官網的程式解壓縮，直接複製到Kindle裝置的跟目錄就行了。不過要有一點耐心，我當初就是一直重新啟動Kindle都沒有辦法載入duokan，後來也不知道為什麼，就在一直不斷的重開機之後，就莫名其妙的進入了多看的頁面。反正就是要有耐心就對了!</p>
+<p>以下就是灌duokan的簡要流程:</p>
+<p>1.先下載安裝包，如Kindle Touch就下載<span>xTouch_2014-09-11.36206.rtm版本的安裝包。</span></p>
+<p>2.把安裝包解壓縮。再把解壓縮完的檔案和檔案夾<a href="http://jingyan.baidu.com/article/9faa72314087e8473c28cb85.html">全部複製到Kindle裝置的根目錄</a>。</p>
+<p>3.接下來就是要重啟Kindle了。</p>
+<p>以下是Kindle原生系統頁面。</p>
+<p><img src="http://68.media.tumblr.com/861bad1b6a451c4cf333be5504e9327a/tumblr_inline_nd7pq44DdU1snfajc.jpg"/></p>
+<p>點選右上角的Menu，就會出現下面的視窗。接著點選Settings。</p>
+<p><img src="http://68.media.tumblr.com/2a549437572c421fc45d80583be09209/tumblr_inline_nd7prxjAoQ1snfajc.jpg"/></p>
+<p>之後會出現Settings的選單，請再點選Menu，就會跳出一個視窗，然後點選Restart。</p>
+<p><img src="http://68.media.tumblr.com/5121e2632c4983c9625ff3baaeb1561d/tumblr_inline_nd7pua1WFq1snfajc.jpg"/></p>
+<p>接著就<span>關機進入重啟模式。</span></p>
+<p><img src="http://68.media.tumblr.com/653427b3e68324ba1a5d9951316bad02/tumblr_inline_nd7pzrgQLF1snfajc.jpg"/></p>
+
+<p>然後畫面一開始還是會出現Kindle載入的畫面，這時先不要緊張。</p>
+<p><img src="http://68.media.tumblr.com/714a1c30b65b0df89d1f365e80813c88/tumblr_inline_nd7q28M3DQ1snfajc.jpg"/></p>
+
+<p>如果順利的話，應該就會看到下面的畫面，這樣就代表你的Kindle已經成功灌入duokan系統了。</p>
+<p><img src="http://68.media.tumblr.com/71a0e529738122e11e1a7ef6c6bc36a6/tumblr_inline_nd7qicajt21snfajc.jpg"/></p>
+
+<p></p>
+
+<p>其實多看的介面也是蠻不錯的，有分成首頁、購物車(多看電子書商城，可購買及下載電子書)、個人帳戶(多看的帳戶，有我的書籍、動態、書友圈、評論、消息等信息)還有設定這4個大項目。</p>
+<p><img src="http://68.media.tumblr.com/cf719946874a37af301a418eab6f1eca/tumblr_inline_nd7qqcxb051snfajc.jpg"/></p>
+
+<p>當然，如果你想切換成Kindle原生系統，也可以在設定選項中的切換功能，從Duokan系統切換至Kindle的原生系統。以下就是切換中的畫面。</p>
+<p><img src="http://68.media.tumblr.com/cb2832a574543515f007237d5119061b/tumblr_inline_nd7qv5eZoS1snfajc.jpg"/></p>
+<p>個人覺得多看(Duokan)系統解決了Kindle出了美國就不能下載電子書的窘境，雖然說還是只能下載Duokan的電子書，但是對於華人來說，至少多了一條可以下載的管道，也比較能夠讓讀者願意花錢購買書籍，而不是用地下的管道下載書籍。而這也考驗著Amazon，到底是要開放美國本土以外也可以下載電子書，還是要繼續堅守目前的原則，讓我們海外的用戶，用成本甚至<a href="http://www.learning-english-onlines.com/kindle-fire-price-tag/">賠錢的價格購買Kindle</a>，然後灌多看(Duokan)，讓多看搶得海外華人電子書市場的先機呢?</p>
+
+<p></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Duokan>#Duokan</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%A4%9A%E7%9C%8B%E7%B3%BB%E7%B5%B1>#多看系統</a>
+<a href=http://pacermania.tumblr.com/tagged/kindle>#kindle</a>
+<a href=http://pacermania.tumblr.com/tagged/kindle%20touch>#kindle touch</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

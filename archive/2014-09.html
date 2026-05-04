@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":886,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>九月 2014</h1>
+
+
+<article class=regular id=p-98713756003>
+<p class=meta><span class=date>2014年09月29日 17時18分00秒</span>
+<a class=llink href=../posts/98713756003.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/98713756003 rel=canonical>●</a></p>
+<h2>[網路空間]115網盤--比google drive容量還大的網路硬碟</h2>
+<p><img alt="image" src="http://68.media.tumblr.com/287adc85df333516bb31a8a1d8d7deb0/tumblr_inline_ncnms9jlOL1snfajc.png"/></p>
+
+<p>最近為了要用<strike>網路代抓</strike>網路存取的服務,所以開始上網搜尋有這類服務的網路硬碟,其實平心而論,google drive雖然只有15G左右的大小(115網盤的空間是以TB來計算,115網盤今年<a href="http://jingyan.baidu.com/article/0a52e3f41b7e0fbf62ed729a.html">有免費贈送8TB的活動</a>),對現在的人來說容量算是小了些(現在隨身碟隨便都是16G起跳),但是如果不放一些有的沒的的東西在上面的話,再加上google的google docs的功能,google drive說實話還是我網路空間的首選.</p>
+<p>不過最近因為二寶出生,必須要跟女王待在月子中心,沒有辦法常常回家,可是我又很愛看一些<strike>“院線電影”</strike>“網路分享的資源”,但是要抓這些資源,就必須用一些電腦裡驢子類或是xT類等軟體才能抓.所以為了解決這個問題,我就在網路上找到<a href="http://www.techbang.com/posts/15712-6-super-cloud-space-war?page=6">這個.</a></p>
+<p>115網站就是把驢子類和xT類的軟體內建在網站裡面,只要把你找到的種子或者連結上傳到115網站上,它就會幫你抓！</p>
+<p>步驟如下：</p>
+<p>1.首先要先申請115網站的帳號(台灣的使用者可以用手機號碼申請,115會給你一個認證碼,之後要記得綁定電子郵件信箱,以免以後忘記密碼,會有杯具發生)</p>
+<p>2.然後進入網盤>離線</p>
+<p><img alt="image" src="http://68.media.tumblr.com/a56b73c81a9880f1192c1d2c9838d75f/tumblr_inline_ncnmxeC60D1snfajc.png"/></p>
+<p>3.如果是有種子的話,可以選BT下載,如果是有動物類或是磁力連結的話,請選擇鏈結任務.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/96c80a22bca5c6b3498f7fd73a1393b4/tumblr_inline_ncnmylcA0y1snfajc.png"/></p>
+<p>如果運氣夠好,115網盤上已經有相同的資源,基本上就是"秒抓",不到1分鐘就抓完.</p>
+<p>另外,最好是加入vip會員,除了可以多加1TB的空間之外,檔案下載到電腦的速度更是快呀！基本上都是1000KB/s起跳(甚至2000KB/s).沒有vip會員的話,速度就會在50~100KB/s左右徘徊.</p>
+<p>不過台灣的使用者要加入vip會員就比較麻煩,好在115提供使用手機充值卡的方式購買115網站的楓幣,然後再用楓幣購買vip會員.</p>
+<p>步驟如下：</p>
+<p>1.首先先進入增值服務.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/be7e8030bd6caf26114900cf490891e1/tumblr_inline_ncnnlh8bF81snfajc.png"/></p>
+<p>2.再點選手機充值>中國聯通(點其他電信業者也可以)>再填入充值卡序號/密碼就可以囉！</p>
+<p><img alt="image" src="http://68.media.tumblr.com/d7713501ddb5bbda7e1c645d786289cb/tumblr_inline_ncno6fGgjV1snfajc.png"/></p>
+
+<p>3.然後使用楓幣購買一年份的vip會員就可以囉！</p>
+<p><img alt="image" src="http://68.media.tumblr.com/ac26fa963c6e346511af3f875e2500e6/tumblr_inline_ncno8hjqWp1snfajc.png"/></p>
+
+<p></p>
+
+<p>如果你有paypal,也可以使用paypal付費的方式加入vip會員,只是費用會多一倍！</p>
+<p>P.S. 至於中國聯通的手機充值卡如何購買,請上Y拍或是露天,搜尋<a href="http://search.ruten.com.tw/search/s000.php?searchfrom=indexbar&k=%A4%A4%B0%EA%C1p%B3q&t=0">中國聯通</a>就可以了.</p>
+
+<p></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/115%E7%B6%B2%E7%9B%A4>#115網盤</a>
+<a href=http://pacermania.tumblr.com/tagged/www.115.com>#www.115.com</a>
+<a href=http://pacermania.tumblr.com/tagged/google%20drive>#google drive</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%B8%AD%E5%9C%8B%E8%81%AF%E9%80%9A%E5%85%85%E5%80%BC%E5%8D%A1>#中國聯通充值卡</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%B6%B2%E8%B7%AF%E4%BB%A3%E6%8A%93>#網路代抓</a>
+<a href=http://pacermania.tumblr.com/tagged/115%E7%B6%B2%E8%B7%AF%E4%BB%A3%E6%8A%93>#115網路代抓</a>
+</p>
+</article>
+
+<article class=photo id=p-97921873513>
+<p class=meta><span class=date>2014年09月20日 07時14分09秒</span>
+<a class=llink href=../posts/97921873513.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/97921873513 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_nc68jlTdM61sjz8axo1_1280.jpg"></p>
+<p>難以置信，二寶(兜比)在今天凌晨四點出生了。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%85%9C%E6%AF%94>#兜比</a>
+</p>
+</article>
+
+<article class=regular id=p-96946188148>
+<p class=meta><span class=date>2014年09月08日 12時20分00秒</span>
+<a class=llink href=../posts/96946188148.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/96946188148 rel=canonical>●</a></p>
+<h2>[Chrome OS]使用ssh在大陸翻牆</h2>
+<p>相信常常去大陸出差的人應該對VPN不會陌生,不過相較之下ssh的方式就比較少人使用.不過由於我的<a href="http://pacermania.tumblr.com/post/82586060896/chromeos-hp-chromebook-14">Chromebook</a>沒有辦法使用Openvpn的ssl協定,也無法安裝Openvpn這個軟體,因此我就選擇了ssh的方式.</p>
+<p>首先必須要有三個條件:</p>
+<p>1.要在大陸以外的地區設置Openssh server(可參考<a href="http://blog.yam.com/yzl1218/article/62900868">windows</a>版本或<a href="http://www.ewdna.com/2012/06/ubuntu-ssh-server.html">Linux</a>版本的安裝方法),你也可以請你的朋友幫你架ssh server,並給你他的server的IP位置,user帳號,以及密碼)</p>
+<p>2.在Chromebook的Chrome瀏覽器安裝<a href="http://www.soft4fun.net/software/internet/proxy-switchy-%E4%B8%80%E9%8D%B5%E5%88%87%E6%8F%9B%E7%B6%B2%E8%B7%AFproxy%E8%A8%AD%E5%AE%9A.htm#axzz3CgKAT4XC">Proxy Switchy!</a></p>
+<p>3.在Chromebook的Chrome OS的Crosh終端機頁面執行ssh指令</p>
+<p>假設1. 2.都已經完成.接著就可以用<a href="http://www.cnblogs.com/webapplee/p/3825453.html">ctrl+alt+T的快速組合鍵</a>,叫出Crosh終端機頁面.</p>
+<p>然後</p>
+<p>依照以下順序在指令列輸入</p>
+<p><strong>crosh> ssh</strong></p>
+<p><strong>crosh> host yourhostname(例如:123.123.234.234)</strong></p>
+<p><strong>crosh> user yourname(例如:你在這個ssh server中所設的帳號)</strong></p>
+<p><strong>crosh> dynamic-forward 8101(指定port,可以指定8000-8999的範圍裡任何一個數字當作port)</strong></p>
+<p><strong>crosh> nocmd(不要顯示指令)</strong></p>
+<p><strong>crosh> connect</strong></p>
+<p>如下圖所示</p>
+<p><img alt="image" src="http://68.media.tumblr.com/ab40d4bf7b18075f8a625c11e2c9205b/tumblr_inline_nbkhvjHrc21snfajc.jpg"/></p>
+
+<p>接著就會出現要求輸入密碼的指示.輸入完密碼後,應該就會連上ssh server了.</p>
+<p>接下來就要設定Proxy Switchy!了</p>
+<p><strong>首先在設定頁面左邊按下【New Profile】然後在「Profile Name」欄位填入設定值的名稱（例如ssh），然後選取「Manual Configuration」並在Socks Host(不是HTTP Proxy) 位置輸入127.0.0.1</strong></p>
+<p><strong>Port 則輸入8101(或是可以用8000到8999中任一個數字,但是一定要與dynamic-forward指令後面的數字要一樣！),在下方SOCKS v5的方式連接(我測試過用SOCKS v4也可以連,但是速度較慢,且有些網頁會連不上).</strong></p>
+<p><strong>完成後按【Save】儲存即可完成新增一個網路設定，要新增多個不同設定在重複同樣步驟即可。<br/></strong></p>
+<p>如下圖所示</p>
+<p><img alt="image" src="http://68.media.tumblr.com/58b7e65f512ccbee0757c094509843c4/tumblr_inline_nbki56t5Pu1snfajc.jpg"/></p>
+
+<p></p>
+<p><span><strong>在地球圖示上按一下「滑鼠左鍵」,選擇剛剛設定的profile名稱(如ssh),就會直接以該設定值來進行網路連線.</strong></span></p>
+
+<p>簡單來說,就是以ssh的方式與ssh server建立連線,並把ssh server當成proxy server,就可以連上被GFW擋掉的網站啦！</p>
+<p>所以往後要用Chromebook在大陸翻牆,就先用crosh連上ssh server,接著再開啟Proxy Switchy!所設定的連線就可以了！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%A4%A7%E9%99%B8%E7%BF%BB%E7%89%86>#大陸翻牆</a>
+<a href=http://pacermania.tumblr.com/tagged/crosh>#crosh</a>
+<a href=http://pacermania.tumblr.com/tagged/Proxy%20Switchy%21>#Proxy Switchy!</a>
+<a href=http://pacermania.tumblr.com/tagged/chromebook>#chromebook</a>
+<a href=http://pacermania.tumblr.com/tagged/chrome%20OS>#chrome OS</a>
+<a href=http://pacermania.tumblr.com/tagged/HP%20Chromebook%2014>#HP Chromebook 14</a>
+<a href=http://pacermania.tumblr.com/tagged/GFW>#GFW</a>
+</p>
+</article>
+
+<article class=photo id=p-96622895433>
+<p class=meta><span class=date>2014年09月04日 23時07分16秒</span>
+<a class=llink href=../posts/96622895433.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/96622895433 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo4_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo5_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo6_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo7_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo8_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo9_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nbdu04b9ID1sjz8axo10_1280.jpg"></p>
+<p>鳥巢水立方夜景。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%8C%97%E4%BA%AC>#北京</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B0%B4%E7%AB%8B%E6%96%B9>#水立方</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%B3%A5%E5%B7%A2>#鳥巢</a>
+<a href=http://pacermania.tumblr.com/tagged/Beijing>#Beijing</a>
+<a href=http://pacermania.tumblr.com/tagged/water%20cube>#water cube</a>
+</p>
+</article>
+
+<article class=photo id=p-96460776538>
+<p class=meta><span class=date>2014年09月03日 00時24分00秒</span>
+<a class=llink href=../posts/96460776538.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/96460776538 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo4_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo5_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo6_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo7_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo8_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo9_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nba897TiY21sjz8axo10_1280.jpg"></p>
+<p>北京什剎海pub街</p>
+<p>搭地鐵六號線至北海北站.</p>
+<p>地圖</p>
+<iframe frameborder="0" height="450" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6118.38807010124!2d116.39051815353395!3d39.93704924710808!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f0530561717501%3A0xdb56703ea76d05e3!2z5LuA5YmO5rW36YWS5ZCn6KGX!5e0!3m2!1sen!2stw!4v1409675306609" width="600"></iframe>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E5%8C%97%E4%BA%AC>#北京</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BB%80%E5%89%8E%E6%B5%B7>#什剎海</a>
+<a href=http://pacermania.tumblr.com/tagged/pub>#pub</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%85%92%E5%90%A7>#酒吧</a>
+</p>
+</article>
+
+<article class=photo id=p-96361168493>
+<p class=meta><span class=date>2014年09月01日 23時04分10秒</span>
+<a class=llink href=../posts/96361168493.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/96361168493 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_nb89uyxL7O1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nb89uyxL7O1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nb89uyxL7O1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_nb89uyxL7O1sjz8axo4_1280.jpg"></p>
+<p>北大現代化的校園一隅+校園外道路夜景</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/PKU>#PKU</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%B8>#北京大學</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

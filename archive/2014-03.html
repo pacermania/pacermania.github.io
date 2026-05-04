@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":955,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>三月 2014</h1>
+
+
+<article class=photo id=p-80360867777>
+<p class=meta><span class=date>2014年03月22日 22時40分57秒</span>
+<a class=llink href=../posts/80360867777.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/80360867777 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n2ue49UbRW1sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n2ue49UbRW1sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n2ue49UbRW1sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n2ue49UbRW1sjz8axo4_1280.jpg"></p>
+<p>表弟結婚了！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E8%A1%A8%E5%BC%9F>#表弟</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%A9%9A%E7%A6%AE>#婚禮</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%BE%90%E5%B7%9E%E6%9C%83%E9%A4%A8>#徐州會館</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%BE%90%E5%B7%9E%E8%B7%AF2%E8%99%9F>#徐州路2號</a>
+</p>
+</article>
+
+<article class=photo id=p-80250022460>
+<p class=meta><span class=date>2014年03月21日 18時11分20秒</span>
+<a class=llink href=../posts/80250022460.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/80250022460 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_n2s6yxyNk51sjz8axo1_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n2s6yxyNk51sjz8axo2_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n2s6yxyNk51sjz8axo3_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n2s6yxyNk51sjz8axo4_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n2s6yxyNk51sjz8axo5_1280.jpg"></p>
+<p><img alt="" src="../images/tumblr_n2s6yxyNk51sjz8axo6_1280.jpg"></p>
+<p>回台北的途中來到古坑休息站。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%8F%A4%E5%9D%91%E4%BC%91%E6%81%AF%E7%AB%99>#古坑休息站</a>
+</p>
+</article>
+
+<article class=regular id=p-79972548065>
+<p class=meta><span class=date>2014年03月18日 23時16分23秒</span>
+<a class=llink href=../posts/79972548065.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/79972548065 rel=canonical>●</a></p>
+<h2>[電影]Blue Jasmine(藍色茉莉)</h2>
+<p><img src="http://68.media.tumblr.com/1f24e3967460e490ef55297e84692bb8/tumblr_inline_n2n10uuiLt1snfajc.jpg"/></p>
+
+<p><a href="http://zh.wikipedia.org/wiki/%E5%87%AF%E7%89%B9%C2%B7%E5%B8%83%E5%85%B0%E5%88%87%E7%89%B9">凱特布蘭琪</a>的演技沒有話說,只要看過神鬼玩家,都會被他精湛的演技所折服,但是我會看這部電影,主要是為了和女王一起觀看(因為我們的電影生活極不協調).</p>
+<p>其實該有的<a href="http://tivo.pixnet.net/blog/post/42409585-%E3%80%8A%E8%97%8D%E8%89%B2%E8%8C%89%E8%8E%89%E3%80%8B%E7%80%95%E8%87%A8%E5%B4%A9%E6%BD%B0%E9%82%8A%E7%B7%A3%E7%9A%84%E6%8A%91%E9%AC%B1%E8%B2%B4%E5%A9%A6">影評</a>網路上都寫的差不多了.不過劇中的女主角茉莉,正如電影名稱一樣,很Blue很憂鬱.</p>
+<p>看完之後,覺得有時候我們就如同茉莉一樣,常常覺得過去的輝煌也好,不堪也罷,怎麼就是有人無法逃離這樣的漩渦?就像劇中茉莉一直嫌他妹妹,他怎麼都一直在找爛咖,不像他可以嫁入有錢人家.但是在別人眼中,我們是不是也跟茉莉一樣,在不知不覺中就陷入了過往的漩渦.而且往往裹足不前的不是別人,而是自己.</p>
+<p>最後劇中茉莉不斷的自言自語,不停的說著Hal(茉莉的丈夫)怎樣Hal如何的.如果像這樣如法擺脫過去而自言自語是一種病徵的話,那我們常常在和別人談話中誇耀自己的豐功偉業,是不是也算是一種病徵呢？</p>
+<p><strong>電影預告</strong></p>
+<iframe frameborder="0" height="315" src="//www.youtube.com/embed/FER3C394aI8" width="560"></iframe>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/blue%20jasmine>#blue jasmine</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%97%8D%E8%89%B2%E8%8C%89%E8%8E%89>#藍色茉莉</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%87%B1%E7%89%B9%E5%B8%83%E8%98%AD%E7%90%AA>#凱特布蘭琪</a>
+<a href=http://pacermania.tumblr.com/tagged/cate%20blanchett>#cate blanchett</a>
+</p>
+</article>
+
+<article class=regular id=p-79752505452>
+<p class=meta><span class=date>2014年03月16日 20時16分00秒</span>
+<a class=llink href=../posts/79752505452.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/79752505452 rel=canonical>●</a></p>
+<h2>[親子]高雄國際機場觀景台</h2>
+<p>小時候在台北的我，姑姑曾經帶我去松山機場的一個地方，那個地方就在跑道的盡頭，運氣好的話可以看到很多飛機降落,而那些飛機就在你的頭頂上方掠過，那震耳欲聾的噪音，對我們這種遊客來說，聽起來真是痛快!但是對附近的居民來說可就…</p>
+<p>直到上星期帶比比回阿嬤家，因為下午天氣不是很理想，於是就想說去小港機場的觀景台看看飛機吧!</p>
+<p>雖然比起小時在<a href="http://alechome.blogspot.tw/2011/03/blog-post.html">濱江街180巷</a>看飛機，少了那種噪音的震撼，不過比比年紀這麼小，還是等他大一點的時候再帶他去吧!</p>
+<p>其實雖然說是觀景台，實際上這個觀景台就是連接國內線跟國際線的走道跟<a href="http://blog.xuite.net/bobowin/me/58830314-%5B+%E5%8F%B0%E5%8C%97%E8%A6%AA%E5%AD%90%E9%81%8A%E6%96%B0%E6%99%AF%E9%BB%9E+%5D+%E6%9D%BE%E5%B1%B1%E6%A9%9F%E5%A0%B4%E8%A7%80%E6%99%AF%E5%8F%B0~%E7%9C%8B%E9%A3%9B%E6%A9%9F">松山機場的新蓋的觀景台</a>比起來，相形之下弱了一些。可以看到飛機的走道那一側，都有設置座椅，可以讓人們在這裡喝飲料看飛機，甚至還有人把這裡當成免費的K書中心，真的是太強啦!</p>
+<p><img alt="image" src="http://68.media.tumblr.com/8cd8406b4f53a51cb6292b3b13f8f77a/tumblr_inline_n2j1muvFvp1snfajc.jpg"/></p>
+<p>阿公、比比還有比比的老爸一起看飛機</p>
+<p><img alt="image" src="http://68.media.tumblr.com/643acfc9616f230b9dea8f1620c8c005/tumblr_inline_n2j1qwWU8Z1snfajc.jpg"/></p>
+<p>相較於看飛機，比比比較喜歡在櫥窗裡的模型飛機</p>
+
+<p></p>
+<p><img alt="image" src="http://68.media.tumblr.com/c0bc13d51750e67dbf61bcdf0b1259e1/tumblr_inline_n2j1guhWqK1snfajc.jpg"/></p>
+<p>大家都坐在走道上的座椅看飛機</p>
+<p><img alt="image" src="http://68.media.tumblr.com/0567ce11ae81e9a440f2263ac5eb3642/tumblr_inline_n2j1v3Uc0q1snfajc.jpg"/></p>
+<p>其實這才是比比最愛在觀景台做的事，在觀景台的走道跑來跑去!</p>
+<p><img alt="image" src="http://68.media.tumblr.com/d0e0bc96d663c413d55bbe884c32189b/tumblr_inline_n2j1ypxjLJ1snfajc.jpg"/></p>
+<p>其實比比的馬麻對飛機也不感興趣，還不如跟比比一起在走道玩還比較開心</p>
+<p><img src="http://68.media.tumblr.com/1b38d9a65f513050f3f76b0c95ab993f/tumblr_inline_n2j3ihxDbV1snfajc.jpg"/></p>
+
+<p>雖然不像松山機場可以有頂樓露天觀景台，看到飛機的距離也比松山機場遠，臨場感不是很好，沒有飛機"振翅高飛"的感覺，也不像松山機場比較可以感覺到機場地勤人員忙碌的氣息，再者，小港機場觀景台沒有咖啡廳(有販賣機或是去國內航廈或國際航廈那邊買)，是比較美中不足的地方。</p>
+<p>不管如何，這仍舊是下午無聊時可以消磨時間的好去處。觀賞前可以先去高雄國際機場網站查詢<a href="http://www.kia.gov.tw/schedule/schedule.asp">航班資訊</a>，這樣才看的到飛機起飛唷!</p>
+<p><a href="http://www.kia.gov.tw/">高雄國際機場</a>(小港機場)</p>
+<p>位置:高雄市小港區中山四路</p>
+<iframe frameborder="0" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14736.458530007663!2d120.35087365!3d22.574815549999787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1ceaaec46945d129!2z6auY6ZuE5ZyL6Zqb6Iiq56m656uZ!5e0!3m2!1szh-TW!2stw!4v1394971343616" width="600"></iframe>
+<p>搭捷運的話</p>
+<p>可以搭高雄捷運紅線(往小港的方向)，在<a href="http://www.krtco.com.tw/train_info/service_1-R4.aspx">高雄國際機場站</a>下車。(班次資訊可至<a href="http://www.krtco.com.tw/">高雄捷運</a>查詢)</p>
+<p>然後出捷運站閘口後，按照國際航班(航廈)的指引標示前進，最後會到達一個有四台電梯的地方。然後搭電梯到最頂樓(印象中是3樓)之後，再往右手邊走就可以看到觀景台了。</p>
+<p>觀景台介紹還可以參考<a href="http://www.kia.gov.tw/airport/observatory.asp">高雄國際機場網站</a>。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E9%AB%98%E9%9B%84%E5%B0%8F%E6%B8%AF%E6%A9%9F%E5%A0%B4>#高雄小港機場</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%B0%8F%E6%B8%AF%E6%A9%9F%E5%A0%B4>#小港機場</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%A7%80%E6%99%AF%E5%8F%B0>#觀景台</a>
+</p>
+</article>
+
+<article class=link id=p-79152422723>
+<p class=meta><span class=date>2014年03月10日 17時20分35秒</span>
+<a class=llink href=../posts/79152422723.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/79152422723 rel=canonical>●</a></p>
+<h2><a href="http://abhinavsingh.com/blog/2008/07/gain-admin-access-on-windows-system-using-your-guest-account/">Gain admin access on windows system using your guest account | Abhi's Weblog</a></h2>
+<blockquote class="link_og_blockquote">Hello All, Ever thought of how to get into your friend’s system and see the access denied files and folders? Or ever wanted to hack into someone’s admin</blockquote>
+<p>雖然微軟已經宣布不支援xp了，可是為了保險起見，還是把這個大絕招記下來吧!</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/winxp>#winxp</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%B8%B3%E8%99%9F%E7%A0%B4%E8%A7%A3>#帳號破解</a>
+</p>
+</article>
+
+<article class=regular id=p-78653853332>
+<p class=meta><span class=date>2014年03月05日 23時50分00秒</span>
+<a class=llink href=../posts/78653853332.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/78653853332 rel=canonical>●</a></p>
+<h2>[育兒]台北松山菸廠文化園區</h2>
+<p><img alt="image" src="http://68.media.tumblr.com/ea5ca0b49e17e02d5a6ee7360cac5ac7/tumblr_inline_n1yyuga4li1snfajc.jpg"/></p>
+
+<p>說到松山菸廠,其實在我讀高中的時候,敝校就是在松山菸廠附近,所以有時候在上課時,不時會飄來陣陣菸草味,這或許也是就讀這間高中所獨有的"福利",隨著菸廠的拆除,這陣陣菸味也只能在記憶中回味.</p>
+
+<p>現在這一塊地,變成了台北市民,甚至是外縣市遊客假日會帶小孩一同遊玩之地,往日的菸廠只剩下具有日據時代風格的倉庫,其他所有跟菸廠及公賣局的東西都不復存在,取而代之的則是美化景觀用的樹木,翠綠的青草地,以及一棟象徵資本主義社會且內有誠品書店及假日飯店的複合式建築.</p>
+<p>這建築物裡面有誠品以及假日飯店</p>
+<p><img alt="image" src="http://68.media.tumblr.com/c86bffa07f852a0beda5ef073752edb4/tumblr_inline_n1yyl4coSE1snfajc.jpg"/></p>
+
+<p>撇開上述的這些論述,這塊讓我百感交集的地方,現在變成女王及比比的大遊樂場,其實別有一番樂趣.反正高中的回憶早已離我遠去,何不就帶著女王,比比還有雙親,一同來這裡享受台北難得一見的陽光！</p>
+<p><img alt="image" src="http://68.media.tumblr.com/d551f4d5fc162779c53d0cff6a9d64ee/tumblr_inline_n1yyrpXTY41snfajc.jpg"/></p>
+<p>女王跟比比的合照.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/5dca880f98a44b01ffc3cd390347aadf/tumblr_inline_n1yyt43TAs1snfajc.jpg"/></p>
+<p>在倉庫裡面(有設計商品展),比比玩得很開心呢！</p>
+
+<p><img alt="image" src="http://68.media.tumblr.com/20f43dca1776b70e90ca4577c3cd20dc/tumblr_inline_n1yyoxW0Vd1snfajc.jpg"/></p>
+<p>一些建築物都被現代的廣告給淹沒了！跟<a href="http://pacermania.tumblr.com/post/62314179463/day3">北京798</a>比起來,還是798比較有文青的氣息.</p>
+<p><img alt="image" src="http://68.media.tumblr.com/f7073009ac1f9c50e0e72df5287b78ec/tumblr_inline_n1yyyiKSxw1snfajc.jpg"/></p>
+<p>以下是地圖資訊</p>
+<iframe frameborder="0" height="350" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com.tw/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%85%89%E5%BE%A9%E5%8D%97%E8%B7%AF%E6%9D%BE%E5%B1%B1%E8%8F%B8%E5%BB%A0%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80&aq=1&oq=%E6%9D%BE%E8%8F%B8&sll=22.973661,120.611854&sspn=2.801612,3.397522&brcurrent=3,0x3442abf2b1d366ed:0x5d62b36fc2a1bb86,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&ie=UTF8&hq=&hnear=&ll=25.043708,121.559325&spn=0.006295,0.006295&t=m&iwloc=A&output=embed" width="425"></iframe><br/><small><a href="https://maps.google.com.tw/maps?f=q&source=embed&hl=zh-TW&geocode=&q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%85%89%E5%BE%A9%E5%8D%97%E8%B7%AF%E6%9D%BE%E5%B1%B1%E8%8F%B8%E5%BB%A0%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80&aq=1&oq=%E6%9D%BE%E8%8F%B8&sll=22.973661,120.611854&sspn=2.801612,3.397522&brcurrent=3,0x3442abf2b1d366ed:0x5d62b36fc2a1bb86,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&ie=UTF8&hq=&hnear=&ll=25.043708,121.559325&spn=0.006295,0.006295&t=m&iwloc=A">顯示詳細地圖</a></small></p>
+<p>誠品書店底下有地下停車場,其他詳情請至http://www.songshanculturalpark.org/  </p>
+<p>P.S.</p>
+<p>這次回台北我們是使用<a href="http://www.thsrc.com.tw/event/trans/st130601_Jiaosi.html">高鐵交通聯票-礁溪線</a>,雖然沒有以前的早鳥優惠,但是總共四張北高的高鐵票外加兩張葛瑪蘭客運的票,只要5320元.平均一張高鐵票就算放棄客運不坐,<strong>每張也只要1330元</strong>(原價1630,所以我真的懷疑高鐵根本就是藉故漲價,想要撈更多的錢)！不過以上一定要坐北高的路線才會划算,否則只要從台中以北出發基本上就不划算囉！</p>
+<p>不過這個方案也很麻煩,有很多限制,例如換票一定要在高鐵車站換,乘坐高鐵的日期只能選擇在乘坐客運日期的前一天或後兩天,其他的我就不在這多說了,有<strike>興趣要坐倒高鐵</strike>需要的人,可以參考一下這個方案！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E6%9D%BE%E5%B1%B1%E8%8F%B8%E5%BB%A0%E6%96%87%E5%8C%96%E5%9C%92%E5%8D%80>#松山菸廠文化園區</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%AF%94%E6%AF%94>#比比</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%AB%98%E9%90%B5%E5%A5%97%E7%A5%A8>#高鐵套票</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

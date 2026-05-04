@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>2024年11月致富心態-摩根.豪瑟(天下文化) | Pacermania的部落格</title>
+
+    <meta name="description" content="作者有提到我們的投資方式和策略，會受到我們成長環境的影響，假設你是經歷過美國1930年代的人，你經歷過大蕭條的恐懼，這時你就會傾向儲蓄或是投資債券，如果你是經歷過景氣大好的人，你就會有很大的概率選擇投資股票市場。">
+
+    <link rel="canonical" href="https://a1253247.info/pacermania/archive/2024-11-1.html" />
+
+    </head>
+
+
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十一月 2024</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2024年11月03日 06時08分03秒</span> <a class="llink" href="../posts/103290594288.html">&para;</a> <a href="http://pacermania.tumblr.com/post/103290594288" rel="canonical">●</a></p>
+
+<h2>致富心態-摩根.豪瑟(天下文化)</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="致富心態" id="致富心態" src="../images/S12501008.jpg" style="width: 1227px; height: 889px;" /></figure>
+
+<p>自從看過綠角以及約翰柏格的理財書及自傳後，我就鮮少接觸有關理財的書籍。原因之一是因為這兩位的投資的策略大致相同，就是持續的投資還有資產配置，接下來就是等在長時間投資所產生的複利效應，為投資人帶來豐厚的報酬。由於這幾年這樣的策略運作良好(主要是美國股市真的漲得太誇張)，所以策略沒有調整的必要，自然就不會想去找其他的理財書去讀，也可以把原本要拿來選股的時間，多陪陪家人，做自己想做的事。但是最近群組裡面有一些大老推薦這一本書，加上女王也想要看這本書，於是就入手了。
+。</p>
+<p>其實這一本書跟大部分教你投資或是選股的方式大異其趣，反而重點是放在投資人的心理如何影響他的決策，進而做出外人看起來無法理解的決定。例如，當股災來臨時，大家都知道只要撐過去，接下來就有機會上漲了。但是，當你身在其中，一天報暴跌10%，加上手頭沒有充足的資金，家裡的帳單不斷地湧上，這時的恐懼就會強烈的縈繞在你的心頭，揮之不去，即便理智上應該要持續持有，你還是有可能會出清手頭上的股票，而錯過上漲的機會。另外，作者有提到我們的投資方式和策略，會受到我們成長環境的影響，假設你是經歷過美國1930年代的人，你經歷過大蕭條的恐懼，這時你就會傾向儲蓄或是投資債券，如果你是經歷過景氣大好的人，你就會有很大的概率選擇投資股票市場。</p>
+
+<p>作者在書中也提到兩個比較重要的觀念，第一個是要有容錯的空間，第二就是長尾效應。第一個主要是在闡述人一定會犯錯，不管是誤判情勢，或是客觀上你已經做出最正確的決定時，股票市場卻做出非理性的反應，這時假設你有身邊仍有充足的資金，這筆錢就可以讓你在遇到意外時恢復信心，幫助你度過難關。也因此作者也強調儲蓄的重要性，你不必為了甚麼理由存錢(例如買車、買奢侈品)，儲蓄率的高低將會影響你日後是否會致富的關鍵，還有你在股票市場上存活的機會。</p>
+<p>長尾效應作者則是以亞馬遜作為例子，亞馬遜在經營上曾經有許多的嘗試，除了AWS還有電子書之外，甚至還有發展手機，雖然亞馬遜很多的計畫還有嘗試都失敗了，但是往往只要少數的計畫可以成功，就可以帶來豐厚的收入，使得公司得以持續的生存下去。像巴菲特的波克夏也是，波克夏絕大多數的投資獲利都是差強人意，往往可以幫波克夏投資人帶來利潤的，都只有少數幾檔股票而已。所以，當你投資遇到失敗時，可以把它當成得到豐厚收入所要付出的代價，或者像是罰單，很多人會為了去遊樂園而付高額的門票，但是卻不願為賺取豐厚利潤而冒失敗的風險。當然，上述前提是在你有足夠的存款時，你才有辦法在未來賺取豐厚的收益。</p>
+
+<p>這本書最有趣的地方，是有講到美國人喜歡過度消費。這個習慣可以追溯至第二次世界大戰剛結束。在戰時，美國（其實很多國家都是）幾乎所有的生產資源都拿來生產武器或軍用物資，很少會有人會去蓋房子。但是戰爭結束後，會有兩大問題。1600萬參與戰爭的人即將回國，這些人將何去何從（工作機會在哪裡）？這會是巨大的經濟和社會問題。還有戰爭結束後，預期的會有通貨膨脹，到底是要提升利率，還是要維持低利率？</p>
+
+<p>後來美國提出了一系列對退伍軍人優惠的措施，還有更多更方便的貸款服務，即便一般民眾都可以有機會買高級的電冰箱，高級的房車等等。也就是說，在那個時代，中產階級和有錢人的差距沒那麼大，即便薪水有差，但是在生活上，不分階級可以擁有同樣的消費行為（追求消費上的平等）。在那個世代，負債並不可怕，同時也不是問題，因為負債比仍在控制之中。但是現在薪資級距拉大，再用二戰那時的思維消費，你會快速破產。可是二戰之後的的典範建立已經起來，而且根深蒂固在人們心中，所以現在要鼓勵美國人存錢幾乎是不可能的事。所以那時候的鼓勵消費是有時代背景的，那時是為了要解決戰後的經濟問題，所以才會鼓吹消費。讓大部分人在消費上得到平等。</p>
+
+<p>因此，無論你的投資策略如何，都要想辦法讓你的儲蓄率上升，因為你要用投資策略增加0.1%的利潤要花很大的力氣，但是要增加0.1%的儲蓄是相對比較容易的。所以大家就努力存錢吧!</p>
+
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+<a href="../archive/2024-10.html">赤字迷思-現代貨幣理論和為人民而生的經濟(史蒂芬妮‧凱爾頓)</a>
+
+<p><a href="../archive/2024-08-1.html" target="_blank">卡洛斯．魯依斯．薩豐《天使遊戲》</a></p>
+
+<p><a href="../archive/2024-09.html" target="_blank">賈德．戴蒙-槍砲、病菌與鋼鐵</a></p>
+<p><a href="https://a1253247.blogspot.com/p/blog-page.html">電子書-大數據的傲慢與偏見</a></p>
+
+<p><a href="https://medium.com/@a1253247/%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1-%E7%B4%84%E7%BF%B0-%E5%8D%9A%E6%A0%BC-john-c-bogle-%E5%85%B1%E5%90%8C%E5%9F%BA%E9%87%91%E5%B8%B8%E8%AD%9810%E9%80%B1%E5%B9%B4%E7%B4%80%E5%BF%B5%E7%89%88-bab3f6e3c159">[投資理財]約翰·博格(John C. Bogle)共同基金常識10週年紀念版</a></p>
+
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p></p>
+
+<p><a href="https://www.instagram.com/beastmama.cooking/" rel="nofollow" target="_blank">野獸媽媽|懶人料理x越吃越瘦x零廚藝</a></p>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

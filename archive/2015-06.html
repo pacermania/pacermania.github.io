@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":1334,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>六月 2015</h1>
+
+
+<article class=link id=p-121758823143>
+<p class=meta><span class=date>2015年06月17日 23時09分19秒</span>
+<a class=llink href=../posts/121758823143.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/121758823143 rel=canonical>●</a></p>
+<h2><a href="https://tw.tech.yahoo.com/news/apple-music%E5%8F%B0%E7%81%A3%E6%9C%88%E8%B2%BB%E6%9B%9D%E5%85%89-%E5%8F%AA%E8%A6%81%E7%BE%8E%E5%9C%8B-%E5%8D%8A-060400697.html">Apple Music台灣月費曝光 只要美國一半</a></h2>
+<p>我只能說消費者是最大的贏家！雖然線上音樂串流跟唱片業者與歌手仍有許多矛盾存在，像<a href="http://buzzorange.com/techorange/2014/11/14/why-taylor-swift-spotify/">Taylor Swift的最新專輯1989在Spotify下架</a>，都說明了這樣的音樂模式並非被所有音樂人接受。</p><p>然而，不可否認的，唱片市場在網路MP3充斥以及Napster，海盜灣的推坡助攔下不斷地委縮。數位音樂下載與線上音樂串流似乎就成為可以對抗盜版的手段之一，但是在唱片業者主要收益還是放在實體唱片和數位下載的情形下，表面上<a href="http://technews.tw/2015/03/20/streaming-music-sales-beat-cds-in-2014/">線上音樂串流市場持續成長，甚至超越實體CD的收入</a>，但實際上仍有很長的路要走。<br/></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/apple%20music>#apple music</a>
+<a href=http://pacermania.tumblr.com/tagged/Spotify>#Spotify</a>
+<a href=http://pacermania.tumblr.com/tagged/taylor%20swift>#taylor swift</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%B7%9A%E4%B8%8A%E9%9F%B3%E6%A8%82%E4%B8%B2%E6%B5%81>#線上音樂串流</a>
+<a href=http://pacermania.tumblr.com/tagged/streaming%20music>#streaming music</a>
+</p>
+</article>
+
+<article class=regular id=p-120838357838>
+<p class=meta><span class=date>2015年06月06日 15時23分35秒</span>
+<a class=llink href=../posts/120838357838.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/120838357838 rel=canonical>●</a></p>
+<h2>[KINDLE]自AMAZON下載電子書</h2>
+<figure data-orig-width="1879" data-orig-height="2528" class="tmblr-full"><img src="http://68.media.tumblr.com/425aac9f33a573b9960bab0537d8e09a/tumblr_inline_npihkkLhpI1snfajc_540.jpg" alt="image" data-orig-width="1879" data-orig-height="2528"/></figure><p>以前我都是用USB連接線把檔案傳到<a href="http://www.amazon.com/Kindle-Glare-Free-Touchscreen-Display-Wi-Fi/dp/B00I15SB16/ref=dp_ob_image_def">KINDLE</a>上，然後再用KINDLE看書，完全不用網路傳輸。最近因為要開始研究韓國旅遊，所以想說在AMAZON買電子書，然後下載到我的KINDLE上閱讀。只是從以前到現在，我都還沒在AMAZON上買過電子書，並且下載到我的KINDLE上。所以這一次我就把我從AMAZON購買書到傳送電子書到KINDLE的過程寫下來。</p><p>但是首先，你必須要有一個AMAZON美國帳號，若不知道怎樣申請AMAZON美國帳號，可以參考<a href="http://pacermania.tumblr.com/post/103290594288/amazon-mp3">這裡</a>。</p><figure data-orig-width="959" data-orig-height="744" class="tmblr-full"><img src="http://68.media.tumblr.com/05f2bfc8f37105fbac5efd0ecd37ffeb/tumblr_inline_npihlb7dtE1snfajc_540.png" alt="image" data-orig-width="959" data-orig-height="744"/></figure><p>一開始先登入AMAZON的帳號，並且在帳號(Account)的地方選擇Manage
+your content and devices。</p><figure data-orig-width="959" data-orig-height="744" class="tmblr-full"><img src="http://68.media.tumblr.com/42ddcf680180dea61f6a3948b6fb7f2f/tumblr_inline_npihnoWm7L1snfajc_540.png" alt="image" data-orig-width="959" data-orig-height="744"/></figure><p>在your
+devices的選項中看看是否有你的KINDLE在清單裡面，若沒有，記得要在你的KINDLE上先登入你的AMAZON的帳號，這樣AMAZON就會把你的KINDLE放進your
+devices的清單裡面啦。</p><figure data-orig-width="959" data-orig-height="744" class="tmblr-full"><img src="http://68.media.tumblr.com/d90f0d809fb135e872343f27921a4952/tumblr_inline_npiho05dcm1snfajc_540.png" alt="image" data-orig-width="959" data-orig-height="744"/></figure><p>然後選擇你想要買的書，記得要把Deliver的位置選擇至你的KINDLE，點選1-Click之後，就完成了購買程序。</p><figure data-orig-width="1778" data-orig-height="2418" class="tmblr-full"><img src="http://68.media.tumblr.com/35da4939f55a8f18145dcaca61e94d96/tumblr_inline_npihrdPdOl1snfajc_540.jpg" alt="image" data-orig-width="1778" data-orig-height="2418"/></figure><p>然後打開你的KINDLE。</p><figure data-orig-width="1778" data-orig-height="2463" class="tmblr-full"><img src="http://68.media.tumblr.com/e3a2b72c393bfa8957827d0f7e941f4a/tumblr_inline_npihs4UYdq1snfajc_540.jpg" alt="image" data-orig-width="1778" data-orig-height="2463"/></figure><p>開啟無線網路。</p><figure data-orig-width="1791" data-orig-height="2423" class="tmblr-full"><img src="http://68.media.tumblr.com/125374adf3bd89d169da2fc4aebd450d/tumblr_inline_npihsgreNt1snfajc_540.jpg" alt="image" data-orig-width="1791" data-orig-height="2423"/></figure><p>之後，KINDLE就會自動下載你剛剛購買的書。</p><figure data-orig-width="1721" data-orig-height="2286" class="tmblr-full"><img src="http://68.media.tumblr.com/3acb76bf3467803f10916df365484ce2/tumblr_inline_npihstOLfx1snfajc_540.jpg" alt="image" data-orig-width="1721" data-orig-height="2286"/></figure><p>網路很快，一下子就下載完了。然後就可以觀看剛剛下載完成的書囉。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/AMAZON>#AMAZON</a>
+<a href=http://pacermania.tumblr.com/tagged/amazon%20kindle>#amazon kindle</a>
+<a href=http://pacermania.tumblr.com/tagged/Kindle%20Touch>#Kindle Touch</a>
+<a href=http://pacermania.tumblr.com/tagged/Kindle>#Kindle</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%9B%BB%E5%AD%90%E6%9B%B8>#電子書</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

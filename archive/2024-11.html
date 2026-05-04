@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>HDMI轉AV-用降維方式錄影電視節目 - Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>十一月 2024</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2024年11月01日 02時38分05秒</span> <a class="llink" href="../posts/153117938918.html">&para;</a> <a href="http://pacermania.tumblr.com/post/153117938918" rel="canonical">●</a></p>
+
+<h2>HDMI轉AV-用降維方式錄影電視節目</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="HDMI轉AV" id="HDMI轉AV" src="../images/IMG_7999.JPG" style="width: 1227px; height: 889px;" /></figure>
+
+<p>HDMI轉AV-以前小時候習慣用VHS錄影機錄製節目，這個習慣一直沿用至今日。然而現在的電視或網路節目已經是1080i為主流，會使用720甚至480畫素的節目已經非常罕見，低於1080i基本上已經無法被一般民眾所接受，因此，像錄影機這種無法提供高畫質的影音設備已經成為古董，大多數人都不會去使用。</p>
+
+<p>然而，由於著作權的關係，目前以HDMI傳輸影音的節目都有保護的機制，所以如果你的設備沒有經過HDCP(High-Bandwidth Digital Content Protection；高頻寬數位內容保護)授權，你就沒有辦法正常的收看節目或錄製節目。市面上確實有許多可以錄製HDMI影音的設備，但是這些設備基本上都不提供錄製HDCP節目的功能。當然網路上依舊有許多人提供可以破解的方式，例如加裝HDMI Splitter，就可以解碼HDCP。</p>
+
+<p>不過雖然有前述的方式可以破解，但是由於小弟還是覺得用HDMI設備錄製的方式，實在是不熟悉且過於麻煩，因此就想是否可以以犧牲畫質的方式，來達到可以錄影的目的呢?後來，就發現AMAZON上有賣HDMI轉AV的轉接器，而且還可以用在舊型的電視上觀看FireStick的節目，所以小弟就決定用這樣"降維打擊"，來建構一個可以錄製網路節目的架構。小弟使用的架構如下。</p>
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="HDMI轉AV" id="HDMI轉AV" src="../images/hdmi2av.jpg" style="width: 1227px; height: 889px;" /></figure>
+
+<p>簡單來說，我是使用Apple TV當作訊號來源，Apple TV輸出的訊號傳送至HDMI轉AV的轉接器(把數位信號轉換成類比訊號)，轉接器的類比信號進入VHS錄影機，錄影機的類比信號再進入電視。經過HDMI轉AV的轉接器的訊號轉換後(應該市面上販售的HDMI轉AV的轉接器都可以，我是在高雄的建國路附近買的)，完全擺脫了HDCP的束縛，只是訊號變成類比訊號，畫質也下降成480(DVD畫質)。</p>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592">
+<p><img alt="HDMI轉AV" src="../images/IMG_7998.JPG" style="width:480px; height: 640px;" /></p>
+
+<p><img alt="HDMI轉AV" src="../images/IMG_8020.jpg" style="width: 640px; height: 480px;" /></p>
+
+<p><img alt="HDMI轉AV" src="../images/thumbnail_IMG_8033.jpg" style="width: 640px; height: 480px;" /></p>
+</figure>
+
+<p>雖然畫質不是很理想，但是這樣的方式確實可以有效擺脫HDCP的束縛，小弟就是用這樣的方式錄影NCAA的籃球賽。不過由於現在都是以HDMI為主流，VHS錄影機也不太好找，VHS錄影帶也不多見，如果你家裡正好來有閒置的VHS錄影機，不彷來試試看，回味一下當年的畫質吧!</p>
+
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+<a href="https://technews.tw/2022/09/14/are-u-using-authorized-hdmi-products/">你用的是「授權」過的HDMI 產品嗎?</a>
+
+<p><a href="https://a1253247.blogspot.com/2024/06/tvheadend-raspberry-piserver.html" target="_blank">TVHeadend-用Raspberry Pi搭建無線數位電視Server</a></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/06/qobuz.html" target="_blank">Qobuz-播放高音質音樂的音樂平台</a></p>
+<p><a href="https://a1253247.info/pacermania/archive/2024-09-1.html">Airplay-於HomePod上聆聽黑膠唱機/轉盤音樂</a></p>
+
+<p><a href="https://a1253247.info/pacermania/archive/2024-08.html">PLEX-好用的多媒體伺服器軟體</a></p>
+
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p></p>
+
+<p><a href="https://www.instagram.com/beastmama.cooking/" rel="nofollow" target="_blank">野獸媽媽|懶人料理x越吃越瘦x零廚藝</a></p>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>2024年9月：賈德．戴蒙-槍砲、病菌與鋼鐵 | Pacermania的部落格</title>
+
+    <meta name="description" content="這一本書的中心思想很簡單，就是人類居住/所在的環境決定了後續發展的命運。就像書中一直提到的，為什麼是歐洲的人去殖民美洲，反而不是美洲的人去殖民歐洲呢?很多傳統的理論都刻意注重在文化史料上，導致多數學者認為歐洲的族群可能比較優越，進而可以征服美洲。">
+
+    <link rel="canonical" href="https://a1253247.info/pacermania/archive/2024-09.html" />
+
+    </head>
+
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>九月 2024</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2024年09月01日 09時30分05秒</span> <a class="llink" href="../posts/153117938918.html">&para;</a> <a href="http://pacermania.tumblr.com/post/153117938918" rel="canonical">●</a></p>
+
+<h2>賈德．戴蒙-槍砲、病菌與鋼鐵</h2>
+
+<figure class="tmblr-full" data-orig-height="1936" data-orig-width="2592"><img alt="賈德戴蒙" id="賈德戴蒙" src="../images/Steel-1.jpg" style="width: 1227px; height: 889px;" /></figure>
+
+<p>賈德．戴蒙-槍砲、病菌與鋼鐵，這本書的名聲響亮，連平常喜歡看小說的我，都聽過這本書的名字，之後也買了這一本書。只是後來都還是以看小說為主，加上還有其他有趣的書想看，就導致這本書一直被我束之高閣。直到後來我發現電子書可以用聽的方式閱讀之後，就想何不利用上班通勤的時間來聽這一本書呢?於是我就利用上班通勤的時間，聽完了這本書。<p>
+
+其實這一本書的中心思想很簡單，就是人類居住/所在的環境決定了後續發展的命運。就像書中一直提到的，為什麼是歐洲的人去殖民美洲，反而不是美洲的人去殖民歐洲呢?很多傳統的理論都刻意注重在文化史料上，導致多數學者認為歐洲的族群可能比較優越，進而可以征服美洲。可是作者卻以演化生物學的角度，發現歐洲因為所在環境具有多種高蛋白質、高營養且馴化過的作物，加上也具有多種馴化的動物(尤其是馬匹)可供使用，這樣的環境造就了可以支撐不事生產的人群，這些人群可以從事各種農業生產的活動，最後自然的可以在文化/文字、科學、藝術、軍事上獲得長足的進步。<p>
+
+反觀其他地區的環境，天生就僅有少數馴化過的作物以及少數馴化的動物，加上沒有馬匹可以使用，這樣的環境自然沒有條件去支撐不事生產的人群，所以就沒有多餘的精力去在文化/文字、科學、藝術、軍事上獲得進步。所以作者也說，並不是因為歐洲人比較優越，只是因為歐洲人運氣好，假設今天兩者互相調換，歐洲人也是會遭遇到同樣落魄的命運。畢竟即便是現在科技如此進步，人類能夠馴化一種植物和動物都非常的困難，更何況是以前的人類?<p>
+
+也正因為歐洲的人類具有先天上絕對的環境優勢，讓歐洲的人口可以迅速成長及擴張，人口越多越密集，就越有機會產生人畜共通的病菌傳播。人類在接觸病菌之後，會漸漸地對病菌產生抵抗力，病菌為了生存，也會產生變異，就這樣周而復始。歐洲人因為對其接觸的病菌有抵抗力，所以比較不會因為病菌而生病或死亡;相反的，美洲大陸因為人口稀少，對病菌的抵抗力較弱，也因此歐洲人在登陸美洲之後，這些對歐洲病菌沒有抵抗力的當地人口，自然地就面臨死亡的命運。<p>
+
+最後作者也分析為什麼一開始技術落後的歐洲，現在反而成為技術的領先者?原因是因為歐洲的特殊地理環境，使各族群之間適度的分隔，並保持相互競爭的關係。因為有競爭關係，若是鄰國有發展新的技術，但是自己沒有發展，很有可能面臨被滅亡的命運。所以為了存活，不僅要學習/趕上鄰國的技術，自己還要發展更先進的技術以維持優勢，就在這樣的相互作用之下，歐洲的技術得以後來居上，成為世界的主宰。而美洲大陸則是過於分散，彼此沒有很明顯的競爭關係，因此不需要發展先進技術以維持領先地位。<p>
+
+中國則是很早就統一，內部及外部並沒有太多的刺激及競爭，因此中國的技術是否要發展，主要端看上位者一個的決定，只要在上位者決定錯誤，就會造成技術落後。但是中國即便技術落後，依舊無損其生存優勢，一直到清末西方列強開始蠶食鯨吞開始，中國才面臨危機。<p>
+
+這本書真的顛覆了以往歷史學家對於人類發展的觀點，我覺得現在研究歷史，真的不能只專注在文獻史料，更應該要想辦法拼湊當時的地理環境、經濟、科技等相關資料，才能拼湊出當時的真正樣貌。<p>
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+<a href="https://a1253247.blogspot.com/2024/07/kindle-app-ios.html">Kindle app-使用iOS語音功能來"聽書"</a>
+
+<p><a href="https://medium.com/@a1253247/kindle-%E4%BD%BF%E7%94%A8calibre-dedrm-%E5%B9%AB%E4%BD%A0%E5%8E%BB%E9%99%A4%E4%BA%9E%E9%A6%AC%E9%81%9C-amazon-%E9%9B%BB%E5%AD%90%E6%9B%B8%E7%9A%84drm-85da165e2051" target="_blank">[Kindle]使用Calibre+DeDRM，幫你去除亞馬遜(Amazon)電子書的DRM</a></p>
+
+<p><a href="https://a1253247.blogspot.com/p/blog-page.html" target="_blank">電子書-大數據的傲慢與偏見</a></p>
+<p><a href="https://medium.com/@a1253247/kindle-%E8%AE%93%E4%BD%A0%E7%9A%84kindle%E4%B9%9F%E5%8F%AF%E4%BB%A5%E8%AE%80%E6%A8%82%E5%A4%A9%E6%9B%B8%E5%9F%8E-kobo-%E7%9A%84%E9%9B%BB%E5%AD%90%E6%9B%B8-526dfcf87a3">[Kindle]讓你的Kindle也可以讀樂天書城（Kobo）的電子書</a></p>
+
+<p><a href="../archive/2024-08.html">PLEX-好用的多媒體伺服器軟體</a></p>
+
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p></p>
+
+<p><a href="https://www.instagram.com/beastmama.cooking/" rel="nofollow" target="_blank">野獸媽媽|懶人料理x越吃越瘦x零廚藝</a></p>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

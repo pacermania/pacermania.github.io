@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":1087,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>二月 2016</h1>
+
+
+<article class=regular id=p-139852170393>
+<p class=meta><span class=date>2016年02月23日 23時23分40秒</span>
+<a class=llink href=../posts/139852170393.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/139852170393 rel=canonical>●</a></p>
+<h2>[Google]將ICS檔匯入Google Calendar</h2>
+<figure data-orig-width="480" data-orig-height="365" class="tmblr-full"><img src="http://68.media.tumblr.com/6d9a16d16abd267cfd76fe376c44d831/tumblr_inline_o308q4z72N1snfajc_540.png" alt="image" data-orig-width="480" data-orig-height="365"/></figure><p>以前從來沒有想到要把ics檔匯入行事曆的打算，想說反正就把重要的事情(例如球賽的轉播時間)直接用土法煉鋼的方式，輸入到Google Calendar，或是輸入到手機，甚至下載整個賽程表，或者直接po在部落格上就ok了。因為上述方法個人也沒有覺得很不方便，於是就是一直此用上述方法。</p><p>直到去年的Rugby World Cup的官網，提供了ics檔下載，然後在讓球迷將ics檔匯入outlook或google calendar中。只是到底要如何匯入google calendar呢？這真讓我傷透腦筋，後來在不斷的<strike>問候</strike>請教google大神和自己摸索之後，終於找到將ics檔匯入的方法。</p><p>以最近最熱門的賽事，莫過於在板球大國印度舉辦的<a href="http://www.icc-cricket.com/world-t20/fixtures/men">T20(twenty-twenty)的世界盃賽事</a>了，而剛好這個官網也提供了ics檔，讓球迷下載。</p><figure data-orig-width="1019" data-orig-height="631" class="tmblr-full"><img src="http://68.media.tumblr.com/436996e5a9cdb1c26ce4219656d1c2b5/tumblr_inline_o309t8sBay1snfajc_540.png" alt="image" data-orig-width="1019" data-orig-height="631"/></figure><p>若不知道如何下載，可以點擊<a href="http://cht.tw/h/pb08n">這裡</a>來下載。<br/></p><p>下載完成後，接著由google search首頁右上角的功能表，進入google calendar。</p><figure data-orig-width="1011" data-orig-height="621" class="tmblr-full"><img src="http://68.media.tumblr.com/d11175c924ebcaf792667d66d5a92992/tumblr_inline_o309xhX8t21snfajc_540.png" alt="image" data-orig-width="1011" data-orig-height="621"/></figure><p>進入之後，請選擇左手邊的other calendars下拉選單，選擇其中的import calendar的選項。</p><figure data-orig-width="1008" data-orig-height="629" class="tmblr-full"><img src="http://68.media.tumblr.com/96bcc9247a51062e311d4233726e6447/tumblr_inline_o30a62LKRB1snfajc_540.png" alt="image" data-orig-width="1008" data-orig-height="629"/></figure><p>將著就會跳出視窗，請選擇你要匯入的ics檔，本次以T20 world Cup 2016官網提供的ics檔為範例，當然也可以選擇其他的ics檔來匯入你要匯入的行事曆。</p><figure data-orig-width="1018" data-orig-height="618" class="tmblr-full"><img src="http://68.media.tumblr.com/5776f0fe02635255a126a3f03794ed00/tumblr_inline_o30acapLpB1snfajc_540.png" alt="image" data-orig-width="1018" data-orig-height="618"/></figure><p>之後應該就可以看到你匯入的資料(賽程)了(喔耶！)</p><figure data-orig-width="1024" data-orig-height="636" class="tmblr-full"><img src="http://68.media.tumblr.com/3db2a41c1efd9da7257bedb998bbb415/tumblr_inline_o30amh772r1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="636"/></figure><p>有了這招，就不會錯過任何一個重要的比賽了(家有小屁孩，可能嗎？)</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/ICS%E6%AA%94>#ICS檔</a>
+<a href=http://pacermania.tumblr.com/tagged/.ics>#.ics</a>
+<a href=http://pacermania.tumblr.com/tagged/google%20calendar>#google calendar</a>
+<a href=http://pacermania.tumblr.com/tagged/t20%20world%20cup%202016%20schedule>#t20 world cup 2016 schedule</a>
+<a href=http://pacermania.tumblr.com/tagged/import%20calendar>#import calendar</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%8C%AF%E5%85%A5google%E8%A1%8C%E4%BA%8B%E6%9B%86>#匯入google行事曆</a>
+<a href=http://pacermania.tumblr.com/tagged/ics%E6%AA%94%E5%8C%AF%E5%85%A5google%E8%A1%8C%E4%BA%8B%E6%9B%86>#ics檔匯入google行事曆</a>
+</p>
+</article>
+
+<article class=regular id=p-138479218568>
+<p class=meta><span class=date>2016年02月01日 22時22分53秒</span>
+<a class=llink href=../posts/138479218568.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/138479218568 rel=canonical>●</a></p>
+<h2>[Amazon]以Amazon Fire Stick+Joy Drone取代Amazon Echo</h2>
+<figure class="tmblr-full" data-orig-height="2948" data-orig-width="1893"><img data-orig-height="2948" data-orig-width="1893" alt="image" src="http://68.media.tumblr.com/60b3c530cc5c6fa3eebd5e232258e088/tumblr_inline_o1vgnavdts1snfajc_540.jpg"/></figure><p>其實會想這樣做，也是因為之前我都使用電腦來收聽Amazon Prime Music，但是Amazon Prime Music似乎會與一些網站或網路服務，尤其是有使用SSL或是Secure Connection連線的網站，特別容易中斷Amazon Prime Music的音樂串流，所以我就想買一台<a href="http://www.amazon.com/Amazon-SK705DI-Echo/dp/B00X4WHP5E/ref=sr_1_1?ie=UTF8&qid=1454298731&sr=8-1&keywords=amazon+echo">Amazon Echo</a>來播放Amazon Prime Music。</p><figure class="tmblr-full" data-orig-height="300" data-orig-width="300"><img data-orig-height="300" data-orig-width="300" alt="image" src="http://68.media.tumblr.com/6154078e0d1e75abf74d9132d88ebff3/tumblr_inline_o1vgpmQNRe1snfajc_540.jpg"/></figure><p>(圖片取自Amazon官網)<br/></p><p>不過Amazon Echo一個要179刀，這真的是有點貴，加上家裡已經有很多小音箱了，再加一個Amazon Echo的話，我大概會被女王<strike>逐出家門</strike>禁止吧!所以這時候就想到是不是有其他的Amazon產品，來替代Amazon Echo。</p><p>另外，為了不要在播放Amazon Prime Music的時候還要用到電腦螢幕，因此這個替代Amazon Echo的產品也必須要具備Voice Remote(聲控)的功能(否則就悲劇了)。後來我發現原來第二代的<a href="http://www.amazon.com/Fire-TV-Stick-Voice-Remote/dp/B00ZVJAF9G/ref=sr_1_2?ie=UTF8&qid=1454298602&sr=8-2&keywords=fire+stick">Fire Stick有Voice Remote</a>(聲控)，若再加上其他的一些套件，例如<a href="https://www.kickstarter.com/projects/1752052318/joydrone-chromecast-music-adapter">Joy Drone</a>，就有機會把Fire Stick改造成類似Amazon Echo聲控音箱了。</p><p>所以準備的項目有：</p><ol><li>Fire Stick with Voice Remote</li><li>Joy Drone(原本是用在Chromecast上，使其不需要透過電視就可以把音源輸出)</li><li>*Amazon Prime Membership(聽Amazon Prime Music用，可能不是必要條件，因為Fire 
+Stick也可以播放Tunein和Pandora，但是少了Amazon Prime Music會少了很多樂趣，Prime 
+Membership申請可參考<a href="http://pacermania.tumblr.com/post/132783264693/amazon%E4%B8%8D%E4%BD%BF%E7%94%A8%E7%BE%8E%E5%9C%8B%E4%BF%A1%E7%94%A8%E5%8D%A1%E4%B9%9F%E5%8F%AF%E8%B3%BC%E8%B2%B7amazon-prime-music%E7%9A%84%E6%9C%8D%E5%8B%99">這裡</a>)<br/></li></ol><p>以價格來說：<br/></p><p>Fire Stick with Voice Remote $49.99(特價$39.99)</p><p>Joy Drone $22</p><p>總共 $71.99($61.99)</p><p>足足比Amazon Echo少了100刀左右，相當划算。雖然Echo的音質網路上評價都不錯，但是基本上音箱就是不可更換的，不像Fire Stick+Joy Drone是可以選擇音箱的，我相信省下來的100刀應該可以買到不錯的音箱或是耳機吧!</p><p>以下是Fire Stick+Joy Drone連接完成後的樣子</p><figure class="tmblr-full" data-orig-height="3120" data-orig-width="3120"><img data-orig-height="3120" data-orig-width="3120" alt="image" src="http://68.media.tumblr.com/6011825d3825b4d1eb4eb0a04a7781e3/tumblr_inline_o1vh11dfQX1snfajc_540.jpg"/></figure><p>所以現在我只要對著Voice Remote下指示，就可以讓Fire Stick播放音樂了。例如:</p><p>“Alexa. Play Helen Jane Long Prime Station”(Alexa是Amazon系列產品語音助理的名字)</p><p>這樣Fire Stick就會播放與Helen Jane Long這位鋼琴演奏者同類型的音樂了(Prime Station的功能)。</p><p>最後，在首次使用Fire Stick之前，還是得先接上螢幕或電視，輸入Amazon的帳號和密碼，才能完成(可參考<a href="http://post.smzdm.com/p/245610">Amazon Fire TV stick开箱&评测</a>)。只要設定完成，以後就直接差上電源就可以開機，不需要再接上螢幕輸入Amazon的帳號和密碼，就可以實現與Amazon Echo媲美的聲控功能了。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/fire%20stick>#fire stick</a>
+<a href=http://pacermania.tumblr.com/tagged/amazon%20echo>#amazon echo</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa>#alexa</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Prime%20Music>#Amazon Prime Music</a>
+<a href=http://pacermania.tumblr.com/tagged/Joy%20Drone>#Joy Drone</a>
+<a href=http://pacermania.tumblr.com/tagged/Fire%20Stick%20with%20Voice%20Remote>#Fire Stick with Voice Remote</a>
+<a href=http://pacermania.tumblr.com/tagged/prime%20membership>#prime membership</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

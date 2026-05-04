@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":846,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>七月 2016</h1>
+
+
+<article class=regular id=p-147499866233>
+<p class=meta><span class=date>2016年07月17日 00時48分42秒</span>
+<a class=llink href=../posts/147499866233.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/147499866233 rel=canonical>●</a></p>
+<h2>[育兒]航空教育展示館</h2>
+<p><figure data-orig-width="2816" data-orig-height="2112" class="tmblr-full"><img src="http://68.media.tumblr.com/5fac3e40c667afade57b2db732cec78d/tumblr_inline_oaf15dZErJ1snfajc_540.jpg" data-orig-width="2816" data-orig-height="2112" alt="image"/></figure></p><p>航空教育展示館，比起一般的展示館或博物館，航空教育展示館可以說是近年來少見的大手筆，而且最不具有商業氣息的場館（現在就算科工館我都覺得商業氣息濃厚）。所以原先只是為了要在岡山地區尋找可以讓小屁孩玩的景點，但是找到這個景點後，居然就變成我最有興趣（是怎樣？）。不過為了可以看到以往只能在軍武雜誌，或是在<a href="http://goods.ruten.com.tw/item/qa?21108034269118">中國空軍飛機畫冊</a>中才可以看到的飛機，現在終於可以親眼看見了。這是多麼的令（大）人興奮呀！</p><p>於是在上次因為颱風的關係撲了個空，今天終於如願可以進場了。</p><figure data-orig-width="2816" data-orig-height="2112" class="tmblr-full"><img src="http://68.media.tumblr.com/bea703f2d704a3ebf0c50cd1875b7627/tumblr_inline_oaf19nq05k1snfajc_540.jpg" data-orig-width="2816" data-orig-height="2112" alt="image"/></figure><p>一進去就可以看到聆廊滿目的飛機，爽度真的很夠呀！眼前的這架是F-84。</p><figure data-orig-width="2816" data-orig-height="2112" class="tmblr-full"><img src="http://68.media.tumblr.com/60481e67635f706c0aad351662db960f/tumblr_inline_oaf1iyPZSH1snfajc_540.jpg" data-orig-width="2816" data-orig-height="2112" alt="image"/></figure><p>這也是我這次朝聖的重點，F-5E戰鬥機，這可是以往國軍的主力戰鬥機之一。</p><figure data-orig-width="2816" data-orig-height="2112" class="tmblr-full"><img src="http://68.media.tumblr.com/a17f36326af40fed622dbd2826cc061b/tumblr_inline_oaf1q8JzoC1snfajc_540.jpg" data-orig-width="2816" data-orig-height="2112" alt="image"/></figure><p>另一個朝聖重點，F-104戰鬥機（具有高空攔截功能）。F-104可以說是我國空軍辛酸的代名詞，美國人把不要的或老舊的飛機賣到台灣來，不僅零件備品缺乏，更慘的是因為機齡老舊，故障率很高，所以真的要為以前飛過F-104的飛官致上最大的敬意。</p><p>整體而言，很感謝空軍可以不計成本，建設這樣具有教育意義的場館，不僅可以提升國軍的形象，也可以作為軍民連繫的橋樑。</p>
+以下是這次拍攝的照片：
+<iframe style="border:none;" width="500" height="500" src="http://photo.xuite.net/_slider?userId=pacermania&albumId=19888932&size=500&interval=2000"></iframe><p>題外話：下次去我一定要在紀念品部買一件飛行夾克！</p><p>如何去：</p><p>從國道一號岡山交流道下，往西走186號道路（往空軍學校的方向），186號道路會接介壽路，遇到介壽路與通校路的十字路口後右轉走通校路，直走到底遇到T字路口後，左轉巨輪路，之後再接致遠路就可以看到了。（不過真的有點難找）</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12371.990151774433!2d120.26429741116739!3d22.79450785284363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4008a79808e521a9!2z6Iiq56m65pWZ6IKy5bGV56S66aSo!5e0!3m2!1sen!2stw!4v1468687607182" width="400" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/%E8%88%AA%E7%A9%BA%E6%95%99%E8%82%B2%E5%B1%95%E7%A4%BA%E9%A4%A8>#航空教育展示館</a>
+<a href=http://pacermania.tumblr.com/tagged/%E9%AB%98%E9%9B%84%E5%B8%82%E5%B2%A1%E5%B1%B1%E5%8D%80>#高雄市岡山區</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%82%B2%E5%85%92>#育兒</a>
+</p>
+</article>
+
+<article class=regular id=p-146897780433>
+<p class=meta><span class=date>2016年07月04日 22時55分33秒</span>
+<a class=llink href=../posts/146897780433.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/146897780433 rel=canonical>●</a></p>
+<h2>[Amazon亞馬遜]使用Visa Gift Card購買Amazon Video</h2>
+<figure data-orig-width="845" data-orig-height="527" class="tmblr-full"><img src="http://68.media.tumblr.com/2919c767ffa3a32c1d916e7bf288e65b/tumblr_inline_o9ssq9oIL01snfajc_540.png" alt="image" data-orig-width="845" data-orig-height="527"/></figure><p>由於最近在我的部落格有人問說，為什麼亞馬遜的MP3可以用Amazon Gift Card購買（<a href="https://disqus.com/home/discussion/pacermania/amazonmp3_pacermania/?utm_source=reply&utm_medium=email&utm_content=read_more#comment-2763294527">請參考這篇</a>），但是Video一定要設定payment method才可以購買，於是我就想到我之前用樂天信用卡可以直接買日本MP3，也可以用樂天信用卡直接設定取得itunes日本帳號，所以不管是amazon或是itunes都是信用卡是否為當地信用卡，作為是否可以讓顧客購買的依據。因此，根據這樣的原理，我有理由相信藉由<a href="https://tw.search.bid.yahoo.com/search/auction/product?=visa+gift+card&kw=visa+gift+card&p=visa+gift+card">Visa Gift Card</a>作為美國當地信用卡，就可以購買amazon video的影片。</p>
+
+<p>但是在取得Visa Gift Card之後，還必須先到<a href="https://www2.consumercardaccess.com/main/mygiftcardusb/Home">www.mygiftcardsite.com</a>註冊（填寫卡號、檢查碼、美國地址），這張卡才可以使用。如下圖所示。
+</p>
+
+<img src="http://68.media.tumblr.com/09e28d00ccbb0dc1e66948aa94d8a742/tumblr_inline_o9srk95UgO1snfajc_540.png" alt="image"/><p>在新增payment method之前，必須先進入amazon account，並且在amazon wallet區塊中找到payment method，如下圖打勾的地方。</p>
+
+
+
+<img src="http://68.media.tumblr.com/ddfae62c1977a1d0abd76d2b6fb144fd/tumblr_inline_o9srkuwaKm1snfajc_540.png" alt="image"/><p>接下來就要點選add credit/debit card的地方，新增payment method了，如下圖打勾的地方。</p>
+
+
+
+<img src="http://68.media.tumblr.com/84397608bd63901b3e5a4ebce5e98622/tumblr_inline_o9srl9QiEO1snfajc_540.png" alt="image"/><p>新增的時候，會要求輸入信用卡卡號、美國的地址、電話。</p>
+
+
+
+<img src="http://68.media.tumblr.com/2c5a8d69c7908b79f3f6e36c31543571/tumblr_inline_o9sruy95x11snfajc_540.png" alt="image"/><p>輸入完成後，就完成的信用卡的新增。</p>
+
+<p>接下來就是要實際購買amazon video了，我是拿我家小朋友喜歡看的米奇妙妙屋來測試。接下來就搜尋米奇妙妙屋的影片，我選擇了第1季的第四集。</p>
+
+<p>點選購買amazon video的時候，一開始會出現使用須知說明的頁面。
+</p>
+
+<img src="http://68.media.tumblr.com/d8cfe172381bd9fea656a862b924b08a/tumblr_inline_o9srpqUs8Z1snfajc_540.png" alt="image"/><p>點選continue之後，amazon需要花一點時間來處理你的訂單。</p>
+
+
+
+<img src="http://68.media.tumblr.com/b4bfd3f51c332fda671475cde1e3bff5/tumblr_inline_o9srq3I3lE1snfajc_540.png" alt="image"/><p>接下來看到這樣的訊息，就代表你購買成功了。而且amazon會先扣你amazon gift card的餘額，直到餘額不夠支付影片的價錢時，才會扣Visa Gift Card內的錢。</p>
+
+
+
+<img src="http://68.media.tumblr.com/9347dec86b98a84dd5113ec27c19cd90/tumblr_inline_o9srqiL3Ex1snfajc_540.png" alt="image"/><p>然後就可以觀看你在amazon video中購買的影片了。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon>#Amazon</a>
+<a href=http://pacermania.tumblr.com/tagged/Amazon%20Video>#Amazon Video</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/Visa%20Gift%20Card>#Visa Gift Card</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%97%A5%E6%9C%AC%E4%BA%9E%E9%A6%AC%E9%81%9C>#日本亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/amazon.jp>#amazon.jp</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

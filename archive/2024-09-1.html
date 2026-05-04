@@ -1,0 +1,89 @@
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":879,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Airplay-於HomePod上聆聽黑膠唱機/轉盤音樂-Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>九月 2024</h1>
+
+<article class="regular" id="p-153117938918">
+<p class="meta"><span class="date">2024年09月03日 09時30分05秒</span> <a class="llink" href="../posts/153117938918.html">&para;</a> <a href="http://pacermania.tumblr.com/post/153117938918" rel="canonical">●</a></p>
+
+<h2>Airplay-於HomePod上聆聽黑膠唱機/轉盤音樂</h2>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiR3j0Deb1P3LmFEsQ-P4NTO0TEZ0CqF8-4nuweZ9v31AILHQi8ltoZlZVVQyU_7F76t8yJM0k31cJ9dG3Ze2V31ae1T1XruBSTD-rp8-8r-OMfrw1qvWWiFzT3BTGugp6DbPyHbNCEF-703UMMUve_xT721mfmzqD_RtD-B1sdupFscu_yh402mOdgZWeI/s4032/IMG_7920~photo.JPG" style="display: block; padding: 1em 0px; text-align: center;"><img alt="HomePod" border="0" data-original-height="3024" data-original-width="4032" height="480" src="https://a1253247.info/pacermania/images/IMG_7920~airplay.JPG" title="HomePod" width="640" /></a></div>
+HomePod-之前爲了要體驗Apple Music的全景聲，買了兩個HomePod。後來因爲比較少聽Apple Music的緣故，所以基本上就是把HomePod拿來積灰塵了。說實話HomePod的聲音表現不俗，它的音質表現足以力抗同價位的產品，如果你是蘋果的愛用者，以HomePod作爲主力是OK的。但是問題就是HomePod多半只能用於蘋果的生態鏈，你必需要用PC或是MAC電腦才能與其連線（Airplay），如果你是Android用户，大概就只能另外買一臺iPad或是用PC來連線HomePod聽音樂了。
+
+<div><br /></div><div><div>不過小弟最近發現，在Google Play商店有一個AirMusic app，可以把Android手機上/手機接收的音源（包含耳機孔），用Airplay的方式轉傳到HomePod上。尤其是如果你的Android平板有3.5mm的耳機孔，那就更棒了，連買USB音效卡的錢都省了。小弟就是用Foobar電腦端-→Auralic Aries Mini-→Android平板--&gt;HomePod的方式，把電腦中的音樂傳送到HomePod上。雖然有些人會說，直接在PC用Tuneblade不是更方便更快？但是問題是當你要用HomePod聽黑膠的時候，TuneBlade這招就完全行不通了。</div><div><br /></div></div><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLTTESHPTCwjCvbmUIaxxlLWGPY0DOUbFMp4kQO0q11AXO2eS5TP02LLT4ft9JGR3Pzw6PP7gErQUC1e9y1ePbgORmEgk57gwnMd_xBNYZRYanE5yU-UN_OpmJaqoaUsfr9zM0yGCPWKYzHla6K9bL2fW7_BXaKKAoNIm5wFPxhwSiBazl-0bkYFORsbes/s4028/IMG_8100~photo-full.jpg" style="margin-left: 1em; margin-right: 1em;"><img alt="HomePod" border="0" data-original-height="2485" data-original-width="4028" height="394" src="../images/IMG_8100~airplayl.jpg" title="HomePod" width="640" /></a></div><br /><div>另外，iOS也有一個AirChord app，可以讓你的iPhone或iPad接收的音源，用Airplay的方式轉傳到HomePod上。不過小弟建議要買一個USB音效卡，因爲小弟用蘋果官方出的lightning轉3.5mm轉換器，會一直抓不到音樂（音源），就無法與HomePod建立連線。改用音效卡之後，iPhone或iPad都抓得到接收的音源，也就可以把音樂（尤其是黑膠音樂）轉傳到HomePod上了。</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbLsuKjeQMm_N-hLlsxlrBY1iZIGQUzUYhY_lVYoLY788q-6x_R_3y3ET5E7gop7UivkboLTXjnRpvg3rS7TYMjUCuE6XA7WIxROXw8KA7J30XMPViIe1Sq1hm-mcIiP-nb0JTYJCXlspkjXQ5hdLIqjI1EfzDRnTVSrdJ_oQEb7i_eCDeTGpSEVxsxYOD/s1334/IMG_8086~photo.PNG" style="margin-left: 1em; margin-right: 1em;"><img alt="HomePod" border="0" data-original-height="1334" data-original-width="750" height="640" src="../images/IMG_8086~airplay.PNG" title="HomePod" width="360" /></a></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaZ6NHwGu_rOF8DwkQ0xAf8e1YFdTzg1g1KMGObJEUmIdIFTmBGIJP1cfxs-uJFxTPYVLz0WwvyqhJFvc_SZwzXBsnxW5HFKR5MXTJfios8cyiusZvZ-com0uRkhQ8oMmdUpExvcGMQm65BUv1cGbGRkdEzebcJ0OuM0B6qqFWZLiBUpxVQDHuSsrMwrm_/s1334/IMG_8087~photo.PNG" style="margin-left: 1em; margin-right: 1em;"><img alt="HomePod" border="0" data-original-height="1334" data-original-width="750" height="640" src="../images/IMG_8087~airplay.PNG" title="HomePod" width="360" /></a></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiujHX0BhSRvP4sl1zdPHkGcmujQZkfHuktLmjljcOR8o-5EKgYj0l9VX5qhL9dALpcnijf6DOe-2SRd76MOEjasLqaatWt8ypHeb8BGISw3PsNH7Kvi7ejhnFamY9cwxtn7-rD7XftVsox0nea5VKLSqYcTSiHWgurmNGwUogVIpQSsOwvfz4ZmoRM3dJu/s4096/IMG_20240330_134245.jpg" style="margin-left: 1em; margin-right: 1em;"><img alt="HomePod" border="0" data-original-height="4096" data-original-width="3072" height="640" src="../images/IMG_20240330_134245_airplay.jpg" title="HomePod" width="480" /></a></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEFkF1sKAsXiN1HRJ2ZKWSV-SOK5A8dfxX8bpOnULEe9qDMj8eFGBTxuPo3u6R-ARMkRBChHk9AuVSPipbUniJA_-ZLr7t5xHRHdxpMmv9mzbV6jfaFb6nhPuvv00T6GOSsH1GSuiopGAtNJ4wRQst6w4CQpylCxMB3uGOorSDkvowgXyaZf2tAuQVrRw8/s4096/IMG_20240330_134746.jpg" style="margin-left: 1em; margin-right: 1em;"><img alt="HomePod" border="0" data-original-height="3072" data-original-width="4096" height="480" src="../images/IMG_20240330_134746_airplay.jpg" title="HomePod" width="640" /></a></div><br /><div>小弟覺得HomePod音質真的不差，用HomePod播黑膠的音樂，以前看似不可能，現在不管Android或是iOS都可以播放黑膠音樂了。雖然發燒友可能根本看不上HomePod的音質，但是對於小資族羣來說，HomePod補足了一般同價位音箱低音的部分，加上HomePod本身會對所在環境作聲音的調整，聽起來不像同價位音箱會有轟轟的感覺。所以，自從用HomePod聽黑膠之後，我就感覺音質比起我的klipsch r-40pm又提升一個層次，看來我可以暫時打消音箱升級的念頭了。
+
+<p><b><span style="background-color:#f1c40f;">延伸閱讀:</span></b></p>
+<a href="https://play.google.com/store/apps/details?id=app.airmusic.pro&hl=en_US">AirMusic app</a>
+
+<p><a href="https://www.airchordapp.com/" target="_blank">Airchord官網</a></p>
+
+<p><a href="https://a1253247.blogspot.com/p/homepod-itunes-matchhomepod-mini.html" target="_blank">Homepod-利用iTunes Match在homepod mini聽音樂</a></p>
+<p><a href="https://a1253247.blogspot.com/2023/07/audirvana-origin.html">Audirvana Origin-電腦音樂整合的另一個選擇</a></p>
+
+<p><a href="https://a1253247.info/pacermania/archive/2024-08.html">PLEX-好用的多媒體伺服器軟體</a></p>
+
+<p></p>
+
+<p><span style="background-color:#ffcccc;">另外，美國購物代運可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html" target="_blank">https://a1253247.blogspot.com/p/hopshopgo-vs-spexeshop.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ffff66;">對板球有興趣的可參考:</span></p>
+
+<p><a href="https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html" target="_blank">https://a1253247.blogspot.com/2022/05/cricket-line-written-by-admin-24-10.html</a></p>
+
+<p></p>
+
+<p></p>
+
+<p><span style="background-color:#ff99ff;">對生活飲食有興趣，可參考:</span></p>
+
+<p></p>
+
+<p><a href="https://www.instagram.com/beastmama.cooking/" rel="nofollow" target="_blank">野獸媽媽|懶人料理x越吃越瘦x零廚藝</a></p>
+
+<p></p>
+
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/Amazon%20app>#Amazon app</a>
+<a href=http://pacermania.tumblr.com/tagged/alexa%20app>#alexa app</a>
+<a href=http://pacermania.tumblr.com/tagged/TP-Link%20Smart%20Wi-Fi%20Plug>#TP-Link Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9C>#亞馬遜</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9Cwifi>#亞馬遜wifi</a>
+<a href=http://pacermania.tumblr.com/tagged/%E4%BA%9E%E9%A6%AC%E9%81%9CAlexa%E8%81%B2%E6%8E%A7>#亞馬遜Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Alexa%E8%81%B2%E6%8E%A7>#Alexa聲控</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20Wi-Fi%20Plug>#Smart Wi-Fi Plug</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E6%99%BA%E6%85%A7%E6%8F%92%E9%A0%AD>#無線網路智慧插頭</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>

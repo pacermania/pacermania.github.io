@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":957,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>一月 2016</h1>
+
+
+<article class=regular id=p-137397643978>
+<p class=meta><span class=date>2016年01月16日 15時15分22秒</span>
+<a class=llink href=../posts/137397643978.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/137397643978 rel=canonical>●</a></p>
+<h2>[線上影音]Netflix今年(2016年)登陸台灣</h2>
+<figure class="tmblr-full" data-orig-height="718" data-orig-width="1024"><img src="http://68.media.tumblr.com/fb0200b3f269b2b9ed2c1e2fc301a5d1/tumblr_inline_o119572INL1snfajc_540.png" data-orig-height="718" data-orig-width="1024"/></figure><p>相信喜歡看美劇的人，對於<a href="http://www.netflix.com">Netflix</a>一定不陌生，自從Netflix依據客戶的使用習慣，製作出膾炙人口的House of Cards(中文翻成紙牌屋)之後，掀起一陣線上影音的旋風，同時也促使了像<a href="http://www.hulu.com/welcome">Hulu</a>、<a href="https://www.sling.com/">Sling TV</a>、<a href="http://www.nowtv.com/">Nowtv</a>等業者的興起，也讓民眾看到了線上影音服務的業者有與主流影音媒體與供應商一搏的機會。</p><p>在今年(2016年)1月，Netflix終於登陸台灣了(終於可以用不需要VPN+只有英文字幕的Netflix了)，台灣民眾除了第四台、MOD之外，終於有第3個影音平台可供選擇。這麼好的機會，我二話不說就登錄了一個Netflix的帳號。</p><p>而且Netflix很貼心的是，一個帳號可以分成很多使用者，其中一個還是兒童使用者，這樣就不用怕騙小屁孩的影片沒有著落了。</p><figure class="tmblr-full" data-orig-height="718" data-orig-width="1024"><img src="http://68.media.tumblr.com/cfc08ab9090c21b8be921e13788218be/tumblr_inline_o119zwl5js1snfajc_540.png" data-orig-height="718" data-orig-width="1024"/></figure><p>不過在一開始建立帳號的時候，Netflix還是會叫你選出3個你喜愛影集或影片，來抓出你的喜好。</p><figure class="tmblr-full" data-orig-height="718" data-orig-width="1024"><img src="http://68.media.tumblr.com/0014e2193f19eefeb85bacce4208bb70/tumblr_inline_o11a5xHP181snfajc_540.png" data-orig-height="718" data-orig-width="1024"/></figure><p>選完之後，在經過Netflix本身的database計算之後，就會進入個人主頁面，除了最新的影集之外，還會推荐你可能會喜歡的影片或影集。</p><figure class="tmblr-full" data-orig-height="718" data-orig-width="1024"><img src="http://68.media.tumblr.com/13f59b46efd93289cda3e73ce15aa0e8/tumblr_inline_o11ablnj4U1snfajc_540.png" data-orig-height="718" data-orig-width="1024"/></figure><p>接下來就可以點選你要看的影集了。不過有些影片(例如小朋友的卡通)，可能會有沒有中文字幕的情形，這時就只能希望Netflix可以加快中文化的進度囉！但是至少目前我喜歡的影集Gotham有中文字幕可以看，還算蠻不錯的！</p><figure class="tmblr-full" data-orig-height="718" data-orig-width="1024"><img src="http://68.media.tumblr.com/2738ec8ca4d5d5643465f0ccee4f1d25/tumblr_inline_o11as3Wk471snfajc_540.png" data-orig-height="718" data-orig-width="1024"/></figure><p>雖然Netflix已經登陸台灣，但是有些影集因為翻譯或版權的關係，依舊還沒有辦法在台灣的Netflix看到(House of Cards就是一個例子，而且這一部就是Netflix鎮店之寶)，只能期待台灣的Netflix以後能引進更多國外，甚至日本及台灣的優質影集，這才是台灣民眾的福音呀！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/netflix>#netflix</a>
+<a href=http://pacermania.tumblr.com/tagged/house%20of%20cards>#house of cards</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%B4%99%E7%89%8C%E5%B1%8B>#紙牌屋</a>
+<a href=http://pacermania.tumblr.com/tagged/%E7%B6%B2%E9%A3%9B>#網飛</a>
+</p>
+</article>
+
+<article class=regular id=p-136468642293>
+<p class=meta><span class=date>2016年01月03日 01時35分50秒</span>
+<a class=llink href=../posts/136468642293.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/136468642293 rel=canonical>●</a></p>
+<h2>[淘寶購物]Linksys WRT54G路由器(已刷DD-WRT版本)</h2>
+<figure data-orig-width="3120" data-orig-height="3120" class="tmblr-full"><img src="http://68.media.tumblr.com/fa1ea0f56d949e0fbad1c2bb80ec922d/tumblr_inline_o0c1ke0ihj1snfajc_540.jpg" alt="image" data-orig-width="3120" data-orig-height="3120"/></figure><p><a href="http://www.dd-wrt.com/site/index">DD-WRT</a>一向是公認好用的Router專用的軟體，DD-WRT的好處就在於他可以把一般Router廠商封印起來的功能，藉由這個軟體可以得到釋放(當然你的Router也要夠力才行)。但是要使用DD-WRT這個軟體，不僅要找可以刷的Router(並不是所有的Router都支援DD-WRT，詳情請見<a href="http://www.dd-wrt.com/wiki/index.php/Supported_Devices">Supported Devices</a>)，另外，刷DD-WRT若一不小心，很有可能就會把你的Router變磚頭，所以基本上，我是找人幫我代刷的(我的TPLINK的<a href="http://www.tp-link.tw/products/details/cat-9_TL-WR941ND.html">wr941nd</a>就是在露天拍賣找人代刷的)。</p><p>自從用了DD-WRT之後，就喜歡上這個軟體了。他的畫面簡潔，而且該有的功能都有(有VPN和PPTP的功能)，更重要的是還可以支援指令編寫功能，如果你會使用指令的話，就可以使用一些圖形介面上沒有的功能(例如Static Routing)。我原本TP-LINK使用原廠軟體常常當機，接Router的有線網路也常常斷線，後來刷了DD-WRT之後就沒有當機的問題了。這也加深了我對DD-WRT的信心。</p><p>不過最近在想說是不是有人會賣直接刷好DD-WRT的Router，來代替我家裡的另一個Router，於是我就去淘寶搜尋了一下，結果果然找到了一個賣家(如下圖)。</p><figure data-orig-width="1024" data-orig-height="718" class="tmblr-full"><img src="http://68.media.tumblr.com/442b8db682a148bcc5d260d632cf20b7/tumblr_inline_o0c55pg9q81snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="718"/></figure><p>而且他剛好在特價，一個<a href="https://en.wikipedia.org/wiki/Linksys_WRT54G_series">Linksys WRT54G</a>只要138元人民幣(含運費)，算一算只要700元台幣，但是比起在台灣同價格的Router，功能實在強太多了！於是看在特價的份上，二話不說就拍了。</p><p>不過說實話，自從上次拍了兒童汽車座椅之後(請參考<a href="http://pacermania.tumblr.com/post/111085890373/%E6%B7%98%E5%AF%B6%E8%B3%BC%E7%89%A9diono%E5%AE%89%E5%85%A8%E6%B1%BD%E8%BB%8A%E5%BA%A7%E6%A4%85" title="[淘寶購物]Diono安全汽車座椅">[淘寶購物]Diono安全汽車座椅</a>)，就很怕這台Linksys WRT54G會被台灣的海關攔截(例如這台Router的wifi頻率或功率沒有被NCC認可)。不過後來證實是我多慮了，或許也是因為這件貨品的價值不高，也就沒有被擋下來了。所以這台Router從我拍下開始，大概一個星期左右就到貨了(我使用黑貓直運，不過大陸段還是集運)。</p><p>到貨之後，將電源接上，就出現了令人感動的畫面(如下圖)：</p><figure data-orig-width="1024" data-orig-height="718" class="tmblr-full"><img src="http://68.media.tumblr.com/58bc496b0ed904ec81dce05988b57b5d/tumblr_inline_o0c5szINDl1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="718"/></figure><p>而且DD-WRT可以藉由狀態選單，可以得知目前Router的CPU運作狀況，記憶體容量大小等(如下圖)，真的是好用多了。</p><figure data-orig-width="1024" data-orig-height="718" class="tmblr-full"><img src="http://68.media.tumblr.com/425451f21715f9b52e0e702197860d1e/tumblr_inline_o0c5wgUbeR1snfajc_540.png" alt="image" data-orig-width="1024" data-orig-height="718"/></figure><p>如果大家對DD-WRT有興趣，而且有膽識且有可支援DD-WRT的Router的話，大家可以試著自己刷機。若不想冒險的話，就買台可支援DD-WRT的Router，然後請人幫忙代刷吧！</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/DD-WRT>#DD-WRT</a>
+<a href=http://pacermania.tumblr.com/tagged/Linksys%20WRT54G>#Linksys WRT54G</a>
+<a href=http://pacermania.tumblr.com/tagged/%E6%B7%98%E5%AF%B6>#淘寶</a>
+<a href=http://pacermania.tumblr.com/tagged/taobao>#taobao</a>
+<a href=http://pacermania.tumblr.com/tagged/router>#router</a>
+<a href=http://pacermania.tumblr.com/tagged/%E8%B7%AF%E7%94%B1%E5%99%A8>#路由器</a>
+<a href=http://pacermania.tumblr.com/tagged/%E5%88%B7%E6%A9%9F>#刷機</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>
