@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f564513b","applicationID":"2031336","transactionName":"cQwPRhNXWFtQShlRSl0TA10ZF1FTXEw=","queueTime":0,"applicationTime":890,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Pacermania的部落格</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>三月 2015</h1>
+
+
+<article class=regular id=p-114282890303>
+<p class=meta><span class=date>2015年03月22日 12時45分13秒</span>
+<a class=llink href=../posts/114282890303.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/114282890303 rel=canonical>●</a></p>
+<h2>[VPN應用]Pandora網路音樂廣播</h2>
+<figure data-orig-width="1024" data-orig-height="768"><img src="http://68.media.tumblr.com/6ed8b52adfdbb549ac52052ea59aa33f/tumblr_inline_nlleupuG2I1snfajc_500.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>最近為了要看世界盃板球賽，想要申請<a href="http://watch.nowtv.com/sports">Now TV(Sky TV集團)</a>的線上頻道，只是Now TV跟其他美國的線上頻道netflix和hulu一樣，會用IP block的方式，讓其他國家的人沒有辦法觀看，也就是基本上只有該國人才可以看，其他國家的人不給看。以下就是NOW TV（Sky Sports）的頻道內容。</p><figure data-orig-width="1024" data-orig-height="768"><img src="http://68.media.tumblr.com/a79e073168f2edcb0756447c279f2278/tumblr_inline_nllguc38vO1snfajc_500.png" alt="image" data-orig-width="1024" data-orig-height="768"/></figure><p>這樣的限制其來有自，說穿了這也是擁有版權的頻道商/電影商，讓自己利益最大化的方式之一。不過我不會深入探討這問題，有興趣可以參考<a href="http://www.cbw365.com/index.php/Archives/index/id/3169#6874707-twi-1-3451-d9139761845f72ff52ddd9626651e09a">這裡</a>。</p><p>後來為了解決這樣的問題，我在網路上找到了類似VPN的方式，也就是smart DNS的方式，這樣的服務可以讓我的IP被認為是美國或是英國的IP，使我的IP不會被block。這些服務商甚至<a href="https://promo.unblock-us.com/cricket/">大剌剌地在其網站上教學破解方法</a>，所以基本上跟著這些網站上教學就不會錯了。於是我是選擇了<a href="https://www.unblock-us.com/">unblock-us</a>。</p><figure data-orig-width="732" data-orig-height="429"><img src="http://68.media.tumblr.com/a6b8b421072edc42f106398003318955/tumblr_inline_nllfwqnPKU1snfajc_500.png" alt="image" data-orig-width="732" data-orig-height="429"/></figure><p>接下來回歸正題，這樣的作法是不是也可以套用在這些網路音樂服務商，如<a href="http://www.rdio.com/">Rdio</a>，<a href="http://www.pandora.com">Pandora</a>等。後來經過我的測試之後，我發現unblock-us也同樣可以適用，於是我就開始享受Rdio和Pandora所提供的免費網路音樂廣播的服務囉！（由此可知美國人是多麼的幸福，台灣除了<a href="https://www.spotify.com/tw/">Spotify</a>之外其他網路音樂服務幾乎都是要錢的！）</p><p>雖然我之前已經開通了google play music all access(可參考<a href="http://pacermania.tumblr.com/search/google+music">如何開通google play music</a>一文)，而其功能也相當的不錯，便宜又大碗，加上又可以送你免費50,000首歌的儲存容量，又整合了Google本身的線上音樂購買的功能，這樣完整的生態圈，大概只有蘋果和亞馬遜可以跟其對拼。只是不管怎麼樣，我總覺得google網路廣播功能還是沒辦法符合我的需求，也就是有時候你明明選擇古典吉他音樂，但是有時候卻會跑出類似交響樂或是鋼琴協奏曲的情形，加上我已經過了那種自己會排歌單或是搜尋歌單的年紀了，所以我就想試試看Pandora。</p><p>Pandora的賣點基本上就是他有獨到的方法，可以歸納出音樂的DNA（？），加上Pandora有專門的專家來分門別類，至少都有一定的人類聽音樂的邏輯。至少最近我嘗試的結果，Pandora的電台功能真的相當優秀，至少他的電台推出歌幾乎很少出鎚的！</p><p>一開始你可以在左上角或是Create Station的欄位，輸入你喜愛的歌手名稱或曲風，Pandora就會開啟該歌手或曲風的電台，並不斷地推播，不過推播過的歌就沒辦法在重聽，就像我們在聽電台一樣，只是變成網路而已。</p><figure data-orig-width="1007" data-orig-height="734"><img src="http://68.media.tumblr.com/93fe021fcf6f23b17d962a1ca8c492b0/tumblr_inline_nllhm7xNIL1snfajc_500.png" alt="image" data-orig-width="1007" data-orig-height="734"/></figure><p>如果在聽的過程中，有聽到自己非常喜愛的歌曲，你就可以點選大拇指向上（讚）;反之，如果你覺得推播的歌很爛或者不想聽，你就可以點選跳過或是大拇指向下，經過幾輪這樣的過程之後，理論上Pandora的選歌會越來越貼近你的口味，也越來越不會出鎚！</p><figure data-orig-width="949" data-orig-height="643"><img src="http://68.media.tumblr.com/88b9d2580a2d76f9541e409dada34520/tumblr_inline_nllhrrwSKC1snfajc_500.png" alt="image" data-orig-width="949" data-orig-height="643"/></figure><p>單然如果在這個電台裡面，你想加入其他的歌手，可以透過option>Station Detail的功能加入。</p><figure data-orig-width="947" data-orig-height="627"><img src="http://68.media.tumblr.com/0fbd3cb0988599b7d48d5a05ced53b8d/tumblr_inline_nllhtvfYpS1snfajc_500.png" alt="image" data-orig-width="947" data-orig-height="627"/></figure><p>然後輸入其他歌手的名字，增加電台的多樣性。</p><figure data-orig-width="949" data-orig-height="652"><img src="http://68.media.tumblr.com/ac3d6c47458e7a68f486b2e58378f9e9/tumblr_inline_nllhvd59za1snfajc_500.png" alt="image" data-orig-width="949" data-orig-height="652"/></figure><p>目前我真的覺得Pandora是最貼近我的需求的。雖然Pandora的歌曲資料庫”只有”100萬首歌，與Spotify，Rdio和Google的千萬首歌比起來，資料庫算是小很多的，但是透過精準的推歌，可以讓這些少量歌曲，發揮最大的收聽及推播效益，真的是Pandora屹立不搖的關鍵。</p><p>收聽Pandora的注意事項：</p><p>1.分為免費版和付費版，如果不想要被廣告打擾，就使用付費版（可以使用台灣的信用卡）。</p><p>2.目前Pandora只有英文歌曲，沒有中文歌或是日韓歌曲。</p><p>3.Pandora目前只有在美國，澳大利亞和紐西蘭有提供服務，要收聽一定要使用VPN或是Smart DNS的方式。</p><p>4.只提供推播模式，歌曲播完之後就不能重聽，只能觀看相關資訊或推文到facebook或twitter上<span style="font-size: 12px;">。</span></p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/VPN>#VPN</a>
+<a href=http://pacermania.tumblr.com/tagged/Smart%20DNS>#Smart DNS</a>
+<a href=http://pacermania.tumblr.com/tagged/Pandora>#Pandora</a>
+<a href=http://pacermania.tumblr.com/tagged/cricket%20world%20cup>#cricket world cup</a>
+<a href=http://pacermania.tumblr.com/tagged/cricket%20world%202015>#cricket world 2015</a>
+<a href=http://pacermania.tumblr.com/tagged/unblock-us>#unblock-us</a>
+<a href=http://pacermania.tumblr.com/tagged/google%20play%20music>#google play music</a>
+<a href=http://pacermania.tumblr.com/tagged/google%20play%20music%20all%20access>#google play music all access</a>
+<a href=http://pacermania.tumblr.com/tagged/rdio>#rdio</a>
+<a href=http://pacermania.tumblr.com/tagged/Spotify>#Spotify</a>
+</p>
+</article>
+
+<article class=regular id=p-113604186083>
+<p class=meta><span class=date>2015年03月14日 23時52分51秒</span>
+<a class=llink href=../posts/113604186083.html>¶</a>
+<a href=http://pacermania.tumblr.com/post/113604186083 rel=canonical>●</a></p>
+<h2>[HP Stream 13]HP Stream 13簡易開箱文(隨機附贈Office 365個人版一年)</h2>
+<figure data-orig-width="1080" data-orig-height="608"><img src="http://68.media.tumblr.com/9549e13f13b552bd78f745a8b861ddee/tumblr_inline_nl7kqgeEib1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="608"/></figure><p>最近在網路上看到<a href="http://24h.pchome.com.tw/prod/DHAG5J-A9005P0AT?q=/S/DHAA1M">HPStream11</a>，這款電腦可以說就是微軟版的Chromebook，微軟似乎就是打著把筆電接近成本價格賣給消費者，之後在藉由其提供的服務，從消費者身上賺錢。這樣的例子屢見不顯，從最早期的Amazon推出的Kindle，藉由超便宜的Kindle打通電子書的通路，成為電子書無可取代的霸主。接著Google採取同樣的策略，利用便宜的Chromebook並贈送1年100GB的雲端硬碟和90天Google
+Music服務，讓消費者使用及習慣Google的雲端服務，等消費者習慣使用Google服務之後，消費者在提供的服務到期之後，自然就會繼續續約，賺取往後幾年的服務費。</p>
+<p>由於Google的策略奏效，加上現在Apple崛起，微軟不得不改變以往的銷售策略。於是微軟就推出了Stream系列的筆電，這個系列有11，13，14吋等三種規格。不過之前台灣只有出11吋的規格，如果要買其他尺寸，大概就只能網拍，淘寶或是托別人從國外帶回來囉！</p><p>我個人選擇13吋，因為我覺得這樣螢幕不會太小，但是攜帶上又不會不方便。而且13吋的Stream在美國亞馬遜只要229鎂，真的是太便宜了！<br/></p>
+<figure data-orig-width="959" data-orig-height="744"><img src="http://68.media.tumblr.com/50ee4fc176939651f24b91d169a2279a/tumblr_inline_nl7lfdWGie1snfajc.png" alt="image" data-orig-width="959" data-orig-height="744"/></figure><p>我就是看在便宜，而且台灣的電腦都被微軟綁架（無奈），連上一些政府的網站都非用IE不可，如果沒有一台微軟的電腦，還真的很難在辦公室生存！</p>
+
+<p>以下就是HP
+Stream 13的外觀囉！</p><p>正面看起來真的跟HP的Chromebook
+14很像。</p><figure data-orig-width="1080" data-orig-height="1209"><img src="http://68.media.tumblr.com/955c7377754cd216c1cf668afbbd40f3/tumblr_inline_nl7kshY1q11snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="1209"/></figure><p>右邊側面有兩個USB
+2.0和電源線的孔。</p><figure data-orig-width="1080" data-orig-height="739"><img src="http://68.media.tumblr.com/495069eab5427d1da344254a5a0875c2/tumblr_inline_nl7ksv27md1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="739"/></figure><p>左邊側面則是有HDMI，USB
+3.0，耳機孔，Micro
+SD插槽。</p><figure data-orig-width="1080" data-orig-height="784"><img src="http://68.media.tumblr.com/f57b135936628b393a7a28776f6e1931/tumblr_inline_nl7ktefiNv1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="784"/></figure><p>HP
+Stream 13的顏色有亮藍色和桃紅色兩種選擇，這兩種顏色都很亮，讓人不注意都不行
+XD</p><p>接下來就是微軟最重要的策略了。免費贈送1
+TB OneDrive空間及Office
+365個人版1年份！如果扣掉前述兩項的費用（價值2100元），這台HP
+Stream 13根本就不到5000元！所以可以看出微軟為了挽回頹勢，不惜使出流血價賠錢賣的策略，最後得利的當然還是消費者囉！</p><p>這張就是激活Office
+365及1
+TB OneDrive空間用的卡，只要按照步驟，上述的優惠就會掛在你的帳號之下。不過隨機贈送的Office
+365是個人版，只能裝在一台電腦以及一台平板或是行動裝置上，安裝時要特別注意。</p><figure data-orig-width="1080" data-orig-height="1080"><img src="http://68.media.tumblr.com/30d14493585b878d6c9aa6186ffb7d9e/tumblr_inline_nl7kunwlcw1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="1080"/></figure><p>以下是Office
+365的安裝畫面。</p><figure data-orig-width="1080" data-orig-height="1080"><img src="http://68.media.tumblr.com/342ec1f5956e6e0dac3c44c3bfedd8aa/tumblr_inline_nl7kv5bN3u1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="1080"/></figure><p>使用建議的設定就可以了。</p><figure data-orig-width="1080" data-orig-height="1080"><img src="http://68.media.tumblr.com/3fa9b661185a0b71f8a8491b04779ce0/tumblr_inline_nl7kvkAfRi1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="1080"/></figure><p>接下來安裝的時候就會有廣告出現。</p><figure data-orig-width="1080" data-orig-height="1080"><img src="http://68.media.tumblr.com/20f6815ae5e19fecd2e5ce474290742a/tumblr_inline_nl7kw4kfQl1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="1080"/></figure><p>廣告主要是強調Office
+365結合雲端，這樣文件就可以（存在雲端）帶著走。這也是為什麼Stream只有配備32
+GB的固態硬碟的原因了！</p><figure data-orig-width="1080" data-orig-height="1080"><img src="http://68.media.tumblr.com/a6d207918b44e9a05069fcd75744742b/tumblr_inline_nl7kwfd4JD1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="1080"/></figure><p>了解新功能，我想可以等以後有空的時候再來了解吧！</p><figure data-orig-width="1080" data-orig-height="1080"><img src="http://68.media.tumblr.com/7fb00b4007d6f0f74a24070a9b625f9e/tumblr_inline_nl7kx3TxtP1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="1080"/></figure><p>安裝完成（雖然背景還在繼續安裝，但是已經可以使用了）</p><figure data-orig-width="1080" data-orig-height="1080"><img src="http://68.media.tumblr.com/e32fd965146ed8b355b9a7c0cb59a788/tumblr_inline_nl7kxk46Av1snfajc.jpg" alt="image" data-orig-width="1080" data-orig-height="1080"/></figure><p>Office
+365使用上跟之前的Office沒有太大的區別，但是WIN 8.1的介面，真的花了我一些時間才慢慢適應。不過適應之後，就覺得這些功能也還蠻不錯的，看來微軟在新的UI上也花了不少心思，雖然跟Apple及Google相比，還有一段距離要走！</p><p>如果對Chromebook有興趣，請參考<a href="http://pacermania.tumblr.com/post/82586060896/chromeos-hp-chromebook-14">這篇</a>。</p><p>如果對Kindle
+Touch有興趣，請參考<a href="http://blog.xuite.net/pacermania/a1253247/56748661">這篇</a>。</p>
+<p class=tags><a href=http://pacermania.tumblr.com/tagged/HP%20Stream%2013>#HP Stream 13</a>
+<a href=http://pacermania.tumblr.com/tagged/Office%20365>#Office 365</a>
+<a href=http://pacermania.tumblr.com/tagged/HP%20Chromebook%2014>#HP Chromebook 14</a>
+<a href=http://pacermania.tumblr.com/tagged/Kindle%20Touch>#Kindle Touch</a>
+<a href=http://pacermania.tumblr.com/tagged/WIN%208.1>#WIN 8.1</a>
+</p>
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<p><a href=../ rel=contents>Index</a></p>
