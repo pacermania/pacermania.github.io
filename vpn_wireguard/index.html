@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireguard + Privoxy 轉發解鎖區域限制</title>
+   <meta name="description" content="如果你想要用raspberry pi當旁路由，使用wireguard協定解鎖其他國家網站，可以參考本篇文章">
+
+    <link rel="canonical" href="https://pacermania.github.io/vpn_wireguard" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "PingFang TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+            color: #000000;
+            line-height: 1.8;
+            background-color: #ffffff;
+        }
+
+        /* 網頁版型：左 1/3 留白, 中 1/3 內容, 右 1/3 留白 */
+        .page-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            min-height: 100vh;
+        }
+
+        .content-area {
+            grid-column: 2;
+            padding: 60px 0;
+        }
+
+        /* 手動調整小螢幕適配 */
+        @media screen and (max-width: 1024px) {
+            .page-layout {
+                grid-template-columns: 0.5fr 2fr 0.5fr;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .page-layout {
+                grid-template-columns: 10% 80% 10%;
+            }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 50px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #001f3f; /* 深藍色 */
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 6px solid #001f3f;
+            padding-left: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        /* Code 方塊標註 */
+        pre {
+            background-color: #f5f5f5;
+            border: 1px solid #cccccc;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1em;
+            color: #000000;
+        }
+
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+        }
+
+        .step-path {
+            color: #003366;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 0.9em;
+            color: #888888;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-layout">
+    <div class="side-spacer"></div>
+    
+    <div class="content-area">
+        <h1>Wireguard + Privoxy 轉發解鎖區域限制</h1>
+
+        <h2>於 Astrill VPN 下載 wireguard.conf 設定檔</h2>
+        <p class="step-path">Memberzone > VPN and IP Testing Tools > Wireguard 3rd party configuration</p>
+        <p>自訂名稱，選擇 Server 之後，下載 config 檔。下載完成後，可以自行命名 config 檔，例如 <code>wgca.conf</code></p>
+
+        <h2>於 Raspberry Pi 安裝 wireguard</h2>
+        <p>於終端機視窗輸入指令：</p>
+        <pre>sudo apt install wireguard</pre>
+        <p>接著輸入：</p>
+        <pre>sudo wg-quick up wgca</pre>
+        <p>然後輸入：</p>
+        <pre>sudo wg</pre>
+        <p>進行檢查。如果有跑出一堆連線資訊，就代表你連線成功了。</p>
+
+        <h2>安裝 Privoxy</h2>
+        <p>小弟一直有聽說這個軟體，但是一直想不到應用的場景，直到詢問 Gemini 之後，才發現 Privoxy 很好用。</p>
+        <p>於終端機視窗輸入指令：</p>
+        <pre>sudo apt update
+sudo apt install privoxy -y</pre>
+        
+        <p>編輯設定檔：</p>
+        <pre>sudo nano /etc/privoxy/config</pre>
+        
+        <p>將檔案中的 <code>listen-address 127.0.0.1:8118</code> 改為：</p>
+        <pre>listen-address 0.0.0.0:8118</pre>
+        
+        <p>重新啟動 Privoxy 服務：</p>
+        <pre>sudo systemctl restart privoxy</pre>
+
+        <h2>使用案例</h2>
+        <p>小弟在 Google TV Streamer 中的 <span class="step-path">設定 > 網際網路 > Proxy 設定</span></p>
+        <p>IP 位置輸入你安裝 Privoxy 的樹莓派的 IP 位置 (例如 <code>192.168.X.X</code>)</p>
+        <p>Port 輸入預設的 <code>8118</code></p>
+        <p>設定完成後，如果沒問題，你應該就可以解鎖台灣區以外，例如加拿大區的影音串流內容了。</p>
+        <p>小弟目前用這招解鎖 <strong>Paramount+、HBOMAX、KaroStream</strong> 等平台都沒問題。</p>
+
+<h2>參考網站</h2>
+<ul>
+<li><a href="https://www.astrill.com" title="1 post(s)">Astrill VPN官方網站</a></li>
+
+
+<h2>2025文章</h2>
+<ul>
+<li><a href="https://pacermania.github.io/archive/2025-12.html" title="1 post(s)">窮人的經濟學</a></li>
+  <li><a href="https://pacermania.github.io/archive/2025-11.html" title="1 post(s)">老派球迷的逆襲：挺球員、背紀錄、重情義，找回看球的初衷與樂趣</a></li>
+  <li><a href="https://pacermania.github.io/archive/2025-10.html" title="1 post(s)">Kindle-火藥時代（歐陽泰）</a></li>
+<li><a href="https://pacermania.github.io/archive/2025-09.html" title="1 post(s)">你的幸福曲線</a></li>
+<li><a href="https://pacermania.github.io/archive/2025-08.html" title="1 post(s)">大是出版-給那天落選的你(阿部廣太郎）</a></li>
+<li><a href="https://pacermania.github.io/archive/2025-07-1.html" title="1 post(s)">利用Raspberry Pi設置軟路由(以NORDVPN為例)</a></li>
+<li><a href="https://pacermania.github.io/archive/2025-07.html" title="1 post(s)">柳美里-『JR上野駅公園口』</a></li>
+    <li><a href="https://pacermania.github.io/archive/2025-06.html" title="1 post(s)">漢聲精選世界成長文學-浪潮(莫頓.盧)</a></li>
+    <li><a href="https://pacermania.github.io/archive/2025-05.html" title="1 post(s)">半藤一利-諾門罕之夏（Google圖書）</a></li>
+    <li><a href="https://pacermania.github.io/archive/2025-04.html" title="1 post(s)">Readmoo-蜜蜂與遠雷(恩田陸)</a></li>
+    <li><a href="https://pacermania.github.io/archive/2025-03-1.html" title="1 post(s)">Picoreplayer-將音樂轉發至homepod上</a></li>
+     <li><a href="https://pacermania.github.io/archive/2025-03.html" title="1 post(s)">好讀網站-沙丘第一部(法蘭克‧赫伯特)</a></li>
+     <li><a href="https://pacermania.github.io/archive/2025-02-1.html" title="1 post(s)">漫遊者文化-少年來了（韓江）</a></li>
+     <li><a href="https://pacermania.github.io/archive/2025-02.html" title="1 post(s)">利用Raspberry Pi設置軟路由(以Express VPN為例)</a></li>
+    <li><a href="https://pacermania.github.io/archive/2025-01.html" title="1 post(s)">角田光代-第八日的蟬</a></li>
+    <li><a href="https://pacermania.github.io/archive/2025-01-1.html" title="1 post(s)">SiriusXM-美國在線廣播和播客平台
+</a></li>
+    </ul><p>
+<p>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <footer>
+            Technote Archive - Pacermania
+        </footer>
+    </div>
+
+    <div class="side-spacer"></div>
+</div>
+
+</body>
+</html>
