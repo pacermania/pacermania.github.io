@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLC2026 - 美國職業板球大聯盟</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "PingFang TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+            color: #000000;
+            line-height: 1.8;
+            background-color: #ffffff;
+        }
+
+        /* 網頁版型：左 1/3 留白, 中 1/3 內容, 右 1/3 留白 */
+        .page-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            min-height: 100vh;
+        }
+
+        .content-area {
+            grid-column: 2;
+            padding: 60px 0;
+        }
+
+        /* 響應式安全設定：在平板或手機上適度放大內容區，避免畫面過窄 */
+        @media screen and (max-width: 1200px) {
+            .page-layout {
+                grid-template-columns: 0.5fr 2fr 0.5fr;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .page-layout {
+                grid-template-columns: 10% 80% 10%;
+            }
+        }
+
+        /* 標題文字加粗加大 */
+        h1 {
+            font-size: 2.3em;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 40px;
+            line-height: 1.3;
+        }
+
+         h2 {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #001f3f; /* 深藍色 */
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 6px solid #001f3f;
+            padding-left: 15px;
+        }
+
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+            color: #1a1a1a;
+        }
+
+        ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        /* 關鍵字與代碼方塊標註 */
+        code {
+            background-color: #f5f5f5;
+            border: 1px solid #cccccc;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            font-size: 0.95em;
+            color: #000000;
+        }
+
+        /* 表格極簡化樣式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0 45px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ffffff;
+            color: #001f3f;
+            font-weight: bold;
+            border-bottom: 2px solid #000000;
+        }
+
+        .section-team {
+            background-color: #f5f5f5;
+            color: #000000;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .section-role {
+            background-color: #ffffff;
+            color: #001f3f;
+            font-weight: bold;
+            font-size: 0.95em;
+            border-bottom: 1px dashed #cccccc;
+        }
+
+        .playoffs {
+            background-color: #fafafa;
+            font-weight: bold;
+        }
+
+        .match-type {
+            font-size: 0.85em;
+            color: #555555;
+        }
+
+        .img-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #cccccc;
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 0.9em;
+            color: #888888;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-layout">
+    <div class="side-spacer"></div>
+    
+    <div class="content-area">
+        <h1>MLC2026 - 美國職業板球大聯盟</h1>
+
+        <p>印度板球超級聯賽（IPL）以及巴基斯坦職業板球聯賽（PSL）結束之後，接下來就是 Major League Cricket 了。雖然美國的職業板球才剛萌芽，不過各支球隊仍有一些國際知名球星，所以仍然很值得一看。</p>
+
+<p><a href="#aaa">I.各球隊球員名單</a></p>
+
+
+
+<p><a href="#bbb">II.賽程</a></p>
+
+
+
+<p><a href="#ccc">III.收看方式</a></p>
+
+
+
+<p><a href="#ccccc">IV.板球聊天室</a></p>
+
+        <h2><div id="aaa">I. 各球隊球員名單</div></h2>
+        <p>這次有 6 支隊伍參賽，以下為參加 MLC 2026 賽季的 6 支球隊球員名單整理：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 25%;">球員姓名 (Player)</th>
+                    <th style="width: 25%;">詳細角色 (Role)</th>
+                    <th style="width: 25%;">擊球習慣 (Batting)</th>
+                    <th style="width: 25%;">投球習慣 (Bowling)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td colspan="4" class="section-team">LA Knight Riders</td></tr>
+                <tr><td colspan="4" class="section-role">BATTERS (擊球手)</td></tr>
+                <tr><td>Unmukt Chand †</td><td><code>Wicketkeeper Batter</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Andre Fletcher</td><td><code>Top order Batter</code></td><td>Right hand Bat</td><td>Right arm Medium fast, Legbreak</td></tr>
+                <tr><td>Alex Hales</td><td><code>Opening Batter</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Jahmar Hamilton †</td><td><code>Wicketkeeper Batter</code></td><td>Right hand Bat</td><td>-</td></tr>
+                <tr><td>Nitish Kumar</td><td><code>Top order Batter</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Colin Munro</td><td><code>Opening Batter</code></td><td>Left hand Bat</td><td>Right arm Medium fast</td></tr>
+                <tr><td>Saif Badar</td><td><code>Middle order Batter</code></td><td>Right hand Bat</td><td>Legbreak Googly</td></tr>
+                <tr><td colspan="4" class="section-role">ALLROUNDERS (全能球員)</td></tr>
+                <tr><td>Karthik Gattepalli</td><td><code>Allrounder</code></td><td>Left hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Sunil Narine</td><td><code>Bowling Allrounder</code></td><td>Left hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Andre Russell</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Fast</td></tr>
+                <tr><td>Matthew Tromp</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium fast</td></tr>
+                <tr><td>Shadley van Schalkwyk</td><td><code>Allrounder</code></td><td>Left hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td colspan="4" class="section-role">BOWLERS (投手)</td></tr>
+                <tr><td>Ali Khan</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast medium</td></tr>
+                <tr><td>Carmi le Roux</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Left arm Medium fast</td></tr>
+                <tr><td>Lloyd Pope</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Legbreak Googly</td></tr>
+                <tr><td>Kristopher Ramsaran</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Left arm Wrist spin</td></tr>
+
+                <tr><td colspan="4" class="section-team">MI New York</td></tr>
+                <tr><td colspan="4" class="section-role">BATTERS (擊球手)</td></tr>
+                <tr><td>Agni Chopra</td><td><code>Top order Batter</code></td><td>Left hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Quinton de Kock †</td><td><code>Wicketkeeper Batter</code></td><td>Left hand Bat</td><td>-</td></tr>
+                <tr><td>Monank Patel †</td><td><code>Wicketkeeper Batter</code></td><td>Right hand Bat</td><td>-</td></tr>
+                <tr><td>Nicholas Pooran †</td><td><code>Wicketkeeper Batter</code></td><td>Left hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Ryan Rickelton †</td><td><code>Wicketkeeper Batter</code></td><td>Left hand Bat</td><td>-</td></tr>
+                <tr><td colspan="4" class="section-role">ALLROUNDERS (全能球員)</td></tr>
+                <tr><td>Corey Anderson</td><td><code>Batting Allrounder</code></td><td>Left hand Bat</td><td>Left arm Medium fast</td></tr>
+                <tr><td>Corbin Bosch</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Fast medium</td></tr>
+                <tr><td>Kunwarjeet Singh</td><td><code>Allrounder</code></td><td>Left hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Kieron Pollard</td><td><code>Batting Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Romario Shepherd</td><td><code>Bowling Allrounder</code></td><td>Right hand Bat</td><td>Right arm Fast medium</td></tr>
+                <tr><td>Sunny Patel</td><td><code>Batting Allrounder</code></td><td>Right hand Bat</td><td>Legbreak</td></tr>
+                <tr><td>Tajinder Singh</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td colspan="4" class="section-role">BOWLERS (投手)</td></tr>
+                <tr><td>Trent Boult</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Left arm Fast medium</td></tr>
+                <tr><td>Faisal Khan Ahmadzai</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Left arm Medium</td></tr>
+                <tr><td>AM Ghazanfar</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Offbreak, Legbreak</td></tr>
+                <tr><td>Nosthush Kenjige</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Tristan Luus</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast medium</td></tr>
+                <tr><td>Rushil Ugarkar</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast medium</td></tr>
+
+                <tr><td colspan="4" class="section-team">San Francisco Unicorns</td></tr>
+                <tr><td colspan="4" class="section-role">BATTERS (擊球手)</td></tr>
+                <tr><td>Finn Allen</td><td><code>Top order Batter</code></td><td>Right hand Bat</td><td>-</td></tr>
+                <tr><td>Saideep Ganesh †</td><td><code>Wicketkeeper</code></td><td>Right hand Bat</td><td>-</td></tr>
+                <tr><td>Aakarshit Gomel</td><td><code>Batter</code></td><td>Right hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Hammad Azam</td><td><code>Middle order Batter</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Lhuan-dre Pretorius †</td><td><code>Wicketkeeper Batter</code></td><td>Left hand Bat</td><td>-</td></tr>
+                <tr><td colspan="4" class="section-role">ALLROUNDERS (全能球員)</td></tr>
+                <tr><td>Matthew Short (c)</td><td><code>Batting Allrounder</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Ravichandran Ashwin</td><td><code>Bowling Allrounder</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Cooper Connolly</td><td><code>Batting Allrounder</code></td><td>Left hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Juanoy Drysdale</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Aaron Hardie</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium fast</td></tr>
+                <tr><td>Hassan Khan</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Anirudh Immanuel</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Legbreak</td></tr>
+                <tr><td>Sanjay Krishnamurthi</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Oliver Peake</td><td><code>Batting Allrounder</code></td><td>Left hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td colspan="4" class="section-role">BOWLERS (投手)</td></tr>
+                <tr><td>Xavier Bartlett</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast medium</td></tr>
+                <tr><td>Haris Rauf</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast</td></tr>
+                <tr><td>Mohammad Ilyas</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Medium fast</td></tr>
+                <tr><td>Zia-ul-Haq</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Left arm Fast medium</td></tr>
+
+                <tr><td colspan="4" class="section-team">Seattle Orcas</td></tr>
+                <tr><td colspan="4" class="section-role">BATTERS (擊球手)</td></tr>
+                <tr><td>Matthew Breetzke</td><td><code>Batter</code></td><td>Right hand Bat</td><td>-</td></tr>
+                <tr><td>Shimron Hetmyer</td><td><code>Middle order Batter</code></td><td>Left hand Bat</td><td>-</td></tr>
+                <tr><td>Sharad Lumba</td><td><code>Middle order Batter</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Tim Robinson</td><td><code>Top order Batter</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Tim Seifert †</td><td><code>Wicketkeeper Batter</code></td><td>Right hand Bat</td><td>-</td></tr>
+                <tr><td>Shayan Jahangir</td><td><code>Batter</code></td><td>Right hand Bat</td><td>Right arm Medium fast</td></tr>
+                <tr><td colspan="4" class="section-role">ALLROUNDERS (全能球員)</td></tr>
+                <tr><td>Ali Sheikh</td><td><code>Batting Allrounder</code></td><td>Left hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Harmeet Singh</td><td><code>Bowling Allrounder</code></td><td>Left hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Shehan Jayasuriya</td><td><code>Batting Allrounder</code></td><td>Left hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Dasun Shanaka</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Marcus Stoinis</td><td><code>Batting Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td colspan="4" class="section-role">BOWLERS & OTHERS (投手與其他)</td></tr>
+                <tr><td>Ottneil Baartman</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Medium fast</td></tr>
+                <tr><td>Ayan Desai</td><td><code>Bowler</code></td><td>Left hand Bat</td><td>Left arm Fast medium</td></tr>
+                <tr><td>Cameron Gannon</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast medium</td></tr>
+                <tr><td>Jasdeep Singh</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Lungi Ngidi</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast medium</td></tr>
+                <tr><td>Tanveer Sangha</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Legbreak</td></tr>
+                <tr><td>Rahul Jariwala</td><td>-</td><td>Right hand Bat</td><td>-</td></tr>
+                <tr><td>Sujit Nayak</td><td>-</td><td>Left hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+
+                <tr><td colspan="4" class="section-team">Texas Super Kings</td></tr>
+                <tr><td colspan="4" class="section-role">BATTERS (擊球手)</td></tr>
+                <tr><td>Faf du Plessis (c)</td><td><code>Middle order Batter</code></td><td>Right hand Bat</td><td>Legbreak</td></tr>
+                <tr><td>Saiteja Mukkamalla</td><td><code>Opening Batter</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Smit Patel †</td><td><code>Wicketkeeper Batter</code></td><td>Right hand Bat</td><td>-</td></tr>
+                <tr><td>Rilee Rossouw</td><td><code>Top order Batter</code></td><td>Left hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td colspan="4" class="section-role">ALLROUNDERS (全能球員)</td></tr>
+                <tr><td>Amshi de Silva</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Donovan Ferreira</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Milind Kumar</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Mohammad Mohsin</td><td><code>Bowling Allrounder</code></td><td>Left hand Bat</td><td>Legbreak Googly</td></tr>
+                <tr><td>Wiaan Mulder</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Shubham Ranjane</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Calvin Savage</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Fast medium</td></tr>
+                <tr><td>Joshua Tromp</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td colspan="4" class="section-role">BOWLERS (投手)</td></tr>
+                <tr><td>Nandre Burger</td><td><code>Bowler</code></td><td>Left hand Bat</td><td>Left arm Fast medium</td></tr>
+                <tr><td>Akeal Hosein</td><td><code>Bowler</code></td><td>Left hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Abhimanyu Lamba</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Keshav Maharaj</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Adam Milne</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast</td></tr>
+                <tr><td>Hardus Viljoen</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast</td></tr>
+
+                <tr><td colspan="4" class="section-team">Washington Freedom</td></tr>
+                <tr><td colspan="4" class="section-role">BATTERS (擊球手)</td></tr>
+                <tr><td>Steven Smith (c)</td><td><code>Top order Batter</code></td><td>Right hand Bat</td><td>Legbreak Googly</td></tr>
+                <tr><td>Andries Gous †</td><td><code>Wicketkeeper Batter</code></td><td>Right hand Bat</td><td>-</td></tr>
+                <tr><td>Lahiru Milantha †</td><td><code>Wicketkeeper Batter</code></td><td>Left hand Bat</td><td>-</td></tr>
+                <tr><td>Mukhtar Ahmed</td><td><code>Opening Batter</code></td><td>Right hand Bat</td><td>Legbreak Googly</td></tr>
+                <tr><td colspan="4" class="section-role">ALLROUNDERS (全能球員)</td></tr>
+                <tr><td>Mark Chapman</td><td><code>Allrounder</code></td><td>Left hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Nikhil Chaudhary</td><td><code>Batting Allrounder</code></td><td>Right hand Bat</td><td>Legbreak Googly</td></tr>
+                <tr><td>Jack Edwards</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Ian Holland</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Marco Jansen</td><td><code>Bowling Allrounder</code></td><td>Right hand Bat</td><td>Left arm Fast</td></tr>
+                <tr><td>Glenn Maxwell</td><td><code>Batting Allrounder</code></td><td>Right hand Bat</td><td>Right arm Offbreak</td></tr>
+                <tr><td>Mitchell Owen</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Obus Pienaar</td><td><code>Allrounder</code></td><td>Right hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Rachin Ravindra</td><td><code>Batting Allrounder</code></td><td>Left hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td colspan="4" class="section-role">BOWLERS (投手)</td></tr>
+                <tr><td>Amila Aponso</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Slow Left arm Orthodox</td></tr>
+                <tr><td>Asif Mehmood</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Medium</td></tr>
+                <tr><td>Ben Dwarshuis</td><td><code>Bowler</code></td><td>Left hand Bat</td><td>Left arm Fast medium</td></tr>
+                <tr><td>Lockie Ferguson</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Right arm Fast</td></tr>
+                <tr><td>Saurabh Netravalkar</td><td><code>Bowler</code></td><td>Right hand Bat</td><td>Left arm Fast medium</td></tr>
+                <tr><td>Abhishek Paradkar</td><td><code>Bowler</code></td><td>Left hand Bat</td><td>Left arm Medium</td></tr>
+                <tr><td>Yasir Mohammad</td><td><code>Bowler</code></td><td>Left hand Bat</td><td>Legbreak Googly</td></tr>
+            </tbody>
+        </table>
+
+        <h2><div id="bbb">II. 賽程表</div></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 15%;">DATE (日期)</th>
+                    <th style="width: 20%;">MATCH (場次)</th>
+                    <th style="width: 35%;">TEAMS (對戰組合)</th>
+                    <th style="width: 15%;">TIME (時間)</th>
+                    <th style="width: 15%;">VENUE (地點)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Fri, 19 Jun '26</td><td><code>1st Match</code> <span class="match-type">(N)</span></td><td>Texas Super Kings vs Seattle Orcas</td><td>8:30 AM</td><td>Dallas</td></tr>
+                <tr><td rowspan="2">Sat, 20 Jun '26</td><td><code>2nd Match</code> <span class="match-type">(D/N)</span></td><td>Los Angeles Knight Riders vs San Francisco Unicorns</td><td>4:30 AM</td><td>Dallas</td></tr>
+                <tr><td><code>3rd Match</code> <span class="match-type">(N)</span></td><td>Seattle Orcas vs Washington Freedom</td><td>8:30 AM</td><td>Dallas</td></tr>
+                <tr><td rowspan="2">Sun, 21 Jun '26</td><td><code>4th Match</code> <span class="match-type">(D/N)</span></td><td>Texas Super Kings vs San Francisco Unicorns</td><td>4:30 AM</td><td>Dallas</td></tr>
+                <tr><td><code>5th Match</code> <span class="match-type">(N)</span></td><td>MI New York vs Washington Freedom</td><td>8:30 AM</td><td>Dallas</td></tr>
+                <tr><td rowspan="2">Mon, 22 Jun '26</td><td><code>6th Match</code> <span class="match-type">(D/N)</span></td><td>Los Angeles Knight Riders vs Seattle Orcas</td><td>4:30 AM</td><td>Dallas</td></tr>
+                <tr><td><code>7th Match</code> <span class="match-type">(N)</span></td><td>Texas Super Kings vs MI New York</td><td>8:30 AM</td><td>Dallas</td></tr>
+                <tr><td>Thu, 25 Jun '26</td><td><code>8th Match</code> <span class="match-type">(N)</span></td><td>San Francisco Unicorns vs Texas Super Kings</td><td>9:30 AM</td><td>Oakland</td></tr>
+                <tr><td>Fri, 26 Jun '26</td><td><code>9th Match</code> <span class="match-type">(N)</span></td><td>Seattle Orcas vs Washington Freedom</td><td>9:30 AM</td><td>Oakland</td></tr>
+                <tr><td rowspan="2">Sat, 27 Jun '26</td><td><code>10th Match</code> <span class="match-type">(D/N)</span></td><td>MI New York vs Texas Super Kings</td><td>5:30 AM</td><td>Oakland</td></tr>
+                <tr><td><code>11th Match</code> <span class="match-type">(N)</span></td><td>San Francisco Unicorns vs Seattle Orcas</td><td>9:30 AM</td><td>Oakland</td></tr>
+                <tr><td rowspan="2">Sun, 28 Jun '26</td><td><code>12th Match</code> <span class="match-type">(D/N)</span></td><td>Los Angeles Knight Riders vs MI New York</td><td>5:30 AM</td><td>Oakland</td></tr>
+                <tr><td><code>13th Match</code> <span class="match-type">(N)</span></td><td>Texas Super Kings vs Washington Freedom</td><td>9:30 AM</td><td>Oakland</td></tr>
+                <tr><td rowspan="2">Mon, 29 Jun '26</td><td><code>14th Match</code> <span class="match-type">(D/N)</span></td><td>Los Angeles Knight Riders vs Seattle Orcas</td><td>5:30 AM</td><td>Oakland</td></tr>
+                <tr><td><code>15th Match</code> <span class="match-type">(N)</span></td><td>San Francisco Unicorns vs Washington Freedom</td><td>9:30 AM</td><td>Oakland</td></tr>
+                <tr><td>Thu, 02 Jul '26</td><td><code>16th Match</code> <span class="match-type">(N)</span></td><td>Los Angeles Knight Riders vs Washington Freedom</td><td>9:30 AM</td><td>Pomona</td></tr>
+                <tr><td>Fri, 03 Jul '26</td><td><code>17th Match</code> <span class="match-type">(N)</span></td><td>MI New York vs Seattle Orcas</td><td>9:30 AM</td><td>Pomona</td></tr>
+                <tr><td>Sat, 04 Jul '26</td><td><code>18th Match</code> <span class="match-type">(N)</span></td><td>Los Angeles Knight Riders vs Texas Super Kings</td><td>9:30 AM</td><td>Pomona</td></tr>
+                <tr><td rowspan="2">Sun, 05 Jul '26</td><td><code>19th Match</code> <span class="match-type">(D/N)</span></td><td>San Francisco Unicorns vs Washington Freedom</td><td>5:30 AM</td><td>Pomona</td></tr>
+                <tr><td><code>20th Match</code> <span class="match-type">(N)</span></td><td>Los Angeles Knight Riders vs MI New York</td><td>9:30 AM</td><td>Pomona</td></tr>
+                <tr><td rowspan="2">Mon, 06 Jul '26</td><td><code>21st Match</code> <span class="match-type">(D/N)</span></td><td>Seattle Orcas vs Texas Super Kings</td><td>5:30 AM</td><td>Pomona</td></tr>
+                <tr><td><code>22nd Match</code> <span class="match-type">(N)</span></td><td>MI New York vs San Francisco Unicorns</td><td>9:30 AM</td><td>Pomona</td></tr>
+                <tr><td>Thu, 09 Jul '26</td><td><code>23rd Match</code> <span class="match-type">(N)</span></td><td>MI New York vs San Francisco Unicorns</td><td>8:30 AM</td><td>Dallas</td></tr>
+                <tr><td>Fri, 10 Jul '26</td><td><code>24th Match</code> <span class="match-type">(N)</span></td><td>Los Angeles Knight Riders vs Washington Freedom</td><td>8:30 AM</td><td>Dallas</td></tr>
+                <tr><td rowspan="2">Sat, 11 Jul '26</td><td><code>25th Match</code> <span class="match-type">(D/N)</span></td><td>MI New York vs Seattle Orcas</td><td>4:30 AM</td><td>Dallas</td></tr>
+                <tr><td><code>26th Match</code> <span class="match-type">(N)</span></td><td>Los Angeles Knight Riders vs San Francisco Unicorns</td><td>8:30 AM</td><td>Dallas</td></tr>
+                <tr><td rowspan="2">Sun, 12 Jul '26</td><td><code>27th Match</code> <span class="match-type">(D/N)</span></td><td>Texas Super Kings vs Washington Freedom</td><td>4:30 AM</td><td>Dallas</td></tr>
+                <tr><td><code>28th Match</code> <span class="match-type">(N)</span></td><td>San Francisco Unicorns vs Seattle Orcas</td><td>8:30 AM</td><td>Dallas</td></tr>
+                <tr><td rowspan="2">Mon, 13 Jul '26</td><td><code>29th Match</code> <span class="match-type">(D/N)</span></td><td>MI New York vs Washington Freedom</td><td>4:30 AM</td><td>Dallas</td></tr>
+                <tr><td><code>30th Match</code> <span class="match-type">(N)</span></td><td>Texas Super Kings vs Los Angeles Knight Riders</td><td>8:30 AM</td><td>Dallas</td></tr>
+                <tr class="playoffs"><td rowspan="2">Thu, 16 Jul '26</td><td><code>Qualifier</code> <span class="match-type">(D/N)</span></td><td>TBA vs TBA</td><td>5:30 AM</td><td>Oakland</td></tr>
+                <tr class="playoffs"><td><code>Eliminator 1</code> <span class="match-type">(N)</span></td><td>TBA vs TBA</td><td>9:30 AM</td><td>Oakland</td></tr>
+                <tr class="playoffs"><td>Fri, 17 Jul '26</td><td><code>Eliminator 2</code> <span class="match-type">(N)</span></td><td>TBA vs TBA</td><td>9:30 AM</td><td>Oakland</td></tr>
+                <tr class="playoffs"><td>Sun, 19 Jul '26</td><td><code>Final</code> <span class="match-type">(N)</span></td><td>TBA vs TBA</td><td>9:30 AM</td><td>Oakland</td></tr>
+            </tbody>
+        </table>
+
+        <h2><div id="ccc">III. 收看方式</div></h2>
+        <p>在台灣，收看美國職業板球大聯盟聯賽，只能透過網路的方式收看（<code>Willow TV</code>）。收看 Willow TV 基本上需要：</p>
+        <ol>
+            <li><strong>申請 VPN 服務</strong>：這裡建議使用 <code>NordVPN</code> 或是 <code>SmartDNS</code>。</li>
+            <li><strong>申請 Willow TV</strong>：特別注意該網站只能使用美國 IP 進入，否則無法進入/註冊帳號。</li>
+            <li><strong>其他訂閱管道</strong>：如不直接訂閱 Willow TV，也可以利用 <code>Sling tv</code> 來訂閱 Willow TV，此外也可以訂閱 <code>KaroStream</code> 來收看。</li>
+        </ol>
+        <p>若有其他問題，歡迎在留言板提問。</p>
+
+        <h2><div id="ccccc">IV. 板球聊天室</div></h2>
+        <p>最後還是希望大家加入 LINE 板球聊天室！</p>
+        <div class="img-container">
+            <img src="https://a1253247.info/blogs/wp-content/uploads/2025/12/1644454548871-1.jpg" alt="LINE 板球聊天室">
+        </div>
+
+<h2>參考資料</h2>
+        <ul>
+            <li>
+                <a href="https://www.espncricinfo.com/series/major-league-cricket-2026-1528556" target="_blank">
+                    <code>Espn Cricinfo 美國職業板球大聯盟報導頁面 - https://www.espncricinfo.com/series/major-league-cricket-2026-1528556</code>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.willow.tv/" target="_blank">
+                    <code>Willow TV官網 - http://www.willow.tv/</code>
+                </a>
+            </li>
+            <li>
+                <a href="https://a1253247.info/blogs/2019/04/20190401.html" target="_blank">
+                    <code>Fire TV/亞馬遜-利用Amazon app使Fire TV也可以VPN - https://a1253247.info/blogs/2019/04/20190401.html</code>
+                </a>
+            </li>
+        </ul>
+<p>
+<p>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+        <footer>
+            Cricket Sports Archive - Pacermania
+        </footer>
+    </div>
+
+    <div class="side-spacer"></div>
+</div>
+
+</body>
+</html>
