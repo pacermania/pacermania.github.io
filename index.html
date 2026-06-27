@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacermania 的部落格</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "PingFang TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+            color: #000000;
+            line-height: 1.8;
+            background-color: #ffffff;
+        }
+
+        /* 網頁版型：左 1/3 留白, 中 1/3 內容, 右 1/3 留白 */
+        .page-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            min-height: 100vh;
+        }
+
+        .content-area {
+            grid-column: 2;
+            padding: 40px 0 60px 0;
+        }
+
+        /* 響應式安全設定：在平板或手機上適度放大內容區，避免畫面過窄 */
+        @media screen and (max-width: 1200px) {
+            .page-layout {
+                grid-template-columns: 0.5fr 2fr 0.5fr;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .page-layout {
+                grid-template-columns: 10% 80% 10%;
+            }
+        }
+
+        /* 頂部個人資訊與大頭照區 */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px solid #cccccc;
+            object-fit: cover;
+        }
+
+        /* 大標題文字加粗加大 */
+        h1 {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #001f3f; /* 深藍色 */
+            margin-top: 45px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #001f3f;
+            padding-bottom: 5px;
+        }
+
+        /* 置頂橫幅選單樣式 */
+        .top-navbar {
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            padding: 10px 0;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-item {
+            font-size: 0.95em;
+            font-weight: bold;
+            color: #001f3f;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            text-decoration: underline;
+        }
+
+        .nav-divider {
+            color: #cccccc;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        /* 最新文章特殊方塊標註 */
+        .featured-box {
+            background-color: #f5f5f5;
+            border: 1px solid #cccccc;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 1.05em;
+        }
+
+        .read-more-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #001f3f;
+            text-decoration: none;
+        }
+
+        .read-more-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 文章存檔清單樣式 */
+        .archive-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .archive-item {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eeeeee;
+            font-size: 1.05em;
+        }
+
+        .archive-item a {
+            text-decoration: none;
+            color: #000000;
+            display: block;
+        }
+
+        .archive-item a:hover {
+            color: #001f3f;
+            padding-left: 5px;
+            transition: all 0.2s ease;
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 0.9em;
+            color: #888888;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-layout">
+    <div class="side-spacer"></div>
+    
+    <div class="content-area">
+        <div class="profile-section">
+            <img class="profile-img" src="https://a1253247.info/blogs/wp-content/uploads/2025/12/1644454548871-1.jpg" alt="Pacermania">
+            <h1>Pacermania 的部落格</h1>
+        </div>
+
+        <nav class="top-navbar">
+            <a class="nav-item" href="https://pacermania.github.io/MLC2026/">MLC2026</a>
+            <span class="nav-divider">|</span>
+            <a class="nav-item" href="https://pacermania.github.io/Olivier_Sibony/">博客來-不當決策</a>
+            <span class="nav-divider">|</span>
+            <a class="nav-item" href="https://pacermania.github.io/vpn_wireguard/">Wireguard+Privoxy</a>
+            <span class="nav-divider">|</span>
+            <a class="nav-item" href="https://pacermania.github.io/dazn_jp/">DAZN_JP</a>
+            <span class="nav-divider">|</span>
+            <a class="nav-item" href="#ccccc">聯繫我</a>
+        </nav>
+
+        <h2>最新文章</h2>
+        <div class="featured-box">
+            印度板球超級聯賽（IPL）以及巴基斯坦職業板球聯賽（PSL）結束之後，接下來就是 Major League Cricket 了。雖然美國的職業板球才剛萌芽，不過各支球隊仍有一些國際知名球星，所以仍然很值得一看。
+            <br>
+            <a class="read-more-link" href="https://pacermania.github.io/MLC2026/">(全文請點我)</a>
+        </div>
+
+        <h2>2025 文章</h2>
+        <ul class="archive-list">
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-12.html">窮人的經濟學</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-11.html">老派球迷的逆襲：挺球員、背紀錄、重情義，找回看球的初衷與樂趣</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-10.html">Kindle- 火藥時代（歐陽泰）</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-09.html">你的幸福曲線</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-08.html">大是出版 - 給那天落選的你 ( 阿部廣太郎）</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-07-1.html">利用 Raspberry Pi 設置軟路由 ( 以 NORDVPN 為例 )</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-07.html">柳美里 - 『 JR 上野駅公園口』</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-06.html">漢聲精選世界成長文學 - 浪潮 ( 莫頓 . 盧 )</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-05.html">半藤一利 - 諾門罕之夏（ Google 圖書）</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-04.html">Readmoo- 蜜蜂與遠雷 ( 恩田陸 )</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-03-1.html">Picoreplayer- 將音樂轉發至 homepod 上</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-03.html">好讀網站 - 沙丘第一部 ( 法蘭克‧赫伯特 )</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-02-1.html">漫遊者文化 - 少年來了（韓江）</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-02.html">利用 Raspberry Pi 設置軟路由 ( 以 Express VPN 為例 )</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-01.html">角田光代 - 第八日的蟬</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2025-01-1.html">SiriusXM- 美國在線廣播和播客平台</a></li>
+        </ul>
+
+        <h2>2024 文章</h2>
+        <ul class="archive-list">
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-12-1.html">因為討厭韓國 - 張康明 ( 布克文化出版事業部 )</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-12-2.html">Ruby 應用 - 以 Github 的 books-dl 為例 - Pacermania 的部落格</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-12.html">摩伊希斯．奈姆 - 以民主之名的獨裁 ( 商周出版 )</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-11-1.html">致富心態 - 摩根 . 豪瑟 ( 天下文化 )</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-11.html">HDMI 轉 AV- 用降維方式錄影電視節目</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-10.html">赤字迷思 - 現代貨幣理論和為人民而生的經濟 ( 史蒂芬妮‧凱爾頓 )</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-09-1.html">Airplay- 於 HomePod 上聆聽黑膠唱機 / 轉盤音樂</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-09.html">賈德．戴蒙 - 槍砲、病菌與鋼鐵</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-08-1.html">天使遊戲 - 卡洛斯 · 魯依斯 · 薩豐</a></li>
+            <li class="archive-item"><a href="https://pacermania.github.io/archive/2024-08.html">PLEX- 好用的多媒體伺服器軟體</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/08/blog-post.html">湯尼．史多茲富斯 - 教練的心</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/07/blog-post.html">桑德爾 - 正義，一場思辨之旅 ( 先覺出版社 )</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/07/kindle-app-ios.html" target="_blank">Kindle app- 使用 iOS 語音功能來 " 聽書 "</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/06/tvheadend-raspberry-piserver.html">TVHeadend- 用 Raspberry Pi 搭建無線數位電視 Server</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/05/icct20i-icc-t20-world-cup-2024.html">ICCT20I-ICC T20 World Cup 2024</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/05/virtualhere.html">VirtualHere- 讓你的舊印表機也可以網路連線列印</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/05/blog-post.html">松本清張 - 點與線 ( 獨步文化 )</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/04/blog-post.html">蓋亞文化 - 柏青哥 ( 李珉貞 )</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/03/audirvana-volumioaudirvana.html">Audirvana- 使用 Volumio 顯示 Audirvana 音樂資訊</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/02/steamdeck-game-modenetflix.html">SteamDeck- 於 Game Mode 中觀看 Netflix</a></li>
+            <li class="archive-item"><a href="https://a1253247.blogspot.com/2024/01/blog-post.html">高寶出版 - 長安十二時辰（馬伯庸 )</a></li>
+        </ul>
+ <h2><div id="ccccc">電子郵件</div></h2>
+<a href="mailto:a1253247@yahoo.com.tw">寄email給我</a><p>
+<p>
+<h2>留言</h2>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pacermania.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+        <footer id="contact">
+            © 2026 Pacermania. Powered by GitHub Pages.
+        </footer>
+    </div>
+
+    <div class="side-spacer"></div>
+</div>
+
+</body>
+</html>
